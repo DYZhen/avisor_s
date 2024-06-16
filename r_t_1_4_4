@@ -1,0 +1,2241 @@
+mkdir -p /home/fadedlove/avisor/build/arch/aarch64
+mkdir -p /home/fadedlove/avisor/build/core
+mkdir -p /home/fadedlove/avisor/build/lib
+mkdir -p /home/fadedlove/avisor/build/plat/qemu-aarch64-virt
+Creating dependency	 src/main.ld
+Creating dependency	 src/arch/aarch64/vgicv2.c
+Creating dependency	 src/arch/aarch64/gicv2.c
+Creating dependency	 src/config.c
+Creating dependency	 src/main.c
+Creating dependency	 src/plat/qemu-aarch64-virt/platform.c
+Creating dependency	 src/lib/string.c
+Creating dependency	 src/lib/bitmap.c
+Creating dependency	 src/lib/printk.c
+Creating dependency	 src/core/mmu.c
+Creating dependency	 src/core/objpool.c
+Creating dependency	 src/core/sched.c
+Creating dependency	 src/core/io.c
+Creating dependency	 src/core/cpu.c
+Creating dependency	 src/core/vmm.c
+Creating dependency	 src/core/interrupts.c
+Creating dependency	 src/core/rq.c
+Creating dependency	 src/core/mem.c
+Creating dependency	 src/core/lcm.c
+Creating dependency	 src/core/console.c
+Creating dependency	 src/core/vm.c
+Creating dependency	 src/arch/aarch64/arch_vm.c
+Creating dependency	 src/arch/aarch64/uart.c
+Creating dependency	 src/arch/aarch64/arch_vmm.c
+Creating dependency	 src/arch/aarch64/hypercall.c
+Creating dependency	 src/arch/aarch64/timer.c
+Creating dependency	 src/arch/aarch64/arch_platform.c
+Creating dependency	 src/arch/aarch64/aborts.c
+Creating dependency	 src/arch/aarch64/arch_interrupts.c
+Creating dependency	 src/arch/aarch64/arch_cpu.c
+Creating dependency	 src/arch/aarch64/iommu.c
+Creating dependency	 src/arch/aarch64/exception.S
+Creating dependency	 src/arch/aarch64/arch_page_table.c
+Creating dependency	 src/arch/aarch64/start.S
+Creating dependency	 src/arch/aarch64/gic.c
+Creating dependency	 src/arch/aarch64/arch_mem.c
+Creating dependency	 src/arch/aarch64/vgic.c
+Compiling source	 src/arch/aarch64/vgic.c
+Compiling source	 src/arch/aarch64/arch_mem.c
+Compiling source	 src/arch/aarch64/gic.c
+Compiling source	 src/arch/aarch64/start.S
+Compiling source	 src/arch/aarch64/arch_page_table.c
+Compiling source	 src/arch/aarch64/exception.S
+Compiling source	 src/arch/aarch64/iommu.c
+Compiling source	 src/arch/aarch64/arch_cpu.c
+Compiling source	 src/arch/aarch64/arch_interrupts.c
+Compiling source	 src/arch/aarch64/aborts.c
+Compiling source	 src/arch/aarch64/arch_platform.c
+Compiling source	 src/arch/aarch64/timer.c
+Compiling source	 src/arch/aarch64/hypercall.c
+Compiling source	 src/arch/aarch64/arch_vmm.c
+Compiling source	 src/arch/aarch64/uart.c
+Compiling source	 src/arch/aarch64/arch_vm.c
+Compiling source	 src/core/vm.c
+Compiling source	 src/core/console.c
+Compiling source	 src/core/lcm.c
+Compiling source	 src/core/mem.c
+Compiling source	 src/core/rq.c
+Compiling source	 src/core/interrupts.c
+Compiling source	 src/core/vmm.c
+Compiling source	 src/core/io.c
+Compiling source	 src/core/sched.c
+Compiling source	 src/core/cpu.c
+Compiling source	 src/core/objpool.c
+Compiling source	 src/lib/printk.c
+Compiling source	 src/core/mmu.c
+Compiling source	 src/lib/bitmap.c
+Compiling source	 src/lib/string.c
+Compiling source	 src/plat/qemu-aarch64-virt/platform.c
+Compiling source	 src/main.c
+Compiling source	 src/config.c
+Compiling source	 src/arch/aarch64/gicv2.c
+Compiling source	 src/arch/aarch64/vgicv2.c
+Compiling source	 src/main.ld
+Linking			avisor
+qemu-system-aarch64 -M virt,virtualization=on -machine gic-version=2,iommu=none \
+	-cpu cortex-a57 -smp 1 -m 4g -nographic \
+	-kernel /home/fadedlove/avisor/build/avisor.elf
+AVISOR INFO: CPU[0] INIT
+AVISOR INFO: ------------avisor started------------
+AVISOR INFO: Exception level: 2
+AVISOR INFO: MEM INIT
+AVISOR INFO: GIC Version: 2
+AVISOR INFO: Timer Init
+AVISOR INFO: EL2 timer frq = 62500000
+AVISOR INFO: Reserved 26 intr
+AVISOR INFO: CPU[0] INTERRUPT INIT
+AVISOR WARNING: NO IOMMU
+AVISOR INFO: VMID:0 Load addr: 0x40100000
+AVISOR INFO: Copy vm0 to 0x50032000, size = 0x27840
+AVISOR INFO: Copy dtb to 0x58122000, size = 0x100000
+AVISOR INFO: VMID:1 Load addr: 0x40127840
+AVISOR INFO: Copy vm1 to 0x5842e000, size = 0x27840
+AVISOR INFO: Copy dtb to 0x6051a000, size = 0x100000
+AVISOR INFO: VMID:2 Load addr: 0x40127840
+AVISOR INFO: Copy vm2 to 0x60bf6000, size = 0x27840
+AVISOR INFO: Copy dtb to 0x68caa000, size = 0x100000
+AVISOR INFO: VMID:3 Load addr: 0x40127840
+AVISOR INFO: Copy vm3 to 0x69aee000, size = 0x27840
+AVISOR INFO: Copy dtb to 0x71b9a000, size = 0x100000
+AVISOR INFO: unikernel 0 will run on pcpu 0.
+AVISOR INFO: vcpu:prio (0:5) run on unikernel 0 on pcpu 0.
+AVISOR INFO: TIME: 4707342 vm id 0 vcpu id 0 pcpu id 0
+AVISOR INFO: TIME IRQ 1
+AVISOR INFO: vcpu repeat
+AVISOR INFO: vcpu:prio (0:5) run on unikernel 0 on pcpu 0.
+AVISOR INFO: TIME: 4748644 vm id 0 vcpu id 0 pcpu id 0
+Powered by
+o.   .o       _ _               __ _
+Oo   Oo  ___ (_) | __ __  __ _ ' _) :_
+oO   oO ' _ `| | |/ /  _)' _` | |_|  _)
+oOo oOO| | | | |   (| | | (_) |  _) :_
+ OoOoO ._, ._:_:_,\_._,  .__,_:_, \___)
+      Epimetheus 0.12.0~052b89e4-custom
+Boot Time Cycles = 7480401
+Hello World! 200000000
+cpuid = 1 fn = 40106ca0
+cpuid = 2 fn = 40106ce0
+cpuid = 3 fn = 40106c80
+main 0
+main 1
+main 2
+main 3
+AVISOR INFO: TIME IRQ 2
+AVISOR INFO: vcpu:prio (1:5) run on unikernel 0 on pcpu 0.
+AVISOR INFO: TIME: 67322871 vm id 0 vcpu id 1 pcpu id 0
+task1! 0
+task1! 1
+task1! 2
+task1! 3
+AVISOR INFO: TIME IRQ 3
+AVISOR INFO: vcpu:prio (2:5) run on unikernel 0 on pcpu 0.
+AVISOR INFO: TIME: 129883744 vm id 0 vcpu id 2 pcpu id 0
+task2! 0
+task2! 1
+task2! 2
+task2! 3
+AVISOR INFO: TIME IRQ 4
+AVISOR INFO: unikernel 1 will run on pcpu 0.
+AVISOR INFO: vcpu:prio (0:5) run on unikernel 1 on pcpu 0.
+AVISOR INFO: TIME: 192459858 vm id 1 vcpu id 0 pcpu id 0
+Powered by
+o.   .o       _ _               __ _
+Oo   Oo  ___ (_) | __ __  __ _ ' _) :_
+oO   oO ' _ `| | |/ /  _)' _` | |_|  _)
+oOo oOO| | | | |   (| | | (_) |  _) :_
+ OoOoO ._, ._:_:_,\_._,  .__,_:_, \___)
+      Epimetheus 0.12.0~052b89e4-custom
+Boot Time Cycles = 195506574
+Hello World! 200000000
+cpuid = 1 fn = 40106c80
+cpuid = 2 fn = 40106cc0
+cpuid = 3 fn = 40106d00
+main 0
+main 1
+main 2
+main 3
+AVISOR INFO: TIME IRQ 5
+AVISOR INFO: vcpu:prio (1:5) run on unikernel 1 on pcpu 0.
+AVISOR INFO: TIME: 255039829 vm id 1 vcpu id 1 pcpu id 0
+task1! 0
+task1! 1
+task1! 2
+task1! 3
+task1! 4
+AVISOR INFO: TIME IRQ 6
+AVISOR INFO: vcpu:prio (2:5) run on unikernel 1 on pcpu 0.
+AVISOR INFO: TIME: 317607347 vm id 1 vcpu id 2 pcpu id 0
+task2! 0
+task2! 1
+task2! 2
+task2! 3
+task2! 4
+AVISOR INFO: TIME IRQ 7
+AVISOR INFO: vcpu:prio (3:5) run on unikernel 1 on pcpu 0.
+AVISOR INFO: TIME: 380176580 vm id 1 vcpu id 3 pcpu id 0
+task3! 0
+task3! 1
+task3! 2
+task3! 3
+task3! 4
+AVISOR INFO: TIME IRQ 8
+AVISOR INFO: unikernel 2 will run on pcpu 0.
+AVISOR INFO: vcpu:prio (0:5) run on unikernel 2 on pcpu 0.
+AVISOR INFO: TIME: 442756126 vm id 2 vcpu id 0 pcpu id 0
+Powered by
+o.   .o       _ _               __ _
+Oo   Oo  ___ (_) | __ __  __ _ ' _) :_
+oO   oO ' _ `| | |/ /  _)' _` | |_|  _)
+oOo oOO| | | | |   (| | | (_) |  _) :_
+ OoOoO ._, ._:_:_,\_._,  .__,_:_, \___)
+      Epimetheus 0.12.0~052b89e4-custom
+Boot Time Cycles = 445656389
+Hello World! 200000000
+cpuid = 1 fn = 40106c80
+cpuid = 2 fn = 40106cc0
+cpuid = 3 fn = 40106d00
+main 0
+main 1
+main 2
+main 3
+AVISOR INFO: TIME IRQ 9
+AVISOR INFO: vcpu:prio (1:5) run on unikernel 2 on pcpu 0.
+AVISOR INFO: TIME: 505328018 vm id 2 vcpu id 1 pcpu id 0
+task1! 0
+task1! 1
+task1! 2
+task1! 3
+AVISOR INFO: TIME IRQ 10
+AVISOR INFO: vcpu:prio (2:5) run on unikernel 2 on pcpu 0.
+AVISOR INFO: TIME: 567897960 vm id 2 vcpu id 2 pcpu id 0
+task2! 0
+task2! 1
+task2! 2
+task2! 3
+task2! 4
+AVISOR INFO: TIME IRQ 11
+AVISOR INFO: vcpu:prio (3:5) run on unikernel 2 on pcpu 0.
+AVISOR INFO: TIME: 630465578 vm id 2 vcpu id 3 pcpu id 0
+task3! 0
+task3! 1
+task3! 2
+task3! 3
+task3! 4
+AVISOR INFO: TIME IRQ 12
+AVISOR INFO: unikernel 3 will run on pcpu 0.
+AVISOR INFO: vcpu:prio (0:5) run on unikernel 3 on pcpu 0.
+AVISOR INFO: TIME: 693047629 vm id 3 vcpu id 0 pcpu id 0
+Powered by
+o.   .o       _ _               __ _
+Oo   Oo  ___ (_) | __ __  __ _ ' _) :_
+oO   oO ' _ `| | |/ /  _)' _` | |_|  _)
+oOo oOO| | | | |   (| | | (_) |  _) :_
+ OoOoO ._, ._:_:_,\_._,  .__,_:_, \___)
+      Epimetheus 0.12.0~052b89e4-custom
+Boot Time Cycles = 696050373
+Hello World! 200000000
+cpuid = 1 fn = 40106c80
+cpuid = 2 fn = 40106cc0
+cpuid = 3 fn = 40106d00
+main 0
+main 1
+main 2
+main 3
+AVISOR INFO: TIME IRQ 13
+AVISOR INFO: vcpu:prio (1:5) run on unikernel 3 on pcpu 0.
+AVISOR INFO: TIME: 755612575 vm id 3 vcpu id 1 pcpu id 0
+task1! 0
+task1! 1
+task1! 2
+task1! 3
+AVISOR INFO: TIME IRQ 14
+AVISOR INFO: vcpu:prio (2:5) run on unikernel 3 on pcpu 0.
+AVISOR INFO: TIME: 818176475 vm id 3 vcpu id 2 pcpu id 0
+task2! 0
+task2! 1
+task2! 2
+task2! 3
+AVISOR INFO: TIME IRQ 15
+AVISOR INFO: vcpu:prio (3:5) run on unikernel 3 on pcpu 0.
+AVISOR INFO: TIME: 880746491 vm id 3 vcpu id 3 pcpu id 0
+task3! 0
+task3! 1
+task3! 2
+task3! 3
+AVISOR INFO: TIME IRQ 16
+AVISOR INFO: unikernel 0 will run on pcpu 0.
+AVISOR INFO: vcpu:prio (3:5) run on unikernel 0 on pcpu 0.
+AVISOR INFO: TIME: 943322484 vm id 0 vcpu id 3 pcpu id 0
+AVISOR INFO: TIME IRQ 17
+AVISOR INFO: vcpu repeat
+AVISOR INFO: vcpu:prio (0:5) run on unikernel 0 on pcpu 0.
+AVISOR INFO: TIME: 1005886133 vm id 0 vcpu id 0 pcpu id 0
+main 4
+main 5
+main 6
+main 7
+main 8
+AVISOR INFO: TIME IRQ 18
+AVISOR INFO: vcpu:prio (1:5) run on unikernel 0 on pcpu 0.
+AVISOR INFO: TIME: 1068457864 vm id 0 vcpu id 1 pcpu id 0
+task1! 4
+task1! 5
+task1! 6
+task1! 7
+task1! 8
+AVISOR INFO: TIME IRQ 19
+AVISOR INFO: vcpu:prio (2:5) run on unikernel 0 on pcpu 0.
+AVISOR INFO: TIME: 1131026075 vm id 0 vcpu id 2 pcpu id 0
+task2! 4
+task2! 5
+task2! 6
+task2! 7
+task2! 8
+AVISOR INFO: TIME IRQ 20
+AVISOR INFO: unikernel 1 will run on pcpu 0.
+AVISOR INFO: vcpu repeat
+AVISOR INFO: vcpu:prio (0:5) run on unikernel 1 on pcpu 0.
+AVISOR INFO: TIME: 1193606806 vm id 1 vcpu id 0 pcpu id 0
+main 4
+main 5
+main 6
+main 7
+main 8
+AVISOR INFO: TIME IRQ 21
+AVISOR INFO: vcpu:prio (1:5) run on unikernel 1 on pcpu 0.
+AVISOR INFO: TIME: 1256164498 vm id 1 vcpu id 1 pcpu id 0
+task1! 5
+task1! 6
+task1! 7
+task1! 8
+AVISOR INFO: TIME IRQ 22
+AVISOR INFO: vcpu:prio (2:5) run on unikernel 1 on pcpu 0.
+AVISOR INFO: TIME: 1318734009 vm id 1 vcpu id 2 pcpu id 0
+task2! 5
+task2! 6
+task2! 7
+task2! 8
+task2! 9
+AVISOR INFO: TIME IRQ 23
+AVISOR INFO: vcpu:prio (3:5) run on unikernel 1 on pcpu 0.
+AVISOR INFO: TIME: 1381304384 vm id 1 vcpu id 3 pcpu id 0
+task3! 5
+task3! 6
+task3! 7
+task3! 8
+task3! 9
+AVISOR INFO: TIME IRQ 24
+AVISOR INFO: unikernel 2 will run on pcpu 0.
+AVISOR INFO: vcpu repeat
+AVISOR INFO: vcpu:prio (0:5) run on unikernel 2 on pcpu 0.
+AVISOR INFO: TIME: 1443882308 vm id 2 vcpu id 0 pcpu id 0
+main 4
+main 5
+main 6
+main 7
+main 8
+AVISOR INFO: TIME IRQ 25
+AVISOR INFO: vcpu:prio (1:5) run on unikernel 2 on pcpu 0.
+AVISOR INFO: TIME: 1506448277 vm id 2 vcpu id 1 pcpu id 0
+task1! 4
+task1! 5
+task1! 6
+task1! 7
+task1! 8
+AVISOR INFO: TIME IRQ 26
+AVISOR INFO: vcpu:prio (2:5) run on unikernel 2 on pcpu 0.
+AVISOR INFO: TIME: 1569018611 vm id 2 vcpu id 2 pcpu id 0
+task2! 5
+task2! 6
+task2! 7
+task2! 8
+AVISOR INFO: TIME IRQ 27
+AVISOR INFO: vcpu:prio (3:5) run on unikernel 2 on pcpu 0.
+AVISOR INFO: TIME: 1631586555 vm id 2 vcpu id 3 pcpu id 0
+task3! 5
+task3! 6
+task3! 7
+task3! 8
+AVISOR INFO: TIME IRQ 28
+AVISOR INFO: unikernel 3 will run on pcpu 0.
+AVISOR INFO: vcpu repeat
+AVISOR INFO: vcpu:prio (0:5) run on unikernel 3 on pcpu 0.
+AVISOR INFO: TIME: 1694167535 vm id 3 vcpu id 0 pcpu id 0
+main 4
+main 5
+main 6
+main 7
+main 8
+AVISOR INFO: TIME IRQ 29
+AVISOR INFO: vcpu:prio (1:5) run on unikernel 3 on pcpu 0.
+AVISOR INFO: TIME: 1756731292 vm id 3 vcpu id 1 pcpu id 0
+task1! 4
+task1! 5
+task1! 6
+task1! 7
+task1! 8
+AVISOR INFO: TIME IRQ 30
+AVISOR INFO: vcpu:prio (2:5) run on unikernel 3 on pcpu 0.
+AVISOR INFO: TIME: 1819301641 vm id 3 vcpu id 2 pcpu id 0
+task2! 4
+task2! 5
+task2! 6
+task2! 7
+task2! 8
+AVISOR INFO: TIME IRQ 31
+AVISOR INFO: vcpu:prio (3:5) run on unikernel 3 on pcpu 0.
+AVISOR INFO: TIME: 1881871877 vm id 3 vcpu id 3 pcpu id 0
+task3! 4
+task3! 5
+task3! 6
+task3! 7
+task3! 8
+AVISOR INFO: TIME IRQ 32
+AVISOR INFO: unikernel 0 will run on pcpu 0.
+AVISOR INFO: vcpu:prio (3:5) run on unikernel 0 on pcpu 0.
+AVISOR INFO: TIME: 1944443933 vm id 0 vcpu id 3 pcpu id 0
+AVISOR INFO: TIME IRQ 33
+AVISOR INFO: vcpu repeat
+AVISOR INFO: vcpu:prio (0:5) run on unikernel 0 on pcpu 0.
+AVISOR INFO: TIME: 2007013103 vm id 0 vcpu id 0 pcpu id 0
+main 9
+main 10
+main 11
+main 12
+main 13
+AVISOR INFO: TIME IRQ 34
+AVISOR INFO: vcpu:prio (1:5) run on unikernel 0 on pcpu 0.
+AVISOR INFO: TIME: 2069585986 vm id 0 vcpu id 1 pcpu id 0
+task1! 9
+task1! 10
+task1! 11
+task1! 12
+task1! 13
+AVISOR INFO: TIME IRQ 35
+AVISOR INFO: vcpu:prio (2:5) run on unikernel 0 on pcpu 0.
+AVISOR INFO: TIME: 2132159049 vm id 0 vcpu id 2 pcpu id 0
+task2! 9
+task2! 10
+task2! 11
+task2! 12
+task2! 13
+AVISOR INFO: TIME IRQ 36
+AVISOR INFO: unikernel 1 will run on pcpu 0.
+AVISOR INFO: vcpu repeat
+AVISOR INFO: vcpu:prio (0:5) run on unikernel 1 on pcpu 0.
+AVISOR INFO: TIME: 2194732139 vm id 1 vcpu id 0 pcpu id 0
+main 9
+main 10
+main 11
+main 12
+main 13
+AVISOR INFO: TIME IRQ 37
+AVISOR INFO: vcpu:prio (1:5) run on unikernel 1 on pcpu 0.
+AVISOR INFO: TIME: 2257285451 vm id 1 vcpu id 1 pcpu id 0
+task1! 9
+task1! 10
+task1! 11
+task1! 12
+task1! 13
+AVISOR INFO: TIME IRQ 38
+AVISOR INFO: vcpu:prio (2:5) run on unikernel 1 on pcpu 0.
+AVISOR INFO: TIME: 2319857494 vm id 1 vcpu id 2 pcpu id 0
+task2! 10
+task2! 11
+task2! 12
+task2! 13
+task2! 14
+AVISOR INFO: TIME IRQ 39
+AVISOR INFO: vcpu:prio (3:5) run on unikernel 1 on pcpu 0.
+AVISOR INFO: TIME: 2382425262 vm id 1 vcpu id 3 pcpu id 0
+task3! 10
+task3! 11
+task3! 12
+task3! 13
+AVISOR INFO: TIME IRQ 40
+AVISOR INFO: unikernel 2 will run on pcpu 0.
+AVISOR INFO: vcpu repeat
+AVISOR INFO: vcpu:prio (0:5) run on unikernel 2 on pcpu 0.
+AVISOR INFO: TIME: 2445006826 vm id 2 vcpu id 0 pcpu id 0
+main 9
+main 10
+main 11
+main 12
+main 13
+AVISOR INFO: TIME IRQ 41
+AVISOR INFO: vcpu:prio (1:5) run on unikernel 2 on pcpu 0.
+AVISOR INFO: TIME: 2507569616 vm id 2 vcpu id 1 pcpu id 0
+task1! 9
+task1! 10
+task1! 11
+task1! 12
+task1! 13
+AVISOR INFO: TIME IRQ 42
+AVISOR INFO: vcpu:prio (2:5) run on unikernel 2 on pcpu 0.
+AVISOR INFO: TIME: 2570137354 vm id 2 vcpu id 2 pcpu id 0
+task2! 9
+task2! 10
+task2! 11
+task2! 12
+task2! 13
+AVISOR INFO: TIME IRQ 43
+AVISOR INFO: vcpu:prio (3:5) run on unikernel 2 on pcpu 0.
+AVISOR INFO: TIME: 2632718254 vm id 2 vcpu id 3 pcpu id 0
+task3! 9
+task3! 10
+task3! 11
+task3! 12
+task3! 13
+AVISOR INFO: TIME IRQ 44
+AVISOR INFO: unikernel 3 will run on pcpu 0.
+AVISOR INFO: vcpu repeat
+AVISOR INFO: vcpu:prio (0:5) run on unikernel 3 on pcpu 0.
+AVISOR INFO: TIME: 2695296684 vm id 3 vcpu id 0 pcpu id 0
+main 9
+main 10
+main 11
+main 12
+main 13
+AVISOR INFO: TIME IRQ 45
+AVISOR INFO: vcpu:prio (1:5) run on unikernel 3 on pcpu 0.
+AVISOR INFO: TIME: 2757861639 vm id 3 vcpu id 1 pcpu id 0
+task1! 9
+task1! 10
+task1! 11
+task1! 12
+task1! 13
+AVISOR INFO: TIME IRQ 46
+AVISOR INFO: vcpu:prio (2:5) run on unikernel 3 on pcpu 0.
+AVISOR INFO: TIME: 2820434108 vm id 3 vcpu id 2 pcpu id 0
+task2! 9
+task2! 10
+task2! 11
+task2! 12
+task2! 13
+AVISOR INFO: TIME IRQ 47
+AVISOR INFO: vcpu:prio (3:5) run on unikernel 3 on pcpu 0.
+AVISOR INFO: TIME: 2883000665 vm id 3 vcpu id 3 pcpu id 0
+task3! 9
+task3! 10
+task3! 11
+task3! 12
+task3! 13
+AVISOR INFO: TIME IRQ 48
+AVISOR INFO: unikernel 0 will run on pcpu 0.
+AVISOR INFO: vcpu:prio (3:5) run on unikernel 0 on pcpu 0.
+AVISOR INFO: TIME: 2945575998 vm id 0 vcpu id 3 pcpu id 0
+AVISOR INFO: TIME IRQ 49
+AVISOR INFO: vcpu repeat
+AVISOR INFO: vcpu:prio (0:5) run on unikernel 0 on pcpu 0.
+AVISOR INFO: TIME: 3008145410 vm id 0 vcpu id 0 pcpu id 0
+main 14
+main 15
+main 16
+main 17
+main 18
+AVISOR INFO: TIME IRQ 50
+AVISOR INFO: vcpu:prio (1:5) run on unikernel 0 on pcpu 0.
+AVISOR INFO: TIME: 3070710937 vm id 0 vcpu id 1 pcpu id 0
+task1! 14
+task1! 15
+task1! 16
+task1! 17
+task1! 18
+AVISOR INFO: TIME IRQ 51
+AVISOR INFO: vcpu:prio (2:5) run on unikernel 0 on pcpu 0.
+AVISOR INFO: TIME: 3133304055 vm id 0 vcpu id 2 pcpu id 0
+task2! 14
+task2! 15
+task2! 16
+task2! 17
+task2! 18
+AVISOR INFO: TIME IRQ 52
+AVISOR INFO: unikernel 1 will run on pcpu 0.
+AVISOR INFO: vcpu repeat
+AVISOR INFO: vcpu:prio (0:5) run on unikernel 1 on pcpu 0.
+AVISOR INFO: TIME: 3195859489 vm id 1 vcpu id 0 pcpu id 0
+main 14
+main 15
+main 16
+main 17
+main 18
+AVISOR INFO: TIME IRQ 53
+AVISOR INFO: vcpu:prio (1:5) run on unikernel 1 on pcpu 0.
+AVISOR INFO: TIME: 3258423084 vm id 1 vcpu id 1 pcpu id 0
+task1! 14
+task1! 15
+task1! 16
+task1! 17
+task1! 18
+AVISOR INFO: TIME IRQ 54
+AVISOR INFO: vcpu:prio (2:5) run on unikernel 1 on pcpu 0.
+AVISOR INFO: TIME: 3320994649 vm id 1 vcpu id 2 pcpu id 0
+task2! 15
+task2! 16
+task2! 17
+task2! 18
+AVISOR INFO: TIME IRQ 55
+AVISOR INFO: vcpu:prio (3:5) run on unikernel 1 on pcpu 0.
+AVISOR INFO: TIME: 3383534828 vm id 1 vcpu id 3 pcpu id 0
+task3! 14
+task3! 15
+task3! 16
+task3! 17
+task3! 18
+AVISOR INFO: TIME IRQ 56
+AVISOR INFO: unikernel 2 will run on pcpu 0.
+AVISOR INFO: vcpu repeat
+AVISOR INFO: vcpu:prio (0:5) run on unikernel 2 on pcpu 0.
+AVISOR INFO: TIME: 3446148751 vm id 2 vcpu id 0 pcpu id 0
+main 14
+main 15
+main 16
+main 17
+main 18
+AVISOR INFO: TIME IRQ 57
+AVISOR INFO: vcpu:prio (1:5) run on unikernel 2 on pcpu 0.
+AVISOR INFO: TIME: 3508677424 vm id 2 vcpu id 1 pcpu id 0
+task1! 14
+task1! 15
+task1! 16
+task1! 17
+task1! 18
+AVISOR INFO: TIME IRQ 58
+AVISOR INFO: vcpu:prio (2:5) run on unikernel 2 on pcpu 0.
+AVISOR INFO: TIME: 3571249725 vm id 2 vcpu id 2 pcpu id 0
+task2! 14
+task2! 15
+task2! 16
+task2! 17
+task2! 18
+AVISOR INFO: TIME IRQ 59
+AVISOR INFO: vcpu:prio (3:5) run on unikernel 2 on pcpu 0.
+AVISOR INFO: TIME: 3633823410 vm id 2 vcpu id 3 pcpu id 0
+task3! 14
+task3! 15
+task3! 16
+task3! 17
+task3! 18
+AVISOR INFO: TIME IRQ 60
+AVISOR INFO: unikernel 3 will run on pcpu 0.
+AVISOR INFO: vcpu repeat
+AVISOR INFO: vcpu:prio (0:5) run on unikernel 3 on pcpu 0.
+AVISOR INFO: TIME: 3696398620 vm id 3 vcpu id 0 pcpu id 0
+main 14
+main 15
+main 16
+main 17
+main 18
+AVISOR INFO: TIME IRQ 61
+AVISOR INFO: vcpu:prio (1:5) run on unikernel 3 on pcpu 0.
+AVISOR INFO: TIME: 3758962672 vm id 3 vcpu id 1 pcpu id 0
+task1! 14
+task1! 15
+task1! 16
+task1! 17
+task1! 18
+AVISOR INFO: TIME IRQ 62
+AVISOR INFO: vcpu:prio (2:5) run on unikernel 3 on pcpu 0.
+AVISOR INFO: TIME: 3821533036 vm id 3 vcpu id 2 pcpu id 0
+task2! 14
+task2! 15
+task2! 16
+task2! 17
+task2! 18
+AVISOR INFO: TIME IRQ 63
+AVISOR INFO: vcpu:prio (3:5) run on unikernel 3 on pcpu 0.
+AVISOR INFO: TIME: 3884101623 vm id 3 vcpu id 3 pcpu id 0
+task3! 14
+task3! 15
+task3! 16
+task3! 17
+task3! 18
+AVISOR INFO: TIME IRQ 64
+AVISOR INFO: unikernel 0 will run on pcpu 0.
+AVISOR INFO: vcpu:prio (3:5) run on unikernel 0 on pcpu 0.
+AVISOR INFO: TIME: 3946681888 vm id 0 vcpu id 3 pcpu id 0
+AVISOR INFO: TIME IRQ 65
+AVISOR INFO: vcpu repeat
+AVISOR INFO: vcpu:prio (0:5) run on unikernel 0 on pcpu 0.
+AVISOR INFO: TIME: 4009245274 vm id 0 vcpu id 0 pcpu id 0
+main 19
+main 20
+main 21
+main 22
+main 23
+AVISOR INFO: TIME IRQ 66
+AVISOR INFO: vcpu:prio (1:5) run on unikernel 0 on pcpu 0.
+AVISOR INFO: TIME: 4071814401 vm id 0 vcpu id 1 pcpu id 0
+task1! 19
+task1! 20
+task1! 21
+task1! 22
+task1! 23
+AVISOR INFO: TIME IRQ 67
+AVISOR INFO: vcpu:prio (2:5) run on unikernel 0 on pcpu 0.
+AVISOR INFO: TIME: 4134382876 vm id 0 vcpu id 2 pcpu id 0
+task2! 19
+task2! 20
+task2! 21
+task2! 22
+task2! 23
+AVISOR INFO: TIME IRQ 68
+AVISOR INFO: unikernel 1 will run on pcpu 0.
+AVISOR INFO: vcpu repeat
+AVISOR INFO: vcpu:prio (0:5) run on unikernel 1 on pcpu 0.
+AVISOR INFO: TIME: 4196959552 vm id 1 vcpu id 0 pcpu id 0
+main 19
+main 20
+main 21
+main 22
+main 23
+AVISOR INFO: TIME IRQ 69
+AVISOR INFO: vcpu:prio (1:5) run on unikernel 1 on pcpu 0.
+AVISOR INFO: TIME: 4259528436 vm id 1 vcpu id 1 pcpu id 0
+task1! 19
+task1! 20
+task1! 21
+task1! 22
+task1! 23
+AVISOR INFO: TIME IRQ 70
+AVISOR INFO: vcpu:prio (2:5) run on unikernel 1 on pcpu 0.
+AVISOR INFO: TIME: 27124383 vm id 1 vcpu id 2 pcpu id 0
+task2! 19
+task2! 20
+task2! 21
+task2! 22
+task2! 23
+AVISOR INFO: TIME IRQ 71
+AVISOR INFO: vcpu:prio (3:5) run on unikernel 1 on pcpu 0.
+AVISOR INFO: TIME: 89699218 vm id 1 vcpu id 3 pcpu id 0
+task3! 19
+task3! 20
+task3! 21
+task3! 22
+task3! 23
+AVISOR INFO: TIME IRQ 72
+AVISOR INFO: unikernel 2 will run on pcpu 0.
+AVISOR INFO: vcpu repeat
+AVISOR INFO: vcpu:prio (0:5) run on unikernel 2 on pcpu 0.
+AVISOR INFO: TIME: 152279612 vm id 2 vcpu id 0 pcpu id 0
+main 19
+main 20
+main 21
+main 22
+main 23
+AVISOR INFO: TIME IRQ 73
+AVISOR INFO: vcpu:prio (1:5) run on unikernel 2 on pcpu 0.
+AVISOR INFO: TIME: 214841096 vm id 2 vcpu id 1 pcpu id 0
+task1! 19
+task1! 20
+task1! 21
+task1! 22
+task1! 23
+AVISOR INFO: TIME IRQ 74
+AVISOR INFO: vcpu:prio (2:5) run on unikernel 2 on pcpu 0.
+AVISOR INFO: TIME: 277409063 vm id 2 vcpu id 2 pcpu id 0
+task2! 19
+task2! 20
+task2! 21
+task2! 22
+task2! 23
+AVISOR INFO: TIME IRQ 75
+AVISOR INFO: vcpu:prio (3:5) run on unikernel 2 on pcpu 0.
+AVISOR INFO: TIME: 339980658 vm id 2 vcpu id 3 pcpu id 0
+task3! 19
+task3! 20
+task3! 21
+task3! 22
+task3! 23
+AVISOR INFO: TIME IRQ 76
+AVISOR INFO: unikernel 3 will run on pcpu 0.
+AVISOR INFO: vcpu repeat
+AVISOR INFO: vcpu:prio (0:5) run on unikernel 3 on pcpu 0.
+AVISOR INFO: TIME: 402559704 vm id 3 vcpu id 0 pcpu id 0
+main 19
+main 20
+main 21
+main 22
+main 23
+AVISOR INFO: TIME IRQ 77
+AVISOR INFO: vcpu:prio (1:5) run on unikernel 3 on pcpu 0.
+AVISOR INFO: TIME: 465123126 vm id 3 vcpu id 1 pcpu id 0
+task1! 19
+task1! 20
+task1! 21
+task1! 22
+task1! 23
+AVISOR INFO: TIME IRQ 78
+AVISOR INFO: vcpu:prio (2:5) run on unikernel 3 on pcpu 0.
+AVISOR INFO: TIME: 527700612 vm id 3 vcpu id 2 pcpu id 0
+task2! 19
+task2! 20
+task2! 21
+task2! 22
+task2! 23
+AVISOR INFO: TIME IRQ 79
+AVISOR INFO: vcpu:prio (3:5) run on unikernel 3 on pcpu 0.
+AVISOR INFO: TIME: 590266375 vm id 3 vcpu id 3 pcpu id 0
+task3! 19
+task3! 20
+task3! 21
+task3! 22
+task3! 23
+AVISOR INFO: TIME IRQ 80
+AVISOR INFO: unikernel 0 will run on pcpu 0.
+AVISOR INFO: vcpu:prio (3:5) run on unikernel 0 on pcpu 0.
+AVISOR INFO: TIME: 652844216 vm id 0 vcpu id 3 pcpu id 0
+AVISOR INFO: TIME IRQ 81
+AVISOR INFO: vcpu repeat
+AVISOR INFO: vcpu:prio (0:5) run on unikernel 0 on pcpu 0.
+AVISOR INFO: TIME: 715412972 vm id 0 vcpu id 0 pcpu id 0
+main 24
+main 25
+main 26
+main 27
+main 28
+AVISOR INFO: TIME IRQ 82
+AVISOR INFO: vcpu:prio (1:5) run on unikernel 0 on pcpu 0.
+AVISOR INFO: TIME: 777941379 vm id 0 vcpu id 1 pcpu id 0
+task1! 24
+task1! 25
+task1! 26
+task1! 27
+task1! 28
+AVISOR INFO: TIME IRQ 83
+AVISOR INFO: vcpu:prio (2:5) run on unikernel 0 on pcpu 0.
+AVISOR INFO: TIME: 840517354 vm id 0 vcpu id 2 pcpu id 0
+task2! 24
+task2! 25
+task2! 26
+task2! 27
+task2! 28
+AVISOR INFO: TIME IRQ 84
+AVISOR INFO: unikernel 1 will run on pcpu 0.
+AVISOR INFO: vcpu repeat
+AVISOR INFO: vcpu:prio (0:5) run on unikernel 1 on pcpu 0.
+AVISOR INFO: TIME: 903085920 vm id 1 vcpu id 0 pcpu id 0
+main 24
+main 25
+main 26
+main 27
+main 28
+AVISOR INFO: TIME IRQ 85
+AVISOR INFO: vcpu:prio (1:5) run on unikernel 1 on pcpu 0.
+AVISOR INFO: TIME: 965651821 vm id 1 vcpu id 1 pcpu id 0
+task1! 24
+task1! 25
+task1! 26
+task1! 27
+task1! 28
+AVISOR INFO: TIME IRQ 86
+AVISOR INFO: vcpu:prio (2:5) run on unikernel 1 on pcpu 0.
+AVISOR INFO: TIME: 1028226549 vm id 1 vcpu id 2 pcpu id 0
+task2! 24
+task2! 25
+task2! 26
+task2! 27
+task2! 28
+AVISOR INFO: TIME IRQ 87
+AVISOR INFO: vcpu:prio (3:5) run on unikernel 1 on pcpu 0.
+AVISOR INFO: TIME: 1090796521 vm id 1 vcpu id 3 pcpu id 0
+task3! 24
+task3! 25
+task3! 26
+task3! 27
+task3! 28
+AVISOR INFO: TIME IRQ 88
+AVISOR INFO: unikernel 2 will run on pcpu 0.
+AVISOR INFO: vcpu repeat
+AVISOR INFO: vcpu:prio (0:5) run on unikernel 2 on pcpu 0.
+AVISOR INFO: TIME: 1153374818 vm id 2 vcpu id 0 pcpu id 0
+main 24
+main 25
+main 26
+main 27
+main 28
+AVISOR INFO: TIME IRQ 89
+AVISOR INFO: vcpu:prio (1:5) run on unikernel 2 on pcpu 0.
+AVISOR INFO: TIME: 1215937360 vm id 2 vcpu id 1 pcpu id 0
+task1! 24
+task1! 25
+task1! 26
+task1! 27
+task1! 28
+AVISOR INFO: TIME IRQ 90
+AVISOR INFO: vcpu:prio (2:5) run on unikernel 2 on pcpu 0.
+AVISOR INFO: TIME: 1278505717 vm id 2 vcpu id 2 pcpu id 0
+task2! 24
+task2! 25
+task2! 26
+task2! 27
+task2! 28
+AVISOR INFO: TIME IRQ 91
+AVISOR INFO: vcpu:prio (3:5) run on unikernel 2 on pcpu 0.
+AVISOR INFO: TIME: 1341076495 vm id 2 vcpu id 3 pcpu id 0
+task3! 24
+task3! 25
+task3! 26
+task3! 27
+task3! 28
+AVISOR INFO: TIME IRQ 92
+AVISOR INFO: unikernel 3 will run on pcpu 0.
+AVISOR INFO: vcpu repeat
+AVISOR INFO: vcpu:prio (0:5) run on unikernel 3 on pcpu 0.
+AVISOR INFO: TIME: 1403653736 vm id 3 vcpu id 0 pcpu id 0
+main 24
+main 25
+main 26
+main 27
+main 28
+AVISOR INFO: TIME IRQ 93
+AVISOR INFO: vcpu:prio (1:5) run on unikernel 3 on pcpu 0.
+AVISOR INFO: TIME: 1466216805 vm id 3 vcpu id 1 pcpu id 0
+task1! 24
+task1! 25
+task1! 26
+task1! 27
+task1! 28
+AVISOR INFO: TIME IRQ 94
+AVISOR INFO: vcpu:prio (2:5) run on unikernel 3 on pcpu 0.
+AVISOR INFO: TIME: 1528787270 vm id 3 vcpu id 2 pcpu id 0
+task2! 24
+task2! 25
+task2! 26
+task2! 27
+task2! 28
+AVISOR INFO: TIME IRQ 95
+AVISOR INFO: vcpu:prio (3:5) run on unikernel 3 on pcpu 0.
+AVISOR INFO: TIME: 1591364140 vm id 3 vcpu id 3 pcpu id 0
+task3! 24
+task3! 25
+task3! 26
+task3! 27
+task3! 28
+AVISOR INFO: TIME IRQ 96
+AVISOR INFO: unikernel 0 will run on pcpu 0.
+AVISOR INFO: vcpu:prio (3:5) run on unikernel 0 on pcpu 0.
+AVISOR INFO: TIME: 1653940331 vm id 0 vcpu id 3 pcpu id 0
+AVISOR INFO: TIME IRQ 97
+AVISOR INFO: vcpu repeat
+AVISOR INFO: vcpu:prio (0:5) run on unikernel 0 on pcpu 0.
+AVISOR INFO: TIME: 1716504771 vm id 0 vcpu id 0 pcpu id 0
+main 29
+main 30
+main 31
+main 32
+main 33
+AVISOR INFO: TIME IRQ 98
+AVISOR INFO: vcpu:prio (1:5) run on unikernel 0 on pcpu 0.
+AVISOR INFO: TIME: 1779071990 vm id 0 vcpu id 1 pcpu id 0
+task1! 29
+task1! 30
+task1! 31
+task1! 32
+task1! 33
+AVISOR INFO: TIME IRQ 99
+AVISOR INFO: vcpu:prio (2:5) run on unikernel 0 on pcpu 0.
+AVISOR INFO: TIME: 1841650531 vm id 0 vcpu id 2 pcpu id 0
+task2! 29
+task2! 30
+task2! 31
+task2! 32
+task2! 33
+AVISOR INFO: TIME IRQ 100
+AVISOR INFO: unikernel 1 will run on pcpu 0.
+AVISOR INFO: vcpu repeat
+AVISOR INFO: vcpu:prio (0:5) run on unikernel 1 on pcpu 0.
+AVISOR INFO: TIME: 1904203695 vm id 1 vcpu id 0 pcpu id 0
+main 29
+main 30
+main 31
+main 32
+main 33
+AVISOR INFO: TIME IRQ 101
+AVISOR INFO: vcpu:prio (1:5) run on unikernel 1 on pcpu 0.
+AVISOR INFO: TIME: 1966767435 vm id 1 vcpu id 1 pcpu id 0
+task1! 29
+task1! 30
+task1! 31
+task1! 32
+task1! 33
+AVISOR INFO: TIME IRQ 102
+AVISOR INFO: vcpu:prio (2:5) run on unikernel 1 on pcpu 0.
+AVISOR INFO: TIME: 2029331536 vm id 1 vcpu id 2 pcpu id 0
+task2! 29
+task2! 30
+task2! 31
+task2! 32
+task2! 33
+AVISOR INFO: TIME IRQ 103
+AVISOR INFO: vcpu:prio (3:5) run on unikernel 1 on pcpu 0.
+AVISOR INFO: TIME: 2091901740 vm id 1 vcpu id 3 pcpu id 0
+task3! 29
+task3! 30
+task3! 31
+task3! 32
+task3! 33
+AVISOR INFO: TIME IRQ 104
+AVISOR INFO: unikernel 2 will run on pcpu 0.
+AVISOR INFO: vcpu repeat
+AVISOR INFO: vcpu:prio (0:5) run on unikernel 2 on pcpu 0.
+AVISOR INFO: TIME: 2154490079 vm id 2 vcpu id 0 pcpu id 0
+main 29
+main 30
+main 31
+main 32
+main 33
+AVISOR INFO: TIME IRQ 105
+AVISOR INFO: vcpu:prio (1:5) run on unikernel 2 on pcpu 0.
+AVISOR INFO: TIME: 2217041407 vm id 2 vcpu id 1 pcpu id 0
+task1! 29
+task1! 30
+task1! 31
+task1! 32
+task1! 33
+AVISOR INFO: TIME IRQ 106
+AVISOR INFO: vcpu:prio (2:5) run on unikernel 2 on pcpu 0.
+AVISOR INFO: TIME: 2279609384 vm id 2 vcpu id 2 pcpu id 0
+task2! 29
+task2! 30
+task2! 31
+task2! 32
+task2! 33
+AVISOR INFO: TIME IRQ 107
+AVISOR INFO: vcpu:prio (3:5) run on unikernel 2 on pcpu 0.
+AVISOR INFO: TIME: 2342182500 vm id 2 vcpu id 3 pcpu id 0
+task3! 29
+task3! 30
+task3! 31
+task3! 32
+task3! 33
+AVISOR INFO: TIME IRQ 108
+AVISOR INFO: unikernel 3 will run on pcpu 0.
+AVISOR INFO: vcpu repeat
+AVISOR INFO: vcpu:prio (0:5) run on unikernel 3 on pcpu 0.
+AVISOR INFO: TIME: 2404762105 vm id 3 vcpu id 0 pcpu id 0
+main 29
+main 30
+main 31
+main 32
+main 33
+AVISOR INFO: TIME IRQ 109
+AVISOR INFO: vcpu:prio (1:5) run on unikernel 3 on pcpu 0.
+AVISOR INFO: TIME: 2467325928 vm id 3 vcpu id 1 pcpu id 0
+task1! 29
+task1! 30
+task1! 31
+task1! 32
+task1! 33
+AVISOR INFO: TIME IRQ 110
+AVISOR INFO: vcpu:prio (2:5) run on unikernel 3 on pcpu 0.
+AVISOR INFO: TIME: 2529893949 vm id 3 vcpu id 2 pcpu id 0
+task2! 29
+task2! 30
+task2! 31
+task2! 32
+task2! 33
+AVISOR INFO: TIME IRQ 111
+AVISOR INFO: vcpu:prio (3:5) run on unikernel 3 on pcpu 0.
+AVISOR INFO: TIME: 2592468621 vm id 3 vcpu id 3 pcpu id 0
+task3! 29
+task3! 30
+task3! 31
+task3! 32
+task3! 33
+AVISOR INFO: TIME IRQ 112
+AVISOR INFO: unikernel 0 will run on pcpu 0.
+AVISOR INFO: vcpu:prio (3:5) run on unikernel 0 on pcpu 0.
+AVISOR INFO: TIME: 2655040563 vm id 0 vcpu id 3 pcpu id 0
+AVISOR INFO: TIME IRQ 113
+AVISOR INFO: vcpu repeat
+AVISOR INFO: vcpu:prio (0:5) run on unikernel 0 on pcpu 0.
+AVISOR INFO: TIME: 2717608678 vm id 0 vcpu id 0 pcpu id 0
+main 34
+main 35
+main 36
+main 37
+main 38
+AVISOR INFO: TIME IRQ 114
+AVISOR INFO: vcpu:prio (1:5) run on unikernel 0 on pcpu 0.
+AVISOR INFO: TIME: 2780177601 vm id 0 vcpu id 1 pcpu id 0
+task1! 34
+task1! 35
+task1! 36
+task1! 37
+task1! 38
+AVISOR INFO: TIME IRQ 115
+AVISOR INFO: vcpu:prio (2:5) run on unikernel 0 on pcpu 0.
+AVISOR INFO: TIME: 2842754588 vm id 0 vcpu id 2 pcpu id 0
+task2! 34
+task2! 35
+task2! 36
+task2! 37
+task2! 38
+AVISOR INFO: TIME IRQ 116
+AVISOR INFO: unikernel 1 will run on pcpu 0.
+AVISOR INFO: vcpu repeat
+AVISOR INFO: vcpu:prio (0:5) run on unikernel 1 on pcpu 0.
+AVISOR INFO: TIME: 2905343428 vm id 1 vcpu id 0 pcpu id 0
+main 34
+main 35
+main 36
+main 37
+main 38
+AVISOR INFO: TIME IRQ 117
+AVISOR INFO: vcpu:prio (1:5) run on unikernel 1 on pcpu 0.
+AVISOR INFO: TIME: 2967888507 vm id 1 vcpu id 1 pcpu id 0
+task1! 34
+task1! 35
+task1! 36
+task1! 37
+task1! 38
+AVISOR INFO: TIME IRQ 118
+AVISOR INFO: vcpu:prio (2:5) run on unikernel 1 on pcpu 0.
+AVISOR INFO: TIME: 3030455623 vm id 1 vcpu id 2 pcpu id 0
+task2! 34
+task2! 35
+task2! 36
+task2! 37
+task2! 38
+AVISOR INFO: TIME IRQ 119
+AVISOR INFO: vcpu:prio (3:5) run on unikernel 1 on pcpu 0.
+AVISOR INFO: TIME: 3093027831 vm id 1 vcpu id 3 pcpu id 0
+task3! 34
+task3! 35
+task3! 36
+task3! 37
+task3! 38
+AVISOR INFO: TIME IRQ 120
+AVISOR INFO: unikernel 2 will run on pcpu 0.
+AVISOR INFO: vcpu repeat
+AVISOR INFO: vcpu:prio (0:5) run on unikernel 2 on pcpu 0.
+AVISOR INFO: TIME: 3155606024 vm id 2 vcpu id 0 pcpu id 0
+main 34
+main 35
+main 36
+main 37
+main 38
+AVISOR INFO: TIME IRQ 121
+AVISOR INFO: vcpu:prio (1:5) run on unikernel 2 on pcpu 0.
+AVISOR INFO: TIME: 3218168450 vm id 2 vcpu id 1 pcpu id 0
+task1! 34
+task1! 35
+task1! 36
+task1! 37
+task1! 38
+AVISOR INFO: TIME IRQ 122
+AVISOR INFO: vcpu:prio (2:5) run on unikernel 2 on pcpu 0.
+AVISOR INFO: TIME: 3280739718 vm id 2 vcpu id 2 pcpu id 0
+task2! 34
+task2! 35
+task2! 36
+task2! 37
+task2! 38
+AVISOR INFO: TIME IRQ 123
+AVISOR INFO: vcpu:prio (3:5) run on unikernel 2 on pcpu 0.
+AVISOR INFO: TIME: 3343310126 vm id 2 vcpu id 3 pcpu id 0
+task3! 34
+task3! 35
+task3! 36
+task3! 37
+task3! 38
+AVISOR INFO: TIME IRQ 124
+AVISOR INFO: unikernel 3 will run on pcpu 0.
+AVISOR INFO: vcpu repeat
+AVISOR INFO: vcpu:prio (0:5) run on unikernel 3 on pcpu 0.
+AVISOR INFO: TIME: 3405892540 vm id 3 vcpu id 0 pcpu id 0
+main 34
+main 35
+main 36
+main 37
+main 38
+AVISOR INFO: TIME IRQ 125
+AVISOR INFO: vcpu:prio (1:5) run on unikernel 3 on pcpu 0.
+AVISOR INFO: TIME: 3468451548 vm id 3 vcpu id 1 pcpu id 0
+task1! 34
+task1! 35
+task1! 36
+task1! 37
+task1! 38
+AVISOR INFO: TIME IRQ 126
+AVISOR INFO: vcpu:prio (2:5) run on unikernel 3 on pcpu 0.
+AVISOR INFO: TIME: 3531026552 vm id 3 vcpu id 2 pcpu id 0
+task2! 34
+task2! 35
+task2! 36
+task2! 37
+task2! 38
+AVISOR INFO: TIME IRQ 127
+AVISOR INFO: vcpu:prio (3:5) run on unikernel 3 on pcpu 0.
+AVISOR INFO: TIME: 3593576892 vm id 3 vcpu id 3 pcpu id 0
+task3! 34
+task3! 35
+task3! 36
+task3! 37
+task3! 38
+AVISOR INFO: TIME IRQ 128
+AVISOR INFO: unikernel 0 will run on pcpu 0.
+AVISOR INFO: vcpu:prio (3:5) run on unikernel 0 on pcpu 0.
+AVISOR INFO: TIME: 3656140271 vm id 0 vcpu id 3 pcpu id 0
+AVISOR INFO: TIME IRQ 129
+AVISOR INFO: vcpu repeat
+AVISOR INFO: vcpu:prio (0:5) run on unikernel 0 on pcpu 0.
+AVISOR INFO: TIME: 3718710211 vm id 0 vcpu id 0 pcpu id 0
+main 39
+main 40
+main 41
+main 42
+main 43
+AVISOR INFO: TIME IRQ 130
+AVISOR INFO: vcpu:prio (1:5) run on unikernel 0 on pcpu 0.
+AVISOR INFO: TIME: 3781277798 vm id 0 vcpu id 1 pcpu id 0
+task1! 39
+task1! 40
+task1! 41
+task1! 42
+task1! 43
+AVISOR INFO: TIME IRQ 131
+AVISOR INFO: vcpu:prio (2:5) run on unikernel 0 on pcpu 0.
+AVISOR INFO: TIME: 3843848927 vm id 0 vcpu id 2 pcpu id 0
+task2! 39
+task2! 40
+task2! 41
+task2! 42
+task2! 43
+AVISOR INFO: TIME IRQ 132
+AVISOR INFO: unikernel 1 will run on pcpu 0.
+AVISOR INFO: vcpu repeat
+AVISOR INFO: vcpu:prio (0:5) run on unikernel 1 on pcpu 0.
+AVISOR INFO: TIME: 3906430961 vm id 1 vcpu id 0 pcpu id 0
+main 39
+main 40
+main 41
+main 42
+main 43
+AVISOR INFO: TIME IRQ 133
+AVISOR INFO: vcpu:prio (1:5) run on unikernel 1 on pcpu 0.
+AVISOR INFO: TIME: 3968990688 vm id 1 vcpu id 1 pcpu id 0
+task1! 39
+task1! 40
+task1! 41
+task1! 42
+task1! 43
+AVISOR INFO: TIME IRQ 134
+AVISOR INFO: vcpu:prio (2:5) run on unikernel 1 on pcpu 0.
+AVISOR INFO: TIME: 4031557910 vm id 1 vcpu id 2 pcpu id 0
+task2! 39
+task2! 40
+task2! 41
+task2! 42
+task2! 43
+AVISOR INFO: TIME IRQ 135
+AVISOR INFO: vcpu:prio (3:5) run on unikernel 1 on pcpu 0.
+AVISOR INFO: TIME: 4094128729 vm id 1 vcpu id 3 pcpu id 0
+task3! 39
+task3! 40
+task3! 41
+task3! 42
+task3! 43
+AVISOR INFO: TIME IRQ 136
+AVISOR INFO: unikernel 2 will run on pcpu 0.
+AVISOR INFO: vcpu repeat
+AVISOR INFO: vcpu:prio (0:5) run on unikernel 2 on pcpu 0.
+AVISOR INFO: TIME: 4156710350 vm id 2 vcpu id 0 pcpu id 0
+main 39
+main 40
+main 41
+main 42
+main 43
+AVISOR INFO: TIME IRQ 137
+AVISOR INFO: vcpu:prio (1:5) run on unikernel 2 on pcpu 0.
+AVISOR INFO: TIME: 4219268452 vm id 2 vcpu id 1 pcpu id 0
+task1! 39
+task1! 40
+task1! 41
+task1! 42
+task1! 43
+AVISOR INFO: TIME IRQ 138
+AVISOR INFO: vcpu:prio (2:5) run on unikernel 2 on pcpu 0.
+AVISOR INFO: TIME: 4281837648 vm id 2 vcpu id 2 pcpu id 0
+task2! 39
+task2! 40
+task2! 41
+task2! 42
+task2! 43
+AVISOR INFO: TIME IRQ 139
+AVISOR INFO: vcpu:prio (3:5) run on unikernel 2 on pcpu 0.
+AVISOR INFO: TIME: 49443176 vm id 2 vcpu id 3 pcpu id 0
+task3! 39
+task3! 40
+task3! 41
+task3! 42
+task3! 43
+AVISOR INFO: TIME IRQ 140
+AVISOR INFO: unikernel 3 will run on pcpu 0.
+AVISOR INFO: vcpu repeat
+AVISOR INFO: vcpu:prio (0:5) run on unikernel 3 on pcpu 0.
+AVISOR INFO: TIME: 112026405 vm id 3 vcpu id 0 pcpu id 0
+main 39
+main 40
+main 41
+main 42
+main 43
+AVISOR INFO: TIME IRQ 141
+AVISOR INFO: vcpu:prio (1:5) run on unikernel 3 on pcpu 0.
+AVISOR INFO: TIME: 174587359 vm id 3 vcpu id 1 pcpu id 0
+task1! 39
+task1! 40
+task1! 41
+task1! 42
+task1! 43
+AVISOR INFO: TIME IRQ 142
+AVISOR INFO: vcpu:prio (2:5) run on unikernel 3 on pcpu 0.
+AVISOR INFO: TIME: 237162195 vm id 3 vcpu id 2 pcpu id 0
+task2! 39
+task2! 40
+task2! 41
+task2! 42
+task2! 43
+AVISOR INFO: TIME IRQ 143
+AVISOR INFO: vcpu:prio (3:5) run on unikernel 3 on pcpu 0.
+AVISOR INFO: TIME: 299729745 vm id 3 vcpu id 3 pcpu id 0
+task3! 39
+task3! 40
+task3! 41
+task3! 42
+task3! 43
+AVISOR INFO: TIME IRQ 144
+AVISOR INFO: unikernel 0 will run on pcpu 0.
+AVISOR INFO: vcpu:prio (3:5) run on unikernel 0 on pcpu 0.
+AVISOR INFO: TIME: 362304366 vm id 0 vcpu id 3 pcpu id 0
+AVISOR INFO: TIME IRQ 145
+AVISOR INFO: vcpu repeat
+AVISOR INFO: vcpu:prio (0:5) run on unikernel 0 on pcpu 0.
+AVISOR INFO: TIME: 424853002 vm id 0 vcpu id 0 pcpu id 0
+main 44
+main 45
+main 46
+main 47
+main 48
+AVISOR INFO: TIME IRQ 146
+AVISOR INFO: vcpu:prio (1:5) run on unikernel 0 on pcpu 0.
+AVISOR INFO: TIME: 487420829 vm id 0 vcpu id 1 pcpu id 0
+task1! 44
+task1! 45
+task1! 46
+task1! 47
+task1! 48
+AVISOR INFO: TIME IRQ 147
+AVISOR INFO: vcpu:prio (2:5) run on unikernel 0 on pcpu 0.
+AVISOR INFO: TIME: 549992365 vm id 0 vcpu id 2 pcpu id 0
+task2! 44
+task2! 45
+task2! 46
+task2! 47
+task2! 48
+AVISOR INFO: TIME IRQ 148
+AVISOR INFO: unikernel 1 will run on pcpu 0.
+AVISOR INFO: vcpu repeat
+AVISOR INFO: vcpu:prio (0:5) run on unikernel 1 on pcpu 0.
+AVISOR INFO: TIME: 612564565 vm id 1 vcpu id 0 pcpu id 0
+main 44
+main 45
+main 46
+main 47
+main 48
+AVISOR INFO: TIME IRQ 149
+AVISOR INFO: vcpu:prio (1:5) run on unikernel 1 on pcpu 0.
+AVISOR INFO: TIME: 675129355 vm id 1 vcpu id 1 pcpu id 0
+task1! 44
+task1! 45
+task1! 46
+task1! 47
+task1! 48
+AVISOR INFO: TIME IRQ 150
+AVISOR INFO: vcpu:prio (2:5) run on unikernel 1 on pcpu 0.
+AVISOR INFO: TIME: 737694067 vm id 1 vcpu id 2 pcpu id 0
+task2! 44
+task2! 45
+task2! 46
+task2! 47
+task2! 48
+AVISOR INFO: TIME IRQ 151
+AVISOR INFO: vcpu:prio (3:5) run on unikernel 1 on pcpu 0.
+AVISOR INFO: TIME: 800272173 vm id 1 vcpu id 3 pcpu id 0
+task3! 44
+task3! 45
+task3! 46
+task3! 47
+task3! 48
+AVISOR INFO: TIME IRQ 152
+AVISOR INFO: unikernel 2 will run on pcpu 0.
+AVISOR INFO: vcpu repeat
+AVISOR INFO: vcpu:prio (0:5) run on unikernel 2 on pcpu 0.
+AVISOR INFO: TIME: 862845720 vm id 2 vcpu id 0 pcpu id 0
+main 44
+main 45
+main 46
+main 47
+main 48
+AVISOR INFO: TIME IRQ 153
+AVISOR INFO: vcpu:prio (1:5) run on unikernel 2 on pcpu 0.
+AVISOR INFO: TIME: 925409437 vm id 2 vcpu id 1 pcpu id 0
+task1! 44
+task1! 45
+task1! 46
+task1! 47
+task1! 48
+AVISOR INFO: TIME IRQ 154
+AVISOR INFO: vcpu:prio (2:5) run on unikernel 2 on pcpu 0.
+AVISOR INFO: TIME: 987983033 vm id 2 vcpu id 2 pcpu id 0
+task2! 44
+task2! 45
+task2! 46
+task2! 47
+task2! 48
+AVISOR INFO: TIME IRQ 155
+AVISOR INFO: vcpu:prio (3:5) run on unikernel 2 on pcpu 0.
+AVISOR INFO: TIME: 1050551725 vm id 2 vcpu id 3 pcpu id 0
+task3! 44
+task3! 45
+task3! 46
+task3! 47
+task3! 48
+AVISOR INFO: TIME IRQ 156
+AVISOR INFO: unikernel 3 will run on pcpu 0.
+AVISOR INFO: vcpu repeat
+AVISOR INFO: vcpu:prio (0:5) run on unikernel 3 on pcpu 0.
+AVISOR INFO: TIME: 1113133187 vm id 3 vcpu id 0 pcpu id 0
+main 44
+main 45
+main 46
+main 47
+main 48
+AVISOR INFO: TIME IRQ 157
+AVISOR INFO: vcpu:prio (1:5) run on unikernel 3 on pcpu 0.
+AVISOR INFO: TIME: 1175699126 vm id 3 vcpu id 1 pcpu id 0
+task1! 44
+task1! 45
+task1! 46
+task1! 47
+task1! 48
+AVISOR INFO: TIME IRQ 158
+AVISOR INFO: vcpu:prio (2:5) run on unikernel 3 on pcpu 0.
+AVISOR INFO: TIME: 1238271900 vm id 3 vcpu id 2 pcpu id 0
+task2! 44
+task2! 45
+task2! 46
+task2! 47
+task2! 48
+AVISOR INFO: TIME IRQ 159
+AVISOR INFO: vcpu:prio (3:5) run on unikernel 3 on pcpu 0.
+AVISOR INFO: TIME: 1300837410 vm id 3 vcpu id 3 pcpu id 0
+task3! 44
+task3! 45
+task3! 46
+task3! 47
+task3! 48
+AVISOR INFO: TIME IRQ 160
+AVISOR INFO: unikernel 0 will run on pcpu 0.
+AVISOR INFO: vcpu:prio (3:5) run on unikernel 0 on pcpu 0.
+AVISOR INFO: TIME: 1363413048 vm id 0 vcpu id 3 pcpu id 0
+AVISOR INFO: TIME IRQ 161
+AVISOR INFO: vcpu repeat
+AVISOR INFO: vcpu:prio (0:5) run on unikernel 0 on pcpu 0.
+AVISOR INFO: TIME: 1426001822 vm id 0 vcpu id 0 pcpu id 0
+main 49
+main 50
+main 51
+main 52
+main 53
+AVISOR INFO: TIME IRQ 162
+AVISOR INFO: vcpu:prio (1:5) run on unikernel 0 on pcpu 0.
+AVISOR INFO: TIME: 1488549953 vm id 0 vcpu id 1 pcpu id 0
+task1! 49
+task1! 50
+task1! 51
+task1! 52
+task1! 53
+AVISOR INFO: TIME IRQ 163
+AVISOR INFO: vcpu:prio (2:5) run on unikernel 0 on pcpu 0.
+AVISOR INFO: TIME: 1551120675 vm id 0 vcpu id 2 pcpu id 0
+task2! 49
+task2! 50
+task2! 51
+task2! 52
+task2! 53
+AVISOR INFO: TIME IRQ 164
+AVISOR INFO: unikernel 1 will run on pcpu 0.
+AVISOR INFO: vcpu repeat
+AVISOR INFO: vcpu:prio (0:5) run on unikernel 1 on pcpu 0.
+AVISOR INFO: TIME: 1613700511 vm id 1 vcpu id 0 pcpu id 0
+main 49
+main 50
+main 51
+main 52
+main 53
+AVISOR INFO: TIME IRQ 165
+AVISOR INFO: vcpu:prio (1:5) run on unikernel 1 on pcpu 0.
+AVISOR INFO: TIME: 1676262681 vm id 1 vcpu id 1 pcpu id 0
+task1! 49
+task1! 50
+task1! 51
+task1! 52
+task1! 53
+AVISOR INFO: TIME IRQ 166
+AVISOR INFO: vcpu:prio (2:5) run on unikernel 1 on pcpu 0.
+AVISOR INFO: TIME: 1738834920 vm id 1 vcpu id 2 pcpu id 0
+task2! 49
+task2! 50
+task2! 51
+task2! 52
+task2! 53
+AVISOR INFO: TIME IRQ 167
+AVISOR INFO: vcpu:prio (3:5) run on unikernel 1 on pcpu 0.
+AVISOR INFO: TIME: 1801401531 vm id 1 vcpu id 3 pcpu id 0
+task3! 49
+task3! 50
+task3! 51
+task3! 52
+task3! 53
+AVISOR INFO: TIME IRQ 168
+AVISOR INFO: unikernel 2 will run on pcpu 0.
+AVISOR INFO: vcpu repeat
+AVISOR INFO: vcpu:prio (0:5) run on unikernel 2 on pcpu 0.
+AVISOR INFO: TIME: 1863984390 vm id 2 vcpu id 0 pcpu id 0
+main 49
+main 50
+main 51
+main 52
+main 53
+AVISOR INFO: TIME IRQ 169
+AVISOR INFO: vcpu:prio (1:5) run on unikernel 2 on pcpu 0.
+AVISOR INFO: TIME: 1926543966 vm id 2 vcpu id 1 pcpu id 0
+task1! 49
+task1! 50
+task1! 51
+task1! 52
+task1! 53
+AVISOR INFO: TIME IRQ 170
+AVISOR INFO: vcpu:prio (2:5) run on unikernel 2 on pcpu 0.
+AVISOR INFO: TIME: 1989115571 vm id 2 vcpu id 2 pcpu id 0
+task2! 49
+task2! 50
+task2! 51
+task2! 52
+task2! 53
+AVISOR INFO: TIME IRQ 171
+AVISOR INFO: vcpu:prio (3:5) run on unikernel 2 on pcpu 0.
+AVISOR INFO: TIME: 2051688191 vm id 2 vcpu id 3 pcpu id 0
+task3! 49
+task3! 50
+task3! 51
+task3! 52
+task3! 53
+AVISOR INFO: TIME IRQ 172
+AVISOR INFO: unikernel 3 will run on pcpu 0.
+AVISOR INFO: vcpu repeat
+AVISOR INFO: vcpu:prio (0:5) run on unikernel 3 on pcpu 0.
+AVISOR INFO: TIME: 2114230411 vm id 3 vcpu id 0 pcpu id 0
+main 49
+main 50
+main 51
+main 52
+main 53
+AVISOR INFO: TIME IRQ 173
+AVISOR INFO: vcpu:prio (1:5) run on unikernel 3 on pcpu 0.
+AVISOR INFO: TIME: 2176794859 vm id 3 vcpu id 1 pcpu id 0
+task1! 49
+task1! 50
+task1! 51
+task1! 52
+task1! 53
+AVISOR INFO: TIME IRQ 174
+AVISOR INFO: vcpu:prio (2:5) run on unikernel 3 on pcpu 0.
+AVISOR INFO: TIME: 2239363710 vm id 3 vcpu id 2 pcpu id 0
+task2! 49
+task2! 50
+task2! 51
+task2! 52
+task2! 53
+AVISOR INFO: TIME IRQ 175
+AVISOR INFO: vcpu:prio (3:5) run on unikernel 3 on pcpu 0.
+AVISOR INFO: TIME: 2301931550 vm id 3 vcpu id 3 pcpu id 0
+task3! 49
+task3! 50
+task3! 51
+task3! 52
+task3! 53
+AVISOR INFO: TIME IRQ 176
+AVISOR INFO: unikernel 0 will run on pcpu 0.
+AVISOR INFO: vcpu:prio (3:5) run on unikernel 0 on pcpu 0.
+AVISOR INFO: TIME: 2364531630 vm id 0 vcpu id 3 pcpu id 0
+AVISOR INFO: TIME IRQ 177
+AVISOR INFO: vcpu repeat
+AVISOR INFO: vcpu:prio (0:5) run on unikernel 0 on pcpu 0.
+AVISOR INFO: TIME: 2427072201 vm id 0 vcpu id 0 pcpu id 0
+main 54
+main 55
+main 56
+main 57
+main 58
+AVISOR INFO: TIME IRQ 178
+AVISOR INFO: vcpu:prio (1:5) run on unikernel 0 on pcpu 0.
+AVISOR INFO: TIME: 2489639551 vm id 0 vcpu id 1 pcpu id 0
+task1! 54
+task1! 55
+task1! 56
+task1! 57
+task1! 58
+AVISOR INFO: TIME IRQ 179
+AVISOR INFO: vcpu:prio (2:5) run on unikernel 0 on pcpu 0.
+AVISOR INFO: TIME: 2552209420 vm id 0 vcpu id 2 pcpu id 0
+task2! 54
+task2! 55
+task2! 56
+task2! 57
+task2! 58
+AVISOR INFO: TIME IRQ 180
+AVISOR INFO: unikernel 1 will run on pcpu 0.
+AVISOR INFO: vcpu repeat
+AVISOR INFO: vcpu:prio (0:5) run on unikernel 1 on pcpu 0.
+AVISOR INFO: TIME: 2614782277 vm id 1 vcpu id 0 pcpu id 0
+main 54
+main 55
+main 56
+main 57
+main 58
+AVISOR INFO: TIME IRQ 181
+AVISOR INFO: vcpu:prio (1:5) run on unikernel 1 on pcpu 0.
+AVISOR INFO: TIME: 2677347585 vm id 1 vcpu id 1 pcpu id 0
+task1! 54
+task1! 55
+task1! 56
+task1! 57
+task1! 58
+AVISOR INFO: TIME IRQ 182
+AVISOR INFO: vcpu:prio (2:5) run on unikernel 1 on pcpu 0.
+AVISOR INFO: TIME: 2739914542 vm id 1 vcpu id 2 pcpu id 0
+task2! 54
+task2! 55
+task2! 56
+task2! 57
+task2! 58
+AVISOR INFO: TIME IRQ 183
+AVISOR INFO: vcpu:prio (3:5) run on unikernel 1 on pcpu 0.
+AVISOR INFO: TIME: 2802485062 vm id 1 vcpu id 3 pcpu id 0
+task3! 54
+task3! 55
+task3! 56
+task3! 57
+task3! 58
+AVISOR INFO: TIME IRQ 184
+AVISOR INFO: unikernel 2 will run on pcpu 0.
+AVISOR INFO: vcpu repeat
+AVISOR INFO: vcpu:prio (0:5) run on unikernel 2 on pcpu 0.
+AVISOR INFO: TIME: 2865057598 vm id 2 vcpu id 0 pcpu id 0
+main 54
+main 55
+main 56
+main 57
+main 58
+AVISOR INFO: TIME IRQ 185
+AVISOR INFO: vcpu:prio (1:5) run on unikernel 2 on pcpu 0.
+AVISOR INFO: TIME: 2927569010 vm id 2 vcpu id 1 pcpu id 0
+task1! 54
+task1! 55
+task1! 56
+task1! 57
+task1! 58
+AVISOR INFO: TIME IRQ 186
+AVISOR INFO: vcpu:prio (2:5) run on unikernel 2 on pcpu 0.
+AVISOR INFO: TIME: 2990140624 vm id 2 vcpu id 2 pcpu id 0
+task2! 54
+task2! 55
+task2! 56
+task2! 57
+task2! 58
+AVISOR INFO: TIME IRQ 187
+AVISOR INFO: vcpu:prio (3:5) run on unikernel 2 on pcpu 0.
+AVISOR INFO: TIME: 3052708841 vm id 2 vcpu id 3 pcpu id 0
+task3! 54
+task3! 55
+task3! 56
+task3! 57
+task3! 58
+AVISOR INFO: TIME IRQ 188
+AVISOR INFO: unikernel 3 will run on pcpu 0.
+AVISOR INFO: vcpu repeat
+AVISOR INFO: vcpu:prio (0:5) run on unikernel 3 on pcpu 0.
+AVISOR INFO: TIME: 3115295995 vm id 3 vcpu id 0 pcpu id 0
+main 54
+main 55
+main 56
+main 57
+main 58
+AVISOR INFO: TIME IRQ 189
+AVISOR INFO: vcpu:prio (1:5) run on unikernel 3 on pcpu 0.
+AVISOR INFO: TIME: 3177856044 vm id 3 vcpu id 1 pcpu id 0
+task1! 54
+task1! 55
+task1! 56
+task1! 57
+task1! 58
+AVISOR INFO: TIME IRQ 190
+AVISOR INFO: vcpu:prio (2:5) run on unikernel 3 on pcpu 0.
+AVISOR INFO: TIME: 3240427606 vm id 3 vcpu id 2 pcpu id 0
+task2! 54
+task2! 55
+task2! 56
+task2! 57
+task2! 58
+AVISOR INFO: TIME IRQ 191
+AVISOR INFO: vcpu:prio (3:5) run on unikernel 3 on pcpu 0.
+AVISOR INFO: TIME: 3303011831 vm id 3 vcpu id 3 pcpu id 0
+task3! 54
+task3! 55
+task3! 56
+task3! 57
+task3! 58
+AVISOR INFO: TIME IRQ 192
+AVISOR INFO: unikernel 0 will run on pcpu 0.
+AVISOR INFO: vcpu:prio (3:5) run on unikernel 0 on pcpu 0.
+AVISOR INFO: TIME: 3365555175 vm id 0 vcpu id 3 pcpu id 0
+AVISOR INFO: TIME IRQ 193
+AVISOR INFO: vcpu repeat
+AVISOR INFO: vcpu:prio (0:5) run on unikernel 0 on pcpu 0.
+AVISOR INFO: TIME: 3428124254 vm id 0 vcpu id 0 pcpu id 0
+main 59
+main 60
+main 61
+main 62
+main 63
+AVISOR INFO: TIME IRQ 194
+AVISOR INFO: vcpu:prio (1:5) run on unikernel 0 on pcpu 0.
+AVISOR INFO: TIME: 3490685439 vm id 0 vcpu id 1 pcpu id 0
+task1! 59
+task1! 60
+task1! 61
+task1! 62
+task1! 63
+AVISOR INFO: TIME IRQ 195
+AVISOR INFO: vcpu:prio (2:5) run on unikernel 0 on pcpu 0.
+AVISOR INFO: TIME: 3553257459 vm id 0 vcpu id 2 pcpu id 0
+task2! 59
+task2! 60
+task2! 61
+task2! 62
+task2! 63
+AVISOR INFO: TIME IRQ 196
+AVISOR INFO: unikernel 1 will run on pcpu 0.
+AVISOR INFO: vcpu repeat
+AVISOR INFO: vcpu:prio (0:5) run on unikernel 1 on pcpu 0.
+AVISOR INFO: TIME: 3615831561 vm id 1 vcpu id 0 pcpu id 0
+main 59
+main 60
+main 61
+main 62
+main 63
+AVISOR INFO: TIME IRQ 197
+AVISOR INFO: vcpu:prio (1:5) run on unikernel 1 on pcpu 0.
+AVISOR INFO: TIME: 3678396082 vm id 1 vcpu id 1 pcpu id 0
+task1! 59
+task1! 60
+task1! 61
+task1! 62
+task1! 63
+AVISOR INFO: TIME IRQ 198
+AVISOR INFO: vcpu:prio (2:5) run on unikernel 1 on pcpu 0.
+AVISOR INFO: TIME: 3740965765 vm id 1 vcpu id 2 pcpu id 0
+task2! 59
+task2! 60
+task2! 61
+task2! 62
+task2! 63
+AVISOR INFO: TIME IRQ 199
+AVISOR INFO: vcpu:prio (3:5) run on unikernel 1 on pcpu 0.
+AVISOR INFO: TIME: 3803545988 vm id 1 vcpu id 3 pcpu id 0
+task3! 59
+task3! 60
+task3! 61
+task3! 62
+task3! 63
+AVISOR INFO: TIME IRQ 200
+AVISOR INFO: unikernel 2 will run on pcpu 0.
+AVISOR INFO: vcpu repeat
+AVISOR INFO: vcpu:prio (0:5) run on unikernel 2 on pcpu 0.
+AVISOR INFO: TIME: 3866118404 vm id 2 vcpu id 0 pcpu id 0
+main 59
+main 60
+main 61
+main 62
+main 63
+AVISOR INFO: TIME IRQ 201
+AVISOR INFO: vcpu:prio (1:5) run on unikernel 2 on pcpu 0.
+AVISOR INFO: TIME: 3928703297 vm id 2 vcpu id 1 pcpu id 0
+task1! 59
+task1! 60
+task1! 61
+task1! 62
+task1! 63
+AVISOR INFO: TIME IRQ 202
+AVISOR INFO: vcpu:prio (2:5) run on unikernel 2 on pcpu 0.
+AVISOR INFO: TIME: 3991252756 vm id 2 vcpu id 2 pcpu id 0
+task2! 59
+task2! 60
+task2! 61
+task2! 62
+task2! 63
+AVISOR INFO: TIME IRQ 203
+AVISOR INFO: vcpu:prio (3:5) run on unikernel 2 on pcpu 0.
+AVISOR INFO: TIME: 4053820284 vm id 2 vcpu id 3 pcpu id 0
+task3! 59
+task3! 60
+task3! 61
+task3! 62
+task3! 63
+AVISOR INFO: TIME IRQ 204
+AVISOR INFO: unikernel 3 will run on pcpu 0.
+AVISOR INFO: vcpu repeat
+AVISOR INFO: vcpu:prio (0:5) run on unikernel 3 on pcpu 0.
+AVISOR INFO: TIME: 4116398227 vm id 3 vcpu id 0 pcpu id 0
+main 59
+main 60
+main 61
+main 62
+main 63
+AVISOR INFO: TIME IRQ 205
+AVISOR INFO: vcpu:prio (1:5) run on unikernel 3 on pcpu 0.
+AVISOR INFO: TIME: 4178961732 vm id 3 vcpu id 1 pcpu id 0
+task1! 59
+task1! 60
+task1! 61
+task1! 62
+task1! 63
+AVISOR INFO: TIME IRQ 206
+AVISOR INFO: vcpu:prio (2:5) run on unikernel 3 on pcpu 0.
+AVISOR INFO: TIME: 4241541057 vm id 3 vcpu id 2 pcpu id 0
+task2! 59
+task2! 60
+task2! 61
+task2! 62
+task2! 63
+AVISOR INFO: TIME IRQ 207
+AVISOR INFO: vcpu:prio (3:5) run on unikernel 3 on pcpu 0.
+AVISOR INFO: TIME: 9136299 vm id 3 vcpu id 3 pcpu id 0
+task3! 59
+task3! 60
+task3! 61
+task3! 62
+task3! 63
+AVISOR INFO: TIME IRQ 208
+AVISOR INFO: unikernel 0 will run on pcpu 0.
+AVISOR INFO: vcpu:prio (3:5) run on unikernel 0 on pcpu 0.
+AVISOR INFO: TIME: 71711460 vm id 0 vcpu id 3 pcpu id 0
+AVISOR INFO: TIME IRQ 209
+AVISOR INFO: vcpu repeat
+AVISOR INFO: vcpu:prio (0:5) run on unikernel 0 on pcpu 0.
+AVISOR INFO: TIME: 134281343 vm id 0 vcpu id 0 pcpu id 0
+main 64
+main 65
+main 66
+main 67
+main 68
+AVISOR INFO: TIME IRQ 210
+AVISOR INFO: vcpu:prio (1:5) run on unikernel 0 on pcpu 0.
+AVISOR INFO: TIME: 196847622 vm id 0 vcpu id 1 pcpu id 0
+task1! 64
+task1! 65
+task1! 66
+task1! 67
+task1! 68
+AVISOR INFO: TIME IRQ 211
+AVISOR INFO: vcpu:prio (2:5) run on unikernel 0 on pcpu 0.
+AVISOR INFO: TIME: 259418080 vm id 0 vcpu id 2 pcpu id 0
+task2! 64
+task2! 65
+task2! 66
+task2! 67
+task2! 68
+AVISOR INFO: TIME IRQ 212
+AVISOR INFO: unikernel 1 will run on pcpu 0.
+AVISOR INFO: vcpu repeat
+AVISOR INFO: vcpu:prio (0:5) run on unikernel 1 on pcpu 0.
+AVISOR INFO: TIME: 321995592 vm id 1 vcpu id 0 pcpu id 0
+main 64
+main 65
+main 66
+main 67
+main 68
+AVISOR INFO: TIME IRQ 213
+AVISOR INFO: vcpu:prio (1:5) run on unikernel 1 on pcpu 0.
+AVISOR INFO: TIME: 384554913 vm id 1 vcpu id 1 pcpu id 0
+task1! 64
+task1! 65
+task1! 66
+task1! 67
+task1! 68
+AVISOR INFO: TIME IRQ 214
+AVISOR INFO: vcpu:prio (2:5) run on unikernel 1 on pcpu 0.
+AVISOR INFO: TIME: 447129766 vm id 1 vcpu id 2 pcpu id 0
+task2! 64
+task2! 65
+task2! 66
+task2! 67
+task2! 68
+AVISOR INFO: TIME IRQ 215
+AVISOR INFO: vcpu:prio (3:5) run on unikernel 1 on pcpu 0.
+AVISOR INFO: TIME: 509697550 vm id 1 vcpu id 3 pcpu id 0
+task3! 64
+task3! 65
+task3! 66
+task3! 67
+task3! 68
+AVISOR INFO: TIME IRQ 216
+AVISOR INFO: unikernel 2 will run on pcpu 0.
+AVISOR INFO: vcpu repeat
+AVISOR INFO: vcpu:prio (0:5) run on unikernel 2 on pcpu 0.
+AVISOR INFO: TIME: 572278044 vm id 2 vcpu id 0 pcpu id 0
+main 64
+main 65
+main 66
+main 67
+main 68
+AVISOR INFO: TIME IRQ 217
+AVISOR INFO: vcpu:prio (1:5) run on unikernel 2 on pcpu 0.
+AVISOR INFO: TIME: 634839590 vm id 2 vcpu id 1 pcpu id 0
+task1! 64
+task1! 65
+task1! 66
+task1! 67
+task1! 68
+AVISOR INFO: TIME IRQ 218
+AVISOR INFO: vcpu:prio (2:5) run on unikernel 2 on pcpu 0.
+AVISOR INFO: TIME: 697409714 vm id 2 vcpu id 2 pcpu id 0
+task2! 64
+task2! 65
+task2! 66
+task2! 67
+task2! 68
+AVISOR INFO: TIME IRQ 219
+AVISOR INFO: vcpu:prio (3:5) run on unikernel 2 on pcpu 0.
+AVISOR INFO: TIME: 759979636 vm id 2 vcpu id 3 pcpu id 0
+task3! 64
+task3! 65
+task3! 66
+task3! 67
+task3! 68
+AVISOR INFO: TIME IRQ 220
+AVISOR INFO: unikernel 3 will run on pcpu 0.
+AVISOR INFO: vcpu repeat
+AVISOR INFO: vcpu:prio (0:5) run on unikernel 3 on pcpu 0.
+AVISOR INFO: TIME: 822565172 vm id 3 vcpu id 0 pcpu id 0
+main 64
+main 65
+main 66
+main 67
+main 68
+AVISOR INFO: TIME IRQ 221
+AVISOR INFO: vcpu:prio (1:5) run on unikernel 3 on pcpu 0.
+AVISOR INFO: TIME: 885119860 vm id 3 vcpu id 1 pcpu id 0
+task1! 64
+task1! 65
+task1! 66
+task1! 67
+task1! 68
+AVISOR INFO: TIME IRQ 222
+AVISOR INFO: vcpu:prio (2:5) run on unikernel 3 on pcpu 0.
+AVISOR INFO: TIME: 947688565 vm id 3 vcpu id 2 pcpu id 0
+task2! 64
+task2! 65
+task2! 66
+task2! 67
+task2! 68
+AVISOR INFO: TIME IRQ 223
+AVISOR INFO: vcpu:prio (3:5) run on unikernel 3 on pcpu 0.
+AVISOR INFO: TIME: 1010258178 vm id 3 vcpu id 3 pcpu id 0
+task3! 64
+task3! 65
+task3! 66
+task3! 67
+task3! 68
+AVISOR INFO: TIME IRQ 224
+AVISOR INFO: unikernel 0 will run on pcpu 0.
+AVISOR INFO: vcpu:prio (3:5) run on unikernel 0 on pcpu 0.
+AVISOR INFO: TIME: 1072840140 vm id 0 vcpu id 3 pcpu id 0
+AVISOR INFO: TIME IRQ 225
+AVISOR INFO: vcpu repeat
+AVISOR INFO: vcpu:prio (0:5) run on unikernel 0 on pcpu 0.
+AVISOR INFO: TIME: 1135404933 vm id 0 vcpu id 0 pcpu id 0
+main 69
+main 70
+main 71
+main 72
+main 73
+AVISOR INFO: TIME IRQ 226
+AVISOR INFO: vcpu:prio (1:5) run on unikernel 0 on pcpu 0.
+AVISOR INFO: TIME: 1197972865 vm id 0 vcpu id 1 pcpu id 0
+task1! 69
+task1! 70
+task1! 71
+task1! 72
+AVISOR INFO: TIME IRQ 227
+AVISOR INFO: vcpu:prio (2:5) run on unikernel 0 on pcpu 0.
+AVISOR INFO: TIME: 1260541952 vm id 0 vcpu id 2 pcpu id 0
+task2! 69
+task2! 70
+task2! 71
+task2! 72
+task2! 73
+AVISOR INFO: TIME IRQ 228
+AVISOR INFO: unikernel 1 will run on pcpu 0.
+AVISOR INFO: vcpu repeat
+AVISOR INFO: vcpu:prio (0:5) run on unikernel 1 on pcpu 0.
+AVISOR INFO: TIME: 1323118937 vm id 1 vcpu id 0 pcpu id 0
+main 69
+main 70
+main 71
+main 72
+main 73
+AVISOR INFO: TIME IRQ 229
+AVISOR INFO: vcpu:prio (1:5) run on unikernel 1 on pcpu 0.
+AVISOR INFO: TIME: 1385684260 vm id 1 vcpu id 1 pcpu id 0
+task1! 69
+task1! 70
+task1! 71
+task1! 72
+task1! 73
+AVISOR INFO: TIME IRQ 230
+AVISOR INFO: vcpu:prio (2:5) run on unikernel 1 on pcpu 0.
+AVISOR INFO: TIME: 1448256668 vm id 1 vcpu id 2 pcpu id 0
+task2! 69
+task2! 70
+task2! 71
+task2! 72
+task2! 73
+AVISOR INFO: TIME IRQ 231
+AVISOR INFO: vcpu:prio (3:5) run on unikernel 1 on pcpu 0.
+AVISOR INFO: TIME: 1510826369 vm id 1 vcpu id 3 pcpu id 0
+task3! 69
+task3! 70
+task3! 71
+task3! 72
+task3! 73
+AVISOR INFO: TIME IRQ 232
+AVISOR INFO: unikernel 2 will run on pcpu 0.
+AVISOR INFO: vcpu repeat
+AVISOR INFO: vcpu:prio (0:5) run on unikernel 2 on pcpu 0.
+AVISOR INFO: TIME: 1573404143 vm id 2 vcpu id 0 pcpu id 0
+main 69
+main 70
+main 71
+main 72
+main 73
+AVISOR INFO: TIME IRQ 233
+AVISOR INFO: vcpu:prio (1:5) run on unikernel 2 on pcpu 0.
+AVISOR INFO: TIME: 1635964638 vm id 2 vcpu id 1 pcpu id 0
+task1! 69
+task1! 70
+task1! 71
+task1! 72
+task1! 73
+AVISOR INFO: TIME IRQ 234
+AVISOR INFO: vcpu:prio (2:5) run on unikernel 2 on pcpu 0.
+AVISOR INFO: TIME: 1698539560 vm id 2 vcpu id 2 pcpu id 0
+task2! 69
+task2! 70
+task2! 71
+task2! 72
+task2! 73
+AVISOR INFO: TIME IRQ 235
+AVISOR INFO: vcpu:prio (3:5) run on unikernel 2 on pcpu 0.
+AVISOR INFO: TIME: 1761102872 vm id 2 vcpu id 3 pcpu id 0
+task3! 69
+task3! 70
+task3! 71
+task3! 72
+task3! 73
+AVISOR INFO: TIME IRQ 236
+AVISOR INFO: unikernel 3 will run on pcpu 0.
+AVISOR INFO: vcpu repeat
+AVISOR INFO: vcpu:prio (0:5) run on unikernel 3 on pcpu 0.
+AVISOR INFO: TIME: 1823642158 vm id 3 vcpu id 0 pcpu id 0
+main 69
+main 70
+main 71
+main 72
+main 73
+AVISOR INFO: TIME IRQ 237
+AVISOR INFO: vcpu:prio (1:5) run on unikernel 3 on pcpu 0.
+AVISOR INFO: TIME: 1886205025 vm id 3 vcpu id 1 pcpu id 0
+task1! 69
+task1! 70
+task1! 71
+task1! 72
+task1! 73
+AVISOR INFO: TIME IRQ 238
+AVISOR INFO: vcpu:prio (2:5) run on unikernel 3 on pcpu 0.
+AVISOR INFO: TIME: 1948776219 vm id 3 vcpu id 2 pcpu id 0
+task2! 69
+task2! 70
+task2! 71
+task2! 72
+task2! 73
+AVISOR INFO: TIME IRQ 239
+AVISOR INFO: vcpu:prio (3:5) run on unikernel 3 on pcpu 0.
+AVISOR INFO: TIME: 2011344810 vm id 3 vcpu id 3 pcpu id 0
+task3! 69
+task3! 70
+task3! 71
+task3! 72
+task3! 73
+AVISOR INFO: TIME IRQ 240
+AVISOR INFO: unikernel 0 will run on pcpu 0.
+AVISOR INFO: vcpu:prio (3:5) run on unikernel 0 on pcpu 0.
+AVISOR INFO: TIME: 2073921649 vm id 0 vcpu id 3 pcpu id 0
+AVISOR INFO: TIME IRQ 241
+AVISOR INFO: vcpu repeat
+AVISOR INFO: vcpu:prio (0:5) run on unikernel 0 on pcpu 0.
+AVISOR INFO: TIME: 2136514573 vm id 0 vcpu id 0 pcpu id 0
+main 74
+main 75
+main 76
+main 77
+main 78
+AVISOR INFO: TIME IRQ 242
+AVISOR INFO: vcpu:prio (1:5) run on unikernel 0 on pcpu 0.
+AVISOR INFO: TIME: 2199054983 vm id 0 vcpu id 1 pcpu id 0
+task1! 73
+task1! 74
+task1! 75
+task1! 76
+task1! 77
+AVISOR INFO: TIME IRQ 243
+AVISOR INFO: vcpu:prio (2:5) run on unikernel 0 on pcpu 0.
+AVISOR INFO: TIME: 2261624977 vm id 0 vcpu id 2 pcpu id 0
+task2! 74
+task2! 75
+task2! 76
+task2! 77
+task2! 78
+AVISOR INFO: TIME IRQ 244
+AVISOR INFO: unikernel 1 will run on pcpu 0.
+AVISOR INFO: vcpu repeat
+AVISOR INFO: vcpu:prio (0:5) run on unikernel 1 on pcpu 0.
+AVISOR INFO: TIME: 2324200548 vm id 1 vcpu id 0 pcpu id 0
+main 74
+main 75
+main 76
+main 77
+main 78
+AVISOR INFO: TIME IRQ 245
+AVISOR INFO: vcpu:prio (1:5) run on unikernel 1 on pcpu 0.
+AVISOR INFO: TIME: 2386774084 vm id 1 vcpu id 1 pcpu id 0
+task1! 74
+task1! 75
+task1! 76
+task1! 77
+task1! 78
+AVISOR INFO: TIME IRQ 246
+AVISOR INFO: vcpu:prio (2:5) run on unikernel 1 on pcpu 0.
+AVISOR INFO: TIME: 2449366309 vm id 1 vcpu id 2 pcpu id 0
+task2! 74
+task2! 75
+task2! 76
+task2! 77
+task2! 78
+AVISOR INFO: TIME IRQ 247
+AVISOR INFO: vcpu:prio (3:5) run on unikernel 1 on pcpu 0.
+AVISOR INFO: TIME: 2511905467 vm id 1 vcpu id 3 pcpu id 0
+task3! 74
+task3! 75
+task3! 76
+task3! 77
+task3! 78
+AVISOR INFO: TIME IRQ 248
+AVISOR INFO: unikernel 2 will run on pcpu 0.
+AVISOR INFO: vcpu repeat
+AVISOR INFO: vcpu:prio (0:5) run on unikernel 2 on pcpu 0.
+AVISOR INFO: TIME: 2574479726 vm id 2 vcpu id 0 pcpu id 0
+main 74
+main 75
+main 76
+main 77
+main 78
+AVISOR INFO: TIME IRQ 249
+AVISOR INFO: vcpu:prio (1:5) run on unikernel 2 on pcpu 0.
+AVISOR INFO: TIME: 2637059198 vm id 2 vcpu id 1 pcpu id 0
+task1! 74
+task1! 75
+task1! 76
+task1! 77
+task1! 78
+AVISOR INFO: TIME IRQ 250
+AVISOR INFO: vcpu:prio (2:5) run on unikernel 2 on pcpu 0.
+AVISOR INFO: TIME: 2699633870 vm id 2 vcpu id 2 pcpu id 0
+task2! 74
+task2! 75
+task2! 76
+task2! 77
+task2! 78
+AVISOR INFO: TIME IRQ 251
+AVISOR INFO: vcpu:prio (3:5) run on unikernel 2 on pcpu 0.
+AVISOR INFO: TIME: 2762229072 vm id 2 vcpu id 3 pcpu id 0
+task3! 74
+task3! 75
+task3! 76
+task3! 77
+task3! 78
+AVISOR INFO: TIME IRQ 252
+AVISOR INFO: unikernel 3 will run on pcpu 0.
+AVISOR INFO: vcpu repeat
+AVISOR INFO: vcpu:prio (0:5) run on unikernel 3 on pcpu 0.
+AVISOR INFO: TIME: 2824777827 vm id 3 vcpu id 0 pcpu id 0
+main 74
+main 75
+main 76
+main 77
+main 78
+AVISOR INFO: TIME IRQ 253
+AVISOR INFO: vcpu:prio (1:5) run on unikernel 3 on pcpu 0.
+AVISOR INFO: TIME: 2887336550 vm id 3 vcpu id 1 pcpu id 0
+task1! 74
+task1! 75
+task1! 76
+task1! 77
+task1! 78
+AVISOR INFO: TIME IRQ 254
+AVISOR INFO: vcpu:prio (2:5) run on unikernel 3 on pcpu 0.
+AVISOR INFO: TIME: 2949903472 vm id 3 vcpu id 2 pcpu id 0
+task2! 74
+task2! 75
+task2! 76
+task2! 77
+task2! 78
+AVISOR INFO: TIME IRQ 255
+AVISOR INFO: vcpu:prio (3:5) run on unikernel 3 on pcpu 0.
+AVISOR INFO: TIME: 3012474345 vm id 3 vcpu id 3 pcpu id 0
+task3! 74
+task3! 75
+task3! 76
+task3! 77
+task3! 78
+AVISOR INFO: TIME IRQ 256
+AVISOR INFO: unikernel 0 will run on pcpu 0.
+AVISOR INFO: vcpu:prio (3:5) run on unikernel 0 on pcpu 0.
+AVISOR INFO: TIME: 3075052023 vm id 0 vcpu id 3 pcpu id 0
+AVISOR INFO: TIME IRQ 257
+AVISOR INFO: vcpu repeat
+AVISOR INFO: vcpu:prio (0:5) run on unikernel 0 on pcpu 0.
+AVISOR INFO: TIME: 3137616662 vm id 0 vcpu id 0 pcpu id 0
+main 79
+main 80
+main 81
+QEMU: Terminated
+

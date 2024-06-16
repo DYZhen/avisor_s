@@ -1,0 +1,7925 @@
+mkdir -p /home/fadedlove/avisor/build/arch/aarch64
+mkdir -p /home/fadedlove/avisor/build/core
+mkdir -p /home/fadedlove/avisor/build/lib
+mkdir -p /home/fadedlove/avisor/build/plat/qemu-aarch64-virt
+Creating dependency	 src/main.ld
+Creating dependency	 src/arch/aarch64/vgicv2.c
+Creating dependency	 src/arch/aarch64/gicv2.c
+Creating dependency	 src/config.c
+Creating dependency	 src/main.c
+Creating dependency	 src/plat/qemu-aarch64-virt/platform.c
+Creating dependency	 src/lib/string.c
+Creating dependency	 src/lib/bitmap.c
+Creating dependency	 src/lib/printk.c
+Creating dependency	 src/core/mmu.c
+Creating dependency	 src/core/objpool.c
+Creating dependency	 src/core/sched.c
+Creating dependency	 src/core/io.c
+Creating dependency	 src/core/cpu.c
+Creating dependency	 src/core/interrupts.c
+Creating dependency	 src/core/vmm.c
+Creating dependency	 src/core/rq.c
+Creating dependency	 src/core/mem.c
+Creating dependency	 src/core/lcm.c
+Creating dependency	 src/core/console.c
+Creating dependency	 src/core/vm.c
+Creating dependency	 src/arch/aarch64/arch_vm.c
+Creating dependency	 src/arch/aarch64/uart.c
+Creating dependency	 src/arch/aarch64/arch_vmm.c
+Creating dependency	 src/arch/aarch64/hypercall.c
+Creating dependency	 src/arch/aarch64/timer.c
+Creating dependency	 src/arch/aarch64/arch_platform.c
+Creating dependency	 src/arch/aarch64/aborts.c
+Creating dependency	 src/arch/aarch64/arch_interrupts.c
+Creating dependency	 src/arch/aarch64/arch_cpu.c
+Creating dependency	 src/arch/aarch64/iommu.c
+Creating dependency	 src/arch/aarch64/exception.S
+Creating dependency	 src/arch/aarch64/arch_page_table.c
+Creating dependency	 src/arch/aarch64/start.S
+Creating dependency	 src/arch/aarch64/arch_mem.c
+Creating dependency	 src/arch/aarch64/gic.c
+Creating dependency	 src/arch/aarch64/vgic.c
+Compiling source	 src/arch/aarch64/vgic.c
+Compiling source	 src/arch/aarch64/arch_mem.c
+Compiling source	 src/arch/aarch64/gic.c
+Compiling source	 src/arch/aarch64/start.S
+Compiling source	 src/arch/aarch64/arch_page_table.c
+Compiling source	 src/arch/aarch64/exception.S
+Compiling source	 src/arch/aarch64/iommu.c
+Compiling source	 src/arch/aarch64/arch_cpu.c
+Compiling source	 src/arch/aarch64/arch_interrupts.c
+Compiling source	 src/arch/aarch64/aborts.c
+Compiling source	 src/arch/aarch64/arch_platform.c
+Compiling source	 src/arch/aarch64/timer.c
+Compiling source	 src/arch/aarch64/hypercall.c
+Compiling source	 src/arch/aarch64/arch_vmm.c
+Compiling source	 src/arch/aarch64/uart.c
+Compiling source	 src/arch/aarch64/arch_vm.c
+Compiling source	 src/core/vm.c
+Compiling source	 src/core/console.c
+Compiling source	 src/core/lcm.c
+Compiling source	 src/core/mem.c
+Compiling source	 src/core/rq.c
+Compiling source	 src/core/interrupts.c
+Compiling source	 src/core/vmm.c
+Compiling source	 src/core/cpu.c
+Compiling source	 src/core/io.c
+Compiling source	 src/core/sched.c
+Compiling source	 src/core/objpool.c
+Compiling source	 src/core/mmu.c
+Compiling source	 src/lib/printk.c
+Compiling source	 src/lib/bitmap.c
+Compiling source	 src/lib/string.c
+Compiling source	 src/plat/qemu-aarch64-virt/platform.c
+Compiling source	 src/main.c
+Compiling source	 src/config.c
+Compiling source	 src/arch/aarch64/gicv2.c
+Compiling source	 src/arch/aarch64/vgicv2.c
+Compiling source	 src/main.ld
+Linking			avisor
+qemu-system-aarch64 -M virt,virtualization=on -machine gic-version=2,iommu=none \
+	-cpu cortex-a57 -smp 2 -m 4g -nographic \
+	-kernel /home/fadedlove/avisor/build/avisor.elf
+AVISOR INFO: CPU[1] INIT
+AVISOR INFO: CPU[0] INIT
+AVISOR INFO: ------------avisor started------------
+AVISOR INFO: Exception level: 2
+AVISOR INFO: MEM INIT
+AVISOR INFO: GIC Version: 2
+AVISOR INFO: GIC Version: 2
+AVISOR INFO: Timer Init
+AVISOR INFO: Timer Init
+AVISOR INFO: EL2 timer frq = 62500000
+AVISOR INFO: EL2 timer frq = 62500000
+AVISOR INFO: Reserved 26 intr
+AVISOR INFO: Reserved 26 intr
+AVISOR INFO: CPU[0] INTERRUPT INIT
+AVISOR INFO: CPU[1] INTERRUPT INIT
+AVISOR WARNING: NO IOMMU
+AVISOR WARNING: NO IOMMU
+AVISOR INFO: VMID:0 Load addr: 0x40100000
+AVISOR INFO: Copy vm0 to 0x50032000, size = 0x27840
+AVISOR INFO: Copy dtb to 0x58122000, size = 0x100000
+AVISOR INFO: VMID:1 Load addr: 0x40127840
+AVISOR INFO: Copy vm1 to 0x5842e000, size = 0x27840
+AVISOR INFO: Copy dtb to 0x6051a000, size = 0x100000
+AVISOR INFO: VMID:2 Load addr: 0x40127840
+AVISOR INFO: Copy vm2 to 0x60bf6000, size = 0x27840
+AVISOR INFO: Copy dtb to 0x68caa000, size = 0x100000
+AVISOR INFO: VMID:3 Load addr: 0x40127840
+AVISOR INFO: Copy vm3 to 0x69aee000, size = 0x27840
+AVISOR INFO: Copy dtb to 0x71b9a000, size = 0x100000
+AVISOR INFO: rr_scheduler_vm latency: 1052
+AVISOR INFO: rr_scheduler_vm latency: 20
+AVISOR INFO: rr_scheduler_vcpu latency: 910
+AVISOR INFO: rr_scheduler_vcpu latency: 1113
+AVISOR INFO: TIME: 4921739 vm id 0 vcpu id 0 pcpu id 0
+AVISOR INFO: TIME: 4921692 vm id 1 vcpu id 0 pcpu id 1
+AVISOR INFO: TIME IRQ 1
+AVISOR INFO: TIME IRQ 2
+AVISOR INFO: rr_scheduler_vcpu latency: 10
+AVISOR INFO: rr_scheduler_vcpu latency: 11
+AVISOR INFO: TIME: 4982483 vm id 0 vcpu id 0 pcpu id 0
+AVISOR INFO: TIME: 4990207 vm id 1 vcpu id 0 pcpu id 1
+Powered by
+o.   .o       _ _               __ _
+Oo   Oo  ___ (_) | __ __  __ _ ' _) :_
+oO   oO ' _ `| | |/ /  _)' _` | |_|  _)
+oOo oOO| | | | |   (| | | (_) |  _) :_
+ OoOoO ._, ._:_:_,\_._,  .__,_:_, \___)
+      Epimetheus 0.12.0~052b89e4-custom
+Boot Time Cycles = 8683599
+Hello World! 200000000
+cpuid = 1 fn = 40106ca0
+cpuid = 2 fn = 40106ce0
+cpuid = 3 fn = 40106c80
+Powered by
+o.   .o       _ _               __ _
+Oo   Oo  ___ (_) | __ __  __ _ ' _) :_
+oO   oO ' _ `| | |/ /  _)' _` | |_|  _)
+oOo oOO| | | | |   (| | | (_) |  _) :_
+ OoOoO ._, ._:_:_,\_._,  .__,_:_, \___)
+      Epimetheus 0.12.0~052b89e4-custom
+Boot Time Cycles = 9080162
+Hello World! 200000000
+cpuid = 1 fn = 40106c80
+cpuid = 2 fn = 40106cc0
+cpuid = 3 fn = 40106d00
+main 0
+main 0
+main 1
+main 1
+main 2
+main 2
+main 3
+main 3
+AVISOR INFO: TIME IRQ 3
+AVISOR INFO: TIME IRQ 4
+AVISOR INFO: rr_scheduler_vcpu latency: 39
+AVISOR INFO: rr_scheduler_vcpu latency: 32
+AVISOR INFO: TIME: 67555595 vm id 1 vcpu id 1 pcpu id 1
+AVISOR INFO: TIME: 67562081 vm id 0 vcpu id 1 pcpu id 0
+task1! 0
+task1! 0
+task1! 1
+task1! 1
+task1! 2
+task1! 2
+task1! 3
+task1! 3
+AVISOR INFO: TIME IRQ 6
+AVISOR INFO: TIME IRQ 5
+AVISOR INFO: rr_scheduler_vcpu latency: 58
+AVISOR INFO: rr_scheduler_vcpu latency: 46
+AVISOR INFO: TIME: 130133387 vm id 1 vcpu id 2 pcpu id 1
+AVISOR INFO: TIME: 130140858 vm id 0 vcpu id 2 pcpu id 0
+task2! 0
+task2! 0
+task2! 1
+task2! 1
+task2! 2
+task2! 2
+task2! 3
+task2! 3
+AVISOR INFO: TIME IRQ 7
+AVISOR INFO: TIME IRQ 8
+AVISOR INFO: rr_scheduler_vm latency: 35
+AVISOR INFO: rr_scheduler_vm latency: 24
+AVISOR INFO: rr_scheduler_vcpu latency: 305
+AVISOR INFO: rr_scheduler_vcpu latency: 29
+AVISOR INFO: TIME: 192721466 vm id 2 vcpu id 0 pcpu id 1
+AVISOR INFO: TIME: 192729912 vm id 3 vcpu id 0 pcpu id 0
+Powered by
+Poow.ered    .byo 
+    o.     _.o   _         _  _                        __ _ __ _
+
+Oo  Oo    Oo  ___ (_) | __ __  __ _ ' _) :_Oo
+ oO   oO  ___ ' (_) | ___ `| __  _ | |/ /  _)' _` |_ _ ' | __|  _))
+ oOo oOO| | |: | _| 
+  oO (  oO|  '| | (_)  |  _) :_
+_ OoOoO ._,  `._:_:_,\|_._ |,   .__,|_:_, \___/)
+ /  _)' _` | |_|  _)
+oO  o   oOO|  | E | pimetheus 0.12.0~052b89e4-|c us|t  om (| | 
+| (_) |  _) :_
+ OoOoBoO ._,ot . Tim_e:_: C_yc,\_l._es,  ._ = 196588600
+_,_:_, \_Hell__)
+o World! 200000000
+ cpu   id = 1 fn = 40106c80
+  Ecpuid = 2 fn = 40106cpicmet0h
+eucps uid = 3 fn 0.=1 402.0~052b1806d9e00
+4-custom
+Boot Time Cycles = 196802980
+Hello World! 200000000
+cpuid = 1 fn = 40106c80
+cpuid = 2 fn = 40106cc0
+cpuid = 3 fn = 40106d00
+main 0
+main 0
+main 1
+main 1
+main 2
+main 2
+main 3
+main 3
+AVISOR INFO: TIME IRQ 9
+AVISOR INFO: TIME IRQ 10
+AVISOR INFO: rr_scheduler_vcpu latency: 81
+AVISOR INFO: rr_scheduler_vcpu latency: 68
+AVISOR INFO: TIME: 255278672 vm id 3 vcpu id 1 pcpu id 0
+AVISOR INFO: TIME: 255294233 vm id 2 vcpu id 1 pcpu id 1
+task1! 0
+task1! 0
+task1! 1
+task1! 1
+task1! 2
+task1! 2
+task1! 3
+task1! 3
+AVISOR INFO: TIME IRQ 11
+AVISOR INFO: TIME IRQ 12
+AVISOR INFO: rr_scheduler_vcpu latency: 30
+AVISOR INFO: rr_scheduler_vcpu latency: 34
+AVISOR INFO: TIME: 317850650 vm id 3 vcpu id 2 pcpu id 0
+AVISOR INFO: TIME: 317855675 vm id 2 vcpu id 2 pcpu id 1
+task2! 0
+task2! 0
+task2! 1
+task2! 1
+task2! 2
+task2! 2
+task2! 3
+task2! 3
+AVISOR INFO: TIME IRQ 13
+AVISOR INFO: TIME IRQ 14
+AVISOR INFO: rr_scheduler_vcpu latency: 48
+AVISOR INFO: rr_scheduler_vcpu latency: 34
+AVISOR INFO: TIME: 380423983 vm id 3 vcpu id 3 pcpu id 0
+AVISOR INFO: TIME: 380437071 vm id 2 vcpu id 3 pcpu id 1
+task3! 0
+task3! 0
+task3! 1
+task3! 1
+task3! 2
+task3! 2
+task3! 3
+task3! 3
+AVISOR INFO: TIME IRQ 15
+AVISOR INFO: TIME IRQ 16
+AVISOR INFO: rr_scheduler_vm latency: 41
+AVISOR INFO: rr_scheduler_vm latency: 19
+AVISOR INFO: rr_scheduler_vcpu latency: 5438
+AVISOR INFO: rr_scheduler_vcpu latency: 175
+AVISOR INFO: TIME: 443006660 vm id 1 vcpu id 3 pcpu id 1
+AVISOR INFO: TIME: 443011264 vm id 0 vcpu id 3 pcpu id 0
+task3! 0
+task3! 1
+task3! 2
+task3! 3
+AVISOR INFO: TIME IRQ 18
+AVISOR INFO: TIME IRQ 17
+AVISOR INFO: rr_scheduler_vcpu latency: 53
+AVISOR INFO: rr_scheduler_vcpu latency: 72
+AVISOR INFO: TIME: 505580818 vm id 0 vcpu id 0 pcpu id 0
+AVISOR INFO: TIME: 505589462 vm id 1 vcpu id 0 pcpu id 1
+main 4
+main 4
+main 5
+main 5
+main 6
+main 6
+main 7
+main 7
+main 8
+main 8
+AVISOR INFO: TIME IRQ 19
+AVISOR INFO: TIME IRQ 20
+AVISOR INFO: rr_scheduler_vcpu latency: 42
+AVISOR INFO: rr_scheduler_vcpu latency: 31
+AVISOR INFO: TIME: 568142962 vm id 0 vcpu id 1 pcpu id 0
+AVISOR INFO: TIME: 568154258 vm id 1 vcpu id 1 pcpu id 1
+task1! 4
+task1! 4
+task1! 5
+task1! 5
+task1! 6
+task1! 6
+task1! 7
+task1! 7
+task1! 8
+task1! 8
+AVISOR INFO: TIME IRQ 21
+AVISOR INFO: TIME IRQ 22
+AVISOR INFO: rr_scheduler_vcpu latency: 45
+AVISOR INFO: rr_scheduler_vcpu latency: 56
+AVISOR INFO: TIME: 630708509 vm id 1 vcpu id 2 pcpu id 1
+AVISOR INFO: TIME: 630720167 vm id 0 vcpu id 2 pcpu id 0
+task2! 4
+task2! 4
+task2! 5
+task2! 5
+task2! 6
+task2! 6
+task2! 7
+task2! 7
+task2! 8
+task2! 8
+AVISOR INFO: TIME IRQ 23
+AVISOR INFO: TIME IRQ 24
+AVISOR INFO: rr_scheduler_vm latency: 25
+AVISOR INFO: rr_scheduler_vm latency: 16
+AVISOR INFO: rr_scheduler_vcpu latency: 187
+AVISOR INFO: rr_scheduler_vcpu latency: 166
+AVISOR INFO: TIME: 693303410 vm id 2 vcpu id 0 pcpu id 1
+AVISOR INFO: TIME: 693311015 vm id 3 vcpu id 0 pcpu id 0
+main 4
+main 4
+main 5
+main 5
+main 6
+main 6
+main 7
+main 7
+main 8
+main 8
+AVISOR INFO: TIME IRQ 25
+AVISOR INFO: TIME IRQ 26
+AVISOR INFO: rr_scheduler_vcpu latency: 30
+AVISOR INFO: rr_scheduler_vcpu latency: 28
+AVISOR INFO: TIME: 755869729 vm id 3 vcpu id 1 pcpu id 0
+AVISOR INFO: TIME: 755879858 vm id 2 vcpu id 1 pcpu id 1
+task1! 4
+task1! 4
+task1! 5
+task1! 5
+task1! 6
+task1! 6
+task1! 7
+task1! 7
+task1! 8
+task1! 8
+AVISOR INFO: TIME IRQ 27
+AVISOR INFO: TIME IRQ 28
+AVISOR INFO: rr_scheduler_vcpu latency: 37
+AVISOR INFO: rr_scheduler_vcpu latency: 51
+AVISOR INFO: TIME: 818428975 vm id 3 vcpu id 2 pcpu id 0
+AVISOR INFO: TIME: 818442271 vm id 2 vcpu id 2 pcpu id 1
+task2! 4
+task2! 4
+task2! 5
+task2! 5
+task2! 6
+task2! 6
+task2! 7
+task2! 7
+task2! 8
+task2! 8
+AVISOR INFO: TIME IRQ 29
+AVISOR INFO: TIME IRQ 30
+AVISOR INFO: rr_scheduler_vcpu latency: 42
+AVISOR INFO: rr_scheduler_vcpu latency: 56
+AVISOR INFO: TIME: 881008633 vm id 2 vcpu id 3 pcpu id 1
+AVISOR INFO: TIME: 881024708 vm id 3 vcpu id 3 pcpu id 0
+task3! 4
+task3! 4
+task3! 5
+task3! 5
+task3! 6
+task3! 6
+task3! 7
+task3! 7
+task3! 8
+task3! 8
+AVISOR INFO: TIME IRQ 31
+AVISOR INFO: TIME IRQ 32
+AVISOR INFO: rr_scheduler_vm latency: 26
+AVISOR INFO: rr_scheduler_vm latency: 17
+AVISOR INFO: rr_scheduler_vcpu latency: 4911
+AVISOR INFO: rr_scheduler_vcpu latency: 3167
+AVISOR INFO: TIME: 943600193 vm id 1 vcpu id 3 pcpu id 1
+AVISOR INFO: TIME: 943606720 vm id 0 vcpu id 0 pcpu id 0
+task3! 4
+main 9
+task3! 5
+main 10
+task3! 6
+main 11
+task3! 7
+main 12
+AVISOR INFO: TIME IRQ 33
+AVISOR INFO: TIME IRQ 34
+AVISOR INFO: rr_scheduler_vcpu latency: 48
+AVISOR INFO: rr_scheduler_vcpu latency: 87
+AVISOR INFO: TIME: 1006169003 vm id 0 vcpu id 1 pcpu id 0
+AVISOR INFO: TIME: 1006175213 vm id 1 vcpu id 0 pcpu id 1
+task1! 9
+main 9
+task1! 10
+main 10
+task1! 11
+main 11
+task1! 12
+main 12
+AVISOR INFO: TIME IRQ 35
+AVISOR INFO: TIME IRQ 36
+AVISOR INFO: rr_scheduler_vcpu latency: 28
+AVISOR INFO: rr_scheduler_vcpu latency: 35
+AVISOR INFO: TIME: 1068736644 vm id 0 vcpu id 3 pcpu id 0
+AVISOR INFO: TIME: 1068743290 vm id 1 vcpu id 1 pcpu id 1
+task1! 9
+task1! 10
+task1! 11
+task1! 12
+task1! 13
+AVISOR INFO: TIME IRQ 37
+AVISOR INFO: TIME IRQ 38
+AVISOR INFO: rr_scheduler_vcpu latency: 42
+AVISOR INFO: rr_scheduler_vcpu latency: 80
+AVISOR INFO: TIME: 1131309304 vm id 1 vcpu id 2 pcpu id 1
+AVISOR INFO: TIME: 1131316327 vm id 0 vcpu id 2 pcpu id 0
+task2! 9
+task2! 9
+task2! 10
+task2! 10
+task2! 11
+task2! 11
+task2! 12
+task2! 12
+task2! 13
+task2! 13
+AVISOR INFO: TIME IRQ 39
+AVISOR INFO: TIME IRQ 40
+AVISOR INFO: rr_scheduler_vm latency: 27
+AVISOR INFO: rr_scheduler_vm latency: 16
+AVISOR INFO: rr_scheduler_vcpu latency: 2513
+AVISOR INFO: rr_scheduler_vcpu latency: 7497
+AVISOR INFO: TIME: 1193892500 vm id 2 vcpu id 0 pcpu id 0
+AVISOR INFO: TIME: 1193897221 vm id 3 vcpu id 0 pcpu id 1
+main 9
+main 9
+main 1mai0n
+ 10
+main 11
+main 11
+main 12
+main 12
+mamina 13in 1
+3
+AVISOR INFO: TIME IRQ 41
+AVISOR INFO: TIME IRQ 42
+AVISOR INFO: rr_scheduler_vcpu latency: 28
+AVISOR INFO: rr_scheduler_vcpu latency: 28
+AVISOR INFO: TIME: 1256454379 vm id 3 vcpu id 1 pcpu id 1
+AVISOR INFO: TIME: 1256464606 vm id 2 vcpu id 1 pcpu id 0
+task1! 9
+task1! 9
+task1! 10
+task1! 10
+task1! 11
+task1! 11
+task1! 12
+task1! 12
+task1! 13
+task1! 13
+AVISOR INFO: TIME IRQ 43
+AVISOR INFO: TIME IRQ 44
+AVISOR INFO: rr_scheduler_vcpu latency: 38
+AVISOR INFO: rr_scheduler_vcpu latency: 57
+AVISOR INFO: TIME: 1319024442 vm id 2 vcpu id 2 pcpu id 0
+AVISOR INFO: TIME: 1319037706 vm id 3 vcpu id 2 pcpu id 1
+task2! 9
+task2! 9
+task2! 10
+task2! 10
+task2! 11
+task2! 11
+task2! 12
+task2! 12
+task2! 13
+task2! 13
+AVISOR INFO: TIME IRQ 45
+AVISOR INFO: TIME IRQ 46
+AVISOR INFO: rr_scheduler_vcpu latency: 17
+AVISOR INFO: rr_scheduler_vcpu latency: 27
+AVISOR INFO: TIME: 1381593398 vm id 2 vcpu id 3 pcpu id 0
+AVISOR INFO: TIME: 1381609473 vm id 3 vcpu id 3 pcpu id 1
+task3! 9
+task3! 9
+task3! 10
+task3! 10
+task3! 11
+task3! 11
+task3! 12
+task3! 12
+AVISOR INFO: TIME IRQ 47
+AVISOR INFO: TIME IRQ 48
+AVISOR INFO: rr_scheduler_vm latency: 63
+AVISOR INFO: rr_scheduler_vm latency: 15
+AVISOR INFO: rr_scheduler_vcpu latency: 640
+AVISOR INFO: rr_scheduler_vcpu latency: 95
+AVISOR INFO: TIME: 1444187308 vm id 0 vcpu id 0 pcpu id 0
+AVISOR INFO: TIME: 1444205692 vm id 1 vcpu id 3 pcpu id 1
+task3! 8
+main 13
+task3! 9
+main 14
+task3! 10
+main 15
+task3! 11
+main 16
+task3! 12
+main 17
+AVISOR INFO: TIME IRQ 49
+AVISOR INFO: TIME IRQ 50
+AVISOR INFO: rr_scheduler_vcpu latency: 29
+AVISOR INFO: rr_scheduler_vcpu latency: 37
+AVISOR INFO: TIME: 1506743450 vm id 0 vcpu id 1 pcpu id 0
+AVISOR INFO: TIME: 1506750752 vm id 1 vcpu id 0 pcpu id 1
+task1! 13
+main 13
+task1! 14
+main 14
+task1! 15
+main 15
+task1! 16
+main 16
+task1! 17
+main 17
+AVISOR INFO: TIME IRQ 51
+AVISOR INFO: TIME IRQ 52
+AVISOR INFO: rr_scheduler_vcpu latency: 28
+AVISOR INFO: rr_scheduler_vcpu latency: 35
+AVISOR INFO: TIME: 1569318201 vm id 0 vcpu id 3 pcpu id 0
+AVISOR INFO: TIME: 1569327048 vm id 1 vcpu id 1 pcpu id 1
+task1! 14
+task1! 15
+task1! 16
+task1! 17
+AVISOR INFO: TIME IRQ 53
+AVISOR INFO: TIME IRQ 54
+AVISOR INFO: rr_scheduler_vcpu latency: 93
+AVISOR INFO: rr_scheduler_vcpu latency: 67
+AVISOR INFO: TIME: 1631895514 vm id 0 vcpu id 2 pcpu id 0
+AVISOR INFO: TIME: 1631903446 vm id 1 vcpu id 2 pcpu id 1
+task2! 14
+task2! 14
+task2! 15
+task2! 15
+task2! 16
+task2! 16
+task2! 17
+task2! 17
+task2! 18
+task2! 18
+AVISOR INFO: TIME IRQ 55
+AVISOR INFO: TIME IRQ 56
+AVISOR INFO: rr_scheduler_vm latency: 25
+AVISOR INFO: rr_scheduler_vm latency: 16
+AVISOR INFO: rr_scheduler_vcpu latency: 267
+AVISOR INFO: rr_scheduler_vcpu latency: 6493
+AVISOR INFO: TIME: 1694480099 vm id 2 vcpu id 0 pcpu id 0
+AVISOR INFO: TIME: 1694487840 vm id 3 vcpu id 0 pcpu id 1
+mainm 1ain4 14
+
+main 15
+main 15
+main 16
+main 16
+main 17
+main 17
+AVISOR INFO: TIME IRQ 57
+AVISOR INFO: TIME IRQ 58
+AVISOR INFO: rr_scheduler_vcpu latency: 34
+AVISOR INFO: rr_scheduler_vcpu latency: 67
+AVISOR INFO: TIME: 1757034563 vm id 2 vcpu id 1 pcpu id 0
+AVISOR INFO: TIME: 1757042536 vm id 3 vcpu id 1 pcpu id 1
+task1! 14
+task1! 14
+task1! 15
+task1! 15
+task1! 16
+task1! 16
+task1! 17
+task1! 17
+AVISOR INFO: TIME IRQ 59
+AVISOR INFO: TIME IRQ 60
+AVISOR INFO: rr_scheduler_vcpu latency: 42
+AVISOR INFO: rr_scheduler_vcpu latency: 53
+AVISOR INFO: TIME: 1819608974 vm id 3 vcpu id 2 pcpu id 1
+AVISOR INFO: TIME: 1819619585 vm id 2 vcpu id 2 pcpu id 0
+task2! 14
+task2! 14
+task2! 15
+task2! 15
+task2! 16
+task2! 16
+task2! 17
+task2! 17
+task2! 18
+task2! 18
+AVISOR INFO: TIME IRQ 62
+AVISOR INFO: TIME IRQ 61
+AVISOR INFO: rr_scheduler_vcpu latency: 60
+AVISOR INFO: rr_scheduler_vcpu latency: 35
+AVISOR INFO: TIME: 1882188293 vm id 2 vcpu id 3 pcpu id 0
+AVISOR INFO: TIME: 1882196022 vm id 3 vcpu id 3 pcpu id 1
+task3! 13
+task3! 13
+task3! 14
+task3! 14
+task3! 15
+task3! 15
+task3! 16
+task3! 16
+task3! 17
+task3! 17
+AVISOR INFO: TIME IRQ 63
+AVISOR INFO: TIME IRQ 64
+AVISOR INFO: rr_scheduler_vm latency: 29
+AVISOR INFO: rr_scheduler_vm latency: 15
+AVISOR INFO: rr_scheduler_vcpu latency: 242
+AVISOR INFO: rr_scheduler_vcpu latency: 121
+AVISOR INFO: TIME: 1944779490 vm id 1 vcpu id 3 pcpu id 1
+AVISOR INFO: TIME: 1944781603 vm id 0 vcpu id 0 pcpu id 0
+task3! 13
+main 18
+task3! 14
+main 19
+task3! 15
+main 20
+task3! 16
+main 21
+task3! 17
+AVISOR INFO: TIME IRQ 65
+AVISOR INFO: TIME IRQ 66
+AVISOR INFO: rr_scheduler_vcpu latency: 740
+AVISOR INFO: rr_scheduler_vcpu latency: 164
+AVISOR INFO: TIME: 2007334458 vm id 0 vcpu id 1 pcpu id 0
+AVISOR INFO: TIME: 2007342328 vm id 1 vcpu id 0 pcpu id 1
+task1! 18
+main 18
+task1! 19
+main 19
+task1! 20
+main 20
+task1! 21
+main 21
+task1! 22
+main 22
+AVISOR INFO: TIME IRQ 67
+AVISOR INFO: TIME IRQ 68
+AVISOR INFO: rr_scheduler_vcpu latency: 93
+AVISOR INFO: rr_scheduler_vcpu latency: 53
+AVISOR INFO: TIME: 2069896458 vm id 1 vcpu id 1 pcpu id 1
+AVISOR INFO: TIME: 2069903572 vm id 0 vcpu id 3 pcpu id 0
+task1! 18
+task1! 19
+task1! 20
+task1! 21
+task1! 22
+AVISOR INFO: TIME IRQ 70
+AVISOR INFO: TIME IRQ 69
+AVISOR INFO: rr_scheduler_vcpu latency: 17
+AVISOR INFO: rr_scheduler_vcpu latency: 52
+AVISOR INFO: TIME: 2132475341 vm id 1 vcpu id 2 pcpu id 1
+AVISOR INFO: TIME: 2132484478 vm id 0 vcpu id 2 pcpu id 0
+task2! 19
+task2! 19
+task2! 20
+task2! 20
+task2! 21
+task2! 21
+task2! 22
+task2! 22
+AVISOR INFO: TIME IRQ 71
+AVISOR INFO: TIME IRQ 72
+AVISOR INFO: rr_scheduler_vm latency: 26
+AVISOR INFO: rr_scheduler_vm latency: 29
+AVISOR INFO: rr_scheduler_vcpu latency: 380
+AVISOR INFO: rr_scheduler_vcpu latency: 205
+AVISOR INFO: TIME: 2195085514 vm id 2 vcpu id 0 pcpu id 1
+AVISOR INFO: TIME: 2195091443 vm id 3 vcpu id 0 pcpu id 0
+main 18
+main 18
+main 19
+main 19
+main 20
+main 20
+main 21
+main 21
+main 22
+main 22
+AVISOR INFO: TIME IRQ 73
+AVISOR INFO: TIME IRQ 74
+AVISOR INFO: rr_scheduler_vcpu latency: 42
+AVISOR INFO: rr_scheduler_vcpu latency: 67
+AVISOR INFO: TIME: 2257625535 vm id 3 vcpu id 1 pcpu id 0
+AVISOR INFO: TIME: 2257639332 vm id 2 vcpu id 1 pcpu id 1
+task1! 18
+task1! 18
+task1! 19
+task1! 19
+task1! 20
+task1! 20
+task1! 21
+task1! 21
+task1! 22
+task1! 22
+AVISOR INFO: TIME IRQ 75
+AVISOR INFO: TIME IRQ 76
+AVISOR INFO: rr_scheduler_vcpu latency: 23
+AVISOR INFO: rr_scheduler_vcpu latency: 24
+AVISOR INFO: TIME: 2320203858 vm id 3 vcpu id 2 pcpu id 0
+AVISOR INFO: TIME: 2320208276 vm id 2 vcpu id 2 pcpu id 1
+task2! 19
+task2! 19
+task2! 20
+task2! 20
+task2! 21
+task2! 21
+task2! 22
+task2! 22
+AVISOR INFO: TIME IRQ 77
+AVISOR INFO: TIME IRQ 78
+AVISOR INFO: rr_scheduler_vcpu latency: 651
+AVISOR INFO: rr_scheduler_vcpu latency: 189
+AVISOR INFO: TIME: 2382781495 vm id 3 vcpu id 3 pcpu id 0
+AVISOR INFO: TIME: 2382785488 vm id 2 vcpu id 3 pcpu id 1
+task3! 18
+task3! 18
+task3! 19
+task3! 19
+task3! 20
+task3! 20
+task3! 21
+task3! 21
+task3! 22
+task3! 22
+AVISOR INFO: TIME IRQ 79
+AVISOR INFO: TIME IRQ 80
+AVISOR INFO: rr_scheduler_vm latency: 25
+AVISOR INFO: rr_scheduler_vm latency: 17
+AVISOR INFO: rr_scheduler_vcpu latency: 3682
+AVISOR INFO: rr_scheduler_vcpu latency: 4663
+AVISOR INFO: TIME: 2445359639 vm id 1 vcpu id 3 pcpu id 0
+AVISOR INFO: TIME: 2445371423 vm id 0 vcpu id 0 pcpu id 1
+main 22
+task3! 18
+main 23
+task3! 19
+main 24
+task3! 20
+main 25
+task3! 21
+main 26
+task3! 22
+AVISOR INFO: TIME IRQ 81
+AVISOR INFO: TIME IRQ 82
+AVISOR INFO: rr_scheduler_vcpu latency: 49
+AVISOR INFO: rr_scheduler_vcpu latency: 48
+AVISOR INFO: TIME: 2507944385 vm id 0 vcpu id 1 pcpu id 1
+AVISOR INFO: TIME: 2507944318 vm id 1 vcpu id 0 pcpu id 0
+task1! 23
+main 23
+task1! 24
+main 24
+task1! 25
+main 25
+task1! 26
+main 26
+task1! 27
+AVISOR INFO: TIME IRQ 83
+AVISOR INFO: TIME IRQ 84
+AVISOR INFO: rr_scheduler_vcpu latency: 40
+AVISOR INFO: rr_scheduler_vcpu latency: 40
+AVISOR INFO: TIME: 2570492335 vm id 0 vcpu id 3 pcpu id 1
+AVISOR INFO: TIME: 2570500577 vm id 1 vcpu id 1 pcpu id 0
+task1! 23
+task1! 24
+task1! 25
+task1! 26
+task1! 27
+AVISOR INFO: TIME IRQ 85
+AVISOR INFO: TIME IRQ 86
+AVISOR INFO: rr_scheduler_vcpu latency: 14
+AVISOR INFO: rr_scheduler_vcpu latency: 52
+AVISOR INFO: TIME: 2633075223 vm id 0 vcpu id 2 pcpu id 1
+AVISOR INFO: TIME: 2633075275 vm id 1 vcpu id 2 pcpu id 0
+task2! 23
+task2! 23
+task2! 24
+task2! 24
+task2! 25
+task2! 25
+task2! 26
+task2! 26
+task2! 27
+task2! 27
+AVISOR INFO: TIME IRQ 88
+AVISOR INFO: TIME IRQ 87
+AVISOR INFO: rr_scheduler_vm latency: 62
+AVISOR INFO: rr_scheduler_vm latency: 20
+AVISOR INFO: rr_scheduler_vcpu latency: 9915
+AVISOR INFO: rr_scheduler_vcpu latency: 18
+AVISOR INFO: TIME: 2695661590 vm id 3 vcpu id 0 pcpu id 1
+AVISOR INFO: TIME: 2695670026 vm id 2 vcpu id 0 pcpu id 0
+main 23
+main 23
+main 24
+main 24
+main 25
+main 25
+main 26
+main 26
+main 27
+main 27
+AVISOR INFO: TIME IRQ 89
+AVISOR INFO: TIME IRQ 90
+AVISOR INFO: rr_scheduler_vcpu latency: 20
+AVISOR INFO: rr_scheduler_vcpu latency: 26
+AVISOR INFO: TIME: 2758214473 vm id 2 vcpu id 1 pcpu id 0
+AVISOR INFO: TIME: 2758230644 vm id 3 vcpu id 1 pcpu id 1
+task1! 23
+task1! 23
+task1! 24
+task1! 24
+task1! 25
+task1! 25
+task1! 26
+task1! 26
+task1! 27
+task1! 27
+AVISOR INFO: TIME IRQ 91
+AVISOR INFO: TIME IRQ 92
+AVISOR INFO: rr_scheduler_vcpu latency: 59
+AVISOR INFO: rr_scheduler_vcpu latency: 40
+AVISOR INFO: TIME: 2820790387 vm id 3 vcpu id 2 pcpu id 1
+AVISOR INFO: TIME: 2820794390 vm id 2 vcpu id 2 pcpu id 0
+task2! 23
+task2! 23
+task2! 24
+task2! 24
+task2! 25
+task2! 25
+task2! 26
+task2! 26
+task2! 27
+task2! 27
+AVISOR INFO: TIME IRQ 93
+AVISOR INFO: TIME IRQ 94
+AVISOR INFO: rr_scheduler_vcpu latency: 29
+AVISOR INFO: rr_scheduler_vcpu latency: 26
+AVISOR INFO: TIME: 2883367186 vm id 3 vcpu id 3 pcpu id 1
+AVISOR INFO: TIME: 2883367316 vm id 2 vcpu id 3 pcpu id 0
+task3! 23
+task3! 23
+task3! 24
+task3! 24
+task3! 25
+task3! 25
+task3! 26
+task3! 26
+task3! 27
+task3! 27
+AVISOR INFO: TIME IRQ 95
+AVISOR INFO: TIME IRQ 96
+AVISOR INFO: rr_scheduler_vm latency: 22
+AVISOR INFO: rr_scheduler_vm latency: 15
+AVISOR INFO: rr_scheduler_vcpu latency: 234
+AVISOR INFO: rr_scheduler_vcpu latency: 172
+AVISOR INFO: TIME: 2945942933 vm id 0 vcpu id 0 pcpu id 1
+AVISOR INFO: TIME: 2945955776 vm id 1 vcpu id 3 pcpu id 0
+main 27
+task3! 23
+main 28
+task3! 24
+main 29
+task3! 25
+main 30
+task3! 26
+main 31
+AVISOR INFO: TIME IRQ 97
+AVISOR INFO: TIME IRQ 98
+AVISOR INFO: rr_scheduler_vcpu latency: 28
+AVISOR INFO: rr_scheduler_vcpu latency: 20
+AVISOR INFO: TIME: 3008511117 vm id 0 vcpu id 1 pcpu id 1
+AVISOR INFO: TIME: 3008517316 vm id 1 vcpu id 0 pcpu id 0
+main 27
+task1! 28
+main 28
+task1! 29
+main 29
+task1! 30
+main 30
+task1! 31
+main 31
+AVISOR INFO: TIME IRQ 99
+AVISOR INFO: TIME IRQ 100
+AVISOR INFO: rr_scheduler_vcpu latency: 25
+AVISOR INFO: rr_scheduler_vcpu latency: 27
+AVISOR INFO: TIME: 3071082894 vm id 0 vcpu id 3 pcpu id 1
+AVISOR INFO: TIME: 3071095385 vm id 1 vcpu id 1 pcpu id 0
+task1! 28
+task1! 29
+task1! 30
+task1! 31
+AVISOR INFO: TIME IRQ 101
+AVISOR INFO: TIME IRQ 102
+AVISOR INFO: rr_scheduler_vcpu latency: 53
+AVISOR INFO: rr_scheduler_vcpu latency: 71
+AVISOR INFO: TIME: 3133653443 vm id 1 vcpu id 2 pcpu id 0
+AVISOR INFO: TIME: 3133664163 vm id 0 vcpu id 2 pcpu id 1
+task2! 28
+task2! 28
+task2! 29
+task2! 29
+task2! 30
+task2! 30
+task2! 31
+task2! 31
+task2! 32
+task2! 32
+AVISOR INFO: TIME IRQ 103
+AVISOR INFO: TIME IRQ 104
+AVISOR INFO: rr_scheduler_vm latency: 43
+AVISOR INFO: rr_scheduler_vm latency: 16
+AVISOR INFO: rr_scheduler_vcpu latency: 322
+AVISOR INFO: rr_scheduler_vcpu latency: 179
+AVISOR INFO: TIME: 3196247258 vm id 3 vcpu id 0 pcpu id 1
+AVISOR INFO: TIME: 3196258640 vm id 2 vcpu id 0 pcpu id 0
+main 28
+main 28
+main 29
+main 29
+main 30
+main 30
+main 31
+main 31
+AVISOR INFO: TIME IRQ 105
+AVISOR INFO: TIME IRQ 106
+AVISOR INFO: rr_scheduler_vcpu latency: 48
+AVISOR INFO: rr_scheduler_vcpu latency: 41
+AVISOR INFO: TIME: 3258806848 vm id 2 vcpu id 1 pcpu id 0
+AVISOR INFO: TIME: 3258814566 vm id 3 vcpu id 1 pcpu id 1
+task1! 28
+task1! 28
+task1! 29
+task1! 29
+task1! 30
+task1! 30
+task1! 31
+task1! 31
+task1! 32
+task1! 32
+AVISOR INFO: TIME IRQ 107
+AVISOR INFO: TIME IRQ 108
+AVISOR INFO: rr_scheduler_vcpu latency: 45
+AVISOR INFO: rr_scheduler_vcpu latency: 20
+AVISOR INFO: TIME: 3321376571 vm id 2 vcpu id 2 pcpu id 0
+AVISOR INFO: TIME: 3321379320 vm id 3 vcpu id 2 pcpu id 1
+task2! 28
+task2! 28
+task2! 29
+task2! 29
+task2! 30
+task2! 30
+task2! 31
+task2! 31
+task2! 32
+AVISOR INFO: TIME IRQ 109
+AVISOR INFO: TIME IRQ 110
+AVISOR INFO: rr_scheduler_vcpu latency: 483
+AVISOR INFO: rr_scheduler_vcpu latency: 3397
+AVISOR INFO: TIME: 3383950889 vm id 3 vcpu id 3 pcpu id 1
+AVISOR INFO: TIME: 3383956629 vm id 2 vcpu id 3 pcpu id 0
+task3! 28
+task3! 28
+task3! 29
+task3! 29
+task3! 30
+task3! 30
+task3! 31
+task3! 31
+AVISOR INFO: TIME IRQ 111
+AVISOR INFO: TIME IRQ 112
+AVISOR INFO: rr_scheduler_vm latency: 27
+AVISOR INFO: rr_scheduler_vm latency: 20
+AVISOR INFO: rr_scheduler_vcpu latency: 162
+AVISOR INFO: rr_scheduler_vcpu latency: 358
+AVISOR INFO: TIME: 3446543454 vm id 0 vcpu id 0 pcpu id 0
+AVISOR INFO: TIME: 3446550182 vm id 1 vcpu id 3 pcpu id 1
+task3! 27
+main 32
+task3! 28
+main 33
+task3! 29
+main 34
+task3! 30
+main 35
+task3! 31
+main 36
+AVISOR INFO: TIME IRQ 113
+AVISOR INFO: TIME IRQ 114
+AVISOR INFO: rr_scheduler_vcpu latency: 46
+AVISOR INFO: rr_scheduler_vcpu latency: 43
+AVISOR INFO: TIME: 3509096098 vm id 0 vcpu id 1 pcpu id 0
+AVISOR INFO: TIME: 3509096176 vm id 1 vcpu id 0 pcpu id 1
+task1! 32
+main 32
+task1! 33
+main 33
+task1! 34
+main 34
+main 35
+task1! 35
+main 36
+task1! 36
+AVISOR INFO: TIME IRQ 115
+AVISOR INFO: TIME IRQ 116
+AVISOR INFO: rr_scheduler_vcpu latency: 36
+AVISOR INFO: rr_scheduler_vcpu latency: 55
+AVISOR INFO: TIME: 3571665105 vm id 0 vcpu id 3 pcpu id 0
+AVISOR INFO: TIME: 3571683841 vm id 1 vcpu id 1 pcpu id 1
+task1! 32
+task1! 33
+task1! 34
+task1! 35
+task1! 36
+AVISOR INFO: TIME IRQ 117
+AVISOR INFO: TIME IRQ 118
+AVISOR INFO: rr_scheduler_vcpu latency: 18
+AVISOR INFO: rr_scheduler_vcpu latency: 43
+AVISOR INFO: TIME: 3634230270 vm id 1 vcpu id 2 pcpu id 1
+AVISOR INFO: TIME: 3634237505 vm id 0 vcpu id 2 pcpu id 0
+task2! 33
+task2! 33
+task2! 34
+task2! 34
+task2! 35
+task2! 35
+task2! 36
+task2! 36
+task2! 37
+AVISOR INFO: TIME IRQ 119
+AVISOR INFO: TIME IRQ 120
+AVISOR INFO: rr_scheduler_vm latency: 27
+AVISOR INFO: rr_scheduler_vm latency: 14
+AVISOR INFO: rr_scheduler_vcpu latency: 8658
+AVISOR INFO: rr_scheduler_vcpu latency: 16
+AVISOR INFO: TIME: 3696820928 vm id 2 vcpu id 0 pcpu id 1
+AVISOR INFO: TIME: 3696826602 vm id 3 vcpu id 0 pcpu id 0
+main 32
+main 32
+main 33
+main 33
+main 34
+main 34
+main 35
+main 35
+main 36
+main 36
+AVISOR INFO: TIME IRQ 121
+AVISOR INFO: TIME IRQ 122
+AVISOR INFO: rr_scheduler_vcpu latency: 52
+AVISOR INFO: rr_scheduler_vcpu latency: 56
+AVISOR INFO: TIME: 3759381699 vm id 2 vcpu id 1 pcpu id 1
+AVISOR INFO: TIME: 3759386877 vm id 3 vcpu id 1 pcpu id 0
+task1! 33
+task1! 33
+task1! 34
+task1! 34
+task1! 35
+task1! 35
+task1! 36
+task1! 36
+task1! 37
+AVISOR INFO: TIME IRQ 123
+AVISOR INFO: TIME IRQ 124
+AVISOR INFO: rr_scheduler_vcpu latency: 346
+AVISOR INFO: rr_scheduler_vcpu latency: 195
+AVISOR INFO: TIME: 3821946122 vm id 2 vcpu id 2 pcpu id 1
+AVISOR INFO: TIME: 3821954926 vm id 3 vcpu id 2 pcpu id 0
+task2! 32
+task2! 33
+task2! 33
+task2! 34
+task2! 34
+task2! 35
+task2! 35
+task2! 36
+task2! 36
+task2! 37
+AVISOR INFO: TIME IRQ 125
+AVISOR INFO: TIME IRQ 126
+AVISOR INFO: rr_scheduler_vcpu latency: 17
+AVISOR INFO: rr_scheduler_vcpu latency: 27
+AVISOR INFO: TIME: 3884520155 vm id 3 vcpu id 3 pcpu id 0
+AVISOR INFO: TIME: 3884535913 vm id 2 vcpu id 3 pcpu id 1
+task3! 32
+task3! 32
+task3! 33
+task3! 33
+task3! 34
+task3! 34
+task3! 35
+task3! 35
+task3! 36
+task3! 36
+AVISOR INFO: TIME IRQ 127
+AVISOR INFO: TIME IRQ 128
+AVISOR INFO: rr_scheduler_vm latency: 24
+AVISOR INFO: rr_scheduler_vm latency: 14
+AVISOR INFO: rr_scheduler_vcpu latency: 204
+AVISOR INFO: rr_scheduler_vcpu latency: 3725
+AVISOR INFO: TIME: 3947107300 vm id 1 vcpu id 3 pcpu id 0
+AVISOR INFO: TIME: 3947123196 vm id 0 vcpu id 0 pcpu id 1
+task3! 32
+main 37
+task3! 33
+main 38
+task3! 34
+main 39
+task3! 35
+main 40
+task3! 36
+main 41
+AVISOR INFO: TIME IRQ 129
+AVISOR INFO: TIME IRQ 130
+AVISOR INFO: rr_scheduler_vcpu latency: 29
+AVISOR INFO: rr_scheduler_vcpu latency: 22
+AVISOR INFO: TIME: 4009667593 vm id 1 vcpu id 0 pcpu id 0
+AVISOR INFO: TIME: 4009680434 vm id 0 vcpu id 1 pcpu id 1
+main 37
+task1! 37
+main 38
+task1! 38
+main 39
+task1! 39
+main 40
+task1! 40
+AVISOR INFO: TIME IRQ 131
+AVISOR INFO: TIME IRQ 132
+AVISOR INFO: rr_scheduler_vcpu latency: 32
+AVISOR INFO: rr_scheduler_vcpu latency: 31
+AVISOR INFO: TIME: 4072246542 vm id 0 vcpu id 3 pcpu id 1
+AVISOR INFO: TIME: 4072258456 vm id 1 vcpu id 1 pcpu id 0
+task1! 37
+task1! 38
+task1! 39
+task1! 40
+task1! 41
+AVISOR INFO: TIME IRQ 133
+AVISOR INFO: TIME IRQ 134
+AVISOR INFO: rr_scheduler_vcpu latency: 15
+AVISOR INFO: rr_scheduler_vcpu latency: 48
+AVISOR INFO: TIME: 4134805952 vm id 1 vcpu id 2 pcpu id 0
+AVISOR INFO: TIME: 4134809163 vm id 0 vcpu id 2 pcpu id 1
+task2! 37
+task2! 38
+task2! 38
+task2! 39
+task2! 39
+task2! 40
+task2! 40
+task2! 41
+task2! 41
+AVISOR INFO: TIME IRQ 135
+AVISOR INFO: TIME IRQ 136
+AVISOR INFO: rr_scheduler_vm latency: 428
+AVISOR INFO: rr_scheduler_vm latency: 14
+AVISOR INFO: rr_scheduler_vcpu latency: 8424
+AVISOR INFO: rr_scheduler_vcpu latency: 20
+AVISOR INFO: TIME: 4197395853 vm id 3 vcpu id 0 pcpu id 1
+AVISOR INFO: TIME: 4197404469 vm id 2 vcpu id 0 pcpu id 0
+main 37
+main 37
+main 38
+main 38
+main 39
+main 39
+main 40
+main 40
+main 41
+main 41
+AVISOR INFO: TIME IRQ 137
+AVISOR INFO: TIME IRQ 138
+AVISOR INFO: rr_scheduler_vcpu latency: 30
+AVISOR INFO: rr_scheduler_vcpu latency: 25
+AVISOR INFO: TIME: 4259956215 vm id 3 vcpu id 1 pcpu id 1
+AVISOR INFO: TIME: 4259962596 vm id 2 vcpu id 1 pcpu id 0
+task1! 37
+task1! 38
+task1! 38
+task1! 39
+task1! 39
+task1! 40
+task1! 40
+task1! 41
+task1! 41
+AVISOR INFO: TIME IRQ 139
+AVISOR INFO: TIME IRQ 140
+AVISOR INFO: rr_scheduler_vcpu latency: 33
+AVISOR INFO: rr_scheduler_vcpu latency: 65
+AVISOR INFO: TIME: 27576324 vm id 3 vcpu id 2 pcpu id 1
+AVISOR INFO: TIME: 27576406 vm id 2 vcpu id 2 pcpu id 0
+task2! 37
+task2! 38
+task2! 38
+task2! 39
+task2! 39
+task2! 40
+task2! 40
+task2! 41
+task2! 41
+AVISOR INFO: TIME IRQ 141
+AVISOR INFO: TIME IRQ 142
+AVISOR INFO: rr_scheduler_vcpu latency: 699
+AVISOR INFO: rr_scheduler_vcpu latency: 200
+AVISOR INFO: TIME: 90137169 vm id 3 vcpu id 3 pcpu id 1
+AVISOR INFO: TIME: 90142566 vm id 2 vcpu id 3 pcpu id 0
+task3! 37
+task3! 37
+task3! 38
+task3! 38
+task3! 39
+task3! 39
+task3! 40
+task3! 40
+task3! 41
+task3! 41
+AVISOR INFO: TIME IRQ 143
+AVISOR INFO: TIME IRQ 144
+AVISOR INFO: rr_scheduler_vm latency: 27
+AVISOR INFO: rr_scheduler_vm latency: 15
+AVISOR INFO: rr_scheduler_vcpu latency: 276
+AVISOR INFO: rr_scheduler_vcpu latency: 10494
+AVISOR INFO: TIME: 152723403 vm id 0 vcpu id 0 pcpu id 0
+AVISOR INFO: TIME: 152745596 vm id 1 vcpu id 3 pcpu id 1
+task3! 37
+main 42
+task3! 38
+main 43
+task3! 39
+main 44
+task3! 40
+main 45
+task3! 41
+AVISOR INFO: TIME IRQ 145
+AVISOR INFO: TIME IRQ 146
+AVISOR INFO: rr_scheduler_vcpu latency: 44
+AVISOR INFO: rr_scheduler_vcpu latency: 35
+AVISOR INFO: TIME: 215292761 vm id 0 vcpu id 1 pcpu id 0
+AVISOR INFO: TIME: 215292815 vm id 1 vcpu id 0 pcpu id 1
+main 41
+task1! 41
+main 42
+task1! 42
+main 43
+task1! 43
+main 44
+task1! 44
+main 45
+task1! 45
+AVISOR INFO: TIME IRQ 147
+AVISOR INFO: TIME IRQ 148
+AVISOR INFO: rr_scheduler_vcpu latency: 26
+AVISOR INFO: rr_scheduler_vcpu latency: 35
+AVISOR INFO: TIME: 277847784 vm id 1 vcpu id 1 pcpu id 1
+AVISOR INFO: TIME: 277854584 vm id 0 vcpu id 3 pcpu id 0
+task1! 42
+task1! 43
+task1! 44
+task1! 45
+task1! 46
+AVISOR INFO: TIME IRQ 149
+AVISOR INFO: TIME IRQ 150
+AVISOR INFO: rr_scheduler_vcpu latency: 15
+AVISOR INFO: rr_scheduler_vcpu latency: 50
+AVISOR INFO: TIME: 340426651 vm id 1 vcpu id 2 pcpu id 1
+AVISOR INFO: TIME: 340434176 vm id 0 vcpu id 2 pcpu id 0
+task2! 42
+task2! 42
+task2! 43
+task2! 43
+task2! 44
+task2! 44
+task2! 45
+task2! 45
+task2! 46
+task2! 46
+AVISOR INFO: TIME IRQ 151
+AVISOR INFO: TIME IRQ 152
+AVISOR INFO: rr_scheduler_vm latency: 28
+AVISOR INFO: rr_scheduler_vm latency: 21
+AVISOR INFO: rr_scheduler_vcpu latency: 2104
+AVISOR INFO: rr_scheduler_vcpu latency: 467
+AVISOR INFO: TIME: 403018524 vm id 2 vcpu id 0 pcpu id 1
+AVISOR INFO: TIME: 403022689 vm id 3 vcpu id 0 pcpu id 0
+main 42
+main 42
+main 43
+main 43
+main 44
+main 44
+main 45
+main 45
+main 46
+main 46
+AVISOR INFO: TIME IRQ 153
+AVISOR INFO: TIME IRQ 154
+AVISOR INFO: rr_scheduler_vcpu latency: 46
+AVISOR INFO: rr_scheduler_vcpu latency: 54
+AVISOR INFO: TIME: 465574934 vm id 3 vcpu id 1 pcpu id 0
+AVISOR INFO: TIME: 465594186 vm id 2 vcpu id 1 pcpu id 1
+task1! 42
+task1! 42
+task1! 43
+task1! 43
+task1! 44
+task1! 44
+task1! 45
+task1! 45
+task1! 46
+AVISOR INFO: TIME IRQ 155
+AVISOR INFO: TIME IRQ 156
+AVISOR INFO: rr_scheduler_vcpu latency: 30
+AVISOR INFO: rr_scheduler_vcpu latency: 31
+AVISOR INFO: TIME: 528144936 vm id 2 vcpu id 2 pcpu id 1
+AVISOR INFO: TIME: 528151829 vm id 3 vcpu id 2 pcpu id 0
+task2! 42
+task2! 42
+task2! 43
+task2! 43
+task2! 44
+task2! 44
+task2! 45
+task2! 45
+task2! 46
+task2! 46
+AVISOR INFO: TIME IRQ 157
+AVISOR INFO: TIME IRQ 158
+AVISOR INFO: rr_scheduler_vcpu latency: 622
+AVISOR INFO: rr_scheduler_vcpu latency: 197
+AVISOR INFO: TIME: 590722351 vm id 3 vcpu id 3 pcpu id 0
+AVISOR INFO: TIME: 590731774 vm id 2 vcpu id 3 pcpu id 1
+task3! 42
+task3! 42
+task3! 43
+task3! 43
+task3! 44
+task3! 44
+task3! 45
+task3! 45
+task3! 46
+task3! 46
+AVISOR INFO: TIME IRQ 159
+AVISOR INFO: TIME IRQ 160
+AVISOR INFO: rr_scheduler_vm latency: 22
+AVISOR INFO: rr_scheduler_vm latency: 15
+AVISOR INFO: rr_scheduler_vcpu latency: 38
+AVISOR INFO: rr_scheduler_vcpu latency: 160
+AVISOR INFO: TIME: 653306482 vm id 0 vcpu id 0 pcpu id 0
+AVISOR INFO: TIME: 653322154 vm id 1 vcpu id 3 pcpu id 1
+main 46
+task3! 42
+main 47
+task3! 43
+main 48
+task3! 44
+main 49
+task3! 45
+main 50
+task3! 46
+AVISOR INFO: TIME IRQ 161
+AVISOR INFO: TIME IRQ 162
+AVISOR INFO: rr_scheduler_vcpu latency: 42
+AVISOR INFO: rr_scheduler_vcpu latency: 31
+AVISOR INFO: TIME: 715871353 vm id 1 vcpu id 0 pcpu id 1
+AVISOR INFO: TIME: 715877642 vm id 0 vcpu id 1 pcpu id 0
+main 46
+task1! 46
+main 47
+task1! 47
+main 48
+task1! 48
+main 49
+task1! 49
+main 50
+task1! 50
+AVISOR INFO: TIME IRQ 163
+AVISOR INFO: TIME IRQ 164
+AVISOR INFO: rr_scheduler_vcpu latency: 54
+AVISOR INFO: rr_scheduler_vcpu latency: 53
+AVISOR INFO: TIME: 778434683 vm id 0 vcpu id 3 pcpu id 0
+AVISOR INFO: TIME: 778451753 vm id 1 vcpu id 1 pcpu id 1
+task1! 47
+task1! 48
+task1! 49
+task1! 50
+task1! 51
+AVISOR INFO: TIME IRQ 165
+AVISOR INFO: TIME IRQ 166
+AVISOR INFO: rr_scheduler_vcpu latency: 17
+AVISOR INFO: rr_scheduler_vcpu latency: 49
+AVISOR INFO: TIME: 841001657 vm id 1 vcpu id 2 pcpu id 1
+AVISOR INFO: TIME: 841006991 vm id 0 vcpu id 2 pcpu id 0
+task2! 47
+task2! 47
+task2! 48
+task2! 48
+task2! 49
+task2! 49
+task2! 50
+task2! 50
+task2! 51
+task2! 51
+AVISOR INFO: TIME IRQ 167
+AVISOR INFO: TIME IRQ 168
+AVISOR INFO: rr_scheduler_vm latency: 28
+AVISOR INFO: rr_scheduler_vm latency: 16
+AVISOR INFO: rr_scheduler_vcpu latency: 381
+AVISOR INFO: rr_scheduler_vcpu latency: 1370
+AVISOR INFO: TIME: 903586413 vm id 2 vcpu id 0 pcpu id 0
+AVISOR INFO: TIME: 903596062 vm id 3 vcpu id 0 pcpu id 1
+main 47
+main 47
+main 48
+main 48
+main 49
+main 49
+main 50
+main 50
+AVISOR INFO: TIME IRQ 169
+AVISOR INFO: TIME IRQ 170
+AVISOR INFO: rr_scheduler_vcpu latency: 45
+AVISOR INFO: rr_scheduler_vcpu latency: 62
+AVISOR INFO: TIME: 966165150 vm id 3 vcpu id 1 pcpu id 1
+AVISOR INFO: TIME: 966182509 vm id 2 vcpu id 1 pcpu id 0
+task1! 46
+task1! 47
+task1! 47
+task1! 48
+task1! 48
+task1! 49
+task1! 49
+task1! 50
+task1! 50
+AVISOR INFO: TIME IRQ 171
+AVISOR INFO: TIME IRQ 172
+AVISOR INFO: rr_scheduler_vcpu latency: 52
+AVISOR INFO: rr_scheduler_vcpu latency: 28
+AVISOR INFO: TIME: 1028733330 vm id 2 vcpu id 2 pcpu id 0
+AVISOR INFO: TIME: 1028733390 vm id 3 vcpu id 2 pcpu id 1
+task2! 47
+task2! 47
+task2! 48
+task2! 48
+task2! 49
+task2! 49
+task2! 50
+task2! 50
+task2! 51
+task2! 51
+AVISOR INFO: TIME IRQ 173
+AVISOR INFO: TIME IRQ 174
+AVISOR INFO: rr_scheduler_vcpu latency: 33
+AVISOR INFO: rr_scheduler_vcpu latency: 28
+AVISOR INFO: TIME: 1091301373 vm id 2 vcpu id 3 pcpu id 0
+AVISOR INFO: TIME: 1091304861 vm id 3 vcpu id 3 pcpu id 1
+task3! 47
+task3! 47
+task3! 4task83! 
+48
+task3! 49
+task3! 49
+task3! 50
+task3! 50
+task3! 51
+task3! 51
+AVISOR INFO: TIME IRQ 175
+AVISOR INFO: TIME IRQ 176
+AVISOR INFO: rr_scheduler_vm latency: 27
+AVISOR INFO: rr_scheduler_vm latency: 14
+AVISOR INFO: rr_scheduler_vcpu latency: 198
+AVISOR INFO: rr_scheduler_vcpu latency: 1857
+AVISOR INFO: TIME: 1153882350 vm id 0 vcpu id 0 pcpu id 0
+AVISOR INFO: TIME: 1153887872 vm id 1 vcpu id 3 pcpu id 1
+main 51
+task3! 47
+main 52
+task3! 48
+main 53
+task3! 49
+main 54
+task3! 50
+main 55
+task3! 51
+AVISOR INFO: TIME IRQ 177
+AVISOR INFO: TIME IRQ 178
+AVISOR INFO: rr_scheduler_vcpu latency: 32
+AVISOR INFO: rr_scheduler_vcpu latency: 27
+AVISOR INFO: TIME: 1216445493 vm id 0 vcpu id 1 pcpu id 0
+AVISOR INFO: TIME: 1216445769 vm id 1 vcpu id 0 pcpu id 1
+main 51
+task1! 51
+main 52
+task1! 52
+main 53
+task1! 53
+main 54
+task1! 54
+main 55
+task1! 55
+AVISOR INFO: TIME IRQ 179
+AVISOR INFO: TIME IRQ 180
+AVISOR INFO: rr_scheduler_vcpu latency: 47
+AVISOR INFO: rr_scheduler_vcpu latency: 33
+AVISOR INFO: TIME: 1279013601 vm id 0 vcpu id 3 pcpu id 0
+AVISOR INFO: TIME: 1279029958 vm id 1 vcpu id 1 pcpu id 1
+task1! 52
+task1! 53
+task1! 54
+task1! 55
+AVISOR INFO: TIME IRQ 182
+AVISOR INFO: TIME IRQ 181
+AVISOR INFO: rr_scheduler_vcpu latency: 55
+AVISOR INFO: rr_scheduler_vcpu latency: 34
+AVISOR INFO: TIME: 1341593144 vm id 0 vcpu id 2 pcpu id 0
+AVISOR INFO: TIME: 1341611961 vm id 1 vcpu id 2 pcpu id 1
+task2! 52
+task2! 52
+task2! 53
+task2! 53
+task2! 54
+task2! 54
+task2! 55
+task2! 55
+task2! 56
+AVISOR INFO: TIME IRQ 183
+AVISOR INFO: TIME IRQ 184
+AVISOR INFO: rr_scheduler_vm latency: 28
+AVISOR INFO: rr_scheduler_vm latency: 16
+AVISOR INFO: rr_scheduler_vcpu latency: 284
+AVISOR INFO: rr_scheduler_vcpu latency: 715
+AVISOR INFO: TIME: 1404186705 vm id 2 vcpu id 0 pcpu id 1
+AVISOR INFO: TIME: 1404191506 vm id 3 vcpu id 0 pcpu id 0
+main 51
+main 51
+main 52
+main 52
+main 53
+main 53
+main 54
+main 54
+main 55
+main 55
+AVISOR INFO: TIME IRQ 185
+AVISOR INFO: TIME IRQ 186
+AVISOR INFO: rr_scheduler_vcpu latency: 47
+AVISOR INFO: rr_scheduler_vcpu latency: 68
+AVISOR INFO: TIME: 1466734817 vm id 3 vcpu id 1 pcpu id 0
+AVISOR INFO: TIME: 1466743146 vm id 2 vcpu id 1 pcpu id 1
+task1! 51
+task1! 51
+task1! 52
+task1! 52
+task1! 53
+task1! 53
+task1! 54
+task1! 54
+task1! 55
+task1! 55
+AVISOR INFO: TIME IRQ 187
+AVISOR INFO: TIME IRQ 188
+AVISOR INFO: rr_scheduler_vcpu latency: 53
+AVISOR INFO: rr_scheduler_vcpu latency: 47
+AVISOR INFO: TIME: 1529304102 vm id 2 vcpu id 2 pcpu id 1
+AVISOR INFO: TIME: 1529316426 vm id 3 vcpu id 2 pcpu id 0
+task2! 52
+task2! 52
+task2! 53
+task2! 53
+task2! 54
+task2! 54
+task2! 55
+task2! 55
+task2! 56
+task2! 56
+AVISOR INFO: TIME IRQ 189
+AVISOR INFO: TIME IRQ 190
+AVISOR INFO: rr_scheduler_vcpu latency: 38
+AVISOR INFO: rr_scheduler_vcpu latency: 53
+AVISOR INFO: TIME: 1591895428 vm id 3 vcpu id 3 pcpu id 0
+AVISOR INFO: TIME: 1591895632 vm id 2 vcpu id 3 pcpu id 1
+task3! 52
+task3! 52
+task3! 53
+task3! 53
+task3! 54
+task3! 54
+task3! 55
+task3! 55
+AVISOR INFO: TIME IRQ 191
+AVISOR INFO: TIME IRQ 192
+AVISOR INFO: rr_scheduler_vm latency: 33
+AVISOR INFO: rr_scheduler_vm latency: 16
+AVISOR INFO: rr_scheduler_vcpu latency: 1126
+AVISOR INFO: rr_scheduler_vcpu latency: 13174
+AVISOR INFO: TIME: 1654471404 vm id 1 vcpu id 3 pcpu id 1
+AVISOR INFO: TIME: 1654494963 vm id 0 vcpu id 0 pcpu id 0
+main 56
+task3! 52
+main 57
+task3! 53
+main 58
+task3! 54
+main 59
+task3! 55
+main 60
+AVISOR INFO: TIME IRQ 193
+AVISOR INFO: TIME IRQ 194
+AVISOR INFO: rr_scheduler_vcpu latency: 26
+AVISOR INFO: rr_scheduler_vcpu latency: 28
+AVISOR INFO: TIME: 1717025441 vm id 1 vcpu id 0 pcpu id 1
+AVISOR INFO: TIME: 1717031650 vm id 0 vcpu id 1 pcpu id 0
+main 56
+task1! 56
+main 57
+task1! 57
+main 58
+task1! 58
+main 59
+task1! 59
+AVISOR INFO: TIME IRQ 195
+AVISOR INFO: TIME IRQ 196
+AVISOR INFO: rr_scheduler_vcpu latency: 57
+AVISOR INFO: rr_scheduler_vcpu latency: 36
+AVISOR INFO: TIME: 1779604245 vm id 1 vcpu id 1 pcpu id 1
+AVISOR INFO: TIME: 1779617925 vm id 0 vcpu id 3 pcpu id 0
+task1! 56
+task1! 57
+task1! 58
+task1! 59
+task1! 60
+AVISOR INFO: TIME IRQ 197
+AVISOR INFO: TIME IRQ 198
+AVISOR INFO: rr_scheduler_vcpu latency: 75
+AVISOR INFO: rr_scheduler_vcpu latency: 31
+AVISOR INFO: TIME: 1842180897 vm id 0 vcpu id 2 pcpu id 0
+AVISOR INFO: TIME: 1842188568 vm id 1 vcpu id 2 pcpu id 1
+task2! 56
+task2! 57
+task2! 57
+task2! 58
+task2! 58
+task2! 59
+task2! 59
+task2! 60
+task2! 60
+task2! 61
+AVISOR INFO: TIME IRQ 199
+AVISOR INFO: TIME IRQ 200
+AVISOR INFO: rr_scheduler_vm latency: 25
+AVISOR INFO: rr_scheduler_vm latency: 16
+AVISOR INFO: rr_scheduler_vcpu latency: 7834
+AVISOR INFO: rr_scheduler_vcpu latency: 16
+AVISOR INFO: TIME: 1904760894 vm id 2 vcpu id 0 pcpu id 1
+AVISOR INFO: TIME: 1904760936 vm id 3 vcpu id 0 pcpu id 0
+main 56
+main 56
+main 57
+main 57
+main 58
+main 58
+main 59
+main 59
+main 60
+main 60
+AVISOR INFO: TIME IRQ 201
+AVISOR INFO: TIME IRQ 202
+AVISOR INFO: rr_scheduler_vcpu latency: 41
+AVISOR INFO: rr_scheduler_vcpu latency: 31
+AVISOR INFO: TIME: 1967330295 vm id 3 vcpu id 1 pcpu id 0
+AVISOR INFO: TIME: 1967340178 vm id 2 vcpu id 1 pcpu id 1
+task1! 56
+task1! 56
+task1! 57
+task1! 57
+task1! 58
+task1! 58
+task1! 59
+task1! 59
+task1! 60
+task1! 60
+AVISOR INFO: TIME IRQ 203
+AVISOR INFO: TIME IRQ 204
+AVISOR INFO: rr_scheduler_vcpu latency: 75
+AVISOR INFO: rr_scheduler_vcpu latency: 48
+AVISOR INFO: TIME: 2029885891 vm id 2 vcpu id 2 pcpu id 1
+AVISOR INFO: TIME: 2029892911 vm id 3 vcpu id 2 pcpu id 0
+task2! 57
+task2! 57
+task2! 58
+task2! 58
+task2! 59
+task2! 59
+task2! 60
+task2! 60
+task2! 61
+AVISOR INFO: TIME IRQ 205
+AVISOR INFO: TIME IRQ 206
+AVISOR INFO: rr_scheduler_vcpu latency: 30
+AVISOR INFO: rr_scheduler_vcpu latency: 55
+AVISOR INFO: TIME: 2092455486 vm id 3 vcpu id 3 pcpu id 0
+AVISOR INFO: TIME: 2092462515 vm id 2 vcpu id 3 pcpu id 1
+task3! 56
+task3! 56
+task3! 57
+task3! 57
+task3! 58
+task3! 58
+task3! 59
+task3! 59
+task3! 60
+task3! 60
+AVISOR INFO: TIME IRQ 207
+AVISOR INFO: TIME IRQ 208
+AVISOR INFO: rr_scheduler_vm latency: 42
+AVISOR INFO: rr_scheduler_vm latency: 16
+AVISOR INFO: rr_scheduler_vcpu latency: 230
+AVISOR INFO: rr_scheduler_vcpu latency: 3406
+AVISOR INFO: TIME: 2155044973 vm id 1 vcpu id 3 pcpu id 1
+AVISOR INFO: TIME: 2155053348 vm id 0 vcpu id 0 pcpu id 0
+task3! 56
+main 61
+task3! 57
+main 62
+task3! 58
+main 63
+task3! 59
+main 64
+task3! 60
+main 65
+AVISOR INFO: TIME IRQ 209
+AVISOR INFO: TIME IRQ 210
+AVISOR INFO: rr_scheduler_vcpu latency: 57
+AVISOR INFO: rr_scheduler_vcpu latency: 50
+AVISOR INFO: TIME: 2217598840 vm id 0 vcpu id 1 pcpu id 0
+AVISOR INFO: TIME: 2217614260 vm id 1 vcpu id 0 pcpu id 1
+main 60
+task1! 60
+main 61
+task1! 61
+main 62
+task1! 62
+main 63
+task1! 63
+main 64
+task1! 64
+AVISOR INFO: TIME IRQ 212
+AVISOR INFO: TIME IRQ 211
+AVISOR INFO: rr_scheduler_vcpu latency: 84
+AVISOR INFO: rr_scheduler_vcpu latency: 58
+AVISOR INFO: TIME: 2280218825 vm id 0 vcpu id 3 pcpu id 0
+AVISOR INFO: TIME: 2280228769 vm id 1 vcpu id 1 pcpu id 1
+task1! 61
+task1! 62
+task1! 63
+task1! 64
+task1! 65
+AVISOR INFO: TIME IRQ 213
+AVISOR INFO: TIME IRQ 214
+AVISOR INFO: rr_scheduler_vcpu latency: 41
+AVISOR INFO: rr_scheduler_vcpu latency: 71
+AVISOR INFO: TIME: 2342750020 vm id 1 vcpu id 2 pcpu id 1
+AVISOR INFO: TIME: 2342763239 vm id 0 vcpu id 2 pcpu id 0
+task2! 61
+task2! 62
+task2! 62
+task2! 63
+task2! 63
+task2! 64
+task2! 64
+task2! 65
+task2! 65
+AVISOR INFO: TIME IRQ 215
+AVISOR INFO: TIME IRQ 216
+AVISOR INFO: rr_scheduler_vm latency: 25
+AVISOR INFO: rr_scheduler_vm latency: 21
+AVISOR INFO: rr_scheduler_vcpu latency: 297
+AVISOR INFO: rr_scheduler_vcpu latency: 196
+AVISOR INFO: TIME: 2405351359 vm id 3 vcpu id 0 pcpu id 0
+AVISOR INFO: TIME: 2405351552 vm id 2 vcpu id 0 pcpu id 1
+main 61
+main 61
+main 62
+main 62
+main 63
+main 63
+main 64
+main 64
+AVISOR INFO: TIME IRQ 217
+AVISOR INFO: TIME IRQ 218
+AVISOR INFO: rr_scheduler_vcpu latency: 55
+AVISOR INFO: rr_scheduler_vcpu latency: 38
+AVISOR INFO: TIME: 2467897294 vm id 3 vcpu id 1 pcpu id 0
+AVISOR INFO: TIME: 2467902709 vm id 2 vcpu id 1 pcpu id 1
+task1! 61
+task1! 61
+task1! 62
+task1! 62
+task1! 63
+task1! 63
+task1! 64
+task1! 64
+AVISOR INFO: TIME IRQ 219
+AVISOR INFO: TIME IRQ 220
+AVISOR INFO: rr_scheduler_vcpu latency: 39
+AVISOR INFO: rr_scheduler_vcpu latency: 41
+AVISOR INFO: TIME: 2530478076 vm id 3 vcpu id 2 pcpu id 0
+AVISOR INFO: TIME: 2530481173 vm id 2 vcpu id 2 pcpu id 1
+task2! 61
+task2! 62
+task2! 62
+task2! 63
+task2! 63
+task2! 64
+task2! 64
+task2! 65
+task2! 65
+AVISOR INFO: TIME IRQ 221
+AVISOR INFO: TIME IRQ 222
+AVISOR INFO: rr_scheduler_vcpu latency: 26
+AVISOR INFO: rr_scheduler_vcpu latency: 42
+AVISOR INFO: TIME: 2593065459 vm id 3 vcpu id 3 pcpu id 0
+AVISOR INFO: TIME: 2593073143 vm id 2 vcpu id 3 pcpu id 1
+task3! 61
+task3! 61
+task3! 62
+task3! 62
+task3! 63
+task3! 63
+task3! 64
+task3! 64
+task3! 65
+task3! 65
+AVISOR INFO: TIME IRQ 223
+AVISOR INFO: TIME IRQ 224
+AVISOR INFO: rr_scheduler_vm latency: 27
+AVISOR INFO: rr_scheduler_vm latency: 13
+AVISOR INFO: rr_scheduler_vcpu latency: 4590
+AVISOR INFO: rr_scheduler_vcpu latency: 270
+AVISOR INFO: TIME: 2655634518 vm id 1 vcpu id 3 pcpu id 0
+AVISOR INFO: TIME: 2655634807 vm id 0 vcpu id 0 pcpu id 1
+task3! 61
+main 66
+task3! 62
+main 67
+task3! 63
+main 68
+task3! 64
+main 69
+task3! 65
+AVISOR INFO: TIME IRQ 225
+AVISOR INFO: TIME IRQ 226
+AVISOR INFO: rr_scheduler_vcpu latency: 32
+AVISOR INFO: rr_scheduler_vcpu latency: 62
+AVISOR INFO: TIME: 2718191929 vm id 1 vcpu id 0 pcpu id 0
+AVISOR INFO: TIME: 2718199473 vm id 0 vcpu id 1 pcpu id 1
+main 65
+task1! 65
+main 66
+task1! 66
+main 67
+task1! 67
+main 68
+task1! 68
+main 69
+task1! 69
+AVISOR INFO: TIME IRQ 227
+AVISOR INFO: TIME IRQ 228
+AVISOR INFO: rr_scheduler_vcpu latency: 24
+AVISOR INFO: rr_scheduler_vcpu latency: 27
+AVISOR INFO: TIME: 2780762644 vm id 1 vcpu id 1 pcpu id 0
+AVISOR INFO: TIME: 2780771933 vm id 0 vcpu id 3 pcpu id 1
+task1! 66
+task1! 67
+task1! 68
+task1! 69
+task1! 70
+AVISOR INFO: TIME IRQ 229
+AVISOR INFO: TIME IRQ 230
+AVISOR INFO: rr_scheduler_vcpu latency: 17
+AVISOR INFO: rr_scheduler_vcpu latency: 42
+AVISOR INFO: TIME: 2843327725 vm id 1 vcpu id 2 pcpu id 0
+AVISOR INFO: TIME: 2843332374 vm id 0 vcpu id 2 pcpu id 1
+task2! 66
+task2! 66
+task2! 67
+task2! 67
+task2! 68
+task2! 68
+task2! 69
+task2! 69
+task2! 70
+task2! 70
+AVISOR INFO: TIME IRQ 231
+AVISOR INFO: TIME IRQ 232
+AVISOR INFO: rr_scheduler_vm latency: 62
+AVISOR INFO: rr_scheduler_vm latency: 19
+AVISOR INFO: rr_scheduler_vcpu latency: 162
+AVISOR INFO: rr_scheduler_vcpu latency: 121
+AVISOR INFO: TIME: 2905951762 vm id 2 vcpu id 0 pcpu id 0
+AVISOR INFO: TIME: 2905951967 vm id 3 vcpu id 0 pcpu id 1
+main 65
+main 65
+main 66
+main 66
+main 67
+main 67
+main 68
+main 68
+main 69
+main 69
+AVISOR INFO: TIME IRQ 233
+AVISOR INFO: TIME IRQ 234
+AVISOR INFO: rr_scheduler_vcpu latency: 45
+AVISOR INFO: rr_scheduler_vcpu latency: 52
+AVISOR INFO: TIME: 2968479323 vm id 3 vcpu id 1 pcpu id 1
+AVISOR INFO: TIME: 2968487214 vm id 2 vcpu id 1 pcpu id 0
+task1! 65
+task1! 65
+task1! 66
+task1! 66
+task1! 67
+task1! 67
+task1! 68
+task1! 68
+task1! 69
+task1! 69
+AVISOR INFO: TIME IRQ 236
+AVISOR INFO: TIME IRQ 235
+AVISOR INFO: rr_scheduler_vcpu latency: 36
+AVISOR INFO: rr_scheduler_vcpu latency: 53
+AVISOR INFO: TIME: 3031058102 vm id 2 vcpu id 2 pcpu id 0
+AVISOR INFO: TIME: 3031060699 vm id 3 vcpu id 2 pcpu id 1
+task2! 66
+task2! 66
+task2! 67
+task2! 67
+task2! 68
+task2! 68
+task2! 69
+task2! 69
+task2! 70
+task2! 70
+AVISOR INFO: TIME IRQ 238
+AVISOR INFO: TIME IRQ 237
+AVISOR INFO: rr_scheduler_vcpu latency: 46
+AVISOR INFO: rr_scheduler_vcpu latency: 26
+AVISOR INFO: TIME: 3093627700 vm id 3 vcpu id 3 pcpu id 1
+AVISOR INFO: TIME: 3093634123 vm id 2 vcpu id 3 pcpu id 0
+task3! 66
+task3! 66
+task3! 67
+task3! 67
+task3! 68
+task3! 68
+task3! 69
+task3! 69
+task3! 70
+task3! 70
+AVISOR INFO: TIME IRQ 239
+AVISOR INFO: TIME IRQ 240
+AVISOR INFO: rr_scheduler_vm latency: 28
+AVISOR INFO: rr_scheduler_vm latency: 20
+AVISOR INFO: rr_scheduler_vcpu latency: 1832
+AVISOR INFO: rr_scheduler_vcpu latency: 154
+AVISOR INFO: TIME: 3156223257 vm id 0 vcpu id 0 pcpu id 0
+AVISOR INFO: TIME: 3156241143 vm id 1 vcpu id 3 pcpu id 1
+main 70
+task3! 66
+main 71
+task3! 67
+main 72
+task3! 68
+main 73
+task3! 69
+main 74
+task3! 70
+AVISOR INFO: TIME IRQ 241
+AVISOR INFO: TIME IRQ 242
+AVISOR INFO: rr_scheduler_vcpu latency: 62
+AVISOR INFO: rr_scheduler_vcpu latency: 47
+AVISOR INFO: TIME: 3218774981 vm id 1 vcpu id 0 pcpu id 1
+AVISOR INFO: TIME: 3218783722 vm id 0 vcpu id 1 pcpu id 0
+main 70
+task1! 70
+main 71
+task1! 71
+main 72
+task1! 72
+main 73
+task1! 73
+main 74
+task1! 74
+AVISOR INFO: TIME IRQ 243
+AVISOR INFO: TIME IRQ 244
+AVISOR INFO: rr_scheduler_vcpu latency: 29
+AVISOR INFO: rr_scheduler_vcpu latency: 41
+AVISOR INFO: TIME: 3281347429 vm id 1 vcpu id 1 pcpu id 1
+AVISOR INFO: TIME: 3281354362 vm id 0 vcpu id 3 pcpu id 0
+task1! 71
+task1! 72
+task1! 73
+task1! 74
+AVISOR INFO: TIME IRQ 245
+AVISOR INFO: TIME IRQ 246
+AVISOR INFO: rr_scheduler_vcpu latency: 90
+AVISOR INFO: rr_scheduler_vcpu latency: 28
+AVISOR INFO: TIME: 3343915163 vm id 0 vcpu id 2 pcpu id 0
+AVISOR INFO: TIME: 3343919927 vm id 1 vcpu id 2 pcpu id 1
+task2! 71
+task2! 71
+task2! 72
+task2! 72
+task2! 73
+task2! 73
+task2! 74
+task2! 74
+task2! 75
+task2! 75
+AVISOR INFO: TIME IRQ 247
+AVISOR INFO: TIME IRQ 248
+AVISOR INFO: rr_scheduler_vm latency: 25
+AVISOR INFO: rr_scheduler_vm latency: 15
+AVISOR INFO: rr_scheduler_vcpu latency: 19
+AVISOR INFO: rr_scheduler_vcpu latency: 4733
+AVISOR INFO: TIME: 3406511318 vm id 3 vcpu id 0 pcpu id 1
+AVISOR INFO: TIME: 3406524802 vm id 2 vcpu id 0 pcpu id 0
+main 70
+main 70
+main 71
+main 71
+main 72
+main 72
+main 73
+main 73
+main 74
+main 74
+AVISOR INFO: TIME IRQ 249
+AVISOR INFO: TIME IRQ 250
+AVISOR INFO: rr_scheduler_vcpu latency: 50
+AVISOR INFO: rr_scheduler_vcpu latency: 33
+AVISOR INFO: TIME: 3469056218 vm id 2 vcpu id 1 pcpu id 0
+AVISOR INFO: TIME: 3469066435 vm id 3 vcpu id 1 pcpu id 1
+task1! 70
+task1! 70
+task1! 71
+task1! 71
+task1! 72
+task1! 72
+task1! 73
+task1! 73
+task1! 74
+task1! 74
+AVISOR INFO: TIME IRQ 252
+AVISOR INFO: TIME IRQ 251
+AVISOR INFO: rr_scheduler_vcpu latency: 28
+AVISOR INFO: rr_scheduler_vcpu latency: 26
+AVISOR INFO: TIME: 3531659439 vm id 3 vcpu id 2 pcpu id 1
+AVISOR INFO: TIME: 3531667129 vm id 2 vcpu id 2 pcpu id 0
+task2! 71
+task2! 71
+task2! 72
+task2! 72
+task2! 73
+task2! 73
+task2! 74
+task2! 74
+task2! 75
+task2! 75
+AVISOR INFO: TIME IRQ 254
+AVISOR INFO: TIME IRQ 253
+AVISOR INFO: rr_scheduler_vcpu latency: 761
+AVISOR INFO: rr_scheduler_vcpu latency: 2687
+AVISOR INFO: TIME: 3594222527 vm id 3 vcpu id 3 pcpu id 1
+AVISOR INFO: TIME: 3594238028 vm id 2 vcpu id 3 pcpu id 0
+task3! 71
+task3! 71
+task3! 72
+task3! 72
+task3! 73
+task3! 73
+task3! 74
+task3! 74
+AVISOR INFO: TIME IRQ 255
+AVISOR INFO: TIME IRQ 256
+AVISOR INFO: rr_scheduler_vm latency: 24
+AVISOR INFO: rr_scheduler_vm latency: 14
+AVISOR INFO: rr_scheduler_vcpu latency: 505
+AVISOR INFO: rr_scheduler_vcpu latency: 5569
+AVISOR INFO: TIME: 3656801615 vm id 1 vcpu id 3 pcpu id 0
+AVISOR INFO: TIME: 3656801591 vm id 0 vcpu id 0 pcpu id 1
+main 75
+task3! 71
+main 76
+task3! 72
+main 77
+task3! 73
+main 78
+task3! 74
+main 79
+task3! 75
+AVISOR INFO: TIME IRQ 257
+AVISOR INFO: TIME IRQ 258
+AVISOR INFO: rr_scheduler_vcpu latency: 27
+AVISOR INFO: rr_scheduler_vcpu latency: 31
+AVISOR INFO: TIME: 3719360997 vm id 1 vcpu id 0 pcpu id 0
+AVISOR INFO: TIME: 3719371497 vm id 0 vcpu id 1 pcpu id 1
+main 75
+task1! 75
+main 76
+task1! 76
+main 77
+task1! 77
+main 78
+task1! 78
+main 79
+task1! 79
+AVISOR INFO: TIME IRQ 259
+AVISOR INFO: TIME IRQ 260
+AVISOR INFO: rr_scheduler_vcpu latency: 33
+AVISOR INFO: rr_scheduler_vcpu latency: 21
+AVISOR INFO: TIME: 3781927577 vm id 0 vcpu id 3 pcpu id 1
+AVISOR INFO: TIME: 3781942270 vm id 1 vcpu id 1 pcpu id 0
+task1! 75
+task1! 76
+task1! 77
+task1! 78
+task1! 79
+AVISOR INFO: TIME IRQ 261
+AVISOR INFO: TIME IRQ 262
+AVISOR INFO: rr_scheduler_vcpu latency: 23
+AVISOR INFO: rr_scheduler_vcpu latency: 63
+AVISOR INFO: TIME: 3844525676 vm id 1 vcpu id 2 pcpu id 0
+AVISOR INFO: TIME: 3844529499 vm id 0 vcpu id 2 pcpu id 1
+task2! 76
+task2! 76
+task2! 77
+task2! 77
+task2! 78
+task2! 78
+task2! 79
+task2! 79
+task2! 80
+task2! 80
+AVISOR INFO: TIME IRQ 263
+AVISOR INFO: TIME IRQ 264
+AVISOR INFO: rr_scheduler_vm latency: 26
+AVISOR INFO: rr_scheduler_vm latency: 16
+AVISOR INFO: rr_scheduler_vcpu latency: 228
+AVISOR INFO: rr_scheduler_vcpu latency: 6434
+AVISOR INFO: TIME: 3907084458 vm id 3 vcpu id 0 pcpu id 1
+AVISOR INFO: TIME: 3907090551 vm id 2 vcpu id 0 pcpu id 0
+main 75
+main 75
+main 76
+main 76
+main 77
+main 77
+main 78
+main 78
+main 79
+main 79
+AVISOR INFO: TIME IRQ 265
+AVISOR INFO: TIME IRQ 266
+AVISOR INFO: rr_scheduler_vcpu latency: 26
+AVISOR INFO: rr_scheduler_vcpu latency: 20
+AVISOR INFO: TIME: 3969639729 vm id 3 vcpu id 1 pcpu id 1
+AVISOR INFO: TIME: 3969648504 vm id 2 vcpu id 1 pcpu id 0
+task1! 75
+task1! 75
+task1! 76
+task1! 76
+task1! 77
+task1! 77
+task1! 78
+task1! 78
+task1! 79
+task1! 79
+AVISOR INFO: TIME IRQ 267
+AVISOR INFO: TIME IRQ 268
+AVISOR INFO: rr_scheduler_vcpu latency: 27
+AVISOR INFO: rr_scheduler_vcpu latency: 43
+AVISOR INFO: TIME: 4032213581 vm id 2 vcpu id 2 pcpu id 0
+AVISOR INFO: TIME: 4032220551 vm id 3 vcpu id 2 pcpu id 1
+task2! 76
+task2! 76
+task2! 77
+task2! 77
+task2! 78
+task2! 78
+task2! 79
+task2! 79
+task2! 80
+AVISOR INFO: TIME IRQ 269
+AVISOR INFO: TIME IRQ 270
+AVISOR INFO: rr_scheduler_vcpu latency: 30
+AVISOR INFO: rr_scheduler_vcpu latency: 28
+AVISOR INFO: TIME: 4094789024 vm id 2 vcpu id 3 pcpu id 0
+AVISOR INFO: TIME: 4094795992 vm id 3 vcpu id 3 pcpu id 1
+task3! 75
+task3! 75
+task3! 76
+task3! 76
+task3! 77
+task3! 77
+task3! 78
+task3! 78
+task3! 79
+task3! 79
+AVISOR INFO: TIME IRQ 271
+AVISOR INFO: TIME IRQ 272
+AVISOR INFO: rr_scheduler_vm latency: 25
+AVISOR INFO: rr_scheduler_vm latency: 18
+AVISOR INFO: rr_scheduler_vcpu latency: 4423
+AVISOR INFO: rr_scheduler_vcpu latency: 387
+AVISOR INFO: TIME: 4157394163 vm id 0 vcpu id 0 pcpu id 0
+AVISOR INFO: TIME: 4157401771 vm id 1 vcpu id 3 pcpu id 1
+main 80
+task3! 76
+main 81
+task3! 77
+main 82
+task3! 78
+main 83
+task3! 79
+main 84
+AVISOR INFO: TIME IRQ 273
+AVISOR INFO: TIME IRQ 274
+AVISOR INFO: rr_scheduler_vcpu latency: 85
+AVISOR INFO: rr_scheduler_vcpu latency: 33
+AVISOR INFO: TIME: 4219935970 vm id 0 vcpu id 1 pcpu id 0
+AVISOR INFO: TIME: 4219942391 vm id 1 vcpu id 0 pcpu id 1
+main 80
+task1! 80
+main 81
+task1! 81
+main 82
+task1! 82
+main 83
+task1! 83
+main 84
+AVISOR INFO: TIME IRQ 275
+AVISOR INFO: TIME IRQ 276
+AVISOR INFO: rr_scheduler_vcpu latency: 46
+AVISOR INFO: rr_scheduler_vcpu latency: 35
+AVISOR INFO: TIME: 4282521361 vm id 0 vcpu id 3 pcpu id 0
+AVISOR INFO: TIME: 4282522265 vm id 1 vcpu id 1 pcpu id 1
+task1! 80
+task1! 81
+task1! 82
+task1! 83
+task1! 84
+AVISOR INFO: TIME IRQ 278
+AVISOR INFO: TIME IRQ 277
+AVISOR INFO: rr_scheduler_vcpu latency: 22
+AVISOR INFO: rr_scheduler_vcpu latency: 54
+AVISOR INFO: TIME: 50123350 vm id 1 vcpu id 2 pcpu id 1
+AVISOR INFO: TIME: 50123725 vm id 0 vcpu id 2 pcpu id 0
+task2! 81
+task2! 81
+task2! 82
+task2! 82
+task2! 83
+task2! 83
+task2! 84
+task2! 84
+task2! 85
+task2! 85
+AVISOR INFO: TIME IRQ 280
+AVISOR INFO: TIME IRQ 279
+AVISOR INFO: rr_scheduler_vm latency: 24
+AVISOR INFO: rr_scheduler_vm latency: 15
+AVISOR INFO: rr_scheduler_vcpu latency: 155
+AVISOR INFO: rr_scheduler_vcpu latency: 3782
+AVISOR INFO: TIME: 112700160 vm id 2 vcpu id 0 pcpu id 1
+AVISOR INFO: TIME: 112708972 vm id 3 vcpu id 0 pcpu id 0
+main 80
+main 80
+main 81
+main 81
+main 82
+main 82
+main 83
+main 83
+main 84
+main 84
+AVISOR INFO: TIME IRQ 282
+AVISOR INFO: TIME IRQ 281
+AVISOR INFO: rr_scheduler_vcpu latency: 40
+AVISOR INFO: rr_scheduler_vcpu latency: 69
+AVISOR INFO: TIME: 175261910 vm id 3 vcpu id 1 pcpu id 0
+AVISOR INFO: TIME: 175267719 vm id 2 vcpu id 1 pcpu id 1
+task1! 80
+task1! 80
+task1! 81
+task1! 81
+task1! 82
+task1! 82
+task1! 83
+task1! 83
+task1! 84
+task1! 84
+AVISOR INFO: TIME IRQ 283
+AVISOR INFO: TIME IRQ 284
+AVISOR INFO: rr_scheduler_vcpu latency: 67
+AVISOR INFO: rr_scheduler_vcpu latency: 34
+AVISOR INFO: TIME: 237840064 vm id 3 vcpu id 2 pcpu id 0
+AVISOR INFO: TIME: 237847319 vm id 2 vcpu id 2 pcpu id 1
+task2! 80
+task2! 81
+task2! 81
+task2! 82
+task2! 82
+task2! 83
+task2! 83
+task2! 84
+task2! 84
+AVISOR INFO: TIME IRQ 285
+AVISOR INFO: TIME IRQ 286
+AVISOR INFO: rr_scheduler_vcpu latency: 32
+AVISOR INFO: rr_scheduler_vcpu latency: 35
+AVISOR INFO: TIME: 300409457 vm id 2 vcpu id 3 pcpu id 1
+AVISOR INFO: TIME: 300417175 vm id 3 vcpu id 3 pcpu id 0
+task3! 80
+task3! 80
+task3! 81
+task3! 81
+task3! 82
+task3! 82
+task3! 83
+task3! 83
+task3! 84
+task3! 84
+AVISOR INFO: TIME IRQ 287
+AVISOR INFO: TIME IRQ 288
+AVISOR INFO: rr_scheduler_vm latency: 26
+AVISOR INFO: rr_scheduler_vm latency: 16
+AVISOR INFO: rr_scheduler_vcpu latency: 3597
+AVISOR INFO: rr_scheduler_vcpu latency: 189
+AVISOR INFO: TIME: 362996228 vm id 1 vcpu id 3 pcpu id 1
+AVISOR INFO: TIME: 363002783 vm id 0 vcpu id 0 pcpu id 0
+task3! 80
+main 85
+task3! 81
+main 86
+task3! 82
+main 87
+task3! 83
+main 88
+task3! 84
+main 89
+AVISOR INFO: TIME IRQ 289
+AVISOR INFO: TIME IRQ 290
+AVISOR INFO: rr_scheduler_vcpu latency: 28
+AVISOR INFO: rr_scheduler_vcpu latency: 28
+AVISOR INFO: TIME: 425558580 vm id 0 vcpu id 1 pcpu id 0
+AVISOR INFO: TIME: 425565945 vm id 1 vcpu id 0 pcpu id 1
+task1! 84
+main 85
+task1! 85
+main 86
+task1! 86
+main 87
+task1! 87
+main 88
+task1! 88
+AVISOR INFO: TIME IRQ 291
+AVISOR INFO: TIME IRQ 292
+AVISOR INFO: rr_scheduler_vcpu latency: 28
+AVISOR INFO: rr_scheduler_vcpu latency: 66
+AVISOR INFO: TIME: 488143916 vm id 0 vcpu id 3 pcpu id 0
+AVISOR INFO: TIME: 488145545 vm id 1 vcpu id 1 pcpu id 1
+task1! 85
+task1! 86
+task1! 87
+task1! 88
+AVISOR INFO: TIME IRQ 293
+AVISOR INFO: TIME IRQ 294
+AVISOR INFO: rr_scheduler_vcpu latency: 22
+AVISOR INFO: rr_scheduler_vcpu latency: 56
+AVISOR INFO: TIME: 550709167 vm id 1 vcpu id 2 pcpu id 1
+AVISOR INFO: TIME: 550721453 vm id 0 vcpu id 2 pcpu id 0
+task2! 86
+task2! 86
+task2! 87
+task2! 87
+task2! 88
+task2! 88
+task2! 89
+task2! 89
+task2! 90
+AVISOR INFO: TIME IRQ 295
+AVISOR INFO: TIME IRQ 296
+AVISOR INFO: rr_scheduler_vm latency: 24
+AVISOR INFO: rr_scheduler_vm latency: 18
+AVISOR INFO: rr_scheduler_vcpu latency: 3157
+AVISOR INFO: rr_scheduler_vcpu latency: 4197
+AVISOR INFO: TIME: 613296491 vm id 2 vcpu id 0 pcpu id 1
+AVISOR INFO: TIME: 613305001 vm id 3 vcpu id 0 pcpu id 0
+main 85
+main 85
+main mai86n
+ 86
+main 87
+main 87
+main 88
+main 88
+AVISOR INFO: TIME IRQ 297
+AVISOR INFO: TIME IRQ 298
+AVISOR INFO: rr_scheduler_vcpu latency: 1208
+AVISOR INFO: rr_scheduler_vcpu latency: 233
+AVISOR INFO: TIME: 675864195 vm id 3 vcpu id 1 pcpu id 0
+AVISOR INFO: TIME: 675871232 vm id 2 vcpu id 1 pcpu id 1
+task1! 85
+task1! 85
+task1! 86
+task1! 86
+task1! 87
+task1! 87
+task1! 88
+task1! 88
+task1! 89
+task1! 89
+AVISOR INFO: TIME IRQ 300
+AVISOR INFO: TIME IRQ 299
+AVISOR INFO: rr_scheduler_vcpu latency: 35
+AVISOR INFO: rr_scheduler_vcpu latency: 53
+AVISOR INFO: TIME: 738426133 vm id 3 vcpu id 2 pcpu id 0
+AVISOR INFO: TIME: 738437311 vm id 2 vcpu id 2 pcpu id 1
+task2! 85
+task2! 85
+task2! 86
+task2! 86
+task2! 87
+task2! 87
+task2! 88
+task2! 88
+task2! 89
+task2! 89
+AVISOR INFO: TIME IRQ 302
+AVISOR INFO: TIME IRQ 301
+AVISOR INFO: rr_scheduler_vcpu latency: 40
+AVISOR INFO: rr_scheduler_vcpu latency: 27
+AVISOR INFO: TIME: 801017237 vm id 2 vcpu id 3 pcpu id 1
+AVISOR INFO: TIME: 801039046 vm id 3 vcpu id 3 pcpu id 0
+task3! 85
+task3! 85
+task3! 86
+task3! 86
+task3! 87
+task3! 87
+task3! 88
+task3! 88
+task3! 89
+task3! 89
+AVISOR INFO: TIME IRQ 303
+AVISOR INFO: TIME IRQ 304
+AVISOR INFO: rr_scheduler_vm latency: 25
+AVISOR INFO: rr_scheduler_vm latency: 17
+AVISOR INFO: rr_scheduler_vcpu latency: 1875
+AVISOR INFO: TIME: 863589720 vm id 1 vcpu id 3 pcpu id 1
+AVISOR INFO: rr_scheduler_vcpu latency: 64
+AVISOR INFO: TIME: 863602498 vm id 0 vcpu id 0 pcpu id 0
+task3! 85
+main 90
+task3! 86
+main 91
+task3! 87
+main 92
+task3! 88
+main 93
+task3! 89
+main 94
+AVISOR INFO: TIME IRQ 305
+AVISOR INFO: TIME IRQ 306
+AVISOR INFO: rr_scheduler_vcpu latency: 28
+AVISOR INFO: rr_scheduler_vcpu latency: 33
+AVISOR INFO: TIME: 926145829 vm id 1 vcpu id 0 pcpu id 1
+AVISOR INFO: TIME: 926151438 vm id 0 vcpu id 1 pcpu id 0
+main 89
+task1! 89
+main 90
+task1! 90
+main 91
+task1! 91
+main 92
+task1! 92
+main 93
+task1! 93
+AVISOR INFO: TIME IRQ 307
+AVISOR INFO: TIME IRQ 308
+AVISOR INFO: rr_scheduler_vcpu latency: 49
+AVISOR INFO: rr_scheduler_vcpu latency: 54
+AVISOR INFO: TIME: 988737910 vm id 1 vcpu id 1 pcpu id 1
+AVISOR INFO: TIME: 988738174 vm id 0 vcpu id 3 pcpu id 0
+task1! 89
+task1! 90
+task1! 91
+task1! 92
+task1! 93
+AVISOR INFO: TIME IRQ 309
+AVISOR INFO: TIME IRQ 310
+AVISOR INFO: rr_scheduler_vcpu latency: 20
+AVISOR INFO: rr_scheduler_vcpu latency: 44
+AVISOR INFO: TIME: 1051291961 vm id 1 vcpu id 2 pcpu id 1
+AVISOR INFO: TIME: 1051299704 vm id 0 vcpu id 2 pcpu id 0
+task2! 90
+task2! 91
+task2! 91
+task2! 92
+task2! 92
+task2! 93
+task2! 93
+task2! 94
+task2! 94
+task2! 95
+AVISOR INFO: TIME IRQ 311
+AVISOR INFO: TIME IRQ 312
+AVISOR INFO: rr_scheduler_vm latency: 162
+AVISOR INFO: rr_scheduler_vm latency: 14
+AVISOR INFO: rr_scheduler_vcpu latency: 238
+AVISOR INFO: rr_scheduler_vcpu latency: 158
+AVISOR INFO: TIME: 1113883405 vm id 2 vcpu id 0 pcpu id 1
+AVISOR INFO: TIME: 1113887894 vm id 3 vcpu id 0 pcpu id 0
+main 89
+main 89
+main 90
+main 90
+main 91
+main 91
+main 92
+main 92
+main 93
+main 93
+AVISOR INFO: TIME IRQ 313
+AVISOR INFO: TIME IRQ 314
+AVISOR INFO: rr_scheduler_vcpu latency: 31
+AVISOR INFO: rr_scheduler_vcpu latency: 51
+AVISOR INFO: TIME: 1176446802 vm id 2 vcpu id 1 pcpu id 1
+AVISOR INFO: TIME: 1176451341 vm id 3 vcpu id 1 pcpu id 0
+task1! 90
+task1! 90
+task1! 91
+task1! 91
+task1! 92
+task1! 92
+task1! 93
+task1! 93
+task1! 94
+task1! 94
+AVISOR INFO: TIME IRQ 316
+AVISOR INFO: TIME IRQ 315
+AVISOR INFO: rr_scheduler_vcpu latency: 37
+AVISOR INFO: rr_scheduler_vcpu latency: 31
+AVISOR INFO: TIME: 1239014336 vm id 3 vcpu id 2 pcpu id 0
+AVISOR INFO: TIME: 1239019926 vm id 2 vcpu id 2 pcpu id 1
+task2! 90
+task2! 90
+task2! 91
+task2! 91
+task2! 92
+task2! 92
+task2! 93
+task2! 93
+task2! 94
+task2! 94
+AVISOR INFO: TIME IRQ 317
+AVISOR INFO: TIME IRQ 318
+AVISOR INFO: rr_scheduler_vcpu latency: 73
+AVISOR INFO: rr_scheduler_vcpu latency: 60
+AVISOR INFO: TIME: 1301595060 vm id 3 vcpu id 3 pcpu id 0
+AVISOR INFO: TIME: 1301603160 vm id 2 vcpu id 3 pcpu id 1
+task3! 90
+task3! 90
+task3! 91
+task3! 91
+task3! 92
+task3! 92
+task3! 93
+task3! 93
+task3! 94
+task3! 94
+AVISOR INFO: TIME IRQ 319
+AVISOR INFO: TIME IRQ 320
+AVISOR INFO: rr_scheduler_vm latency: 46
+AVISOR INFO: rr_scheduler_vm latency: 16
+AVISOR INFO: rr_scheduler_vcpu latency: 197
+AVISOR INFO: rr_scheduler_vcpu latency: 198
+AVISOR INFO: TIME: 1364170575 vm id 1 vcpu id 3 pcpu id 1
+AVISOR INFO: TIME: 1364176296 vm id 0 vcpu id 0 pcpu id 0
+task3! 90
+main 95
+task3! 91
+main 96
+task3! 92
+main 97
+task3! 93
+main 98
+task3! 94
+AVISOR INFO: TIME IRQ 321
+AVISOR INFO: TIME IRQ 322
+AVISOR INFO: rr_scheduler_vcpu latency: 48
+AVISOR INFO: rr_scheduler_vcpu latency: 33
+AVISOR INFO: TIME: 1426729370 vm id 1 vcpu id 0 pcpu id 1
+AVISOR INFO: TIME: 1426737906 vm id 0 vcpu id 1 pcpu id 0
+main 94
+task1! 94
+main 95
+task1! 95
+main 96
+task1! 96
+main 97
+task1! 97
+main 98
+task1! 98
+AVISOR INFO: TIME IRQ 323
+AVISOR INFO: TIME IRQ 324
+AVISOR INFO: rr_scheduler_vcpu latency: 30
+AVISOR INFO: rr_scheduler_vcpu latency: 77
+AVISOR INFO: TIME: 1489315764 vm id 1 vcpu id 1 pcpu id 1
+AVISOR INFO: TIME: 1489330036 vm id 0 vcpu id 3 pcpu id 0
+task1! 94
+task1! 95
+task1! 96
+task1! 97
+task1! 98
+AVISOR INFO: TIME IRQ 325
+AVISOR INFO: TIME IRQ 326
+AVISOR INFO: rr_scheduler_vcpu latency: 28
+AVISOR INFO: rr_scheduler_vcpu latency: 32
+AVISOR INFO: TIME: 1551881953 vm id 1 vcpu id 2 pcpu id 1
+AVISOR INFO: TIME: 1551888759 vm id 0 vcpu id 2 pcpu id 0
+task2! 95
+task2! 96
+task2! 96
+task2! 97
+task2! 97
+task2! 98
+task2! 98
+task2! 99
+task2! 99
+AVISOR INFO: TIME IRQ 327
+AVISOR INFO: TIME IRQ 328
+AVISOR INFO: rr_scheduler_vm latency: 27
+AVISOR INFO: rr_scheduler_vm latency: 21
+AVISOR INFO: rr_scheduler_vcpu latency: 319
+AVISOR INFO: rr_scheduler_vcpu latency: 126
+AVISOR INFO: TIME: 1614471829 vm id 2 vcpu id 0 pcpu id 1
+AVISOR INFO: TIME: 1614477421 vm id 3 vcpu id 0 pcpu id 0
+main 94
+main 94
+main 95
+main 95
+main 96
+main 96
+main 97
+main 97
+main 98
+main 98
+AVISOR INFO: TIME IRQ 329
+AVISOR INFO: TIME IRQ 330
+AVISOR INFO: rr_scheduler_vcpu latency: 28
+AVISOR INFO: rr_scheduler_vcpu latency: 32
+AVISOR INFO: TIME: 1677019124 vm id 3 vcpu id 1 pcpu id 0
+AVISOR INFO: TIME: 1677027741 vm id 2 vcpu id 1 pcpu id 1
+task1! 95
+task1! 95
+task1! 96
+task1! 96
+task1! 97
+task1! 97
+task1! 98
+task1! 98
+task1! 99
+AVISOR INFO: TIME IRQ 331
+AVISOR INFO: TIME IRQ 332
+AVISOR INFO: rr_scheduler_vcpu latency: 700
+AVISOR INFO: rr_scheduler_vcpu latency: 139
+AVISOR INFO: TIME: 1739598000 vm id 3 vcpu id 2 pcpu id 0
+AVISOR INFO: TIME: 1739607367 vm id 2 vcpu id 2 pcpu id 1
+task2! 95
+task2! 95
+task2! 96
+task2! 96
+task2! 97
+task2! 97
+task2! 98
+task2! 98
+task2! 99
+task2! 99
+AVISOR INFO: TIME IRQ 333
+AVISOR INFO: TIME IRQ 334
+AVISOR INFO: rr_scheduler_vcpu latency: 43
+AVISOR INFO: rr_scheduler_vcpu latency: 38
+AVISOR INFO: TIME: 1802158927 vm id 3 vcpu id 3 pcpu id 0
+AVISOR INFO: TIME: 1802166296 vm id 2 vcpu id 3 pcpu id 1
+task3! 95
+task3! 95
+task3! 96
+task3! 96
+task3! 97
+task3! 97
+task3! 98
+task3! 98
+task3! 99
+task3! 99
+AVISOR INFO: TIME IRQ 335
+AVISOR INFO: TIME IRQ 336
+AVISOR INFO: rr_scheduler_vm latency: 30
+AVISOR INFO: rr_scheduler_vm latency: 16
+AVISOR INFO: rr_scheduler_vcpu latency: 182
+AVISOR INFO: rr_scheduler_vcpu latency: 470
+AVISOR INFO: TIME: 1864761365 vm id 1 vcpu id 3 pcpu id 0
+AVISOR INFO: TIME: 1864768577 vm id 0 vcpu id 0 pcpu id 1
+main 99
+task3! 95
+main 100
+task3! 96
+main 101
+task3! 97
+main 102
+task3! 98
+main 103
+task3! 99
+AVISOR INFO: TIME IRQ 337
+AVISOR INFO: TIME IRQ 338
+AVISOR INFO: rr_scheduler_vcpu latency: 38
+AVISOR INFO: rr_scheduler_vcpu latency: 38
+AVISOR INFO: TIME: 1927310628 vm id 0 vcpu id 1 pcpu id 1
+AVISOR INFO: TIME: 1927316192 vm id 1 vcpu id 0 pcpu id 0
+main 99
+task1! 99
+main 100
+task1! 100
+main 101
+task1! 101
+main 102
+task1! 102
+main 103
+task1! 103
+AVISOR INFO: TIME IRQ 339
+AVISOR INFO: TIME IRQ 340
+AVISOR INFO: rr_scheduler_vcpu latency: 47
+AVISOR INFO: rr_scheduler_vcpu latency: 49
+AVISOR INFO: TIME: 1989879753 vm id 0 vcpu id 3 pcpu id 1
+AVISOR INFO: TIME: 1989886504 vm id 1 vcpu id 1 pcpu id 0
+task1! 99
+task1! 100
+task1! 101
+task1! 102
+task1! 103
+AVISOR INFO: TIME IRQ 341
+AVISOR INFO: TIME IRQ 342
+AVISOR INFO: rr_scheduler_vcpu latency: 46
+AVISOR INFO: rr_scheduler_vcpu latency: 29
+AVISOR INFO: TIME: 2052458633 vm id 0 vcpu id 2 pcpu id 1
+AVISOR INFO: TIME: 2052469573 vm id 1 vcpu id 2 pcpu id 0
+task2! 100
+task2! 100
+task2! 101
+task2! 101
+task2! 102
+task2! 102
+task2! 103
+task2! 103
+task2! 104
+task2! 104
+AVISOR INFO: TIME IRQ 343
+AVISOR INFO: TIME IRQ 344
+AVISOR INFO: rr_scheduler_vm latency: 27
+AVISOR INFO: rr_scheduler_vm latency: 17
+AVISOR INFO: rr_scheduler_vcpu latency: 5197
+AVISOR INFO: rr_scheduler_vcpu latency: 183
+AVISOR INFO: TIME: 2115057726 vm id 3 vcpu id 0 pcpu id 0
+AVISOR INFO: TIME: 2115068765 vm id 2 vcpu id 0 pcpu id 1
+main 99
+main 99
+main 100
+main 100
+main 101
+main 101
+main 102
+main 102
+main 103
+main 103
+AVISOR INFO: TIME IRQ 345
+AVISOR INFO: TIME IRQ 346
+AVISOR INFO: rr_scheduler_vcpu latency: 45
+AVISOR INFO: rr_scheduler_vcpu latency: 108
+AVISOR INFO: TIME: 2177617375 vm id 3 vcpu id 1 pcpu id 0
+AVISOR INFO: TIME: 2177626949 vm id 2 vcpu id 1 pcpu id 1
+task1! 99
+task1! 100
+task1! 100
+task1! 101
+task1! 101
+task1! 102
+task1! 102
+task1! 103
+task1! 103
+AVISOR INFO: TIME IRQ 347
+AVISOR INFO: TIME IRQ 348
+AVISOR INFO: rr_scheduler_vcpu latency: 47
+AVISOR INFO: rr_scheduler_vcpu latency: 41
+AVISOR INFO: TIME: 2240174384 vm id 2 vcpu id 2 pcpu id 1
+AVISOR INFO: TIME: 2240180173 vm id 3 vcpu id 2 pcpu id 0
+task2! 100
+task2! 100
+task2! 101
+task2! 101
+task2! 102
+task2! 102
+task2! 103
+task2! 103
+task2! 104
+AVISOR INFO: TIME IRQ 349
+AVISOR INFO: TIME IRQ 350
+AVISOR INFO: rr_scheduler_vcpu latency: 30
+AVISOR INFO: rr_scheduler_vcpu latency: 53
+AVISOR INFO: TIME: 2302746731 vm id 3 vcpu id 3 pcpu id 0
+AVISOR INFO: TIME: 2302758683 vm id 2 vcpu id 3 pcpu id 1
+task3! 100
+task3! 100
+task3! 101
+task3! 101
+task3! 102
+task3! 102
+task3! 103
+task3! 103
+AVISOR INFO: TIME IRQ 351
+AVISOR INFO: TIME IRQ 352
+AVISOR INFO: rr_scheduler_vm latency: 31
+AVISOR INFO: rr_scheduler_vm latency: 16
+AVISOR INFO: rr_scheduler_vcpu latency: 730
+AVISOR INFO: rr_scheduler_vcpu latency: 635
+AVISOR INFO: TIME: 2365368561 vm id 1 vcpu id 3 pcpu id 0
+AVISOR INFO: TIME: 2365371314 vm id 0 vcpu id 0 pcpu id 1
+main 104
+task3! 100
+main 105
+task3! 101
+main 106
+task3! 102
+main 107
+task3! 103
+main 108
+AVISOR INFO: TIME IRQ 354
+AVISOR INFO: TIME IRQ 353
+AVISOR INFO: rr_scheduler_vcpu latency: 56
+AVISOR INFO: rr_scheduler_vcpu latency: 32
+AVISOR INFO: TIME: 2427903809 vm id 1 vcpu id 0 pcpu id 0
+AVISOR INFO: TIME: 2427908522 vm id 0 vcpu id 1 pcpu id 1
+main 104
+task1! 104
+main 105
+task1! 105
+main 106
+task1! 106
+main 107
+task1! 107
+main 108
+AVISOR INFO: TIME IRQ 355
+AVISOR INFO: TIME IRQ 356
+AVISOR INFO: rr_scheduler_vcpu latency: 19
+AVISOR INFO: rr_scheduler_vcpu latency: 26
+AVISOR INFO: TIME: 2490472959 vm id 1 vcpu id 1 pcpu id 0
+AVISOR INFO: TIME: 2490480169 vm id 0 vcpu id 3 pcpu id 1
+task1! 104
+task1! 105
+task1! 106
+task1! 107
+AVISOR INFO: TIME IRQ 357
+AVISOR INFO: TIME IRQ 358
+AVISOR INFO: rr_scheduler_vcpu latency: 21
+AVISOR INFO: rr_scheduler_vcpu latency: 60
+AVISOR INFO: TIME: 2553043497 vm id 1 vcpu id 2 pcpu id 0
+AVISOR INFO: TIME: 2553056909 vm id 0 vcpu id 2 pcpu id 1
+task2! 105
+task2! 105
+task2! 106
+task2! 106
+task2! 107
+task2! 107
+task2! 108
+task2! 108
+task2! 109
+task2! 109
+AVISOR INFO: TIME IRQ 359
+AVISOR INFO: TIME IRQ 360
+AVISOR INFO: rr_scheduler_vm latency: 24
+AVISOR INFO: rr_scheduler_vm latency: 22
+AVISOR INFO: rr_scheduler_vcpu latency: 199
+AVISOR INFO: rr_scheduler_vcpu latency: 200
+AVISOR INFO: TIME: 2615633894 vm id 3 vcpu id 0 pcpu id 1
+AVISOR INFO: TIME: 2615641261 vm id 2 vcpu id 0 pcpu id 0
+main 104
+main 104
+main 105
+main 105
+main 106
+main 106
+main 107
+main 107
+main 108
+main 108
+AVISOR INFO: TIME IRQ 361
+AVISOR INFO: TIME IRQ 362
+AVISOR INFO: rr_scheduler_vcpu latency: 19
+AVISOR INFO: rr_scheduler_vcpu latency: 30
+AVISOR INFO: TIME: 2678187888 vm id 2 vcpu id 1 pcpu id 0
+AVISOR INFO: TIME: 2678203939 vm id 3 vcpu id 1 pcpu id 1
+task1! 104
+task1! 104
+task1! 105
+task1! 105
+task1! 106
+task1! 106
+task1! 107
+task1! 107
+task1! 108
+task1! 108
+AVISOR INFO: TIME IRQ 363
+AVISOR INFO: TIME IRQ 364
+AVISOR INFO: rr_scheduler_vcpu latency: 64
+AVISOR INFO: rr_scheduler_vcpu latency: 81
+AVISOR INFO: TIME: 2740763218 vm id 3 vcpu id 2 pcpu id 1
+AVISOR INFO: TIME: 2740770624 vm id 2 vcpu id 2 pcpu id 0
+task2! 104
+task2! 105
+task2! 105
+task2! 106
+task2! 106
+task2! 107
+task2! 107
+task2! 108
+task2! 108
+AVISOR INFO: TIME IRQ 365
+AVISOR INFO: TIME IRQ 366
+AVISOR INFO: rr_scheduler_vcpu latency: 703
+AVISOR INFO: rr_scheduler_vcpu latency: 187
+AVISOR INFO: TIME: 2803339700 vm id 3 vcpu id 3 pcpu id 1
+AVISOR INFO: TIME: 2803346996 vm id 2 vcpu id 3 pcpu id 0
+task3! 104
+task3! 104
+task3! 105
+task3! 105
+task3! 106
+task3! 106
+task3! 107
+task3! 107
+tatsaskk3! 103!8
+ 108
+AVISOR INFO: TIME IRQ 367
+AVISOR INFO: TIME IRQ 368
+AVISOR INFO: rr_scheduler_vm latency: 26
+AVISOR INFO: rr_scheduler_vm latency: 19
+AVISOR INFO: rr_scheduler_vcpu latency: 632
+AVISOR INFO: rr_scheduler_vcpu latency: 1112
+AVISOR INFO: TIME: 2865921458 vm id 0 vcpu id 0 pcpu id 1
+AVISOR INFO: TIME: 2865934523 vm id 1 vcpu id 3 pcpu id 0
+task3! 104
+main 109
+task3! 105
+main 110
+task3! 106
+main 111
+task3! 107
+main 112
+task3! 108
+main 113
+AVISOR INFO: TIME IRQ 369
+AVISOR INFO: TIME IRQ 370
+AVISOR INFO: rr_scheduler_vcpu latency: 62
+AVISOR INFO: rr_scheduler_vcpu latency: 57
+AVISOR INFO: TIME: 2928481254 vm id 1 vcpu id 0 pcpu id 0
+AVISOR INFO: TIME: 2928488893 vm id 0 vcpu id 1 pcpu id 1
+task1! 108
+main 109
+task1! 109
+main 110
+task1! 110
+main 111
+task1! 111
+main 112
+task1! 112
+AVISOR INFO: TIME IRQ 371
+AVISOR INFO: TIME IRQ 372
+AVISOR INFO: rr_scheduler_vcpu latency: 36
+AVISOR INFO: rr_scheduler_vcpu latency: 52
+AVISOR INFO: TIME: 2991085303 vm id 1 vcpu id 1 pcpu id 0
+AVISOR INFO: TIME: 2991101816 vm id 0 vcpu id 3 pcpu id 1
+task1! 108
+task1! 109
+task1! 110
+task1! 111
+task1! 112
+AVISOR INFO: TIME IRQ 373
+AVISOR INFO: TIME IRQ 374
+AVISOR INFO: rr_scheduler_vcpu latency: 25
+AVISOR INFO: rr_scheduler_vcpu latency: 82
+AVISOR INFO: TIME: 3053643761 vm id 1 vcpu id 2 pcpu id 0
+AVISOR INFO: TIME: 3053650360 vm id 0 vcpu id 2 pcpu id 1
+task2! 110
+task2! 110
+task2! 111
+task2! 111
+task2! 112
+task2! 112
+task2! 113
+task2! 113
+task2! 114
+AVISOR INFO: TIME IRQ 375
+AVISOR INFO: TIME IRQ 376
+AVISOR INFO: rr_scheduler_vm latency: 30
+AVISOR INFO: rr_scheduler_vm latency: 19
+AVISOR INFO: rr_scheduler_vcpu latency: 480
+AVISOR INFO: rr_scheduler_vcpu latency: 247
+AVISOR INFO: TIME: 3116222078 vm id 3 vcpu id 0 pcpu id 1
+AVISOR INFO: TIME: 3116233136 vm id 2 vcpu id 0 pcpu id 0
+main 109
+main 109
+main 110
+main 110
+main 111
+main 111
+main 112
+main 112
+AVISOR INFO: TIME IRQ 377
+AVISOR INFO: TIME IRQ 378
+AVISOR INFO: rr_scheduler_vcpu latency: 43
+AVISOR INFO: rr_scheduler_vcpu latency: 33
+AVISOR INFO: TIME: 3178774210 vm id 3 vcpu id 1 pcpu id 1
+AVISOR INFO: TIME: 3178780202 vm id 2 vcpu id 1 pcpu id 0
+task1! 109
+task1! 109
+task1! 110
+task1! 110
+task1! 111
+task1! 111
+task1! 112
+task1! 112
+task1! 113
+task1! 113
+AVISOR INFO: TIME IRQ 379
+AVISOR INFO: TIME IRQ 380
+AVISOR INFO: rr_scheduler_vcpu latency: 39
+AVISOR INFO: rr_scheduler_vcpu latency: 45
+AVISOR INFO: TIME: 3241349023 vm id 2 vcpu id 2 pcpu id 0
+AVISOR INFO: TIME: 3241360656 vm id 3 vcpu id 2 pcpu id 1
+task2! 109
+task2! 109
+task2! 110
+task2! 110
+task2! 111
+task2! 111
+task2! 112
+task2! 112
+task2! 113
+task2! 113
+AVISOR INFO: TIME IRQ 381
+AVISOR INFO: TIME IRQ 382
+AVISOR INFO: rr_scheduler_vcpu latency: 29
+AVISOR INFO: rr_scheduler_vcpu latency: 44
+AVISOR INFO: TIME: 3303947077 vm id 3 vcpu id 3 pcpu id 1
+AVISOR INFO: TIME: 3303953864 vm id 2 vcpu id 3 pcpu id 0
+task3! 109
+task3! 109
+task3! 110
+task3! 110
+task3! 111
+task3! 111
+task3! 112
+task3! 112
+task3! 113
+task3! 113
+AVISOR INFO: TIME IRQ 383
+AVISOR INFO: TIME IRQ 384
+AVISOR INFO: rr_scheduler_vm latency: 23
+AVISOR INFO: rr_scheduler_vm latency: 17
+AVISOR INFO: rr_scheduler_vcpu latency: 622
+AVISOR INFO: rr_scheduler_vcpu latency: 172
+AVISOR INFO: TIME: 3366507435 vm id 0 vcpu id 0 pcpu id 0
+AVISOR INFO: TIME: 3366512931 vm id 1 vcpu id 3 pcpu id 1
+task3! 109
+main 114
+task3! 110
+main 115
+task3! 111
+main 116
+task3! 112
+main 117
+task3! 113
+AVISOR INFO: TIME IRQ 385
+AVISOR INFO: TIME IRQ 386
+AVISOR INFO: rr_scheduler_vcpu latency: 76
+AVISOR INFO: rr_scheduler_vcpu latency: 71
+AVISOR INFO: TIME: 3429083926 vm id 1 vcpu id 0 pcpu id 1
+AVISOR INFO: TIME: 3429090705 vm id 0 vcpu id 1 pcpu id 0
+main 113
+task1! 113
+main 114
+task1! 114
+main 115
+task1! 115
+main 116
+task1! 116
+main 117
+task1! 117
+AVISOR INFO: TIME IRQ 387
+AVISOR INFO: TIME IRQ 388
+AVISOR INFO: rr_scheduler_vcpu latency: 40
+AVISOR INFO: rr_scheduler_vcpu latency: 29
+AVISOR INFO: TIME: 3491640726 vm id 0 vcpu id 3 pcpu id 0
+AVISOR INFO: TIME: 3491647957 vm id 1 vcpu id 1 pcpu id 1
+task1! 113
+task1! 114
+task1! 115
+task1! 116
+task1! 117
+AVISOR INFO: TIME IRQ 389
+AVISOR INFO: TIME IRQ 390
+AVISOR INFO: rr_scheduler_vcpu latency: 34
+AVISOR INFO: rr_scheduler_vcpu latency: 15
+AVISOR INFO: TIME: 3554217264 vm id 0 vcpu id 2 pcpu id 0
+AVISOR INFO: TIME: 3554222660 vm id 1 vcpu id 2 pcpu id 1
+task2! 114
+task2! 115
+task2! 115
+task2! 116
+task2! 116
+task2! 117
+task2! 117
+task2! 118
+task2! 118
+AVISOR INFO: TIME IRQ 391
+AVISOR INFO: TIME IRQ 392
+AVISOR INFO: rr_scheduler_vm latency: 28
+AVISOR INFO: rr_scheduler_vm latency: 15
+AVISOR INFO: rr_scheduler_vcpu latency: 3556
+AVISOR INFO: rr_scheduler_vcpu latency: 2644
+AVISOR INFO: TIME: 3616805232 vm id 2 vcpu id 0 pcpu id 0
+AVISOR INFO: TIME: 3616810960 vm id 3 vcpu id 0 pcpu id 1
+main 113
+main 113
+main 114
+main 114
+main 115
+main 115
+main 116
+main 116
+main 117
+main 117
+AVISOR INFO: TIME IRQ 393
+AVISOR INFO: TIME IRQ 394
+AVISOR INFO: rr_scheduler_vcpu latency: 26
+AVISOR INFO: rr_scheduler_vcpu latency: 28
+AVISOR INFO: TIME: 3679362751 vm id 2 vcpu id 1 pcpu id 0
+AVISOR INFO: TIME: 3679379433 vm id 3 vcpu id 1 pcpu id 1
+task1! 114
+task1! 114
+task1! 115
+task1! 115
+task1! 116
+task1! 116
+task1! 117
+task1! 117
+task1! 118
+task1! 118
+AVISOR INFO: TIME IRQ 395
+AVISOR INFO: TIME IRQ 396
+AVISOR INFO: rr_scheduler_vcpu latency: 29
+AVISOR INFO: rr_scheduler_vcpu latency: 41
+AVISOR INFO: TIME: 3741925610 vm id 3 vcpu id 2 pcpu id 1
+AVISOR INFO: TIME: 3741934684 vm id 2 vcpu id 2 pcpu id 0
+task2! 114
+task2! 114
+task2! 115
+task2! 115
+task2! 116
+task2! 116
+task2! 117
+task2! 117
+task2! 118
+task2! 118
+AVISOR INFO: TIME IRQ 398
+AVISOR INFO: TIME IRQ 397
+AVISOR INFO: rr_scheduler_vcpu latency: 22
+AVISOR INFO: rr_scheduler_vcpu latency: 18
+AVISOR INFO: TIME: 3804501314 vm id 3 vcpu id 3 pcpu id 1
+AVISOR INFO: TIME: 3804516205 vm id 2 vcpu id 3 pcpu id 0
+task3! 114
+task3! 114
+task3! 115
+task3! 115
+task3! 116
+task3! 116
+task3! 117
+task3! 117
+task3! 118
+task3! 118
+AVISOR INFO: TIME IRQ 399
+AVISOR INFO: TIME IRQ 400
+AVISOR INFO: rr_scheduler_vm latency: 27
+AVISOR INFO: rr_scheduler_vm latency: 18
+AVISOR INFO: rr_scheduler_vcpu latency: 1281
+AVISOR INFO: rr_scheduler_vcpu latency: 132
+AVISOR INFO: TIME: 3867086151 vm id 0 vcpu id 0 pcpu id 0
+AVISOR INFO: TIME: 3867094229 vm id 1 vcpu id 3 pcpu id 1
+main 118
+task3! 114
+main 119
+task3! 115
+main 120
+task3! 116
+main 121
+task3! 117
+main 122
+task3! 118
+AVISOR INFO: TIME IRQ 401
+AVISOR INFO: TIME IRQ 402
+AVISOR INFO: rr_scheduler_vcpu latency: 23
+AVISOR INFO: rr_scheduler_vcpu latency: 28
+AVISOR INFO: TIME: 3929648298 vm id 1 vcpu id 0 pcpu id 1
+AVISOR INFO: TIME: 3929657706 vm id 0 vcpu id 1 pcpu id 0
+main 118
+task1! 118
+main 119
+task1! 119
+main 120
+task1! 120
+main 121
+task1! 121
+main 122
+task1! 122
+AVISOR INFO: TIME IRQ 403
+AVISOR INFO: TIME IRQ 404
+AVISOR INFO: rr_scheduler_vcpu latency: 29
+AVISOR INFO: rr_scheduler_vcpu latency: 64
+AVISOR INFO: TIME: 3992218614 vm id 0 vcpu id 3 pcpu id 0
+AVISOR INFO: TIME: 3992229710 vm id 1 vcpu id 1 pcpu id 1
+task1! 118
+task1! 119
+task1! 120
+task1! 121
+task1! 122
+AVISOR INFO: TIME IRQ 405
+AVISOR INFO: TIME IRQ 406
+AVISOR INFO: rr_scheduler_vcpu latency: 22
+AVISOR INFO: rr_scheduler_vcpu latency: 55
+AVISOR INFO: TIME: 4054791903 vm id 0 vcpu id 2 pcpu id 0
+AVISOR INFO: TIME: 4054792733 vm id 1 vcpu id 2 pcpu id 1
+task2! 119
+task2! 119
+task2! 120
+task2! 120
+task2! 121
+task2! 121
+task2! 122
+task2! 122
+task2! 123
+task2! 123
+AVISOR INFO: TIME IRQ 407
+AVISOR INFO: TIME IRQ 408
+AVISOR INFO: rr_scheduler_vm latency: 27
+AVISOR INFO: rr_scheduler_vm latency: 14
+AVISOR INFO: rr_scheduler_vcpu latency: 7504
+AVISOR INFO: rr_scheduler_vcpu latency: 282
+AVISOR INFO: TIME: 4117367984 vm id 2 vcpu id 0 pcpu id 0
+AVISOR INFO: TIME: 4117381758 vm id 3 vcpu id 0 pcpu id 1
+main 118
+main 118
+main 119
+main 119
+main 120
+main 120
+main 121
+main 121
+main 122
+main 122
+AVISOR INFO: TIME IRQ 409
+AVISOR INFO: TIME IRQ 410
+AVISOR INFO: rr_scheduler_vcpu latency: 29
+AVISOR INFO: rr_scheduler_vcpu latency: 33
+AVISOR INFO: TIME: 4179933679 vm id 3 vcpu id 1 pcpu id 1
+AVISOR INFO: TIME: 4179938952 vm id 2 vcpu id 1 pcpu id 0
+task1! 119
+task1! 119
+task1! 120
+task1! 120
+task1! 121
+task1! 121
+task1! 122
+task1! 122
+AVISOR INFO: TIME IRQ 411
+AVISOR INFO: TIME IRQ 412
+AVISOR INFO: rr_scheduler_vcpu latency: 46
+AVISOR INFO: rr_scheduler_vcpu latency: 42
+AVISOR INFO: TIME: 4242527395 vm id 3 vcpu id 2 pcpu id 1
+AVISOR INFO: TIME: 4242538724 vm id 2 vcpu id 2 pcpu id 0
+task2! 119
+task2! 119
+task2! 120
+task2! 120
+task2! 121
+task2! 121
+task2! 122
+task2! 122
+task2! 123
+task2! 123
+AVISOR INFO: TIME IRQ 414
+AVISOR INFO: TIME IRQ 413
+AVISOR INFO: rr_scheduler_vcpu latency: 37
+AVISOR INFO: rr_scheduler_vcpu latency: 83
+AVISOR INFO: TIME: 10115567 vm id 2 vcpu id 3 pcpu id 0
+AVISOR INFO: TIME: 10122086 vm id 3 vcpu id 3 pcpu id 1
+task3! 119
+task3! 119
+task3! 120
+task3! 120
+task3! 121
+task3! 121
+task3! 122
+task3! 122
+task3ta!sk3! 123 123
+
+AVISOR INFO: TIME IRQ 415
+AVISOR INFO: TIME IRQ 416
+AVISOR INFO: rr_scheduler_vm latency: 28
+AVISOR INFO: rr_scheduler_vm latency: 13
+AVISOR INFO: rr_scheduler_vcpu latency: 154
+AVISOR INFO: rr_scheduler_vcpu latency: 2177
+AVISOR INFO: TIME: 72694388 vm id 0 vcpu id 0 pcpu id 0
+AVISOR INFO: TIME: 72700069 vm id 1 vcpu id 3 pcpu id 1
+main 123
+task3! 119
+main 124
+task3! 120
+main 125
+task3! 121
+main 126
+task3! 122
+main 127
+AVISOR INFO: TIME IRQ 417
+AVISOR INFO: TIME IRQ 418
+AVISOR INFO: rr_scheduler_vcpu latency: 47
+AVISOR INFO: rr_scheduler_vcpu latency: 43
+AVISOR INFO: TIME: 135259019 vm id 0 vcpu id 1 pcpu id 0
+AVISOR INFO: TIME: 135273635 vm id 1 vcpu id 0 pcpu id 1
+main 123
+task1! 123
+main 124
+task1! 124
+main 125
+task1! 125
+main 126
+task1! 126
+main 127
+AVISOR INFO: TIME IRQ 419
+AVISOR INFO: TIME IRQ 420
+AVISOR INFO: rr_scheduler_vcpu latency: 27
+AVISOR INFO: rr_scheduler_vcpu latency: 39
+AVISOR INFO: TIME: 197825609 vm id 1 vcpu id 1 pcpu id 1
+AVISOR INFO: TIME: 197835400 vm id 0 vcpu id 3 pcpu id 0
+task1! 123
+task1! 124
+task1! 125
+task1! 126
+task1! 127
+AVISOR INFO: TIME IRQ 422
+AVISOR INFO: TIME IRQ 421
+AVISOR INFO: rr_scheduler_vcpu latency: 685
+AVISOR INFO: rr_scheduler_vcpu latency: 203
+AVISOR INFO: TIME: 260413001 vm id 0 vcpu id 2 pcpu id 0
+AVISOR INFO: TIME: 260418771 vm id 1 vcpu id 2 pcpu id 1
+task2! 124
+task2! 124
+task2! 125
+task2! 125
+task2! 126
+task2! 126
+task2! 127
+task2! 127
+task2! 128
+task2! 128
+AVISOR INFO: TIME IRQ 423
+AVISOR INFO: TIME IRQ 424
+AVISOR INFO: rr_scheduler_vm latency: 29
+AVISOR INFO: rr_scheduler_vm latency: 17
+AVISOR INFO: rr_scheduler_vcpu latency: 1278
+AVISOR INFO: rr_scheduler_vcpu latency: 191
+AVISOR INFO: TIME: 323000148 vm id 2 vcpu id 0 pcpu id 1
+AVISOR INFO: TIME: 323000087 vm id 3 vcpu id 0 pcpu id 0
+main 123
+main 123
+main 124
+main 124
+main 125
+main 125
+main 126
+main 126
+main 127
+main 127
+AVISOR INFO: TIME IRQ 425
+AVISOR INFO: TIME IRQ 426
+AVISOR INFO: rr_scheduler_vcpu latency: 44
+AVISOR INFO: rr_scheduler_vcpu latency: 63
+AVISOR INFO: TIME: 385549620 vm id 3 vcpu id 1 pcpu id 0
+AVISOR INFO: TIME: 385564137 vm id 2 vcpu id 1 pcpu id 1
+task1! 123
+task1! 123
+task1! 124
+task1! 124
+task1! 125
+task1! 125
+task1! 126
+task1! 126
+task1! 127
+task1! 127
+AVISOR INFO: TIME IRQ 427
+AVISOR INFO: TIME IRQ 428
+AVISOR INFO: rr_scheduler_vcpu latency: 22
+AVISOR INFO: rr_scheduler_vcpu latency: 23
+AVISOR INFO: TIME: 448116742 vm id 2 vcpu id 2 pcpu id 1
+AVISOR INFO: TIME: 448138522 vm id 3 vcpu id 2 pcpu id 0
+task2! 124
+task2! 124
+task2! 125
+task2! 125
+task2! 126
+task2! 126
+task2! 127
+task2! 127
+AVISOR INFO: TIME IRQ 429
+AVISOR INFO: TIME IRQ 430
+AVISOR INFO: rr_scheduler_vcpu latency: 55
+AVISOR INFO: rr_scheduler_vcpu latency: 36
+AVISOR INFO: TIME: 510702872 vm id 3 vcpu id 3 pcpu id 0
+AVISOR INFO: TIME: 510705696 vm id 2 vcpu id 3 pcpu id 1
+task3! 124
+task3! 124
+task3! 125
+task3! 125
+task3! 126
+task3! 126
+task3! 127
+task3! 127
+AVISOR INFO: TIME IRQ 431
+AVISOR INFO: TIME IRQ 432
+AVISOR INFO: rr_scheduler_vm latency: 30
+AVISOR INFO: rr_scheduler_vm latency: 18
+AVISOR INFO: rr_scheduler_vcpu latency: 2376
+AVISOR INFO: rr_scheduler_vcpu latency: 246
+AVISOR INFO: TIME: 573287714 vm id 1 vcpu id 3 pcpu id 1
+AVISOR INFO: TIME: 573294656 vm id 0 vcpu id 0 pcpu id 0
+task3! 123
+main 128
+task3! 124
+main 129
+task3! 125
+main 130
+task3! 126
+main 131
+task3! 127
+main 132
+AVISOR INFO: TIME IRQ 433
+AVISOR INFO: TIME IRQ 434
+AVISOR INFO: rr_scheduler_vcpu latency: 35
+AVISOR INFO: rr_scheduler_vcpu latency: 29
+AVISOR INFO: TIME: 635837734 vm id 0 vcpu id 1 pcpu id 0
+AVISOR INFO: TIME: 635842423 vm id 1 vcpu id 0 pcpu id 1
+task1! 127
+main 128
+task1! 128
+main 129
+task1! 129
+main 130
+task1! 130
+main 131
+task1! 131
+AVISOR INFO: TIME IRQ 435
+AVISOR INFO: TIME IRQ 436
+AVISOR INFO: rr_scheduler_vcpu latency: 34
+AVISOR INFO: rr_scheduler_vcpu latency: 43
+AVISOR INFO: TIME: 698414619 vm id 1 vcpu id 1 pcpu id 1
+AVISOR INFO: TIME: 698419801 vm id 0 vcpu id 3 pcpu id 0
+task1! 128
+task1! 129
+task1! 130
+task1! 131
+AVISOR INFO: TIME IRQ 437
+AVISOR INFO: TIME IRQ 438
+AVISOR INFO: rr_scheduler_vcpu latency: 38
+AVISOR INFO: rr_scheduler_vcpu latency: 69
+AVISOR INFO: TIME: 760996816 vm id 1 vcpu id 2 pcpu id 1
+AVISOR INFO: TIME: 761003923 vm id 0 vcpu id 2 pcpu id 0
+task2! 129
+task2! 129
+task2! 130
+task2! 130
+task2! 131
+task2! 131
+task2! 132
+task2! 132
+task2! 133
+AVISOR INFO: TIME IRQ 439
+AVISOR INFO: TIME IRQ 440
+AVISOR INFO: rr_scheduler_vm latency: 45
+AVISOR INFO: rr_scheduler_vm latency: 15
+AVISOR INFO: rr_scheduler_vcpu latency: 4280
+AVISOR INFO: rr_scheduler_vcpu latency: 721
+AVISOR INFO: TIME: 823574553 vm id 2 vcpu id 0 pcpu id 0
+AVISOR INFO: TIME: 823582725 vm id 3 vcpu id 0 pcpu id 1
+main 128
+main 128
+main 129
+main 129
+main 130
+main 130
+main 131
+main 131
+AVISOR INFO: TIME IRQ 441
+AVISOR INFO: TIME IRQ 442
+AVISOR INFO: rr_scheduler_vcpu latency: 53
+AVISOR INFO: rr_scheduler_vcpu latency: 41
+AVISOR INFO: TIME: 886134263 vm id 2 vcpu id 1 pcpu id 0
+AVISOR INFO: TIME: 886143365 vm id 3 vcpu id 1 pcpu id 1
+task1! 128
+task1! 128
+task1! 129
+task1! 129
+task1! 130
+task1! 130
+task1! 131
+task1! 131
+task1! 132
+task1! 132
+AVISOR INFO: TIME IRQ 443
+AVISOR INFO: TIME IRQ 444
+AVISOR INFO: rr_scheduler_vcpu latency: 52
+AVISOR INFO: rr_scheduler_vcpu latency: 29
+AVISOR INFO: TIME: 948698376 vm id 2 vcpu id 2 pcpu id 0
+AVISOR INFO: TIME: 948705379 vm id 3 vcpu id 2 pcpu id 1
+task2! 128
+task2! 128
+task2! 129
+task2! 129
+task2! 130
+task2! 130
+task2! 131
+task2! 131
+task2! 132
+task2! 132
+AVISOR INFO: TIME IRQ 445
+AVISOR INFO: TIME IRQ 446
+AVISOR INFO: rr_scheduler_vcpu latency: 28
+AVISOR INFO: rr_scheduler_vcpu latency: 22
+AVISOR INFO: TIME: 1011268283 vm id 3 vcpu id 3 pcpu id 1
+AVISOR INFO: TIME: 1011272445 vm id 2 vcpu id 3 pcpu id 0
+task3! 128
+task3! 128
+task3! 129
+task3! 129
+task3! 130
+task3! 130
+task3! 131
+task3! 131
+task3! 132
+task3! 132
+AVISOR INFO: TIME IRQ 447
+AVISOR INFO: TIME IRQ 448
+AVISOR INFO: rr_scheduler_vm latency: 138
+AVISOR INFO: rr_scheduler_vm latency: 16
+AVISOR INFO: rr_scheduler_vcpu latency: 90
+AVISOR INFO: rr_scheduler_vcpu latency: 241
+AVISOR INFO: TIME: 1073874143 vm id 0 vcpu id 0 pcpu id 0
+AVISOR INFO: TIME: 1073880009 vm id 1 vcpu id 3 pcpu id 1
+task3! 128
+main 133
+task3! 129
+main 134
+task3! 130
+main 135
+task3! 131
+main 136
+task3! 132
+AVISOR INFO: TIME IRQ 449
+AVISOR INFO: TIME IRQ 450
+AVISOR INFO: rr_scheduler_vcpu latency: 42
+AVISOR INFO: rr_scheduler_vcpu latency: 28
+AVISOR INFO: TIME: 1136420951 vm id 0 vcpu id 1 pcpu id 0
+AVISOR INFO: TIME: 1136427125 vm id 1 vcpu id 0 pcpu id 1
+main 132
+task1! 132
+main 133
+task1! 133
+main 134
+task1! 134
+main 135
+task1! 135
+main 136
+task1! 136
+AVISOR INFO: TIME IRQ 451
+AVISOR INFO: TIME IRQ 452
+AVISOR INFO: rr_scheduler_vcpu latency: 29
+AVISOR INFO: rr_scheduler_vcpu latency: 40
+AVISOR INFO: TIME: 1199011675 vm id 0 vcpu id 3 pcpu id 0
+AVISOR INFO: TIME: 1199014638 vm id 1 vcpu id 1 pcpu id 1
+task1! 132
+task1! 133
+task1! 134
+task1! 135
+task1! 136
+AVISOR INFO: TIME IRQ 453
+AVISOR INFO: TIME IRQ 454
+AVISOR INFO: rr_scheduler_vcpu latency: 22
+AVISOR INFO: rr_scheduler_vcpu latency: 64
+AVISOR INFO: TIME: 1261571578 vm id 1 vcpu id 2 pcpu id 1
+AVISOR INFO: TIME: 1261575774 vm id 0 vcpu id 2 pcpu id 0
+task2! 133
+task2! 134
+task2! 134
+task2! 135
+task2! 135
+task2! 136
+task2! 136
+task2! 137
+task2! 137
+AVISOR INFO: TIME IRQ 455
+AVISOR INFO: TIME IRQ 456
+AVISOR INFO: rr_scheduler_vm latency: 63
+AVISOR INFO: rr_scheduler_vm latency: 17
+AVISOR INFO: rr_scheduler_vcpu latency: 1494
+AVISOR INFO: rr_scheduler_vcpu latency: 1598
+AVISOR INFO: TIME: 1324148897 vm id 2 vcpu id 0 pcpu id 0
+AVISOR INFO: TIME: 1324158602 vm id 3 vcpu id 0 pcpu id 1
+main 132
+main 132
+main 133
+main 133
+main 134
+main 134
+main 135
+main 135
+main 136
+main 136
+AVISOR INFO: TIME IRQ 457
+AVISOR INFO: TIME IRQ 458
+AVISOR INFO: rr_scheduler_vcpu latency: 60
+AVISOR INFO: rr_scheduler_vcpu latency: 47
+AVISOR INFO: TIME: 1386727168 vm id 2 vcpu id 1 pcpu id 0
+AVISOR INFO: TIME: 1386727528 vm id 3 vcpu id 1 pcpu id 1
+task1! 133
+task1! 133
+task1! 134
+task1! 134
+task1! 135
+task1! 135
+task1! 136
+task1! 136
+task1! 137
+AVISOR INFO: TIME IRQ 459
+AVISOR INFO: TIME IRQ 460
+AVISOR INFO: rr_scheduler_vcpu latency: 68
+AVISOR INFO: rr_scheduler_vcpu latency: 36
+AVISOR INFO: TIME: 1449278586 vm id 2 vcpu id 2 pcpu id 0
+AVISOR INFO: TIME: 1449283765 vm id 3 vcpu id 2 pcpu id 1
+task2! 133
+task2! 133
+task2! 134
+task2! 134
+task2! 135
+task2! 135
+task2! 136
+task2! 136
+task2! 137
+task2! 137
+AVISOR INFO: TIME IRQ 461
+AVISOR INFO: TIME IRQ 462
+AVISOR INFO: rr_scheduler_vcpu latency: 2108
+AVISOR INFO: rr_scheduler_vcpu latency: 7142
+AVISOR INFO: TIME: 1511864058 vm id 2 vcpu id 3 pcpu id 0
+AVISOR INFO: TIME: 1511878214 vm id 3 vcpu id 3 pcpu id 1
+task3! 133
+task3! 133
+task3! 134
+task3! 134
+task3! 135
+task3! 135
+task3! 136
+task3! 136
+task3! 137
+task3! 137
+AVISOR INFO: TIME IRQ 463
+AVISOR INFO: TIME IRQ 464
+AVISOR INFO: rr_scheduler_vm latency: 27
+AVISOR INFO: rr_scheduler_vm latency: 15
+AVISOR INFO: rr_scheduler_vcpu latency: 1597
+AVISOR INFO: rr_scheduler_vcpu latency: 200
+AVISOR INFO: TIME: 1574447163 vm id 0 vcpu id 0 pcpu id 0
+AVISOR INFO: TIME: 1574457690 vm id 1 vcpu id 3 pcpu id 1
+main 137
+task3! 133
+main 138
+task3! 134
+main 139
+task3! 135
+main 140
+task3! 136
+main 141
+task3! 137
+AVISOR INFO: TIME IRQ 465
+AVISOR INFO: TIME IRQ 466
+AVISOR INFO: rr_scheduler_vcpu latency: 24
+AVISOR INFO: rr_scheduler_vcpu latency: 19
+AVISOR INFO: TIME: 1637000023 vm id 1 vcpu id 0 pcpu id 1
+AVISOR INFO: TIME: 1637006932 vm id 0 vcpu id 1 pcpu id 0
+main 137
+task1! 137
+main 138
+task1! 138
+main 139
+task1! 139
+main 140
+task1! 140
+main 141
+task1! 141
+AVISOR INFO: TIME IRQ 467
+AVISOR INFO: TIME IRQ 468
+AVISOR INFO: rr_scheduler_vcpu latency: 32
+AVISOR INFO: rr_scheduler_vcpu latency: 32
+AVISOR INFO: TIME: 1699571238 vm id 1 vcpu id 1 pcpu id 1
+AVISOR INFO: TIME: 1699577720 vm id 0 vcpu id 3 pcpu id 0
+task1! 137
+task1! 138
+task1! 139
+task1! 140
+task1! 141
+AVISOR INFO: TIME IRQ 469
+AVISOR INFO: TIME IRQ 470
+AVISOR INFO: rr_scheduler_vcpu latency: 22
+AVISOR INFO: rr_scheduler_vcpu latency: 46
+AVISOR INFO: TIME: 1762158803 vm id 1 vcpu id 2 pcpu id 1
+AVISOR INFO: TIME: 1762158825 vm id 0 vcpu id 2 pcpu id 0
+task2! 138
+task2! 138
+task2! 139
+task2! 139
+task2! 140
+task2! 140
+task2! 141
+task2! 141
+task2! 142
+task2! 142
+AVISOR INFO: TIME IRQ 471
+AVISOR INFO: TIME IRQ 472
+AVISOR INFO: rr_scheduler_vm latency: 51
+AVISOR INFO: rr_scheduler_vm latency: 16
+AVISOR INFO: rr_scheduler_vcpu latency: 4080
+AVISOR INFO: rr_scheduler_vcpu latency: 19
+AVISOR INFO: TIME: 1824738301 vm id 2 vcpu id 0 pcpu id 1
+AVISOR INFO: TIME: 1824747360 vm id 3 vcpu id 0 pcpu id 0
+main 137
+main 137
+main 138
+main 138
+main 139
+main 139
+main 140
+main 140
+main 141
+main 141
+AVISOR INFO: TIME IRQ 473
+AVISOR INFO: TIME IRQ 474
+AVISOR INFO: rr_scheduler_vcpu latency: 35
+AVISOR INFO: rr_scheduler_vcpu latency: 48
+AVISOR INFO: TIME: 1887299315 vm id 2 vcpu id 1 pcpu id 1
+AVISOR INFO: TIME: 1887309532 vm id 3 vcpu id 1 pcpu id 0
+task1! 137
+task1! 138
+task1! 138
+task1! 139
+task1! 139
+task1! 140
+task1! 140
+task1! 141
+task1! 141
+AVISOR INFO: TIME IRQ 475
+AVISOR INFO: TIME IRQ 476
+AVISOR INFO: rr_scheduler_vcpu latency: 54
+AVISOR INFO: rr_scheduler_vcpu latency: 59
+AVISOR INFO: TIME: 1949869514 vm id 2 vcpu id 2 pcpu id 1
+AVISOR INFO: TIME: 1949879759 vm id 3 vcpu id 2 pcpu id 0
+task2! 138
+task2! 138
+task2! 139
+task2! 139
+task2! 140
+task2! 140
+task2! 141
+task2! 141
+task2! 142
+AVISOR INFO: TIME IRQ 477
+AVISOR INFO: TIME IRQ 478
+AVISOR INFO: rr_scheduler_vcpu latency: 676
+AVISOR INFO: rr_scheduler_vcpu latency: 116
+AVISOR INFO: TIME: 2012450091 vm id 2 vcpu id 3 pcpu id 1
+AVISOR INFO: TIME: 2012458294 vm id 3 vcpu id 3 pcpu id 0
+task3! 138
+task3! 138
+task3! 139
+task3! 139
+task3! 140
+task3! 140
+task3! 141
+task3! 141
+task3! 142
+AVISOR INFO: TIME IRQ 479
+AVISOR INFO: TIME IRQ 480
+AVISOR INFO: rr_scheduler_vm latency: 35
+AVISOR INFO: rr_scheduler_vm latency: 13
+AVISOR INFO: rr_scheduler_vcpu latency: 2251
+AVISOR INFO: rr_scheduler_vcpu latency: 1557
+AVISOR INFO: TIME: 2075040999 vm id 1 vcpu id 3 pcpu id 1
+AVISOR INFO: TIME: 2075048621 vm id 0 vcpu id 0 pcpu id 0
+main 142
+task3! 138
+main 143
+task3! 139
+main 144
+task3! 140
+main 145
+task3! 141
+main 146
+task3! 142
+AVISOR INFO: TIME IRQ 481
+AVISOR INFO: TIME IRQ 482
+AVISOR INFO: rr_scheduler_vcpu latency: 30
+AVISOR INFO: rr_scheduler_vcpu latency: 30
+AVISOR INFO: TIME: 2137596517 vm id 1 vcpu id 0 pcpu id 1
+AVISOR INFO: TIME: 2137602601 vm id 0 vcpu id 1 pcpu id 0
+main 142
+task1! 142
+main 143
+task1! 143
+main 144
+task1! 144
+main 145
+task1! 145
+main 146
+AVISOR INFO: TIME IRQ 483
+AVISOR INFO: TIME IRQ 484
+AVISOR INFO: rr_scheduler_vcpu latency: 41
+AVISOR INFO: rr_scheduler_vcpu latency: 45
+AVISOR INFO: TIME: 2200167891 vm id 1 vcpu id 1 pcpu id 1
+AVISOR INFO: TIME: 2200184630 vm id 0 vcpu id 3 pcpu id 0
+task1! 142
+task1! 143
+task1! 144
+task1! 145
+task1! 146
+AVISOR INFO: TIME IRQ 485
+AVISOR INFO: TIME IRQ 486
+AVISOR INFO: rr_scheduler_vcpu latency: 61
+AVISOR INFO: rr_scheduler_vcpu latency: 36
+AVISOR INFO: TIME: 2262740019 vm id 0 vcpu id 2 pcpu id 0
+AVISOR INFO: TIME: 2262748003 vm id 1 vcpu id 2 pcpu id 1
+task2! 143
+task2! 143
+task2! 144
+task2! 144
+task2! 145
+task2! 145
+task2! 146
+task2! 146
+task2! 147
+AVISOR INFO: TIME IRQ 488
+AVISOR INFO: TIME IRQ 487
+AVISOR INFO: rr_scheduler_vm latency: 24
+AVISOR INFO: rr_scheduler_vm latency: 14
+AVISOR INFO: rr_scheduler_vcpu latency: 3420
+AVISOR INFO: rr_scheduler_vcpu latency: 8004
+AVISOR INFO: TIME: 2325325724 vm id 2 vcpu id 0 pcpu id 0
+AVISOR INFO: TIME: 2325333073 vm id 3 vcpu id 0 pcpu id 1
+main 142
+main 142
+main 143
+main 143
+main 144
+main 144
+main 145
+main 145
+main 146
+main 146
+AVISOR INFO: TIME IRQ 489
+AVISOR INFO: TIME IRQ 490
+AVISOR INFO: rr_scheduler_vcpu latency: 25
+AVISOR INFO: rr_scheduler_vcpu latency: 32
+AVISOR INFO: TIME: 2387881838 vm id 3 vcpu id 1 pcpu id 1
+AVISOR INFO: TIME: 2387889071 vm id 2 vcpu id 1 pcpu id 0
+task1! 142
+task1! 142
+task1! 143
+task1! 143
+task1! 144
+task1! 144
+task1! 145
+task1! 145
+task1! 146
+task1! 146
+AVISOR INFO: TIME IRQ 491
+AVISOR INFO: TIME IRQ 492
+AVISOR INFO: rr_scheduler_vcpu latency: 25
+AVISOR INFO: rr_scheduler_vcpu latency: 39
+AVISOR INFO: TIME: 2450461137 vm id 2 vcpu id 2 pcpu id 0
+AVISOR INFO: TIME: 2450466173 vm id 3 vcpu id 2 pcpu id 1
+task2! 142
+task2! 143
+task2! 143
+task2! 144
+task2! 144
+task2! 145
+task2! 145
+task2! 146
+task2! 146
+AVISOR INFO: TIME IRQ 493
+AVISOR INFO: TIME IRQ 494
+AVISOR INFO: rr_scheduler_vcpu latency: 59
+AVISOR INFO: rr_scheduler_vcpu latency: 38
+AVISOR INFO: TIME: 2513030198 vm id 3 vcpu id 3 pcpu id 1
+AVISOR INFO: TIME: 2513036867 vm id 2 vcpu id 3 pcpu id 0
+task3! 142
+task3! 143
+task3! 143
+task3! 144
+task3! 144
+task3! 145
+task3! 145
+task3! 146
+task3! 146
+AVISOR INFO: TIME IRQ 495
+AVISOR INFO: TIME IRQ 496
+AVISOR INFO: rr_scheduler_vm latency: 29
+AVISOR INFO: rr_scheduler_vm latency: 16
+AVISOR INFO: rr_scheduler_vcpu latency: 228
+AVISOR INFO: rr_scheduler_vcpu latency: 259
+AVISOR INFO: TIME: 2575620296 vm id 0 vcpu id 0 pcpu id 0
+AVISOR INFO: TIME: 2575626357 vm id 1 vcpu id 3 pcpu id 1
+main 147
+task3! 143
+main 148
+task3! 144
+main 149
+task3! 145
+main 150
+task3! 146
+main 151
+AVISOR INFO: TIME IRQ 497
+AVISOR INFO: TIME IRQ 498
+AVISOR INFO: rr_scheduler_vcpu latency: 33
+AVISOR INFO: rr_scheduler_vcpu latency: 40
+AVISOR INFO: TIME: 2638178768 vm id 0 vcpu id 1 pcpu id 0
+AVISOR INFO: TIME: 2638188182 vm id 1 vcpu id 0 pcpu id 1
+task1! 146
+main 147
+task1! 147
+main 148
+task1! 148
+main 149
+task1! 149
+main 150
+task1! 150
+maAVISOR INFO: TIME IRQ 499
+AVISOR INFO: TIME IRQ 500
+AVISOR INFO: rr_scheduler_vcpu latency: 21
+AVISOR INFO: rr_scheduler_vcpu latency: 39
+AVISOR INFO: TIME: 2700765911 vm id 1 vcpu id 1 pcpu id 1
+AVISOR INFO: TIME: 2700770340 vm id 0 vcpu id 3 pcpu id 0
+task1! 147
+task1! 148
+task1! 149
+task1! 150
+task1! 151
+AVISOR INFO: TIME IRQ 502
+AVISOR INFO: TIME IRQ 501
+AVISOR INFO: rr_scheduler_vcpu latency: 22
+AVISOR INFO: rr_scheduler_vcpu latency: 53
+AVISOR INFO: TIME: 2763325402 vm id 1 vcpu id 2 pcpu id 1
+AVISOR INFO: TIME: 2763337759 vm id 0 vcpu id 2 pcpu id 0
+task2! 147
+task2! 148
+task2! 148
+task2! 149
+task2! 149
+task2! 150
+task2! 150
+task2! 151
+task2! 151
+task2! 152
+AVISOR INFO: TIME IRQ 503
+AVISOR INFO: TIME IRQ 504
+AVISOR INFO: rr_scheduler_vm latency: 25
+AVISOR INFO: rr_scheduler_vm latency: 16
+AVISOR INFO: rr_scheduler_vcpu latency: 200
+AVISOR INFO: rr_scheduler_vcpu latency: 122
+AVISOR INFO: TIME: 2825914177 vm id 2 vcpu id 0 pcpu id 0
+AVISOR INFO: TIME: 2825914616 vm id 3 vcpu id 0 pcpu id 1
+main 147
+main 147
+main 148
+main 148
+main 149
+main 149
+main 150
+main 150
+main 151
+main 151
+AVISOR INFO: TIME IRQ 505
+AVISOR INFO: TIME IRQ 506
+AVISOR INFO: rr_scheduler_vcpu latency: 53
+AVISOR INFO: rr_scheduler_vcpu latency: 28
+AVISOR INFO: TIME: 2888467082 vm id 2 vcpu id 1 pcpu id 0
+AVISOR INFO: TIME: 2888481190 vm id 3 vcpu id 1 pcpu id 1
+task1! 147
+task1! 147
+task1! 148
+task1! 148
+task1! 149
+task1! 149
+task1! 150
+task1! 150
+task1! 151
+task1! 151
+AVISOR INFO: TIME IRQ 507
+AVISOR INFO: TIME IRQ 508
+AVISOR INFO: rr_scheduler_vcpu latency: 65
+AVISOR INFO: rr_scheduler_vcpu latency: 30
+AVISOR INFO: TIME: 2951041303 vm id 3 vcpu id 2 pcpu id 1
+AVISOR INFO: TIME: 2951046738 vm id 2 vcpu id 2 pcpu id 0
+task2! 147
+task2! 147
+task2! 148
+task2! 148
+task2! 149
+task2! 149
+task2! 150
+task2! 150
+task2! 151
+task2! 151
+AVISOR INFO: TIME IRQ 509
+AVISOR INFO: TIME IRQ 510
+AVISOR INFO: rr_scheduler_vcpu latency: 48
+AVISOR INFO: rr_scheduler_vcpu latency: 41
+AVISOR INFO: TIME: 3013614675 vm id 3 vcpu id 3 pcpu id 1
+AVISOR INFO: TIME: 3013619871 vm id 2 vcpu id 3 pcpu id 0
+task3! 147
+task3! 147
+task3! 148
+task3! 148
+task3! 149
+task3! 149
+task3! 150
+task3! 150
+task3! 151
+task3! 151
+AVISOR INFO: TIME IRQ 512
+AVISOR INFO: TIME IRQ 511
+AVISOR INFO: rr_scheduler_vm latency: 25
+AVISOR INFO: rr_scheduler_vm latency: 19
+AVISOR INFO: rr_scheduler_vcpu latency: 1383
+AVISOR INFO: rr_scheduler_vcpu latency: 1216
+AVISOR INFO: TIME: 3076197956 vm id 0 vcpu id 0 pcpu id 1
+AVISOR INFO: TIME: 3076204227 vm id 1 vcpu id 3 pcpu id 0
+task3! 147
+main 152
+task3! 148
+main 153
+task3! 149
+main 154
+task3! 150
+main 155
+task3! 151
+main 156
+AVISOR INFO: TIME IRQ 513
+AVISOR INFO: TIME IRQ 514
+AVISOR INFO: rr_scheduler_vcpu latency: 112
+AVISOR INFO: rr_scheduler_vcpu latency: 67
+AVISOR INFO: TIME: 3138765907 vm id 1 vcpu id 0 pcpu id 0
+AVISOR INFO: TIME: 3138779530 vm id 0 vcpu id 1i pcpu id 1n
+ 151
+task1! 151
+task1! 152
+task1! 153
+task1! 154
+task1! 155
+AVISOR INFO: TIME IRQ 515
+AVISOR INFO: TIME IRQ 516
+AVISOR INFO: rr_scheduler_vcpu latency: 41
+AVISOR INFO: rr_scheduler_vcpu latency: 37
+AVISOR INFO: TIME: 3201336357 vm id 1 vcpu id 1 pcpu id 0
+AVISOR INFO: TIME: 3201343520 vm id 0 vcpu id 3 pcpu id 1
+task1! 152
+task1! 153
+task1! 154
+task1! 155
+task1! 156
+AVISOR INFO: TIME IRQ 517
+AVISOR INFO: TIME IRQ 518
+AVISOR INFO: rr_scheduler_vcpu latency: 39
+AVISOR INFO: rr_scheduler_vcpu latency: 55
+AVISOR INFO: TIME: 3263907426 vm id 1 vcpu id 2 pcpu id 0
+AVISOR INFO: TIME: 3263915441 vm id 0 vcpu id 2 pcpu id 1
+task2! 152
+task2! 153
+task2! 153
+task2! 154
+task2! 154
+task2! 155
+task2! 155
+task2! 156
+task2! 156
+task2! 157
+AVISOR INFO: TIME IRQ 519
+AVISOR INFO: TIME IRQ 520
+AVISOR INFO: rr_scheduler_vm latency: 29
+AVISOR INFO: rr_scheduler_vm latency: 19
+AVISOR INFO: rr_scheduler_vcpu latency: 213
+AVISOR INFO: rr_scheduler_vcpu latency: 937
+AVISOR INFO: TIME: 3326508291 vm id 3 vcpu id 0 pcpu id 1
+AVISOR INFO: TIME: 3326513331 vm id 2 vcpu id 0 pcpu id 0
+main 152
+main 152
+main 153
+main 153
+main 154
+main 154
+main 155
+main 155
+main 156
+AVISOR INFO: TIME IRQ 521
+AVISOR INFO: TIME IRQ 522
+AVISOR INFO: rr_scheduler_vcpu latency: 81
+AVISOR INFO: rr_scheduler_vcpu latency: 70
+AVISOR INFO: TIME: 3389061424 vm id 3 vcpu id 1 pcpu id 1
+AVISOR INFO: TIME: 3389072074 vm id 2 vcpu id 1 pcpu id 0
+task1! 152
+task1! 152
+task1! 153
+task1! 153
+task1! 154
+task1! 154
+task1! 155
+task1! 155
+task1! 156
+AVISOR INFO: TIME IRQ 523
+AVISOR INFO: TIME IRQ 524
+AVISOR INFO: rr_scheduler_vcpu latency: 27
+AVISOR INFO: rr_scheduler_vcpu latency: 29
+AVISOR INFO: TIME: 3451632556 vm id 3 vcpu id 2 pcpu id 1
+AVISOR INFO: TIME: 3451639514 vm id 2 vcpu id 2 pcpu id 0
+task2! 152
+task2! 152
+task2! 153
+task2! 153
+task2! 154
+task2! 154
+task2! 155
+task2! 155
+task2! 156
+task2! 156
+AVISOR INFO: TIME IRQ 525
+AVISOR INFO: TIME IRQ 526
+AVISOR INFO: rr_scheduler_vcpu latency: 25
+AVISOR INFO: rr_scheduler_vcpu latency: 30
+AVISOR INFO: TIME: 3514195563 vm id 3 vcpu id 3 pcpu id 1
+AVISOR INFO: TIME: 3514202469 vm id 2 vcpu id 3 pcpu id 0
+task3! 152
+task3! 152
+task3! 153
+task3! 153
+task3! 154
+task3! 154
+task3! 155
+task3! 155
+task3! 156
+task3! 156
+AVISOR INFO: TIME IRQ 527
+AVISOR INFO: TIME IRQ 528
+AVISOR INFO: rr_scheduler_vm latency: 27
+AVISOR INFO: rr_scheduler_vm latency: 12
+AVISOR INFO: rr_scheduler_vcpu latency: 1243
+AVISOR INFO: rr_scheduler_vcpu latency: 79
+AVISOR INFO: TIME: 3576789530 vm id 0 vcpu id 0 pcpu id 1
+AVISOR INFO: TIME: 3576819299 vm id 1 vcpu id 3 pcpu id 0
+task3! 152
+main 157
+task3! 153
+main 158
+task3! 154
+main 159
+task3! 155
+main 160
+task3! 156
+AVISOR INFO: TIME IRQ 529
+AVISOR INFO: TIME IRQ 530
+AVISOR INFO: rr_scheduler_vcpu latency: 45
+AVISOR INFO: rr_scheduler_vcpu latency: 47
+AVISOR INFO: TIME: 3639347357 vm id 0 vcpu id 1 pcpu id 1
+AVISOR INFO: TIME: 3639355205 vm id 1 vcpu id 0 pcpu id 0
+task1! 156
+task1! 157
+task1! 158
+task1! 159
+task1! 160
+AVISOR INFO: TIME IRQ 531
+AVISOR INFO: TIME IRQ 532
+AVISOR INFO: rr_scheduler_vcpu latency: 29
+AVISOR INFO: rr_scheduler_vcpu latency: 20
+AVISOR INFO: TIME: 3701942197 vm id 0 vcpu id 3 pcpu id 1
+AVISOR INFO: TIME: 3701951970 vm id 1 vcpu id 1 pcpu id 0
+task1! 157
+task1! 158
+task1! 159
+task1! 160
+AVISOR INFO: TIME IRQ 533
+AVISOR INFO: TIME IRQ 534
+AVISOR INFO: rr_scheduler_vcpu latency: 18
+AVISOR INFO: rr_scheduler_vcpu latency: 48
+AVISOR INFO: TIME: 3764482047 vm id 1 vcpu id 2 pcpu id 0
+AVISOR INFO: TIME: 3764486749 vm id 0 vcpu id 2 pcpu id 1
+task2! 157
+task2! 158
+task2! 158
+task2! 159
+task2! 159
+task2! 160
+task2! 160
+task2! 161
+task2! 161
+task2! 162
+AVISOR INFO: TIME IRQ 535
+AVISOR INFO: TIME IRQ 536
+AVISOR INFO: rr_scheduler_vm latency: 25
+AVISOR INFO: rr_scheduler_vm latency: 18
+AVISOR INFO: rr_scheduler_vcpu latency: 268
+AVISOR INFO: rr_scheduler_vcpu latency: 6272
+AVISOR INFO: TIME: 3827074973 vm id 3 vcpu id 0 pcpu id 0
+AVISOR INFO: TIME: 3827081906 vm id 2 vcpu id 0 pcpu id 1
+main 156
+main 157
+main 157
+main 158
+main 158
+main 159
+main 159
+main 160
+main 160
+AVISOR INFO: TIME IRQ 538
+AVISOR INFO: TIME IRQ 537
+AVISOR INFO: rr_scheduler_vcpu latency: 34
+AVISOR INFO: rr_scheduler_vcpu latency: 34
+AVISOR INFO: TIME: 3889637588 vm id 2 vcpu id 1 pcpu id 1
+AVISOR INFO: TIME: 3889641800 vm id 3 vcpu id 1 pcpu id 0
+task1! 156
+task1! 157
+task1! 157
+task1! 158
+task1! 158
+task1! 159
+task1! 159
+task1! 160
+task1! 160
+task1! 161
+AVISOR INFO: TIME IRQ 539
+AVISOR INFO: TIME IRQ 540
+AVISOR INFO: rr_scheduler_vcpu latency: 25
+AVISOR INFO: rr_scheduler_vcpu latency: 20
+AVISOR INFO: TIME: 3952201323 vm id 3 vcpu id 2 pcpu id 0
+AVISOR INFO: TIME: 3952209108 vm id 2 vcpu id 2 pcpu id 1
+task2! 157
+task2! 157
+task2! 158
+task2! 158
+task2! 159
+task2! 159
+task2! 160
+task2! 160
+task2! 161
+AVISOR INFO: TIME IRQ 541
+AVISOR INFO: TIME IRQ 542
+AVISOR INFO: rr_scheduler_vcpu latency: 952
+AVISOR INFO: rr_scheduler_vcpu latency: 194
+AVISOR INFO: TIME: 4014793446 vm id 2 vcpu id 3 pcpu id 1
+AVISOR INFO: TIME: 4014803328 vm id 3 vcpu id 3 pcpu id 0
+task3! 157
+task3! 157
+task3! 158
+task3! 158
+task3! 159
+task3! 159
+task3! 160
+task3! 160
+task3! 161
+AVISOR INFO: TIME IRQ 543
+AVISOR INFO: TIME IRQ 544
+AVISOR INFO: rr_scheduler_vm latency: 25
+AVISOR INFO: rr_scheduler_vm latency: 15
+AVISOR INFO: rr_scheduler_vcpu latency: 1232
+AVISOR INFO: rr_scheduler_vcpu latency: 2397
+AVISOR INFO: TIME: 4077366899 vm id 0 vcpu id 0 pcpu id 0
+AVISOR INFO: TIME: 4077371592 vm id 1 vcpu id 3 pcpu id 1
+main 161
+task3! 157
+main 162
+task3! 158
+main 163
+task3! 159
+main 164
+task3! 160
+main 165
+task3! 161
+AVISOR INFO: TIME IRQ 545
+AVISOR INFO: TIME IRQ 546
+AVISOR INFO: rr_scheduler_vcpu latency: 22
+AVISOR INFO: rr_scheduler_vcpu latency: 41
+AVISOR INFO: TIME: 4139928344 vm id 0 vcpu id 1 pcpu id 0
+AVISOR INFO: TIME: 4139936783 vm id 1 vcpu id 0 pcpu id 1
+task1! 161
+task1! 162
+task1! 163
+task1! 164
+task1! 165
+AVISOR INFO: TIME IRQ 547
+AVISOR INFO: TIME IRQ 548
+AVISOR INFO: rr_scheduler_vcpu latency: 31
+AVISOR INFO: rr_scheduler_vcpu latency: 24
+AVISOR INFO: TIME: 4202492109 vm id 0 vcpu id 3 pcpu id 0
+AVISOR INFO: TIME: 4202515727 vm id 1 vcpu id 1 pcpu id 1
+task1! 161
+task1! 162
+task1! 163
+task1! 164
+task1! 165
+AVISOR INFO: TIME IRQ 550
+AVISOR INFO: TIME IRQ 549
+AVISOR INFO: rr_scheduler_vcpu latency: 61
+AVISOR INFO: rr_scheduler_vcpu latency: 31
+AVISOR INFO: TIME: 4265034259 vm id 0 vcpu id 2 pcpu id 0
+AVISOR INFO: TIME: 4265045996 vm id 1 vcpu id 2 pcpu id 1
+task2! 162
+task2! 163
+task2! 163
+task2! 164
+task2! 164
+task2! 165
+task2! 165
+task2! 166
+task2! 166
+AVISOR INFO: TIME IRQ 551
+AVISOR INFO: TIME IRQ 552
+AVISOR INFO: rr_scheduler_vm latency: 42
+AVISOR INFO: rr_scheduler_vm latency: 24
+AVISOR INFO: rr_scheduler_vcpu latency: 217
+AVISOR INFO: rr_scheduler_vcpu latency: 219
+AVISOR INFO: TIME: 32687265 vm id 3 vcpu id 0 pcpu id 0
+AVISOR INFO: TIME: 32694440 vm id 2 vcpu id 0 pcpu id 1
+main 161
+main 161
+main 162
+main 162
+main 163
+main 163
+main 164
+main 164
+main 165
+main 165
+AVISOR INFO: TIME IRQ 553
+AVISOR INFO: TIME IRQ 554
+AVISOR INFO: rr_scheduler_vcpu latency: 28
+AVISOR INFO: rr_scheduler_vcpu latency: 18
+AVISOR INFO: TIME: 95215907 vm id 3 vcpu id 1 pcpu id 0
+AVISOR INFO: TIME: 95216148 vm id 2 vcpu id 1 pcpu id 1
+task1! 161
+task1! 162
+task1! 162
+task1! 163
+task1! 163
+task1! 164
+task1! 164
+task1! 165
+task1! 165
+task1! 166
+AVISOR INFO: TIME IRQ 555
+AVISOR INFO: TIME IRQ 556
+AVISOR INFO: rr_scheduler_vcpu latency: 33
+AVISOR INFO: rr_scheduler_vcpu latency: 25
+AVISOR INFO: TIME: 157781217 vm id 2 vcpu id 2 pcpu id 1
+AVISOR INFO: TIME: 157788652 vm id 3 vcpu id 2 pcpu id 0
+task2! 161
+task2! 162
+task2! 162
+task2! 163
+task2! 163
+task2! 164
+task2! 164
+task2! 165
+task2! 165
+AVISOR INFO: TIME IRQ 558
+AVISOR INFO: TIME IRQ 557
+AVISOR INFO: rr_scheduler_vcpu latency: 41
+AVISOR INFO: rr_scheduler_vcpu latency: 26
+AVISOR INFO: TIME: 220350837 vm id 2 vcpu id 3 pcpu id 1
+AVISOR INFO: TIME: 220359840 vm id 3 vcpu id 3 pcpu id 0
+task3! 161
+task3! 162
+task3! 162
+task3! 163
+task3! 163
+task3! 164
+task3! 164
+task3! 165
+task3! 165
+AVISOR INFO: TIME IRQ 559
+AVISOR INFO: TIME IRQ 560
+AVISOR INFO: rr_scheduler_vm latency: 29
+AVISOR INFO: rr_scheduler_vm latency: 19
+AVISOR INFO: rr_scheduler_vcpu latency: 216
+AVISOR INFO: rr_scheduler_vcpu latency: 181
+AVISOR INFO: TIME: 282943266 vm id 0 vcpu id 0 pcpu id 0
+AVISOR INFO: TIME: 282948611 vm id 1 vcpu id 3 pcpu id 1
+main 166
+task3! 162
+main 167
+task3! 163
+main 168
+task3! 164
+main 169
+task3! 165
+main 170
+task3! 166
+AVISOR INFO: TIME IRQ 561
+AVISOR INFO: TIME IRQ 562
+AVISOR INFO: rr_scheduler_vcpu latency: 709
+AVISOR INFO: rr_scheduler_vcpu latency: 151
+AVISOR INFO: TIME: 345507178 vm id 1 vcpu id 0 pcpu id 1
+AVISOR INFO: TIME: 345526203 vm id 0 vcpu id 1 pcpu id 0
+task1! 166
+task1! 167
+task1! 168
+task1! 169
+task1! 170
+AVISOR INFO: TIME IRQ 563
+AVISOR INFO: TIME IRQ 564
+AVISOR INFO: rr_scheduler_vcpu latency: 34
+AVISOR INFO: rr_scheduler_vcpu latency: 43
+AVISOR INFO: TIME: 408064922 vm id 0 vcpu id 3 pcpu id 0
+AVISOR INFO: TIME: 408070962 vm id 1 vcpu id 1 pcpu id 1
+task1! 166
+task1! 167
+task1! 168
+task1! 169
+task1! 170
+AVISOR INFO: TIME IRQ 565
+AVISOR INFO: TIME IRQ 566
+AVISOR INFO: rr_scheduler_vcpu latency: 36
+AVISOR INFO: rr_scheduler_vcpu latency: 76
+AVISOR INFO: TIME: 470644930 vm id 1 vcpu id 2 pcpu id 1
+AVISOR INFO: TIME: 470654959 vm id 0 vcpu id 2 pcpu id 0
+task2! 167
+task2! 167
+task2! 168
+task2! 168
+task2! 169
+task2! 169
+task2! 170
+task2! 170
+task2! 171
+task2! 171
+AVISOR INFO: TIME IRQ 567
+AVISOR INFO: TIME IRQ 568
+AVISOR INFO: rr_scheduler_vm latency: 43
+AVISOR INFO: rr_scheduler_vm latency: 17
+AVISOR INFO: rr_scheduler_vcpu latency: 883
+AVISOR INFO: rr_scheduler_vcpu latency: 203
+AVISOR INFO: TIME: 533238787 vm id 3 vcpu id 0 pcpu id 1
+AVISOR INFO: TIME: 533245223 vm id 2 vcpu id 0 pcpu id 0
+main 166
+main 166
+main 167
+main 167
+main 168
+main 168
+main 169
+main 169
+main 170
+main 170
+AVISOR INFO: TIME IRQ 569
+AVISOR INFO: TIME IRQ 570
+AVISOR INFO: rr_scheduler_vcpu latency: 41
+AVISOR INFO: rr_scheduler_vcpu latency: 30
+AVISOR INFO: TIME: 595792247 vm id 3 vcpu id 1 pcpu id 1
+AVISOR INFO: TIME: 595798928 vm id 2 vcpu id 1 pcpu id 0
+task1! 166
+task1! 167
+task1! 167
+task1! 168
+task1! 168
+task1! 169
+task1! 169
+task1! 170
+task1! 170
+AVISOR INFO: TIME IRQ 571
+AVISOR INFO: TIME IRQ 572
+AVISOR INFO: rr_scheduler_vcpu latency: 33
+AVISOR INFO: rr_scheduler_vcpu latency: 58
+AVISOR INFO: TIME: 658368137 vm id 2 vcpu id 2 pcpu id 0
+AVISOR INFO: TIME: 658371785 vm id 3 vcpu id 2 pcpu id 1
+task2! 166
+task2! 166
+task2! 167
+task2! 167
+task2! 168
+task2! 168
+task2! 169
+task2! 169
+task2! 170
+task2! 170
+AVISOR INFO: TIME IRQ 573
+AVISOR INFO: TIME IRQ 574
+AVISOR INFO: rr_scheduler_vcpu latency: 34
+AVISOR INFO: rr_scheduler_vcpu latency: 19
+AVISOR INFO: TIME: 720937292 vm id 2 vcpu id 3 pcpu id 0
+AVISOR INFO: TIME: 720955129 vm id 3 vcpu id 3 pcpu id 1
+task3! 166
+task3! 166
+task3! 167
+task3! 167
+task3! 168
+task3! 168
+task3! 169
+task3! 169
+task3! 170
+task3! 170
+AVISOR INFO: TIME IRQ 575
+AVISOR INFO: TIME IRQ 576
+AVISOR INFO: rr_scheduler_vm latency: 26
+AVISOR INFO: rr_scheduler_vm latency: 17
+AVISOR INFO: rr_scheduler_vcpu latency: 115
+AVISOR INFO: rr_scheduler_vcpu latency: 2471
+AVISOR INFO: TIME: 783540251 vm id 1 vcpu id 3 pcpu id 1
+AVISOR INFO: TIME: 783544851 vm id 0 vcpu id 0 pcpu id 0
+main 171
+task3! 167
+main 172
+task3! 168
+main 173
+task3! 169
+main 174
+task3! 170
+main 175
+AVISOR INFO: TIME IRQ 577
+AVISOR INFO: TIME IRQ 578
+AVISOR INFO: rr_scheduler_vcpu latency: 31
+AVISOR INFO: rr_scheduler_vcpu latency: 40
+AVISOR INFO: TIME: 846089270 vm id 0 vcpu id 1 pcpu id 0
+AVISOR INFO: TIME: 846100100 vm id 1 vcpu id 0 pcpu id 1
+task1! 171
+task1! 172
+task1! 173
+task1! 174
+task1! 175
+AVISOR INFO: TIME IRQ 579
+AVISOR INFO: TIME IRQ 580
+AVISOR INFO: rr_scheduler_vcpu latency: 39
+AVISOR INFO: rr_scheduler_vcpu latency: 33
+AVISOR INFO: TIME: 908667465 vm id 0 vcpu id 3 pcpu id 0
+AVISOR INFO: TIME: 908667568 vm id 1 vcpu id 1 pcpu id 1
+task1! 171
+task1! 172
+task1! 173
+task1! 174
+task1! 175
+AVISOR INFO: TIME IRQ 581
+AVISOR INFO: TIME IRQ 582
+AVISOR INFO: rr_scheduler_vcpu latency: 36
+AVISOR INFO: rr_scheduler_vcpu latency: 23
+AVISOR INFO: TIME: 971231612 vm id 0 vcpu id 2 pcpu id 0
+AVISOR INFO: TIME: 971242942 vm id 1 vcpu id 2 pcpu id 1
+task2! 172
+task2! 172
+task2! 173
+task2! 173
+task2! 174
+task2! 174
+task2! 175
+task2! 175
+task2! 176
+task2! 176
+AVISOR INFO: TIME IRQ 583
+AVISOR INFO: TIME IRQ 584
+AVISOR INFO: rr_scheduler_vm latency: 166
+AVISOR INFO: rr_scheduler_vm latency: 15
+AVISOR INFO: rr_scheduler_vcpu latency: 1082
+AVISOR INFO: rr_scheduler_vcpu latency: 176
+AVISOR INFO: TIME: 1033827733 vm id 2 vcpu id 0 pcpu id 1
+AVISOR INFO: TIME: 1033827696 vm id 3 vcpu id 0 pcpu id 0
+main 171
+main 171
+main 172
+main 172
+main 173
+main 173
+main 174
+main 174
+main 175
+main 175
+AVISOR INFO: TIME IRQ 586
+AVISOR INFO: TIME IRQ 585
+AVISOR INFO: rr_scheduler_vcpu latency: 52
+AVISOR INFO: rr_scheduler_vcpu latency: 43
+AVISOR INFO: TIME: 1096382065 vm id 3 vcpu id 1 pcpu id 0
+AVISOR INFO: TIME: 1096389702 vm id 2 vcpu id 1 pcpu id 1
+task1! 171
+task1! 171
+task1! 172
+task1! 172
+task1! 173
+task1! 173
+task1! 174
+task1! 174
+task1! 175
+task1! 175
+AVISOR INFO: TIME IRQ 588
+AVISOR INFO: TIME IRQ 587
+AVISOR INFO: rr_scheduler_vcpu latency: 25
+AVISOR INFO: rr_scheduler_vcpu latency: 47
+AVISOR INFO: TIME: 1158958358 vm id 3 vcpu id 2 pcpu id 0
+AVISOR INFO: TIME: 1158970076 vm id 2 vcpu id 2 pcpu id 1
+task2! 171
+task2! 171
+task2! 172
+task2! 172
+task2! 173
+task2! 173
+task2! 174
+task2! 174
+task2! 175
+task2! 175
+AVISOR INFO: TIME IRQ 589
+AVISOR INFO: TIME IRQ 590
+AVISOR INFO: rr_scheduler_vcpu latency: 21
+AVISOR INFO: rr_scheduler_vcpu latency: 31
+AVISOR INFO: TIME: 1221525129 vm id 3 vcpu id 3 pcpu id 0
+AVISOR INFO: TIME: 1221533536 vm id 2 vcpu id 3 pcpu id 1
+task3! 171
+task3! 171
+task3! 172
+task3! 172
+task3! 173
+task3! 173
+task3! 174
+task3! 174
+task3! 175
+task3! 175
+AVISOR INFO: TIME IRQ 591
+AVISOR INFO: TIME IRQ 592
+AVISOR INFO: rr_scheduler_vm latency: 24
+AVISOR INFO: rr_scheduler_vm latency: 15
+AVISOR INFO: rr_scheduler_vcpu latency: 2787
+AVISOR INFO: rr_scheduler_vcpu latency: 187
+AVISOR INFO: TIME: 1284111029 vm id 0 vcpu id 0 pcpu id 0
+AVISOR INFO: TIME: 1284126561 vm id 1 vcpu id 3 pcpu id 1
+task3! 171
+main 176
+task3! 172
+main 177
+task3! 173
+main 178
+task3! 174
+main 179
+task3! 175
+main 180
+AVISOR INFO: TIME IRQ 593
+AVISOR INFO: TIME IRQ 594
+AVISOR INFO: rr_scheduler_vcpu latency: 52
+AVISOR INFO: rr_scheduler_vcpu latency: 55
+AVISOR INFO: TIME: 1346669838 vm id 1 vcpu id 0 pcpu id 1
+AVISOR INFO: TIME: 1346676658 vm id 0 vcpu id 1 pcpu id 0
+task1! 176
+task1! 177
+task1! 178
+task1! 179
+task1! 180
+AVISOR INFO: TIME IRQ 596
+AVISOR INFO: TIME IRQ 595
+AVISOR INFO: rr_scheduler_vcpu latency: 44
+AVISOR INFO: rr_scheduler_vcpu latency: 50
+AVISOR INFO: TIME: 1409240170 vm id 1 vcpu id 1 pcpu id 1
+AVISOR INFO: TIME: 1409247485 vm id 0 vcpu id 3 pcpu id 0
+task1! 176
+task1! 177
+task1! 178
+task1! 179
+task1! 180
+AVISOR INFO: TIME IRQ 597
+AVISOR INFO: TIME IRQ 598
+AVISOR INFO: rr_scheduler_vcpu latency: 41
+AVISOR INFO: rr_scheduler_vcpu latency: 18
+AVISOR INFO: TIME: 1471831562 vm id 1 vcpu id 2 pcpu id 1
+AVISOR INFO: TIME: 1471831646 vm id 0 vcpu id 2 pcpu id 0
+task2! 177
+task2! 177
+task2! 178
+task2! 178
+task2! 179
+task2! 179
+task2! 180
+task2! 180
+task2! 181
+AVISOR INFO: TIME IRQ 599
+AVISOR INFO: TIME IRQ 600
+AVISOR INFO: rr_scheduler_vm latency: 56
+AVISOR INFO: rr_scheduler_vm latency: 17
+AVISOR INFO: rr_scheduler_vcpu latency: 61
+AVISOR INFO: rr_scheduler_vcpu latency: 141
+AVISOR INFO: TIME: 1534409013 vm id 2 vcpu id 0 pcpu id 0
+AVISOR INFO: TIME: 1534416210 vm id 3 vcpu id 0 pcpu id 1
+main 176
+main 176
+main 177
+main 177
+main 178
+main 178
+main 179
+main 179
+main 180
+main 180
+AVISOR INFO: TIME IRQ 601
+AVISOR INFO: TIME IRQ 602
+AVISOR INFO: rr_scheduler_vcpu latency: 26
+AVISOR INFO: rr_scheduler_vcpu latency: 18
+AVISOR INFO: TIME: 1596964360 vm id 3 vcpu id 1 pcpu id 1
+AVISOR INFO: TIME: 1596973212 vm id 2 vcpu id 1 pcpu id 0
+task1! 176
+task1! 176
+task1! 177
+task1! 177
+task1! 178
+task1! 178
+task1! 179
+task1! 179
+task1! 180
+AVISOR INFO: TIME IRQ 604
+AVISOR INFO: TIME IRQ 603
+AVISOR INFO: rr_scheduler_vcpu latency: 410
+AVISOR INFO: rr_scheduler_vcpu latency: 15612
+AVISOR INFO: TIME: 1659540867 vm id 2 vcpu id 2 pcpu id 0
+AVISOR INFO: TIME: 1659548838 vm id 3 vcpu id 2 pcpu id 1
+task2! 176
+task2! 176
+task2! 177
+task2! 177
+task2! 178
+task2! 178
+task2! 179
+task2! 179
+task2! 180
+task2! 180
+AVISOR INFO: TIME IRQ 605
+AVISOR INFO: TIME IRQ 606
+AVISOR INFO: rr_scheduler_vcpu latency: 50
+AVISOR INFO: rr_scheduler_vcpu latency: 55
+AVISOR INFO: TIME: 1722104585 vm id 2 vcpu id 3 pcpu id 0
+AVISOR INFO: TIME: 1722110980 vm id 3 vcpu id 3 pcpu id 1
+task3! 176
+task3! 176
+task3! 177
+task3! 177
+task3! 178
+task3! 178
+task3! 179
+task3! 179
+task3! 180
+task3! 180
+AVISOR INFO: TIME IRQ 607
+AVISOR INFO: TIME IRQ 608
+AVISOR INFO: rr_scheduler_vm latency: 30
+AVISOR INFO: rr_scheduler_vm latency: 14
+AVISOR INFO: rr_scheduler_vcpu latency: 182
+AVISOR INFO: rr_scheduler_vcpu latency: 121
+AVISOR INFO: TIME: 1784694858 vm id 1 vcpu id 3 pcpu id 1
+AVISOR INFO: TIME: 1784702206 vm id 0 vcpu id 0 pcpu id 0
+task3! 176
+main 181
+task3! 177
+main 182
+task3! 178
+main 183
+task3! 179
+main 184
+task3! 180
+main 185
+AVISOR INFO: TIME IRQ 609
+AVISOR INFO: TIME IRQ 610
+AVISOR INFO: rr_scheduler_vcpu latency: 31
+AVISOR INFO: rr_scheduler_vcpu latency: 51
+AVISOR INFO: TIME: 1847255024 vm id 0 vcpu id 1 pcpu id 0
+AVISOR INFO: TIME: 1847260569 vm id 1 vcpu id 0 pcpu id 1
+task1! 181
+task1! 182
+task1! 183
+task1! 184
+task1! 185
+AVISOR INFO: TIME IRQ 611
+AVISOR INFO: TIME IRQ 612
+AVISOR INFO: rr_scheduler_vcpu latency: 29
+AVISOR INFO: rr_scheduler_vcpu latency: 26
+AVISOR INFO: TIME: 1909831635 vm id 0 vcpu id 3 pcpu id 0
+AVISOR INFO: TIME: 1909846957 vm id 1 vcpu id 1 pcpu id 1
+task1! 181
+task1! 182
+task1! 183
+task1! 184
+task1! 185
+AVISOR INFO: TIME IRQ 613
+AVISOR INFO: TIME IRQ 614
+AVISOR INFO: rr_scheduler_vcpu latency: 16
+AVISOR INFO: rr_scheduler_vcpu latency: 46
+AVISOR INFO: TIME: 1972398061 vm id 0 vcpu id 2 pcpu id 0
+AVISOR INFO: TIME: 1972398004 vm id 1 vcpu id 2 pcpu id 1
+task2! 181
+task2! 182
+task2! 182
+task2! 183
+task2! 183
+task2! 184
+task2! 184
+task2! 185
+task2! 185
+task2! 186
+AVISOR INFO: TIME IRQ 615
+AVISOR INFO: TIME IRQ 616
+AVISOR INFO: rr_scheduler_vm latency: 30
+AVISOR INFO: rr_scheduler_vm latency: 15
+AVISOR INFO: rr_scheduler_vcpu latency: 257
+AVISOR INFO: TIME: 2034987146 vm id 3 vcpu id 0 pcpu id 0
+AVISOR INFO: rr_scheduler_vcpu latency: 14555
+AVISOR INFO: TIME: 2035001513 vm id 2 vcpu id 0 pcpu id 1
+main 181
+main 181
+main 182
+main 182
+main 183
+main 183
+main 184
+main 184
+main 185
+main 185
+AVISOR INFO: TIME IRQ 617
+AVISOR INFO: TIME IRQ 618
+AVISOR INFO: rr_scheduler_vcpu latency: 39
+AVISOR INFO: rr_scheduler_vcpu latency: 32
+AVISOR INFO: TIME: 2097539551 vm id 2 vcpu id 1 pcpu id 1
+AVISOR INFO: TIME: 2097546043 vm id 3 vcpu id 1 pcpu id 0
+task1! 180
+task1! 181
+task1! 181
+task1! 182
+task1! 182
+task1! 183
+task1! 183
+task1! 184
+task1! 184
+task1! 185
+AVISOR INFO: TIME IRQ 619
+AVISOR INFO: TIME IRQ 620
+AVISOR INFO: rr_scheduler_vcpu latency: 28
+AVISOR INFO: rr_scheduler_vcpu latency: 17
+AVISOR INFO: TIME: 2160106760 vm id 3 vcpu id 2 pcpu id 0
+AVISOR INFO: TIME: 2160122254 vm id 2 vcpu id 2 pcpu id 1
+task2! 181
+task2! 181
+task2! 182
+task2! 182
+task2! 183
+task2! 183
+task2! 184
+task2! 184
+task2! 185
+AVISOR INFO: TIME IRQ 621
+AVISOR INFO: TIME IRQ 622
+AVISOR INFO: rr_scheduler_vcpu latency: 50
+AVISOR INFO: rr_scheduler_vcpu latency: 35
+AVISOR INFO: TIME: 2222682045 vm id 3 vcpu id 3 pcpu id 0
+AVISOR INFO: TIME: 2222688360 vm id 2 vcpu id 3 pcpu id 1
+task3! 181
+task3! 181
+task3! 182
+task3! 182
+task3! 183
+task3! 183
+task3! 184
+task3! 184
+task3! 185
+AVISOR INFO: TIME IRQ 623
+AVISOR INFO: TIME IRQ 624
+AVISOR INFO: rr_scheduler_vm latency: 28
+AVISOR INFO: rr_scheduler_vm latency: 18
+AVISOR INFO: rr_scheduler_vcpu latency: 237
+AVISOR INFO: rr_scheduler_vcpu latency: 70
+AVISOR INFO: TIME: 2285277157 vm id 0 vcpu id 0 pcpu id 1
+AVISOR INFO: TIME: 2285296911 vm id 1 vcpu id 3 pcpu id 0
+task3! 181
+main 186
+task3! 182
+main 187
+task3! 183
+main 188
+task3! 184
+main 189
+task3! 185
+AVISOR INFO: TIME IRQ 626
+AVISOR INFO: TIME IRQ 625
+AVISOR INFO: rr_scheduler_vcpu latency: 26
+AVISOR INFO: rr_scheduler_vcpu latency: 28
+AVISOR INFO: TIME: 2347840098 vm id 0 vcpu id 1 pcpu id 1
+AVISOR INFO: TIME: 2347840211 vm id 1 vcpu id 0 pcpu id 0
+task1! 186
+task1! 187
+task1! 188
+task1! 189
+task1! 190
+AVISOR INFO: TIME IRQ 627
+AVISOR INFO: TIME IRQ 628
+AVISOR INFO: rr_scheduler_vcpu latency: 49
+AVISOR INFO: rr_scheduler_vcpu latency: 36
+AVISOR INFO: TIME: 2410405387 vm id 1 vcpu id 1 pcpu id 0
+AVISOR INFO: TIME: 2410419748 vm id 0 vcpu id 3 pcpu id 1
+task1! 186
+task1! 187
+task1! 188
+task1! 189
+AVISOR INFO: TIME IRQ 629
+AVISOR INFO: TIME IRQ 630
+AVISOR INFO: rr_scheduler_vcpu latency: 60
+AVISOR INFO: rr_scheduler_vcpu latency: 93
+AVISOR INFO: TIME: 2472984345 vm id 1 vcpu id 2 pcpu id 0
+AVISOR INFO: TIME: 2472991564 vm id 0 vcpu id 2 pcpu id 1
+task2! 186
+task2! 187
+task2! 187
+task2! 188
+task2! 188
+task2! 189
+task2! 189
+task2! 190
+task2! 190
+AVISOR INFO: TIME IRQ 632
+AVISOR INFO: TIME IRQ 631
+AVISOR INFO: rr_scheduler_vm latency: 24
+AVISOR INFO: rr_scheduler_vm latency: 24
+AVISOR INFO: rr_scheduler_vcpu latency: 647
+AVISOR INFO: rr_scheduler_vcpu latency: 2484
+AVISOR INFO: TIME: 2535566841 vm id 2 vcpu id 0 pcpu id 0
+AVISOR INFO: TIME: 2535574255 vm id 3 vcpu id 0 pcpu id 1
+main 186
+main 186
+main 187
+main 187
+main 188
+main 188
+main 189
+main 189
+main 190
+AVISOR INFO: TIME IRQ 633
+AVISOR INFO: TIME IRQ 634
+AVISOR INFO: rr_scheduler_vcpu latency: 33
+AVISOR INFO: rr_scheduler_vcpu latency: 54
+AVISOR INFO: TIME: 2598126937 vm id 2 vcpu id 1 pcpu id 0
+AVISOR INFO: TIME: 2598128759 vm id 3 vcpu id 1 pcpu id 1
+task1! 185
+task1! 186
+task1! 186
+task1! 187
+task1! 187
+task1! 188
+task1! 188
+task1! 189
+task1! 189
+task1! 190
+AVISOR INFO: TIME IRQ 635
+AVISOR INFO: TIME IRQ 636
+AVISOR INFO: rr_scheduler_vcpu latency: 31
+AVISOR INFO: rr_scheduler_vcpu latency: 30
+AVISOR INFO: TIME: 2660695907 vm id 3 vcpu id 2 pcpu id 1
+AVISOR INFO: TIME: 2660701383 vm id 2 vcpu id 2 pcpu id 0
+task2! 185
+task2! 186
+task2! 186
+task2! 187
+task2! 187
+task2! 188
+task2! 188
+task2! 189
+task2! 189
+AVISOR INFO: TIME IRQ 637
+AVISOR INFO: TIME IRQ 638
+AVISOR INFO: rr_scheduler_vcpu latency: 26
+AVISOR INFO: rr_scheduler_vcpu latency: 22
+AVISOR INFO: TIME: 2723277328 vm id 3 vcpu id 3 pcpu id 1
+AVISOR INFO: TIME: 2723284351 vm id 2 vcpu id 3 pcpu id 0
+task3! 185
+task3! 186
+task3! 186
+task3! 187
+task3! 187
+task3! 188
+task3! 188
+task3! 189
+task3! 189
+task3! 190
+AVISOR INFO: TIME IRQ 639
+AVISOR INFO: TIME IRQ 640
+AVISOR INFO: rr_scheduler_vm latency: 26
+AVISOR INFO: rr_scheduler_vm latency: 17
+AVISOR INFO: rr_scheduler_vcpu latency: 5165
+AVISOR INFO: rr_scheduler_vcpu latency: 18
+AVISOR INFO: TIME: 2785858682 vm id 1 vcpu id 3 pcpu id 1
+AVISOR INFO: TIME: 2785867603 vm id 0 vcpu id 0 pcpu id 0
+main 190
+task3! 186
+main 191
+task3! 187
+main 192
+task3! 188
+main 193
+task3! 189
+main 194
+task3! 190
+AVISOR INFO: TIME IRQ 641
+AVISOR INFO: TIME IRQ 642
+AVISOR INFO: rr_scheduler_vcpu latency: 25
+AVISOR INFO: rr_scheduler_vcpu latency: 32
+AVISOR INFO: TIME: 2848412532 vm id 0 vcpu id 1 pcpu id 0
+AVISOR INFO: TIME: 2848414756 vm id 1 vcpu id 0 pcpu id 1
+task1! 191
+task1! 192
+task1! 193
+task1! 194
+task1! 195
+AVISOR INFO: TIME IRQ 643
+AVISOR INFO: TIME IRQ 644
+AVISOR INFO: rr_scheduler_vcpu latency: 32
+AVISOR INFO: rr_scheduler_vcpu latency: 21
+AVISOR INFO: TIME: 2910978049 vm id 0 vcpu id 3 pcpu id 0
+AVISOR INFO: TIME: 2910984510 vm id 1 vcpu id 1 pcpu id 1
+task1! 190
+task1! 191
+task1! 192
+task1! 193
+task1! 194
+AVISOR INFO: TIME IRQ 645
+AVISOR INFO: TIME IRQ 646
+AVISOR INFO: rr_scheduler_vcpu latency: 29
+AVISOR INFO: rr_scheduler_vcpu latency: 69
+AVISOR INFO: TIME: 2973550322 vm id 1 vcpu id 2 pcpu id 1
+AVISOR INFO: TIME: 2973555063 vm id 0 vcpu id 2 pcpu id 0
+task2! 191
+task2! 191
+task2! 192
+task2! 192
+task2! 193
+task2! 193
+task2! 194
+task2! 194
+task2! 195
+task2! 195
+AVISOR INFO: TIME IRQ 647
+AVISOR INFO: TIME IRQ 648
+AVISOR INFO: rr_scheduler_vm latency: 23
+AVISOR INFO: rr_scheduler_vm latency: 19
+AVISOR INFO: rr_scheduler_vcpu latency: 1982
+AVISOR INFO: rr_scheduler_vcpu latency: 5153
+AVISOR INFO: TIME: 3036132614 vm id 3 vcpu id 0 pcpu id 0
+AVISOR INFO: TIME: 3036139819 vm id 2 vcpu id 0 pcpu id 1
+main 190
+main 191
+main 191
+main 192
+main 192
+main 193
+main 193
+main 194
+main 194
+AVISOR INFO: TIME IRQ 649
+AVISOR INFO: TIME IRQ 650
+AVISOR INFO: rr_scheduler_vcpu latency: 28
+AVISOR INFO: rr_scheduler_vcpu latency: 31
+AVISOR INFO: TIME: 3098696229 vm id 2 vcpu id 1 pcpu id 1
+AVISOR INFO: TIME: 3098701053 vm id 3 vcpu id 1 pcpu id 0
+task1! 190
+task1! 191
+task1! 191
+task1! 192
+task1! 192
+task1! 193
+task1! 193
+task1! 194
+task1! 194
+AVISOR INFO: TIME IRQ 651
+AVISOR INFO: TIME IRQ 652
+AVISOR INFO: rr_scheduler_vcpu latency: 29
+AVISOR INFO: rr_scheduler_vcpu latency: 30
+AVISOR INFO: TIME: 3161280522 vm id 3 vcpu id 2 pcpu id 0
+AVISOR INFO: TIME: 3161299471 vm id 2 vcpu id 2 pcpu id 1
+task2! 190
+task2! 190
+task2! 191
+task2! 191
+task2! 192
+task2! 192
+task2! 193
+task2! 193
+task2! 194
+task2! 194
+AVISOR INFO: TIME IRQ 653
+AVISOR INFO: TIME IRQ 654
+AVISOR INFO: rr_scheduler_vcpu latency: 25
+AVISOR INFO: rr_scheduler_vcpu latency: 41
+AVISOR INFO: TIME: 3223838205 vm id 3 vcpu id 3 pcpu id 0
+AVISOR INFO: TIME: 3223844309 vm id 2 vcpu id 3 pcpu id 1
+task3! 190
+task3! 191
+task3! 191
+task3! 192
+task3! 192
+task3! 193
+task3! 193
+task3! 194
+task3! 194
+AVISOR INFO: TIME IRQ 655
+AVISOR INFO: TIME IRQ 656
+AVISOR INFO: rr_scheduler_vm latency: 25
+AVISOR INFO: rr_scheduler_vm latency: 16
+AVISOR INFO: rr_scheduler_vcpu latency: 1701
+AVISOR INFO: rr_scheduler_vcpu latency: 136
+AVISOR INFO: TIME: 3286434394 vm id 0 vcpu id 0 pcpu id 0
+AVISOR INFO: TIME: 3286441974 vm id 1 vcpu id 3 pcpu id 1
+main 195
+task3! 191
+main 196
+task3! 192
+main 197
+task3! 193
+main 198
+task3! 194
+main 199
+task3! 195
+AVISOR INFO: TIME IRQ 657
+AVISOR INFO: TIME IRQ 658
+AVISOR INFO: rr_scheduler_vcpu latency: 41
+AVISOR INFO: rr_scheduler_vcpu latency: 32
+AVISOR INFO: TIME: 3348986996 vm id 1 vcpu id 0 pcpu id 1
+AVISOR INFO: TIME: 3348997796 vm id 0 vcpu id 1 pcpu id 0
+task1! 196
+task1! 197
+task1! 198
+task1! 199
+task1! 200
+AVISOR INFO: TIME IRQ 659
+AVISOR INFO: TIME IRQ 660
+AVISOR INFO: rr_scheduler_vcpu latency: 49
+AVISOR INFO: rr_scheduler_vcpu latency: 55
+AVISOR INFO: TIME: 3411570265 vm id 0 vcpu id 3 pcpu id 0
+AVISOR INFO: TIME: 3411579234 vm id 1 vcpu id 1 pcpu id 1
+task1! 195
+task1! 196
+task1! 197
+task1! 198
+task1! 199
+AVISOR INFO: TIME IRQ 661
+AVISOR INFO: TIME IRQ 662
+AVISOR INFO: rr_scheduler_vcpu latency: 27
+AVISOR INFO: rr_scheduler_vcpu latency: 63
+AVISOR INFO: TIME: 3474138816 vm id 1 vcpu id 2 pcpu id 1
+AVISOR INFO: TIME: 3474147113 vm id 0 vcpu id 2 pcpu id 0
+task2! 196
+task2! 196
+task2! 197
+task2! 197
+task2! 198
+task2! 198
+task2! 199
+task2! 199
+task2! 200
+AVISOR INFO: TIME IRQ 663
+AVISOR INFO: TIME IRQ 664
+AVISOR INFO: rr_scheduler_vm latency: 27
+AVISOR INFO: rr_scheduler_vm latency: 14
+AVISOR INFO: rr_scheduler_vcpu latency: 206
+AVISOR INFO: rr_scheduler_vcpu latency: 82
+AVISOR INFO: TIME: 3536723538 vm id 3 vcpu id 0 pcpu id 0
+AVISOR INFO: TIME: 3536728889 vm id 2 vcpu id 0 pcpu id 1
+main 195
+main 195
+main 196
+main 196
+main 197
+main 197
+main 198
+main 198
+main 199
+main 199
+AVISOR INFO: TIME IRQ 665
+AVISOR INFO: TIME IRQ 666
+AVISOR INFO: rr_scheduler_vcpu latency: 47
+AVISOR INFO: rr_scheduler_vcpu latency: 52
+AVISOR INFO: TIME: 3599275589 vm id 3 vcpu id 1 pcpu id 0
+AVISOR INFO: TIME: 3599280183 vm id 2 vcpu id 1 pcpu id 1
+task1! 195
+task1! 195
+task1! 196
+task1! 196
+task1! 197
+task1! 197
+task1! 198
+task1! 198
+task1! 199
+task1! 199
+AVISOR INFO: TIME IRQ 667
+AVISOR INFO: TIME IRQ 668
+AVISOR INFO: rr_scheduler_vcpu latency: 80
+AVISOR INFO: rr_scheduler_vcpu latency: 34
+AVISOR INFO: TIME: 3661850147 vm id 3 vcpu id 2 pcpu id 0
+AVISOR INFO: TIME: 3661857650 vm id 2 vcpu id 2 pcpu id 1
+task2! 195
+task2! 195
+task2! 196
+task2! 196
+task2! 197
+task2! 197
+task2! 198
+task2! 198
+task2! 199
+task2! 199
+AVISOR INFO: TIME IRQ 669
+AVISOR INFO: TIME IRQ 670
+AVISOR INFO: rr_scheduler_vcpu latency: 35
+AVISOR INFO: rr_scheduler_vcpu latency: 45
+AVISOR INFO: TIME: 3724439805 vm id 2 vcpu id 3 pcpu id 1
+AVISOR INFO: TIME: 3724448551 vm id 3 vcpu id 3 pcpu id 0
+task3! 195
+task3! 195
+task3! 196
+task3! 196
+task3! 197
+task3! 197
+task3! 198
+task3! 198
+task3! 199
+task3! 199
+AVISOR INFO: TIME IRQ 672
+AVISOR INFO: TIME IRQ 671
+AVISOR INFO: rr_scheduler_vm latency: 28
+AVISOR INFO: rr_scheduler_vm latency: 17
+AVISOR INFO: rr_scheduler_vcpu latency: 305
+AVISOR INFO: rr_scheduler_vcpu latency: 220
+AVISOR INFO: TIME: 3787027008 vm id 0 vcpu id 0 pcpu id 0
+AVISOR INFO: TIME: 3787037257 vm id 1 vcpu id 3 pcpu id 1
+main 200
+task3! 196
+main 201
+task3! 197
+main 202
+task3! 198
+main 203
+task3! 199
+main 204
+AVISOR INFO: TIME IRQ 673
+AVISOR INFO: TIME IRQ 674
+AVISOR INFO: rr_scheduler_vcpu latency: 56
+AVISOR INFO: rr_scheduler_vcpu latency: 57
+AVISOR INFO: TIME: 3849573220 vm id 1 vcpu id 0 pcpu id 1
+AVISOR INFO: TIME: 3849580022 vm id 0 vcpu id 1 pcpu id 0
+task1! 201
+task1! 202
+task1! 203
+task1! 204
+task1! 205
+AVISOR INFO: TIME IRQ 675
+AVISOR INFO: TIME IRQ 676
+AVISOR INFO: rr_scheduler_vcpu latency: 35
+AVISOR INFO: rr_scheduler_vcpu latency: 42
+AVISOR INFO: TIME: 3912150928 vm id 0 vcpu id 3 pcpu id 0
+AVISOR INFO: TIME: 3912167479 vm id 1 vcpu id 1 pcpu id 1
+task1! 200
+task1! 201
+task1! 202
+task1! 203
+AVISOR INFO: TIME IRQ 677
+AVISOR INFO: TIME IRQ 678
+AVISOR INFO: rr_scheduler_vcpu latency: 17
+AVISOR INFO: rr_scheduler_vcpu latency: 37
+AVISOR INFO: TIME: 3974733787 vm id 0 vcpu id 2 pcpu id 0
+AVISOR INFO: TIME: 3974733839 vm id 1 vcpu id 2 pcpu id 1
+task2! 200
+task2! 201
+task2! 201
+task2! 202
+task2! 202
+task2! 203
+task2! 203
+task2! 204
+task2! 204
+task2! 205
+AVISOR INFO: TIME IRQ 679
+AVISOR INFO: TIME IRQ 680
+AVISOR INFO: rr_scheduler_vm latency: 32
+AVISOR INFO: rr_scheduler_vm latency: 19
+AVISOR INFO: rr_scheduler_vcpu latency: 9758
+AVISOR INFO: rr_scheduler_vcpu latency: 22
+AVISOR INFO: TIME: 4037324101 vm id 3 vcpu id 0 pcpu id 0
+AVISOR INFO: TIME: 4037331334 vm id 2 vcpu id 0 pcpu id 1
+main 200
+main 200
+main 201
+main 201
+main 202
+main 202
+main 203
+main 203
+main 204
+main 204
+AVISOR INFO: TIME IRQ 681
+AVISOR INFO: TIME IRQ 682
+AVISOR INFO: rr_scheduler_vcpu latency: 31
+AVISOR INFO: rr_scheduler_vcpu latency: 18
+AVISOR INFO: TIME: 4099881740 vm id 2 vcpu id 1 pcpu id 1
+AVISOR INFO: TIME: 4099881810 vm id 3 vcpu id 1 pcpu id 0
+task1! 200
+task1! 200
+task1! 201
+task1! 201
+task1! 202
+task1! 202
+task1! 203
+task1! 203
+task1! 204
+AVISOR INFO: TIME IRQ 683
+AVISOR INFO: TIME IRQ 684
+AVISOR INFO: rr_scheduler_vcpu latency: 31
+AVISOR INFO: rr_scheduler_vcpu latency: 34
+AVISOR INFO: TIME: 4162445607 vm id 2 vcpu id 2 pcpu id 1
+AVISOR INFO: TIME: 4162445712 vm id 3 vcpu id 2 pcpu id 0
+task2! 200
+task2! 200
+task2! 201
+task2! 201
+task2! 202
+task2! 202
+task2! 203
+task2! 203
+task2! 204
+task2! 204
+AVISOR INFO: TIME IRQ 685
+AVISOR INFO: TIME IRQ 686
+AVISOR INFO: rr_scheduler_vcpu latency: 51
+AVISOR INFO: rr_scheduler_vcpu latency: 29
+AVISOR INFO: TIME: 4225011076 vm id 3 vcpu id 3 pcpu id 0
+AVISOR INFO: TIME: 4225027441 vm id 2 vcpu id 3 pcpu id 1
+task3! 200
+task3! 200
+task3! 201
+task3! 201
+task3! 202
+task3! 202
+task3! 203
+task3! 203
+task3! 204
+task3! 204
+AVISOR INFO: TIME IRQ 687
+AVISOR INFO: TIME IRQ 688
+AVISOR INFO: rr_scheduler_vm latency: 24
+AVISOR INFO: rr_scheduler_vm latency: 15
+AVISOR INFO: rr_scheduler_vcpu latency: 1442
+AVISOR INFO: rr_scheduler_vcpu latency: 196
+AVISOR INFO: TIME: 4287593783 vm id 0 vcpu id 0 pcpu id 0
+AVISOR INFO: TIME: 4287614094 vm id 1 vcpu id 3 pcpu id 1
+task3! 200
+main 205
+task3! 201
+main 206
+task3! 202
+main 207
+task3! 203
+main 208
+task3! 204
+main 209
+AVISOR INFO: TIME IRQ 690
+AVISOR INFO: TIME IRQ 689
+AVISOR INFO: rr_scheduler_vcpu latency: 30
+AVISOR INFO: rr_scheduler_vcpu latency: 35
+AVISOR INFO: TIME: 55186564 vm id 1 vcpu id 0 pcpu id 1
+AVISOR INFO: TIME: 55196499 vm id 0 vcpu id 1 pcpu id 0
+task1! 206
+task1! 207
+task1! 208
+task1! 209
+task1! 210
+AVISOR INFO: TIME IRQ 691
+AVISOR INFO: TIME IRQ 692
+AVISOR INFO: rr_scheduler_vcpu latency: 33
+AVISOR INFO: rr_scheduler_vcpu latency: 31
+AVISOR INFO: TIME: 117760041 vm id 0 vcpu id 3 pcpu id 0
+AVISOR INFO: TIME: 117777603 vm id 1 vcpu id 1 pcpu id 1
+task1! 204
+task1! 205
+task1! 206
+task1! 207
+task1! 208
+AVISOR INFO: TIME IRQ 693
+AVISOR INFO: TIME IRQ 694
+AVISOR INFO: rr_scheduler_vcpu latency: 46
+AVISOR INFO: rr_scheduler_vcpu latency: 22
+AVISOR INFO: TIME: 180333740 vm id 0 vcpu id 2 pcpu id 0
+AVISOR INFO: TIME: 180345315 vm id 1 vcpu id 2 pcpu id 1
+task2! 205
+task2! 206
+task2! 206
+task2! 207
+task2! 207
+task2! 208
+task2! 208
+task2! 209
+task2! 209
+AVISOR INFO: TIME IRQ 695
+AVISOR INFO: TIME IRQ 696
+AVISOR INFO: rr_scheduler_vm latency: 25
+AVISOR INFO: rr_scheduler_vm latency: 53
+AVISOR INFO: rr_scheduler_vcpu latency: 290
+AVISOR INFO: rr_scheduler_vcpu latency: 3372
+AVISOR INFO: TIME: 242924847 vm id 3 vcpu id 0 pcpu id 0
+AVISOR INFO: TIME: 242930985 vm id 2 vcpu id 0 pcpu id 1
+main 205
+main 205
+main 206
+main 206
+main 207
+main 207
+main 208
+main 208
+AVISOR INFO: TIME IRQ 697
+AVISOR INFO: TIME IRQ 698
+AVISOR INFO: rr_scheduler_vcpu latency: 56
+AVISOR INFO: rr_scheduler_vcpu latency: 57
+AVISOR INFO: TIME: 305470846 vm id 3 vcpu id 1 pcpu id 0
+AVISOR INFO: TIME: 305478462 vm id 2 vcpu id 1 pcpu id 1
+task1! 204
+task1! 205
+task1! 205
+task1! 206
+task1! 206
+task1! 207
+task1! 207
+task1! 208
+task1! 208
+task1! 209
+AVISOR INFO: TIME IRQ 699
+AVISOR INFO: TIME IRQ 700
+AVISOR INFO: rr_scheduler_vcpu latency: 32
+AVISOR INFO: rr_scheduler_vcpu latency: 35
+AVISOR INFO: TIME: 368044638 vm id 2 vcpu id 2 pcpu id 1
+AVISOR INFO: TIME: 368059005 vm id 3 vcpu id 2 pcpu id 0
+task2! 205
+task2! 205
+task2! 206
+task2! 206
+task2! 207
+task2! 207
+task2! 208
+task2! 208
+task2! 209
+AVISOR INFO: TIME IRQ 701
+AVISOR INFO: TIME IRQ 702
+AVISOR INFO: rr_scheduler_vcpu latency: 26
+AVISOR INFO: rr_scheduler_vcpu latency: 43
+AVISOR INFO: TIME: 430616486 vm id 3 vcpu id 3 pcpu id 0
+AVISOR INFO: TIME: 430623019 vm id 2 vcpu id 3 pcpu id 1
+task3! 205
+task3! 205
+task3! 206
+task3! 206
+task3! 207
+task3! 207
+task3! 208
+task3! 208
+task3! 209
+AVISOR INFO: TIME IRQ 704
+AVISOR INFO: TIME IRQ 703
+AVISOR INFO: rr_scheduler_vm latency: 26
+AVISOR INFO: rr_scheduler_vm latency: 17
+AVISOR INFO: rr_scheduler_vcpu latency: 243
+AVISOR INFO: rr_scheduler_vcpu latency: 178
+AVISOR INFO: TIME: 493205488 vm id 0 vcpu id 0 pcpu id 0
+AVISOR INFO: TIME: 493223735 vm id 1 vcpu id 3 pcpu id 1
+task3! 205
+main 210
+task3! 206
+main 211
+task3! 207
+main 212
+task3! 208
+main 213
+task3! 209
+AVISOR INFO: TIME IRQ 705
+AVISOR INFO: TIME IRQ 706
+AVISOR INFO: rr_scheduler_vcpu latency: 37
+AVISOR INFO: rr_scheduler_vcpu latency: 45
+AVISOR INFO: TIME: 555768245 vm id 0 vcpu id 1 pcpu id 0
+AVISOR INFO: TIME: 555777680 vm id 1 vcpu id 0 pcpu id 1
+task1! 211
+task1! 212
+task1! 213
+task1! 214
+AVISOR INFO: TIME IRQ 707
+AVISOR INFO: TIME IRQ 708
+AVISOR INFO: rr_scheduler_vcpu latency: 62
+AVISOR INFO: rr_scheduler_vcpu latency: 44
+AVISOR INFO: TIME: 618340345 vm id 0 vcpu id 3 pcpu id 0
+AVISOR INFO: TIME: 618344781 vm id 1 vcpu id 1 pcpu id 1
+task1! 209
+task1! 210
+task1! 211
+task1! 212
+task1! 213
+AVISOR INFO: TIME IRQ 709
+AVISOR INFO: TIME IRQ 710
+AVISOR INFO: rr_scheduler_vcpu latency: 22
+AVISOR INFO: rr_scheduler_vcpu latency: 48
+AVISOR INFO: TIME: 680921349 vm id 1 vcpu id 2 pcpu id 1
+AVISOR INFO: TIME: 680921557 vm id 0 vcpu id 2 pcpu id 0
+task2! 210
+task2! 210
+task2! 211
+task2! 211
+task2! 212
+task2! 212
+task2! 213
+task2! 213
+task2! 214
+task2! 214
+AVISOR INFO: TIME IRQ 711
+AVISOR INFO: TIME IRQ 712
+AVISOR INFO: rr_scheduler_vm latency: 68
+AVISOR INFO: rr_scheduler_vm latency: 17
+AVISOR INFO: rr_scheduler_vcpu latency: 1858
+AVISOR INFO: rr_scheduler_vcpu latency: 170
+AVISOR INFO: TIME: 743530570 vm id 2 vcpu id 0 pcpu id 0
+AVISOR INFO: TIME: 743530716 vm id 3 vcpu id 0 pcpu id 1
+main 209
+main 209
+main 210
+main 210
+main 211
+main 211
+main 212
+main 212
+main 213
+main 213
+AVISOR INFO: TIME IRQ 713
+AVISOR INFO: TIME IRQ 714
+AVISOR INFO: rr_scheduler_vcpu latency: 36
+AVISOR INFO: rr_scheduler_vcpu latency: 46
+AVISOR INFO: TIME: 806058608 vm id 2 vcpu id 1 pcpu id 0
+AVISOR INFO: TIME: 806071973 vm id 3 vcpu id 1 pcpu id 1
+task1! 209
+task1! 210
+task1! 210
+task1! 211
+task1! 211
+task1! 212
+task1! 212
+task1! 213
+task1! 213
+AVISOR INFO: TIME IRQ 715
+AVISOR INFO: TIME IRQ 716
+AVISOR INFO: rr_scheduler_vcpu latency: 809
+AVISOR INFO: rr_scheduler_vcpu latency: 196
+AVISOR INFO: TIME: 868641359 vm id 2 vcpu id 2 pcpu id 0
+AVISOR INFO: TIME: 868655307 vm id 3 vcpu id 2 pcpu id 1
+task2! 209
+task2! 210
+task2! 210
+task2! 211
+task2! 211
+task2! 212
+task2! 212
+task2! 213
+task2! 213
+AVISOR INFO: TIME IRQ 717
+AVISOR INFO: TIME IRQ 718
+AVISOR INFO: rr_scheduler_vcpu latency: 34
+AVISOR INFO: rr_scheduler_vcpu latency: 37
+AVISOR INFO: TIME: 931214272 vm id 2 vcpu id 3 pcpu id 0
+AVISOR INFO: TIME: 931221519 vm id 3 vcpu id 3 pcpu id 1
+task3! 209
+task3! 210
+task3! 210
+task3! 211
+task3! 211
+task3! 212
+task3! 212
+task3! 213
+task3! 213
+task3! 214
+AVISOR INFO: TIME IRQ 719
+AVISOR INFO: TIME IRQ 720
+AVISOR INFO: rr_scheduler_vm latency: 537
+AVISOR INFO: rr_scheduler_vm latency: 17
+AVISOR INFO: rr_scheduler_vcpu latency: 660
+AVISOR INFO: rr_scheduler_vcpu latency: 78
+AVISOR INFO: TIME: 993801551 vm id 1 vcpu id 3 pcpu id 0
+AVISOR INFO: TIME: 993810051 vm id 0 vcpu id 0 pcpu id 1
+main 214
+task3! 210
+main 215
+task3! 211
+main 216
+task3! 212
+main 217
+task3! 213
+main 218
+task3! 214
+AVISOR INFO: TIME IRQ 721
+AVISOR INFO: TIME IRQ 722
+AVISOR INFO: rr_scheduler_vcpu latency: 39
+AVISOR INFO: rr_scheduler_vcpu latency: 55
+AVISOR INFO: TIME: 1056358157 vm id 0 vcpu id 1 pcpu id 1
+AVISOR INFO: TIME: 1056369505 vm id 1 vcpu id 0 pcpu id 0
+task1! 215
+task1! 216
+task1! 217
+task1! 218
+task1! 219
+AVISOR INFO: TIME IRQ 723
+AVISOR INFO: TIME IRQ 724
+AVISOR INFO: rr_scheduler_vcpu latency: 39
+AVISOR INFO: rr_scheduler_vcpu latency: 51
+AVISOR INFO: TIME: 1118933564 vm id 1 vcpu id 1 pcpu id 0
+AVISOR INFO: TIME: 1118939894 vm id 0 vcpu id 3 pcpu id 1
+task1! 214
+task1! 215
+task1! 216
+task1! 217
+AVISOR INFO: TIME IRQ 725
+AVISOR INFO: TIME IRQ 726
+AVISOR INFO: rr_scheduler_vcpu latency: 20
+AVISOR INFO: rr_scheduler_vcpu latency: 47
+AVISOR INFO: TIME: 1181506832 vm id 1 vcpu id 2 pcpu id 0
+AVISOR INFO: TIME: 1181513924 vm id 0 vcpu id 2 pcpu id 1
+task2! 215
+task2! 215
+task2! 216
+task2! 216
+task2! 217
+task2! 217
+task2! 218
+task2! 218
+task2! 219
+task2! 219
+AVISOR INFO: TIME IRQ 727
+AVISOR INFO: TIME IRQ 728
+AVISOR INFO: rr_scheduler_vm latency: 25
+AVISOR INFO: rr_scheduler_vm latency: 14
+AVISOR INFO: rr_scheduler_vcpu latency: 256
+AVISOR INFO: rr_scheduler_vcpu latency: 123
+AVISOR INFO: TIME: 1244080100 vm id 2 vcpu id 0 pcpu id 0
+AVISOR INFO: TIME: 1244088738 vm id 3 vcpu id 0 pcpu id 1
+main 214
+main 214
+main 215
+main 215
+main 216
+main 216
+main 217
+main 217
+main 218
+main 218
+AVISOR INFO: TIME IRQ 729
+AVISOR INFO: TIME IRQ 730
+AVISOR INFO: rr_scheduler_vcpu latency: 32
+AVISOR INFO: rr_scheduler_vcpu latency: 42
+AVISOR INFO: TIME: 1306647047 vm id 3 vcpu id 1 pcpu id 1
+AVISOR INFO: TIME: 1306652851 vm id 2 vcpu id 1 pcpu id 0
+task1! 214
+task1! 214
+task1! 215
+task1! 215
+task1! 216
+task1! 216
+task1! 217
+task1! 217
+task1! 218
+task1! 218
+AVISOR INFO: TIME IRQ 731
+AVISOR INFO: TIME IRQ 732
+AVISOR INFO: rr_scheduler_vcpu latency: 24
+AVISOR INFO: rr_scheduler_vcpu latency: 28
+AVISOR INFO: TIME: 1369228172 vm id 2 vcpu id 2 pcpu id 0
+AVISOR INFO: TIME: 1369241378 vm id 3 vcpu id 2 pcpu id 1
+task2! 214
+task2! 214
+task2! 215
+task2! 215
+task2! 216
+task2! 216
+task2! 217
+task2! 217
+task2! 218
+task2! 218
+AVISOR INFO: TIME IRQ 733
+AVISOR INFO: TIME IRQ 734
+AVISOR INFO: rr_scheduler_vcpu latency: 54
+AVISOR INFO: rr_scheduler_vcpu latency: 42
+AVISOR INFO: TIME: 1431792084 vm id 2 vcpu id 3 pcpu id 0
+AVISOR INFO: TIME: 1431799774 vm id 3 vcpu id 3 pcpu id 1
+task3! 214
+task3! 215
+task3! 215
+task3! 216
+task3! 216
+task3! 217
+task3! 217
+task3! 218
+task3! 218
+AVISOR INFO: TIME IRQ 735
+AVISOR INFO: TIME IRQ 736
+AVISOR INFO: rr_scheduler_vm latency: 30
+AVISOR INFO: rr_scheduler_vm latency: 16
+AVISOR INFO: rr_scheduler_vcpu latency: 207
+AVISOR INFO: rr_scheduler_vcpu latency: 115
+AVISOR INFO: TIME: 1494379240 vm id 1 vcpu id 3 pcpu id 0
+AVISOR INFO: TIME: 1494386173 vm id 0 vcpu id 0 pcpu id 1
+main 219
+task3! 215
+main 220
+task3! 216
+main 221
+task3! 217
+main 222
+task3! 218
+main 223
+task3! 219
+AVISOR INFO: TIME IRQ 737
+AVISOR INFO: TIME IRQ 738
+AVISOR INFO: rr_scheduler_vcpu latency: 36
+AVISOR INFO: rr_scheduler_vcpu latency: 51
+AVISOR INFO: TIME: 1556947226 vm id 1 vcpu id 0 pcpu id 0
+AVISOR INFO: TIME: 1556953954 vm id 0 vcpu id 1 pcpu id 1
+task1! 220
+task1! 221
+task1! 222
+task1! 223
+task1! 224
+AVISOR INFO: TIME IRQ 739
+AVISOR INFO: TIME IRQ 740
+AVISOR INFO: rr_scheduler_vcpu latency: 50
+AVISOR INFO: rr_scheduler_vcpu latency: 45
+AVISOR INFO: TIME: 1619516005 vm id 0 vcpu id 3 pcpu id 1
+AVISOR INFO: TIME: 1619522909 vm id 1 vcpu id 1 pcpu id 0
+task1! 218
+task1! 219
+task1! 220
+task1! 221
+task1! 222
+AVISOR INFO: TIME IRQ 741
+AVISOR INFO: TIME IRQ 742
+AVISOR INFO: rr_scheduler_vcpu latency: 23
+AVISOR INFO: rr_scheduler_vcpu latency: 47
+AVISOR INFO: TIME: 1682124293 vm id 1 vcpu id 2 pcpu id 0
+AVISOR INFO: TIME: 1682133202 vm id 0 vcpu id 2 pcpu id 1
+task2! 220
+task2! 220
+task2! 221
+task2! 221
+task2! 222
+task2! 222
+task2! 223
+task2! 223
+task2! 224
+AVISOR INFO: TIME IRQ 743
+AVISOR INFO: TIME IRQ 744
+AVISOR INFO: rr_scheduler_vm latency: 27
+AVISOR INFO: rr_scheduler_vm latency: 12
+AVISOR INFO: rr_scheduler_vcpu latency: 7576
+AVISOR INFO: rr_scheduler_vcpu latency: 17
+AVISOR INFO: TIME: 1744680268 vm id 2 vcpu id 0 pcpu id 1
+AVISOR INFO: TIME: 1744687545 vm id 3 vcpu id 0 pcpu id 0
+main 219
+main 219
+main 220
+main 220
+main 221
+main 221
+main 222
+main 222
+main 223
+main 223
+AVISOR INFO: TIME IRQ 745
+AVISOR INFO: TIME IRQ 746
+AVISOR INFO: rr_scheduler_vcpu latency: 59
+AVISOR INFO: rr_scheduler_vcpu latency: 51
+AVISOR INFO: TIME: 1807251012 vm id 2 vcpu id 1 pcpu id 1
+AVISOR INFO: TIME: 1807255783 vm id 3 vcpu id 1 pcpu id 0
+task1! 219
+task1! 219
+task1! 220
+task1! 220
+task1! 221
+task1! 221
+task1! 222
+task1! 222
+task1! 223
+task1! 223
+AVISOR INFO: TIME IRQ 747
+AVISOR INFO: TIME IRQ 748
+AVISOR INFO: rr_scheduler_vcpu latency: 26
+AVISOR INFO: rr_scheduler_vcpu latency: 26
+AVISOR INFO: TIME: 1869822178 vm id 3 vcpu id 2 pcpu id 0
+AVISOR INFO: TIME: 1869835609 vm id 2 vcpu id 2 pcpu id 1
+task2! 219
+task2! 219
+task2! 220
+task2! 220
+task2! 221
+task2! 221
+task2! 222
+task2! 222
+task2! 223
+task2! 223
+AVISOR INFO: TIME IRQ 749
+AVISOR INFO: TIME IRQ 750
+AVISOR INFO: rr_scheduler_vcpu latency: 36
+AVISOR INFO: rr_scheduler_vcpu latency: 41
+AVISOR INFO: TIME: 1932383489 vm id 2 vcpu id 3 pcpu id 1
+AVISOR INFO: TIME: 1932389406 vm id 3 vcpu id 3 pcpu id 0
+task3! 219
+task3! 219
+task3! 220
+task3! 220
+task3! 221
+task3! 221
+task3! 222
+task3! 222
+task3! 223
+task3! 223
+AVISOR INFO: TIME IRQ 751
+AVISOR INFO: TIME IRQ 752
+AVISOR INFO: rr_scheduler_vm latency: 23
+AVISOR INFO: rr_scheduler_vm latency: 15
+AVISOR INFO: rr_scheduler_vcpu latency: 75
+AVISOR INFO: rr_scheduler_vcpu latency: 224
+AVISOR INFO: TIME: 1995000578 vm id 0 vcpu id 0 pcpu id 0
+AVISOR INFO: TIME: 1995012731 vm id 1 vcpu id 3 pcpu id 1
+main 224
+task3! 220
+main 225
+task3! 221
+main 226
+task3! 222
+main 227
+task3! 223
+main 228
+AVISOR INFO: TIME IRQ 753
+AVISOR INFO: TIME IRQ 754
+AVISOR INFO: rr_scheduler_vcpu latency: 35
+AVISOR INFO: rr_scheduler_vcpu latency: 52
+AVISOR INFO: TIME: 2057543348 vm id 0 vcpu id 1 pcpu id 0
+AVISOR INFO: TIME: 2057559343 vm id 1 vcpu id 0 pcpu id 1
+task1! 225
+task1! 226
+task1! 227
+task1! 228
+task1! 229
+AVISOR INFO: TIME IRQ 755
+AVISOR INFO: TIME IRQ 756
+AVISOR INFO: rr_scheduler_vcpu latency: 58
+AVISOR INFO: rr_scheduler_vcpu latency: 54
+AVISOR INFO: TIME: 2120103885 vm id 1 vcpu id 1 pcpu id 1
+AVISOR INFO: TIME: 2120111445 vm id 0 vcpu id 3 pcpu id 0
+task1! 223
+task1! 224
+task1! 225
+task1! 226
+task1! 227
+AVISOR INFO: TIME IRQ 757
+AVISOR INFO: TIME IRQ 758
+AVISOR INFO: rr_scheduler_vcpu latency: 18
+AVISOR INFO: rr_scheduler_vcpu latency: 73
+AVISOR INFO: TIME: 2182680056 vm id 1 vcpu id 2 pcpu id 1
+AVISOR INFO: TIME: 2182687882 vm id 0 vcpu id 2 pcpu id 0
+task2! 224
+task2! 225
+task2! 225
+task2! 226
+task2! 226
+task2! 227
+task2! 227
+task2! 228
+task2! 228
+task2! 229
+AVISOR INFO: TIME IRQ 759
+AVISOR INFO: TIME IRQ 760
+AVISOR INFO: rr_scheduler_vm latency: 25
+AVISOR INFO: rr_scheduler_vm latency: 17
+AVISOR INFO: rr_scheduler_vcpu latency: 1480
+AVISOR INFO: rr_scheduler_vcpu latency: 118
+AVISOR INFO: TIME: 2245265547 vm id 3 vcpu id 0 pcpu id 0
+AVISOR INFO: TIME: 2245271759 vm id 2 vcpu id 0 pcpu id 1
+main 224
+main 224
+main 225
+main 225
+main 226
+main 226
+main 227
+main 227
+main 228
+main 228
+AVISOR INFO: TIME IRQ 761
+AVISOR INFO: TIME IRQ 762
+AVISOR INFO: rr_scheduler_vcpu latency: 48
+AVISOR INFO: rr_scheduler_vcpu latency: 46
+AVISOR INFO: TIME: 2307826352 vm id 3 vcpu id 1 pcpu id 0
+AVISOR INFO: TIME: 2307833079 vm id 2 vcpu id 1 pcpu id 1
+task1! 224
+task1! 224
+task1! 225
+task1! 225
+task1! 226
+task1! 226
+task1! 227
+task1! 227
+task1! 228
+AVISOR INFO: TIME IRQ 763
+AVISOR INFO: TIME IRQ 764
+AVISOR INFO: rr_scheduler_vcpu latency: 28
+AVISOR INFO: rr_scheduler_vcpu latency: 31
+AVISOR INFO: TIME: 2370408086 vm id 3 vcpu id 2 pcpu id 0
+AVISOR INFO: TIME: 2370409071 vm id 2 vcpu id 2 pcpu id 1
+task2! 224
+task2! 224
+task2! 225
+task2! 225
+task2! 226
+task2! 226
+task2! 227
+task2! 227
+task2! 228
+task2! 228
+AVISOR INFO: TIME IRQ 765
+AVISOR INFO: TIME IRQ 766
+AVISOR INFO: rr_scheduler_vcpu latency: 721
+AVISOR INFO: rr_scheduler_vcpu latency: 195
+AVISOR INFO: TIME: 2432983220 vm id 3 vcpu id 3 pcpu id 0
+AVISOR INFO: TIME: 2432988255 vm id 2 vcpu id 3 pcpu id 1
+task3! 224
+task3! 224
+task3! 225
+task3! 225
+task3! 226
+task3! 226
+task3! 227
+task3! 227
+task3! 228
+task3! 228
+AVISOR INFO: TIME IRQ 768
+AVISOR INFO: TIME IRQ 767
+AVISOR INFO: rr_scheduler_vm latency: 25
+AVISOR INFO: rr_scheduler_vm latency: 14
+AVISOR INFO: rr_scheduler_vcpu latency: 96
+AVISOR INFO: rr_scheduler_vcpu latency: 18
+AVISOR INFO: TIME: 2495557687 vm id 0 vcpu id 0 pcpu id 1
+AVISOR INFO: TIME: 2495562907 vm id 1 vcpu id 3 pcpu id 0
+task3! 224
+main 229
+task3! 225
+main 230
+task3! 226
+main 231
+task3! 227
+main 232
+task3! 228
+AVISOR INFO: TIME IRQ 769
+AVISOR INFO: TIME IRQ 770
+AVISOR INFO: rr_scheduler_vcpu latency: 27
+AVISOR INFO: rr_scheduler_vcpu latency: 17
+AVISOR INFO: TIME: 2558120056 vm id 1 vcpu id 0 pcpu id 0
+AVISOR INFO: TIME: 2558119992 vm id 0 vcpu id 1 pcpu id 1
+task1! 230
+task1! 231
+task1! 232
+task1! 233
+task1! 234
+AVISOR INFO: TIME IRQ 772
+AVISOR INFO: TIME IRQ 771
+AVISOR INFO: rr_scheduler_vcpu latency: 34
+AVISOR INFO: rr_scheduler_vcpu latency: 48
+AVISOR INFO: TIME: 2620699619 vm id 0 vcpu id 3 pcpu id 1
+AVISOR INFO: TIME: 2620701996 vm id 1 vcpu id 1 pcpu id 0
+task1! 228
+task1! 229
+task1! 230
+task1! 231
+task1! 232
+AVISOR INFO: TIME IRQ 773
+AVISOR INFO: TIME IRQ 774
+AVISOR INFO: rr_scheduler_vcpu latency: 68
+AVISOR INFO: rr_scheduler_vcpu latency: 34
+AVISOR INFO: TIME: 2683261932 vm id 1 vcpu id 2 pcpu id 0
+AVISOR INFO: TIME: 2683262234 vm id 0 vcpu id 2 pcpu id 1
+task2! 229
+task2! 230
+task2! 230
+task2! 231
+task2! 231
+task2! 232
+task2! 232
+task2! 233
+task2! 233
+AVISOR INFO: TIME IRQ 775
+AVISOR INFO: TIME IRQ 776
+AVISOR INFO: rr_scheduler_vm latency: 25
+AVISOR INFO: rr_scheduler_vm latency: 15
+AVISOR INFO: rr_scheduler_vcpu latency: 212
+AVISOR INFO: rr_scheduler_vcpu latency: 173
+AVISOR INFO: TIME: 2745847296 vm id 2 vcpu id 0 pcpu id 1
+AVISOR INFO: TIME: 2745859414 vm id 3 vcpu id 0 pcpu id 0
+main 229
+main 229
+main 230
+main 230
+main 231
+main 231
+main 232
+main 232
+main 233
+AVISOR INFO: TIME IRQ 777
+AVISOR INFO: TIME IRQ 778
+AVISOR INFO: rr_scheduler_vcpu latency: 645
+AVISOR INFO: rr_scheduler_vcpu latency: 719
+AVISOR INFO: TIME: 2808405782 vm id 2 vcpu id 1 pcpu id 1
+AVISOR INFO: TIME: 2808411279 vm id 3 vcpu id 1 pcpu id 0
+task1! 228
+task1! 229
+task1! 229
+task1! 230
+task1! 230
+task1! 231
+task1! 231
+task1! 232
+task1! 232
+AVISOR INFO: TIME IRQ 779
+AVISOR INFO: TIME IRQ 780
+AVISOR INFO: rr_scheduler_vcpu latency: 50
+AVISOR INFO: rr_scheduler_vcpu latency: 45
+AVISOR INFO: TIME: 2870979396 vm id 3 vcpu id 2 pcpu id 0
+AVISOR INFO: TIME: 2870984130 vm id 2 vcpu id 2 pcpu id 1
+task2! 229
+task2! 229
+task2! 230
+task2! 230
+task2! 231
+task2! 231
+task2! 232
+task2! 232
+task2! 233
+task2! 233
+AVISOR INFO: TIME IRQ 781
+AVISOR INFO: TIME IRQ 782
+AVISOR INFO: rr_scheduler_vcpu latency: 56
+AVISOR INFO: rr_scheduler_vcpu latency: 41
+AVISOR INFO: TIME: 2933555307 vm id 3 vcpu id 3 pcpu id 0
+AVISOR INFO: TIME: 2933561735 vm id 2 vcpu id 3 pcpu id 1
+task3! 229
+task3! 229
+task3! 230
+task3! 230
+task3! 231
+task3! 231
+task3! 232
+task3! 232
+task3! 233
+task3! 233
+AVISOR INFO: TIME IRQ 783
+AVISOR INFO: TIME IRQ 784
+AVISOR INFO: rr_scheduler_vm latency: 29
+AVISOR INFO: rr_scheduler_vm latency: 15
+AVISOR INFO: rr_scheduler_vcpu latency: 263
+AVISOR INFO: rr_scheduler_vcpu latency: 7753
+AVISOR INFO: TIME: 2996135892 vm id 0 vcpu id 0 pcpu id 0
+AVISOR INFO: TIME: 2996142842 vm id 1 vcpu id 3 pcpu id 1
+main 233
+task3! 229
+main 234
+task3! 230
+main 235
+task3! 231
+main 236
+task3! 232
+main 237
+task3! 233
+AVISOR INFO: TIME IRQ 785
+AVISOR INFO: TIME IRQ 786
+AVISOR INFO: rr_scheduler_vcpu latency: 59
+AVISOR INFO: rr_scheduler_vcpu latency: 59
+AVISOR INFO: TIME: 3058707752 vm id 1 vcpu id 0 pcpu id 1
+AVISOR INFO: TIME: 3058713695 vm id 0 vcpu id 1 pcpu id 0
+task1! 235
+task1! 236
+task1! 237
+task1! 238
+task1! 239
+AVISOR INFO: TIME IRQ 788
+AVISOR INFO: TIME IRQ 787
+AVISOR INFO: rr_scheduler_vcpu latency: 54
+AVISOR INFO: rr_scheduler_vcpu latency: 44
+AVISOR INFO: TIME: 3121276698 vm id 0 vcpu id 3 pcpu id 0
+AVISOR INFO: TIME: 3121285836 vm id 1 vcpu id 1 pcpu id 1
+task1! 233
+task1! 234
+task1! 235
+task1! 236
+AVISOR INFO: TIME IRQ 789
+AVISOR INFO: TIME IRQ 790
+AVISOR INFO: rr_scheduler_vcpu latency: 72
+AVISOR INFO: rr_scheduler_vcpu latency: 27
+AVISOR INFO: TIME: 3183857434 vm id 0 vcpu id 2 pcpu id 0
+AVISOR INFO: TIME: 3183877961 vm id 1 vcpu id 2 pcpu id 1
+task2! 234
+task2! 234
+task2! 235
+task2! 235
+task2! 236
+task2! 236
+task2! 237
+task2! 237
+task2! 238
+task2! 238
+AVISOR INFO: TIME IRQ 791
+AVISOR INFO: TIME IRQ 792
+AVISOR INFO: rr_scheduler_vm latency: 64
+AVISOR INFO: rr_scheduler_vm latency: 19
+AVISOR INFO: rr_scheduler_vcpu latency: 4635
+AVISOR INFO: rr_scheduler_vcpu latency: 161
+AVISOR INFO: TIME: 3246486399 vm id 3 vcpu id 0 pcpu id 0
+AVISOR INFO: TIME: 3246486572 vm id 2 vcpu id 0 pcpu id 1
+main 233
+main 234
+main 234
+main 235
+main 235
+main 236
+main 236
+main 237
+main 237
+main 238
+AVISOR INFO: TIME IRQ 793
+AVISOR INFO: TIME IRQ 794
+AVISOR INFO: rr_scheduler_vcpu latency: 47
+AVISOR INFO: rr_scheduler_vcpu latency: 37
+AVISOR INFO: TIME: 3309000238 vm id 3 vcpu id 1 pcpu id 0
+AVISOR INFO: TIME: 3309007904 vm id 2 vcpu id 1 pcpu id 1
+task1! 233
+task1! 233
+task1! 234
+task1! 234
+task1! 235
+task1! 235
+task1! 236
+task1! 236
+task1! 237
+task1! 237
+AVISOR INFO: TIME IRQ 795
+AVISOR INFO: TIME IRQ 796
+AVISOR INFO: rr_scheduler_vcpu latency: 33
+AVISOR INFO: rr_scheduler_vcpu latency: 35
+AVISOR INFO: TIME: 3371570528 vm id 2 vcpu id 2 pcpu id 1
+AVISOR INFO: TIME: 3371582243 vm id 3 vcpu id 2 pcpu id 0
+task2! 234
+task2! 234
+task2! 235
+task2! 235
+task2! 236
+task2! 236
+task2! 237
+task2! 237
+AVISOR INFO: TIME IRQ 797
+AVISOR INFO: TIME IRQ 798
+AVISOR INFO: rr_scheduler_vcpu latency: 44
+AVISOR INFO: rr_scheduler_vcpu latency: 64
+AVISOR INFO: TIME: 3434148715 vm id 3 vcpu id 3 pcpu id 0
+AVISOR INFO: TIME: 3434155840 vm id 2 vcpu id 3 pcpu id 1
+task3! 234
+task3! 234
+task3! 235
+task3! 235
+task3! 236
+task3! 236
+task3! 237
+task3! 237
+task3! 238
+AVISOR INFO: TIME IRQ 799
+AVISOR INFO: TIME IRQ 800
+AVISOR INFO: rr_scheduler_vm latency: 46
+AVISOR INFO: rr_scheduler_vm latency: 14
+AVISOR INFO: rr_scheduler_vcpu latency: 264
+AVISOR INFO: rr_scheduler_vcpu latency: 5502
+AVISOR INFO: TIME: 3496730255 vm id 0 vcpu id 0 pcpu id 1
+AVISOR INFO: TIME: 3496740215 vm id 1 vcpu id 3 pcpu id 0
+main 238
+task3! 234
+main 239
+task3! 235
+main 240
+task3! 236
+main 241
+task3! 237
+main 242
+task3! 238
+AVISOR INFO: TIME IRQ 801
+AVISOR INFO: TIME IRQ 802
+AVISOR INFO: rr_scheduler_vcpu latency: 58
+AVISOR INFO: rr_scheduler_vcpu latency: 35
+AVISOR INFO: TIME: 3559292323 vm id 1 vcpu id 0 pcpu id 0
+AVISOR INFO: TIME: 3559300090 vm id 0 vcpu id 1 pcpu id 1
+task1! 240
+task1! 241
+task1! 242
+task1! 243
+task1! 244
+AVISOR INFO: TIME IRQ 804
+AVISOR INFO: TIME IRQ 803
+AVISOR INFO: rr_scheduler_vcpu latency: 40
+AVISOR INFO: rr_scheduler_vcpu latency: 35
+AVISOR INFO: TIME: 3621864545 vm id 0 vcpu id 3 pcpu id 1
+AVISOR INFO: TIME: 3621869972 vm id 1 vcpu id 1 pcpu id 0
+task1! 237
+task1! 238
+task1! 239
+task1! 240
+task1! 241
+AVISOR INFO: TIME IRQ 805
+AVISOR INFO: TIME IRQ 806
+AVISOR INFO: rr_scheduler_vcpu latency: 52
+AVISOR INFO: rr_scheduler_vcpu latency: 25
+AVISOR INFO: TIME: 3684439393 vm id 0 vcpu id 2 pcpu id 1
+AVISOR INFO: TIME: 3684454380 vm id 1 vcpu id 2 pcpu id 0
+task2! 239
+task2! 239
+task2! 240
+task2! 240
+task2! 241
+task2! 241
+task2! 242
+task2! 242
+task2! 243
+task2! 243
+AVISOR INFO: TIME IRQ 807
+AVISOR INFO: TIME IRQ 808
+AVISOR INFO: rr_scheduler_vm latency: 44
+AVISOR INFO: rr_scheduler_vm latency: 15
+AVISOR INFO: rr_scheduler_vcpu latency: 1342
+AVISOR INFO: rr_scheduler_vcpu latency: 142
+AVISOR INFO: TIME: 3747028639 vm id 2 vcpu id 0 pcpu id 1
+AVISOR INFO: TIME: 3747037101 vm id 3 vcpu id 0 pcpu id 0
+main 238
+main 239
+main 239
+main 240
+main 240
+main 241
+main 241
+main 242
+main 242
+AVISOR INFO: TIME IRQ 809
+AVISOR INFO: TIME IRQ 810
+AVISOR INFO: rr_scheduler_vcpu latency: 55
+AVISOR INFO: rr_scheduler_vcpu latency: 50
+AVISOR INFO: TIME: 3809582533 vm id 3 vcpu id 1 pcpu id 0
+AVISOR INFO: TIME: 3809588376 vm id 2 vcpu id 1 pcpu id 1
+task1! 238
+task1! 238
+task1! 239
+task1! 239
+task1! 240
+task1! 240
+task1! 241
+task1! 241
+task1! 242
+task1! 242
+AVISOR INFO: TIME IRQ 811
+AVISOR INFO: TIME IRQ 812
+AVISOR INFO: rr_scheduler_vcpu latency: 64
+AVISOR INFO: rr_scheduler_vcpu latency: 50
+AVISOR INFO: TIME: 3872184917 vm id 3 vcpu id 2 pcpu id 0
+AVISOR INFO: TIME: 3872191989 vm id 2 vcpu id 2 pcpu id 1
+task2! 238
+task2! 238
+task2! 239
+task2! 239
+task2! 240
+task2! 240
+task2! 241
+task2! 241
+task2! 242
+task2! 242
+AVISOR INFO: TIME IRQ 813
+AVISOR INFO: TIME IRQ 814
+AVISOR INFO: rr_scheduler_vcpu latency: 42
+AVISOR INFO: rr_scheduler_vcpu latency: 31
+AVISOR INFO: TIME: 3934731945 vm id 2 vcpu id 3 pcpu id 1
+AVISOR INFO: TIME: 3934735654 vm id 3 vcpu id 3 pcpu id 0
+task3! 238
+task3! 239
+task3! 239
+task3! 240
+task3! 240
+task3! 241
+task3! 241
+task3! 242
+task3! 242
+AVISOR INFO: TIME IRQ 815
+AVISOR INFO: TIME IRQ 816
+AVISOR INFO: rr_scheduler_vm latency: 29
+AVISOR INFO: rr_scheduler_vm latency: 15
+AVISOR INFO: rr_scheduler_vcpu latency: 92
+AVISOR INFO: rr_scheduler_vcpu latency: 20
+AVISOR INFO: TIME: 3997316535 vm id 0 vcpu id 0 pcpu id 0
+AVISOR INFO: TIME: 3997324877 vm id 1 vcpu id 3 pcpu id 1
+main 243
+task3! 239
+main 244
+task3! 240
+main 245
+task3! 241
+main 246
+task3! 242
+main 247
+AVISOR INFO: TIME IRQ 817
+AVISOR INFO: TIME IRQ 818
+AVISOR INFO: rr_scheduler_vcpu latency: 31
+AVISOR INFO: rr_scheduler_vcpu latency: 25
+AVISOR INFO: TIME: 4059875447 vm id 0 vcpu id 1 pcpu id 0
+AVISOR INFO: TIME: 4059879258 vm id 1 vcpu id 0 pcpu id 1
+task1! 245
+task1! 246
+task1! 247
+task1! 248
+task1! 249
+AVISOR INFO: TIME IRQ 819
+AVISOR INFO: TIME IRQ 820
+AVISOR INFO: rr_scheduler_vcpu latency: 44
+AVISOR INFO: rr_scheduler_vcpu latency: 46
+AVISOR INFO: TIME: 4122448447 vm id 0 vcpu id 3 pcpu id 0
+AVISOR INFO: TIME: 4122459555 vm id 1 vcpu id 1 pcpu id 1
+task1! 242
+task1! 243
+task1! 244
+task1! 245
+task1! 246
+AVISOR INFO: TIME IRQ 821
+AVISOR INFO: TIME IRQ 822
+AVISOR INFO: rr_scheduler_vcpu latency: 76
+AVISOR INFO: rr_scheduler_vcpu latency: 53
+AVISOR INFO: TIME: 4185047594 vm id 0 vcpu id 2 pcpu id 0
+AVISOR INFO: TIME: 4185055239 vm id 1 vcpu id 2 pcpu id 1
+task2! 244
+task2! 244
+task2! 245
+task2! 245
+task2! 246
+task2! 246
+task2! 247
+task2! 247
+task2! 248
+AVISOR INFO: TIME IRQ 823
+AVISOR INFO: TIME IRQ 824
+AVISOR INFO: rr_scheduler_vm latency: 28
+AVISOR INFO: rr_scheduler_vm latency: 15
+AVISOR INFO: rr_scheduler_vcpu latency: 2519
+AVISOR INFO: rr_scheduler_vcpu latency: 7726
+AVISOR INFO: TIME: 4247617940 vm id 3 vcpu id 0 pcpu id 0
+AVISOR INFO: TIME: 4247625476 vm id 2 vcpu id 0 pcpu id 1
+main 243
+main 243
+main 244
+main 244
+main 245
+main 245
+main 246
+main 246
+main 247
+main 247
+AVISOR INFO: TIME IRQ 825
+AVISOR INFO: TIME IRQ 826
+AVISOR INFO: rr_scheduler_vcpu latency: 64
+AVISOR INFO: rr_scheduler_vcpu latency: 1806
+AVISOR INFO: TIME: 15199070 vm id 2 vcpu id 1 pcpu id 1
+AVISOR INFO: TIME: 15211968 vm id 3 vcpu id 1 pcpu id 0
+task1! 243
+task1! 243
+task1! 244
+task1! 244
+task1! 245
+task1! 245
+task1! 246
+task1! 246
+task1! 247
+AVISOR INFO: TIME IRQ 828
+AVISOR INFO: TIME IRQ 827
+AVISOR INFO: rr_scheduler_vcpu latency: 30
+AVISOR INFO: rr_scheduler_vcpu latency: 45
+AVISOR INFO: TIME: 77778576 vm id 3 vcpu id 2 pcpu id 0
+AVISOR INFO: TIME: 77795163 vm id 2 vcpu id 2 pcpu id 1
+task2! 243
+task2! 243
+task2! 244
+task2! 244
+task2! 245
+task2! 245
+task2! 246
+task2! 246
+task2! 247
+task2! 247
+AVISOR INFO: TIME IRQ 829
+AVISOR INFO: TIME IRQ 830
+AVISOR INFO: rr_scheduler_vcpu latency: 55
+AVISOR INFO: rr_scheduler_vcpu latency: 41
+AVISOR INFO: TIME: 140345878 vm id 3 vcpu id 3 pcpu id 0
+AVISOR INFO: TIME: 140355910 vm id 2 vcpu id 3 pcpu id 1
+task3! 243
+task3! 243
+task3! 244
+task3! 244
+task3! 245
+task3! 245
+task3! 246
+task3! 246
+task3! 247
+task3! 247
+AVISOR INFO: TIME IRQ 831
+AVISOR INFO: TIME IRQ 832
+AVISOR INFO: rr_scheduler_vm latency: 26
+AVISOR INFO: rr_scheduler_vm latency: 18
+AVISOR INFO: rr_scheduler_vcpu latency: 1694
+AVISOR INFO: rr_scheduler_vcpu latency: 1975
+AVISOR INFO: TIME: 202959111 vm id 0 vcpu id 0 pcpu id 1
+AVISOR INFO: TIME: 202967047 vm id 1 vcpu id 3 pcpu id 0
+task3! 243
+main 248
+task3! 244
+main 249
+task3! 245
+main 250
+task3! 246
+main 251
+task3! 247
+AVISOR INFO: TIME IRQ 833
+AVISOR INFO: TIME IRQ 834
+AVISOR INFO: rr_scheduler_vcpu latency: 33
+AVISOR INFO: rr_scheduler_vcpu latency: 20
+AVISOR INFO: TIME: 265501572 vm id 0 vcpu id 1 pcpu id 1
+AVISOR INFO: TIME: 265508653 vm id 1 vcpu id 0 pcpu id 0
+task1! 250
+task1! 251
+task1! 252
+task1! 253
+task1! 254
+AVISOR INFO: TIME IRQ 835
+AVISOR INFO: TIME IRQ 836
+AVISOR INFO: rr_scheduler_vcpu latency: 48
+AVISOR INFO: rr_scheduler_vcpu latency: 48
+AVISOR INFO: TIME: 328064485 vm id 0 vcpu id 3 pcpu id 1
+AVISOR INFO: TIME: 328073256 vm id 1 vcpu id 1 pcpu id 0
+task1! 247
+task1! 248
+task1! 249
+task1! 250
+task1! 251
+AVISOR INFO: TIME IRQ 838
+AVISOR INFO: TIME IRQ 837
+AVISOR INFO: rr_scheduler_vcpu latency: 665
+AVISOR INFO: rr_scheduler_vcpu latency: 2466
+AVISOR INFO: TIME: 390642779 vm id 0 vcpu id 2 pcpu id 1
+AVISOR INFO: TIME: 390651189 vm id 1 vcpu id 2 pcpu id 0
+task2! 248
+task2! 249
+task2! 249
+task2! 250
+task2! 250
+task2! 251
+task2! 251
+task2! 252
+task2! 252
+AVISOR INFO: TIME IRQ 839
+AVISOR INFO: TIME IRQ 840
+AVISOR INFO: rr_scheduler_vm latency: 24
+AVISOR INFO: rr_scheduler_vm latency: 22
+AVISOR INFO: rr_scheduler_vcpu latency: 3755
+AVISOR INFO: rr_scheduler_vcpu latency: 488
+AVISOR INFO: TIME: 453226819 vm id 2 vcpu id 0 pcpu id 1
+AVISOR INFO: TIME: 453234490 vm id 3 vcpu id 0 pcpu id 0
+main 248
+main 248
+main 249
+main 249
+main 250
+main 250
+main 251
+main 251
+main 252
+main 252
+AVISOR INFO: TIME IRQ 841
+AVISOR INFO: TIME IRQ 842
+AVISOR INFO: rr_scheduler_vcpu latency: 34
+AVISOR INFO: rr_scheduler_vcpu latency: 24
+AVISOR INFO: TIME: 515790410 vm id 2 vcpu id 1 pcpu id 1
+AVISOR INFO: TIME: 515798375 vm id 3 vcpu id 1 pcpu id 0
+task1! 247
+task1! 248
+task1! 248
+task1! 249
+task1! 249
+task1! 250
+task1! 250
+task1! 251
+task1! 251
+task1! 252
+AVISOR INFO: TIME IRQ 843
+AVISOR INFO: TIME IRQ 844
+AVISOR INFO: rr_scheduler_vcpu latency: 85
+AVISOR INFO: rr_scheduler_vcpu latency: 66
+AVISOR INFO: TIME: 578375558 vm id 3 vcpu id 2 pcpu id 0
+AVISOR INFO: TIME: 578376067 vm id 2 vcpu id 2 pcpu id 1
+task2! 248
+task2! 248
+task2! 249
+task2! 249
+task2! 250
+task2! 250
+task2! 251
+task2! 251
+task2! 252
+AVISOR INFO: TIME IRQ 845
+AVISOR INFO: TIME IRQ 846
+AVISOR INFO: rr_scheduler_vcpu latency: 59
+AVISOR INFO: rr_scheduler_vcpu latency: 34
+AVISOR INFO: TIME: 640921707 vm id 2 vcpu id 3 pcpu id 1
+AVISOR INFO: TIME: 640926400 vm id 3 vcpu id 3 pcpu id 0
+task3! 248
+task3! 248
+task3! 249
+task3! 249
+task3! 250
+task3! 250
+task3! 251
+task3! 251
+task3! 252
+task3! 252
+AVISOR INFO: TIME IRQ 847
+AVISOR INFO: TIME IRQ 848
+AVISOR INFO: rr_scheduler_vm latency: 44
+AVISOR INFO: rr_scheduler_vm latency: 16
+AVISOR INFO: rr_scheduler_vcpu latency: 2134
+AVISOR INFO: rr_scheduler_vcpu latency: 196
+AVISOR INFO: TIME: 703517633 vm id 0 vcpu id 0 pcpu id 1
+AVISOR INFO: TIME: 703524059 vm id 1 vcpu id 3 pcpu id 0
+main 252
+task3! 248
+main 253
+task3! 249
+main 254
+task3! 250
+main 255
+task3! 251
+main 256
+task3! 252
+AVISOR INFO: TIME IRQ 849
+AVISOR INFO: TIME IRQ 850
+AVISOR INFO: rr_scheduler_vcpu latency: 31
+AVISOR INFO: rr_scheduler_vcpu latency: 33
+AVISOR INFO: TIME: 766077873 vm id 0 vcpu id 1 pcpu id 1
+AVISOR INFO: TIME: 766082964 vm id 1 vcpu id 0 pcpu id 0
+task1! 255
+task1! 256
+task1! 257
+task1! 258
+task1! 259
+AVISOR INFO: TIME IRQ 851
+AVISOR INFO: TIME IRQ 852
+AVISOR INFO: rr_scheduler_vcpu latency: 76
+AVISOR INFO: rr_scheduler_vcpu latency: 57
+AVISOR INFO: TIME: 828671869 vm id 0 vcpu id 3 pcpu id 1
+AVISOR INFO: TIME: 828677441 vm id 1 vcpu id 1 pcpu id 0
+task1! 252
+task1! 253
+task1! 254
+task1! 255
+task1! 256
+AVISOR INFO: TIME IRQ 853
+AVISOR INFO: TIME IRQ 854
+AVISOR INFO: rr_scheduler_vcpu latency: 35
+AVISOR INFO: rr_scheduler_vcpu latency: 26
+AVISOR INFO: TIME: 891228030 vm id 0 vcpu id 2 pcpu id 1
+AVISOR INFO: TIME: 891237502 vm id 1 vcpu id 2 pcpu id 0
+task2! 253
+task2! 253
+task2! 254
+task2! 254
+task2! 255
+task2! 255
+task2! 256
+task2! 256
+task2! 257
+task2! 257
+AVISOR INFO: TIME IRQ 855
+AVISOR INFO: TIME IRQ 856
+AVISOR INFO: rr_scheduler_vm latency: 63
+AVISOR INFO: rr_scheduler_vm latency: 13
+AVISOR INFO: rr_scheduler_vcpu latency: 175
+AVISOR INFO: rr_scheduler_vcpu latency: 3624
+AVISOR INFO: TIME: 953818827 vm id 2 vcpu id 0 pcpu id 0
+AVISOR INFO: TIME: 953836425 vm id 3 vcpu id 0 pcpu id 1
+main 253
+main 253
+main 254
+main 254
+main 255
+main 255
+main 256
+main 256
+main 257
+main 257
+AVISOR INFO: TIME IRQ 857
+AVISOR INFO: TIME IRQ 858
+AVISOR INFO: rr_scheduler_vcpu latency: 46
+AVISOR INFO: rr_scheduler_vcpu latency: 45
+AVISOR INFO: TIME: 1016380398 vm id 3 vcpu id 1 pcpu id 1
+AVISOR INFO: TIME: 1016387849 vm id 2 vcpu id 1 pcpu id 0
+task1! 252
+task1! 253
+task1! 253
+task1! 254
+task1! 254
+task1! 255
+task1! 255
+task1! 256
+task1! 256
+task1! 257
+AVISOR INFO: TIME IRQ 859
+AVISOR INFO: TIME IRQ 860
+AVISOR INFO: rr_scheduler_vcpu latency: 30
+AVISOR INFO: rr_scheduler_vcpu latency: 24
+AVISOR INFO: TIME: 1078944390 vm id 3 vcpu id 2 pcpu id 1
+AVISOR INFO: TIME: 1078950844 vm id 2 vcpu id 2 pcpu id 0
+task2! 252
+task2! 253
+task2! 253
+task2! 254
+task2! 254
+task2! 255
+task2! 255
+task2! 256
+task2! 256
+AVISOR INFO: TIME IRQ 861
+AVISOR INFO: TIME IRQ 862
+AVISOR INFO: rr_scheduler_vcpu latency: 801
+AVISOR INFO: rr_scheduler_vcpu latency: 134
+AVISOR INFO: TIME: 1141539053 vm id 3 vcpu id 3 pcpu id 1
+AVISOR INFO: TIME: 1141548083 vm id 2 vcpu id 3 pcpu id 0
+task3! 253
+task3! 253
+task3! 254
+task3! 254
+task3! 255
+task3! 255
+task3! 256
+task3! 256
+task3! 257
+AVISOR INFO: TIME IRQ 863
+AVISOR INFO: TIME IRQ 864
+AVISOR INFO: rr_scheduler_vm latency: 25
+AVISOR INFO: rr_scheduler_vm latency: 18
+AVISOR INFO: rr_scheduler_vcpu latency: 281
+AVISOR INFO: rr_scheduler_vcpu latency: 5551
+AVISOR INFO: TIME: 1204111924 vm id 1 vcpu id 3 pcpu id 0
+AVISOR INFO: TIME: 1204117998 vm id 0 vcpu id 0 pcpu id 1
+main 257
+task3! 253
+main 258
+task3! 254
+main 259
+task3! 255
+main 260
+task3! 256
+main 261
+AVISOR INFO: TIME IRQ 865
+AVISOR INFO: TIME IRQ 866
+AVISOR INFO: rr_scheduler_vcpu latency: 703
+AVISOR INFO: rr_scheduler_vcpu latency: 195
+AVISOR INFO: TIME: 1266682407 vm id 1 vcpu id 0 pcpu id 0
+AVISOR INFO: TIME: 1266696159 vm id 0 vcpu id 1 pcpu id 1
+task1! 260
+task1! 261
+task1! 262
+task1! 263
+task1! 264
+AVISOR INFO: TIME IRQ 867
+AVISOR INFO: TIME IRQ 868
+AVISOR INFO: rr_scheduler_vcpu latency: 50
+AVISOR INFO: rr_scheduler_vcpu latency: 34
+AVISOR INFO: TIME: 1329255040 vm id 0 vcpu id 3 pcpu id 1
+AVISOR INFO: TIME: 1329261535 vm id 1 vcpu id 1 pcpu id 0
+task1! 257
+task1! 258
+task1! 259
+task1! 260
+task1! 261
+AVISOR INFO: TIME IRQ 869
+AVISOR INFO: TIME IRQ 870
+AVISOR INFO: rr_scheduler_vcpu latency: 42
+AVISOR INFO: rr_scheduler_vcpu latency: 25
+AVISOR INFO: TIME: 1391820542 vm id 0 vcpu id 2 pcpu id 1
+AVISOR INFO: TIME: 1391825024 vm id 1 vcpu id 2 pcpu id 0
+task2! 258
+task2! 258
+task2! 259
+task2! 259
+task2! 260
+task2! 260
+task2! 261
+task2! 261
+task2! 262
+AVISOR INFO: TIME IRQ 871
+AVISOR INFO: TIME IRQ 872
+AVISOR INFO: rr_scheduler_vm latency: 28
+AVISOR INFO: rr_scheduler_vm latency: 17
+AVISOR INFO: rr_scheduler_vcpu latency: 780
+AVISOR INFO: rr_scheduler_vcpu latency: 204
+AVISOR INFO: TIME: 1454418287 vm id 2 vcpu id 0 pcpu id 1
+AVISOR INFO: TIME: 1454428935 vm id 3 vcpu id 0 pcpu id 0
+main 258
+main 258
+main 259
+main 259
+main 260
+main 260
+main 261
+main 261
+main 262
+AVISOR INFO: TIME IRQ 873
+AVISOR INFO: TIME IRQ 874
+AVISOR INFO: rr_scheduler_vcpu latency: 33
+AVISOR INFO: rr_scheduler_vcpu latency: 25
+AVISOR INFO: TIME: 1516960119 vm id 2 vcpu id 1 pcpu id 1
+AVISOR INFO: TIME: 1516972146 vm id 3 vcpu id 1 pcpu id 0
+task1! 257
+task1! 258
+task1! 258
+task1! 259
+task1! 259
+task1! 260
+task1! 260
+task1! 261
+task1! 261
+AVISOR INFO: TIME IRQ 875
+AVISOR INFO: TIME IRQ 876
+AVISOR INFO: rr_scheduler_vcpu latency: 23
+AVISOR INFO: rr_scheduler_vcpu latency: 25
+AVISOR INFO: TIME: 1579538910 vm id 2 vcpu id 2 pcpu id 1
+AVISOR INFO: TIME: 1579546525 vm id 3 vcpu id 2 pcpu id 0
+task2! 257
+task2! 257
+task2! 258
+task2! 258
+task2! 259
+task2! 259
+task2! 260
+task2! 260
+task2! 261
+task2! 261
+AVISOR INFO: TIME IRQ 877
+AVISOR INFO: TIME IRQ 878
+AVISOR INFO: rr_scheduler_vcpu latency: 31
+AVISOR INFO: rr_scheduler_vcpu latency: 42
+AVISOR INFO: TIME: 1642112925 vm id 2 vcpu id 3 pcpu id 1
+AVISOR INFO: TIME: 1642120168 vm id 3 vcpu id 3 pcpu id 0
+task3! 257
+task3! 258
+task3! 258
+task3! 259
+task3! 259
+task3! 260
+task3! 260
+task3! 261
+task3! 261
+AVISOR INFO: TIME IRQ 879
+AVISOR INFO: TIME IRQ 880
+AVISOR INFO: rr_scheduler_vm latency: 26
+AVISOR INFO: rr_scheduler_vm latency: 15
+AVISOR INFO: rr_scheduler_vcpu latency: 12983
+AVISOR INFO: rr_scheduler_vcpu latency: 18
+AVISOR INFO: TIME: 1704711380 vm id 0 vcpu id 0 pcpu id 0
+AVISOR INFO: TIME: 1704722374 vm id 1 vcpu id 3 pcpu id 1
+task3! 257
+main 262
+task3! 258
+main 263
+task3! 259
+main 264
+task3! 260
+main 265
+task3! 261
+main 266
+AVISOR INFO: TIME IRQ 881
+AVISOR INFO: TIME IRQ 882
+AVISOR INFO: rr_scheduler_vcpu latency: 33
+AVISOR INFO: rr_scheduler_vcpu latency: 69
+AVISOR INFO: TIME: 1767268979 vm id 0 vcpu id 1 pcpu id 0
+AVISOR INFO: TIME: 1767276300 vm id 1 vcpu id 0 pcpu id 1
+task1! 265
+task1! 266
+task1! 267
+task1! 268
+task1! 269
+AVISOR INFO: TIME IRQ 883
+AVISOR INFO: TIME IRQ 884
+AVISOR INFO: rr_scheduler_vcpu latency: 55
+AVISOR INFO: rr_scheduler_vcpu latency: 35
+AVISOR INFO: TIME: 1829834188 vm id 1 vcpu id 1 pcpu id 1
+AVISOR INFO: TIME: 1829844525 vm id 0 vcpu id 3 pcpu id 0
+task1! 262
+task1! 263
+task1! 264
+task1! 265
+AVISOR INFO: TIME IRQ 885
+AVISOR INFO: TIME IRQ 886
+AVISOR INFO: rr_scheduler_vcpu latency: 668
+AVISOR INFO: rr_scheduler_vcpu latency: 66
+AVISOR INFO: TIME: 1892415460 vm id 0 vcpu id 2 pcpu id 0
+AVISOR INFO: TIME: 1892421140 vm id 1 vcpu id 2 pcpu id 1
+task2! 262
+task2! 263
+task2! 263
+task2! 264
+task2! 264
+task2! 265
+task2! 265
+task2! 266
+task2! 266
+task2! 267
+AVISOR INFO: TIME IRQ 887
+AVISOR INFO: TIME IRQ 888
+AVISOR INFO: rr_scheduler_vm latency: 28
+AVISOR INFO: rr_scheduler_vm latency: 19
+AVISOR INFO: rr_scheduler_vcpu latency: 8517
+AVISOR INFO: rr_scheduler_vcpu latency: 23
+AVISOR INFO: TIME: 1955009615 vm id 2 vcpu id 0 pcpu id 0
+AVISOR INFO: TIME: 1955009566 vm id 3 vcpu id 0 pcpu id 1
+main 262
+main 263
+main 263
+main 264
+main 264
+main 265
+main 265
+main 266
+main 266
+AVISOR INFO: TIME IRQ 889
+AVISOR INFO: TIME IRQ 890
+AVISOR INFO: rr_scheduler_vcpu latency: 22
+AVISOR INFO: rr_scheduler_vcpu latency: 23
+AVISOR INFO: TIME: 2017563529 vm id 3 vcpu id 1 pcpu id 1
+AVISOR INFO: TIME: 2017584527 vm id 2 vcpu id 1 pcpu id 0
+task1! 262
+task1! 262
+task1! 263
+task1! 263
+task1! 264
+task1! 264
+task1! 265
+task1! 265
+task1! 266
+AVISOR INFO: TIME IRQ 891
+AVISOR INFO: TIME IRQ 892
+AVISOR INFO: rr_scheduler_vcpu latency: 27
+AVISOR INFO: rr_scheduler_vcpu latency: 27
+AVISOR INFO: TIME: 2080152903 vm id 3 vcpu id 2 pcpu id 1
+AVISOR INFO: TIME: 2080159879 vm id 2 vcpu id 2 pcpu id 0
+task2! 262
+task2! 262
+task2! 263
+task2! 263
+task2! 264
+task2! 264
+task2! 265
+task2! 265
+task2! 266
+task2! 266
+AVISOR INFO: TIME IRQ 893
+AVISOR INFO: TIME IRQ 894
+AVISOR INFO: rr_scheduler_vcpu latency: 24
+AVISOR INFO: rr_scheduler_vcpu latency: 29
+AVISOR INFO: TIME: 2142709208 vm id 2 vcpu id 3 pcpu id 0
+AVISOR INFO: TIME: 2142711492 vm id 3 vcpu id 3 pcpu id 1
+task3! 262
+task3! 262
+task3! 263
+task3! 263
+task3! 264
+task3! 264
+task3! 265
+task3! 265
+task3! 266
+task3! 266
+AVISOR INFO: TIME IRQ 895
+AVISOR INFO: TIME IRQ 896
+AVISOR INFO: rr_scheduler_vm latency: 27
+AVISOR INFO: rr_scheduler_vm latency: 14
+AVISOR INFO: rr_scheduler_vcpu latency: 3367
+AVISOR INFO: rr_scheduler_vcpu latency: 191
+AVISOR INFO: TIME: 2205292224 vm id 1 vcpu id 3 pcpu id 0
+AVISOR INFO: TIME: 2205304283 vm id 0 vcpu id 0 pcpu id 1
+task3! 262
+main 267
+task3! 263
+main 268
+task3! 264
+main 269
+task3! 265
+main 270
+task3! 266
+AVISOR INFO: TIME IRQ 897
+AVISOR INFO: TIME IRQ 898
+AVISOR INFO: rr_scheduler_vcpu latency: 32
+AVISOR INFO: rr_scheduler_vcpu latency: 24
+AVISOR INFO: TIME: 2267850288 vm id 0 vcpu id 1 pcpu id 1
+AVISOR INFO: TIME: 2267857913 vm id 1 vcpu id 0 pcpu id 0
+task1! 270
+task1! 271
+task1! 272
+task1! 273
+task1! 274
+AVISOR INFO: TIME IRQ 899
+AVISOR INFO: TIME IRQ 900
+AVISOR INFO: rr_scheduler_vcpu latency: 37
+AVISOR INFO: rr_scheduler_vcpu latency: 31
+AVISOR INFO: TIME: 2330427884 vm id 1 vcpu id 1 pcpu id 0
+AVISOR INFO: TIME: 2330434472 vm id 0 vcpu id 3 pcpu id 1
+task1! 266
+task1! 267
+task1! 268
+task1! 269
+task1! 270
+AVISOR INFO: TIME IRQ 901
+AVISOR INFO: TIME IRQ 902
+AVISOR INFO: rr_scheduler_vcpu latency: 20
+AVISOR INFO: rr_scheduler_vcpu latency: 42
+AVISOR INFO: TIME: 2392994555 vm id 1 vcpu id 2 pcpu id 0
+AVISOR INFO: TIME: 2392999470 vm id 0 vcpu id 2 pcpu id 1
+task2! 267
+task2! 268
+task2! 268
+task2! 269
+task2! 269
+task2! 270
+task2! 270
+task2! 271
+task2! 271
+task2! 272
+AVISOR INFO: TIME IRQ 903
+AVISOR INFO: TIME IRQ 904
+AVISOR INFO: rr_scheduler_vm latency: 25
+AVISOR INFO: rr_scheduler_vm latency: 22
+AVISOR INFO: rr_scheduler_vcpu latency: 35
+AVISOR INFO: rr_scheduler_vcpu latency: 2640
+AVISOR INFO: TIME: 2455578609 vm id 3 vcpu id 0 pcpu id 0
+AVISOR INFO: TIME: 2455586306 vm id 2 vcpu id 0 pcpu id 1
+main 267
+main 267
+main 268
+main 268
+main 269
+main 269
+main 270
+main 270
+main 271
+main 271
+AVISOR INFO: TIME IRQ 905
+AVISOR INFO: TIME IRQ 906
+AVISOR INFO: rr_scheduler_vcpu latency: 1161
+AVISOR INFO: rr_scheduler_vcpu latency: 1575
+AVISOR INFO: TIME: 2518149833 vm id 2 vcpu id 1 pcpu id 1
+AVISOR INFO: TIME: 2518156133 vm id 3 vcpu id 1 pcpu id 0
+task1! 266
+task1! 267
+task1! 267
+task1! 268
+task1! 268
+task1! 269
+task1! 269
+task1! 270
+task1! 270
+task1! 271
+AVISOR INFO: TIME IRQ 907
+AVISOR INFO: TIME IRQ 908
+AVISOR INFO: rr_scheduler_vcpu latency: 20
+AVISOR INFO: rr_scheduler_vcpu latency: 31
+AVISOR INFO: TIME: 2580712413 vm id 2 vcpu id 2 pcpu id 1
+AVISOR INFO: TIME: 2580723660 vm id 3 vcpu id 2 pcpu id 0
+task2! 267
+task2! 267
+task2! 268
+task2! 268
+task2! 269
+task2! 269
+task2! 270
+task2! 270
+task2! 271
+task2! 271
+AVISOR INFO: TIME IRQ 909
+AVISOR INFO: TIME IRQ 910
+AVISOR INFO: rr_scheduler_vcpu latency: 44
+AVISOR INFO: rr_scheduler_vcpu latency: 42
+AVISOR INFO: TIME: 2643278622 vm id 2 vcpu id 3 pcpu id 1
+AVISOR INFO: TIME: 2643283206 vm id 3 vcpu id 3 pcpu id 0
+task3! 267
+task3! 267
+task3! 268
+task3! 268
+task3! 269
+task3! 269
+task3! 270
+task3! 270
+task3! 271
+task3! 271
+AVISOR INFO: TIME IRQ 911
+AVISOR INFO: TIME IRQ 912
+AVISOR INFO: rr_scheduler_vm latency: 24
+AVISOR INFO: rr_scheduler_vm latency: 15
+AVISOR INFO: rr_scheduler_vcpu latency: 220
+AVISOR INFO: rr_scheduler_vcpu latency: 265
+AVISOR INFO: TIME: 2705876949 vm id 0 vcpu id 0 pcpu id 0
+AVISOR INFO: TIME: 2705883479 vm id 1 vcpu id 3 pcpu id 1
+main 271
+task3! 267
+main 272
+task3! 268
+main 273
+task3! 269
+main 274
+task3! 270
+main 275
+task3! 271
+AVISOR INFO: TIME IRQ 913
+AVISOR INFO: TIME IRQ 914
+AVISOR INFO: rr_scheduler_vcpu latency: 58
+AVISOR INFO: rr_scheduler_vcpu latency: 41
+AVISOR INFO: TIME: 2768428695 vm id 1 vcpu id 0 pcpu id 1
+AVISOR INFO: TIME: 2768435749 vm id 0 vcpu id 1 pcpu id 0
+task1! 275
+task1! 276
+task1! 277
+task1! 278
+task1! 279
+AVISOR INFO: TIME IRQ 915
+AVISOR INFO: TIME IRQ 916
+AVISOR INFO: rr_scheduler_vcpu latency: 52
+AVISOR INFO: rr_scheduler_vcpu latency: 55
+AVISOR INFO: TIME: 2831004824 vm id 1 vcpu id 1 pcpu id 1
+AVISOR INFO: TIME: 2831018950 vm id 0 vcpu id 3 pcpu id 0
+task1! 271
+task1! 272
+task1! 273
+task1! 274
+task1! 275
+AVISOR INFO: TIME IRQ 917
+AVISOR INFO: TIME IRQ 918
+AVISOR INFO: rr_scheduler_vcpu latency: 59
+AVISOR INFO: rr_scheduler_vcpu latency: 28
+AVISOR INFO: TIME: 2893584091 vm id 0 vcpu id 2 pcpu id 0
+AVISOR INFO: TIME: 2893588302 vm id 1 vcpu id 2 pcpu id 1
+task2! 272
+task2! 273
+task2! 273
+task2! 274
+task2! 274
+task2! 275
+task2! 275
+task2! 276
+task2! 276
+AVISOR INFO: TIME IRQ 919
+AVISOR INFO: TIME IRQ 920
+AVISOR INFO: rr_scheduler_vm latency: 62
+AVISOR INFO: rr_scheduler_vm latency: 17
+AVISOR INFO: rr_scheduler_vcpu latency: 1965
+AVISOR INFO: rr_scheduler_vcpu latency: 216
+AVISOR INFO: TIME: 2956176279 vm id 3 vcpu id 0 pcpu id 1
+AVISOR INFO: TIME: 2956187476 vm id 2 vcpu id 0 pcpu id 0
+main 272
+main 272
+main 273
+main 273
+main 274
+main 274
+main 275
+main 275
+main 276
+main 276
+AVISOR INFO: TIME IRQ 921
+AVISOR INFO: TIME IRQ 922
+AVISOR INFO: rr_scheduler_vcpu latency: 31
+AVISOR INFO: rr_scheduler_vcpu latency: 29
+AVISOR INFO: TIME: 3018728905 vm id 2 vcpu id 1 pcpu id 0
+AVISOR INFO: TIME: 3018735992 vm id 3 vcpu id 1 pcpu id 1
+task1! 271
+task1! 272
+task1! 272
+task1! 273
+task1! 273
+task1! 274
+task1! 274
+task1! 275
+task1! 275
+task1! 276
+AVISOR INFO: TIME IRQ 923
+AVISOR INFO: TIME IRQ 924
+AVISOR INFO: rr_scheduler_vcpu latency: 34
+AVISOR INFO: rr_scheduler_vcpu latency: 38
+AVISOR INFO: TIME: 3081295936 vm id 3 vcpu id 2 pcpu id 1
+AVISOR INFO: TIME: 3081306377 vm id 2 vcpu id 2 pcpu id 0
+task2! 272
+task2! 272
+task2! 273
+task2! 273
+task2! 274
+task2! 274
+task2! 275
+task2! 275
+AVISOR INFO: TIME IRQ 926
+AVISOR INFO: TIME IRQ 925
+AVISOR INFO: rr_scheduler_vcpu latency: 660
+AVISOR INFO: rr_scheduler_vcpu latency: 200
+AVISOR INFO: TIME: 3143877035 vm id 3 vcpu id 3 pcpu id 1
+AVISOR INFO: TIME: 3143889626 vm id 2 vcpu id 3 pcpu id 0
+task3! 272
+task3! 272
+task3! 273
+task3! 273
+task3! 274
+task3! 274
+task3! 275
+task3! 275
+task3! 276
+AVISOR INFO: TIME IRQ 927
+AVISOR INFO: TIME IRQ 928
+AVISOR INFO: rr_scheduler_vm latency: 26
+AVISOR INFO: rr_scheduler_vm latency: 16
+AVISOR INFO: rr_scheduler_vcpu latency: 4491
+AVISOR INFO: rr_scheduler_vcpu latency: 1578
+AVISOR INFO: TIME: 3206455540 vm id 1 vcpu id 3 pcpu id 0
+AVISOR INFO: TIME: 3206465358 vm id 0 vcpu id 0 pcpu id 1
+main 276
+task3! 272
+main 277
+task3! 273
+main 278
+task3! 274
+main 279
+task3! 275
+main 280
+task3! 276
+AVISOR INFO: TIME IRQ 929
+AVISOR INFO: TIME IRQ 930
+AVISOR INFO: rr_scheduler_vcpu latency: 26
+AVISOR INFO: rr_scheduler_vcpu latency: 29
+AVISOR INFO: TIME: 3269012750 vm id 0 vcpu id 1 pcpu id 1
+AVISOR INFO: TIME: 3269021124 vm id 1 vcpu id 0 pcpu id 0
+task1! 280
+task1! 281
+task1! 282
+task1! 283
+task1! 284
+AVISOR INFO: TIME IRQ 931
+AVISOR INFO: TIME IRQ 932
+AVISOR INFO: rr_scheduler_vcpu latency: 36
+AVISOR INFO: rr_scheduler_vcpu latency: 32
+AVISOR INFO: TIME: 3331620846 vm id 0 vcpu id 3 pcpu id 1
+AVISOR INFO: TIME: 3331629609 vm id 1 vcpu id 1 pcpu id 0
+task1! 276
+task1! 277
+task1! 278
+task1! 279
+task1! 280
+AVISOR INFO: TIME IRQ 933
+AVISOR INFO: TIME IRQ 934
+AVISOR INFO: rr_scheduler_vcpu latency: 812
+AVISOR INFO: rr_scheduler_vcpu latency: 194
+AVISOR INFO: TIME: 3394174511 vm id 0 vcpu id 2 pcpu id 1
+AVISOR INFO: TIME: 3394181565 vm id 1 vcpu id 2 pcpu id 0
+task2! 277
+task2! 277
+task2! 278
+task2! 278
+task2! 279
+task2! 279
+task2! 280
+task2! 280
+task2! 281
+AVISOR INFO: TIME IRQ 935
+AVISOR INFO: TIME IRQ 936
+AVISOR INFO: rr_scheduler_vm latency: 26
+AVISOR INFO: rr_scheduler_vm latency: 19
+AVISOR INFO: rr_scheduler_vcpu latency: 355
+AVISOR INFO: rr_scheduler_vcpu latency: 3576
+AVISOR INFO: TIME: 3456762344 vm id 2 vcpu id 0 pcpu id 0
+AVISOR INFO: TIME: 3456769494 vm id 3 vcpu id 0 pcpu id 1
+main 277
+main 277
+main 278
+main 278
+main 279
+main 279
+main 280
+main 280
+main 281
+AVISOR INFO: TIME IRQ 937
+AVISOR INFO: TIME IRQ 938
+AVISOR INFO: rr_scheduler_vcpu latency: 20
+AVISOR INFO: rr_scheduler_vcpu latency: 29
+AVISOR INFO: TIME: 3519312862 vm id 2 vcpu id 1 pcpu id 0
+AVISOR INFO: TIME: 3519320179 vm id 3 vcpu id 1 pcpu id 1
+task1! 276
+task1! 277
+task1! 277
+task1! 278
+task1! 278
+task1! 279
+task1! 279
+task1! 280
+task1! 280
+task1! 281
+AVISOR INFO: TIME IRQ 939
+AVISOR INFO: TIME IRQ 940
+AVISOR INFO: rr_scheduler_vcpu latency: 849
+AVISOR INFO: rr_scheduler_vcpu latency: 198
+AVISOR INFO: TIME: 3581893260 vm id 2 vcpu id 2 pcpu id 0
+AVISOR INFO: TIME: 3581899819 vm id 3 vcpu id 2 pcpu id 1
+task2! 276
+task2! 276
+task2! 277
+task2! 277
+task2! 278
+task2! 278
+task2! 279
+task2! 279
+task2! 280
+task2! 280
+AVISOR INFO: TIME IRQ 941
+AVISOR INFO: TIME IRQ 942
+AVISOR INFO: rr_scheduler_vcpu latency: 50
+AVISOR INFO: rr_scheduler_vcpu latency: 34
+AVISOR INFO: TIME: 3644482630 vm id 2 vcpu id 3 pcpu id 0
+AVISOR INFO: TIME: 3644492465 vm id 3 vcpu id 3 pcpu id 1
+task3! 276
+task3! 277
+task3! 277
+task3! 278
+task3! 278
+task3! 279
+task3! 279
+task3! 280
+task3! 280
+task3! 281
+AVISOR INFO: TIME IRQ 943
+AVISOR INFO: TIME IRQ 944
+AVISOR INFO: rr_scheduler_vm latency: 46
+AVISOR INFO: rr_scheduler_vm latency: 14
+AVISOR INFO: rr_scheduler_vcpu latency: 187
+AVISOR INFO: rr_scheduler_vcpu latency: 128
+AVISOR INFO: TIME: 3707049412 vm id 1 vcpu id 3 pcpu id 0
+AVISOR INFO: TIME: 3707055786 vm id 0 vcpu id 0 pcpu id 1
+main 281
+task3! 277
+main 282
+task3! 278
+main 283
+task3! 279
+main 284
+task3! 280
+main 285
+task3! 281
+AVISOR INFO: TIME IRQ 945
+AVISOR INFO: TIME IRQ 946
+AVISOR INFO: rr_scheduler_vcpu latency: 30
+AVISOR INFO: rr_scheduler_vcpu latency: 22
+AVISOR INFO: TIME: 3769611774 vm id 0 vcpu id 1 pcpu id 1
+AVISOR INFO: TIME: 3769620186 vm id 1 vcpu id 0 pcpu id 0
+task1! 285
+task1! 286
+task1! 287
+task1! 288
+task1! 289
+AVISOR INFO: TIME IRQ 947
+AVISOR INFO: TIME IRQ 948
+AVISOR INFO: rr_scheduler_vcpu latency: 30
+AVISOR INFO: rr_scheduler_vcpu latency: 26
+AVISOR INFO: TIME: 3832185432 vm id 1 vcpu id 1 pcpu id 0
+AVISOR INFO: TIME: 3832185617 vm id 0 vcpu id 3 pcpu id 1
+task1! 281
+task1! 282
+task1! 283
+task1! 284
+AVISOR INFO: TIME IRQ 949
+AVISOR INFO: TIME IRQ 950
+AVISOR INFO: rr_scheduler_vcpu latency: 814
+AVISOR INFO: rr_scheduler_vcpu latency: 657
+AVISOR INFO: TIME: 3894764020 vm id 0 vcpu id 2 pcpu id 1
+AVISOR INFO: TIME: 3894768013 vm id 1 vcpu id 2 pcpu id 0
+task2! 281
+task2! 282
+task2! 282
+task2! 283
+task2! 283
+task2! 284
+task2! 284
+task2! 285
+task2! 285
+task2! 286
+AVISOR INFO: TIME IRQ 951
+AVISOR INFO: TIME IRQ 952
+AVISOR INFO: rr_scheduler_vm latency: 26
+AVISOR INFO: rr_scheduler_vm latency: 13
+AVISOR INFO: rr_scheduler_vcpu latency: 20
+AVISOR INFO: rr_scheduler_vcpu latency: 4698
+AVISOR INFO: TIME: 3957342850 vm id 3 vcpu id 0 pcpu id 1
+AVISOR INFO: TIME: 3957342941 vm id 2 vcpu id 0 pcpu id 0
+main 281
+main 282
+main 282
+main 283
+main 283
+main 284
+main 284
+main 285
+main 285
+AVISOR INFO: TIME IRQ 953
+AVISOR INFO: TIME IRQ 954
+AVISOR INFO: rr_scheduler_vcpu latency: 44
+AVISOR INFO: rr_scheduler_vcpu latency: 37
+AVISOR INFO: TIME: 4019897488 vm id 2 vcpu id 1 pcpu id 0
+AVISOR INFO: TIME: 4019904364 vm id 3 vcpu id 1 pcpu id 1
+task1! 281
+task1! 282
+task1! 282
+task1! 283
+task1! 283
+task1! 284
+task1! 284
+task1! 285
+AVISOR INFO: TIME IRQ 955
+AVISOR INFO: TIME IRQ 956
+AVISOR INFO: rr_scheduler_vcpu latency: 22
+AVISOR INFO: rr_scheduler_vcpu latency: 27
+AVISOR INFO: TIME: 4082461177 vm id 3 vcpu id 2 pcpu id 1
+AVISOR INFO: TIME: 4082472205 vm id 2 vcpu id 2 pcpu id 0
+task2! 281
+task2! 281
+task2! 282
+task2! 282
+task2! 283
+task2! 283
+task2! 284
+task2! 284
+task2! 285
+task2! 285
+AVISOR INFO: TIME IRQ 957
+AVISOR INFO: TIME IRQ 958
+AVISOR INFO: rr_scheduler_vcpu latency: 40
+AVISOR INFO: rr_scheduler_vcpu latency: 31
+AVISOR INFO: TIME: 4145037991 vm id 3 vcpu id 3 pcpu id 1
+AVISOR INFO: TIME: 4145049141 vm id 2 vcpu id 3 pcpu id 0
+task3! 281
+task3! 282
+task3! 282
+task3! 283
+task3! 283
+task3! 284
+task3! 284
+task3! 285
+task3! 285
+AVISOR INFO: TIME IRQ 959
+AVISOR INFO: TIME IRQ 960
+AVISOR INFO: rr_scheduler_vm latency: 32
+AVISOR INFO: rr_scheduler_vm latency: 17
+AVISOR INFO: rr_scheduler_vcpu latency: 105
+AVISOR INFO: rr_scheduler_vcpu latency: 20
+AVISOR INFO: TIME: 4207630540 vm id 1 vcpu id 3 pcpu id 1
+AVISOR INFO: TIME: 4207645162 vm id 0 vcpu id 0 pcpu id 0
+main 286
+task3! 282
+main 287
+task3! 283
+main 288
+task3! 284
+main 289
+task3! 285
+AVISOR INFO: TIME IRQ 961
+AVISOR INFO: TIME IRQ 962
+AVISOR INFO: rr_scheduler_vcpu latency: 755
+AVISOR INFO: rr_scheduler_vcpu latency: 192
+AVISOR INFO: TIME: 4270215953 vm id 0 vcpu id 1 pcpu id 0
+AVISOR INFO: TIME: 4270231227 vm id 1 vcpu id 0 pcpu id 1
+task1! 290
+task1! 291
+task1! 292
+task1! 293
+task1! 294
+AVISOR INFO: TIME IRQ 963
+AVISOR INFO: TIME IRQ 964
+AVISOR INFO: rr_scheduler_vcpu latency: 37
+AVISOR INFO: rr_scheduler_vcpu latency: 83
+AVISOR INFO: TIME: 37798028 vm id 0 vcpu id 3 pcpu id 0
+AVISOR INFO: TIME: 37809115 vm id 1 vcpu id 1 pcpu id 1
+task1! 285
+task1! 286
+task1! 287
+task1! 288
+task1! 289
+AVISOR INFO: TIME IRQ 966
+AVISOR INFO: TIME IRQ 965
+AVISOR INFO: rr_scheduler_vcpu latency: 42
+AVISOR INFO: rr_scheduler_vcpu latency: 92
+AVISOR INFO: TIME: 100374942 vm id 0 vcpu id 2 pcpu id 0
+AVISOR INFO: TIME: 100374872 vm id 1 vcpu id 2 pcpu id 1
+task2! 286
+task2! 287
+task2! 287
+task2! 288
+task2! 288
+task2! 289
+task2! 289
+task2! 290
+task2! 290
+task2! 291
+AVISOR INFO: TIME IRQ 967
+AVISOR INFO: TIME IRQ 968
+AVISOR INFO: rr_scheduler_vm latency: 32
+AVISOR INFO: rr_scheduler_vm latency: 19
+AVISOR INFO: rr_scheduler_vcpu latency: 180
+AVISOR INFO: rr_scheduler_vcpu latency: 4716
+AVISOR INFO: TIME: 162964908 vm id 2 vcpu id 0 pcpu id 0
+AVISOR INFO: TIME: 162975443 vm id 3 vcpu id 0 pcpu id 1
+main 286
+main 286
+main 287
+main 287
+main 288
+main 288
+main 289
+main 289
+main 290
+main 290
+AVISOR INFO: TIME IRQ 969
+AVISOR INFO: TIME IRQ 970
+AVISOR INFO: rr_scheduler_vcpu latency: 32
+AVISOR INFO: rr_scheduler_vcpu latency: 41
+AVISOR INFO: TIME: 225513762 vm id 2 vcpu id 1 pcpu id 0
+AVISOR INFO: TIME: 225522450 vm id 3 vcpu id 1 pcpu id 1
+task1! 285
+task1! 286
+task1! 286
+task1! 287
+task1! 287
+task1! 288
+task1! 288
+task1! 289
+task1! 289
+task1! 290
+AVISOR INFO: TIME IRQ 971
+AVISOR INFO: TIME IRQ 972
+AVISOR INFO: rr_scheduler_vcpu latency: 30
+AVISOR INFO: rr_scheduler_vcpu latency: 30
+AVISOR INFO: TIME: 288111169 vm id 2 vcpu id 2 pcpu id 0
+AVISOR INFO: TIME: 288116353 vm id 3 vcpu id 2 pcpu id 1
+task2! 286
+task2! 286
+task2! 287
+task2! 287
+task2! 288
+task2! 288
+task2! 289
+task2! 289
+task2! 290
+AVISOR INFO: TIME IRQ 973
+AVISOR INFO: TIME IRQ 974
+AVISOR INFO: rr_scheduler_vcpu latency: 55
+AVISOR INFO: rr_scheduler_vcpu latency: 38
+AVISOR INFO: TIME: 350668915 vm id 2 vcpu id 3 pcpu id 0
+AVISOR INFO: TIME: 350668842 vm id 3 vcpu id 3 pcpu id 1
+task3! 286
+task3! 286
+task3! 287
+task3! 287
+task3! 288
+task3! 288
+task3! 289
+task3! 289
+task3! 290
+task3! 290
+AVISOR INFO: TIME IRQ 975
+AVISOR INFO: TIME IRQ 976
+AVISOR INFO: rr_scheduler_vm latency: 27
+AVISOR INFO: rr_scheduler_vm latency: 21
+AVISOR INFO: rr_scheduler_vcpu latency: 23
+AVISOR INFO: rr_scheduler_vcpu latency: 173
+AVISOR INFO: TIME: 413254148 vm id 1 vcpu id 3 pcpu id 0
+AVISOR INFO: TIME: 413257728 vm id 0 vcpu id 0 pcpu id 1
+main 290
+task3! 286
+main 291
+task3! 287
+main 292
+task3! 288
+main 293
+task3! 289
+main 294
+task3! 290
+AVISOR INFO: TIME IRQ 977
+AVISOR INFO: TIME IRQ 978
+AVISOR INFO: rr_scheduler_vcpu latency: 31
+AVISOR INFO: rr_scheduler_vcpu latency: 26
+AVISOR INFO: TIME: 475808057 vm id 0 vcpu id 1 pcpu id 1
+AVISOR INFO: TIME: 475817187 vm id 1 vcpu id 0 pcpu id 0
+task1! 295
+task1! 296
+task1! 297
+task1! 298
+task1! 299
+AVISOR INFO: TIME IRQ 979
+AVISOR INFO: TIME IRQ 980
+AVISOR INFO: rr_scheduler_vcpu latency: 27
+AVISOR INFO: TIME: 538381932 vm id 1 vcpu id 1 pcpu id 0
+AVISOR INFO: rr_scheduler_vcpu latency: 12319
+AVISOR INFO: TIME: 538399175 vm id 0 vcpu id 3 pcpu id 1
+task1! 290
+task1! 291
+task1! 292
+task1! 293
+task1! 294
+AVISOR INFO: TIME IRQ 981
+AVISOR INFO: TIME IRQ 982
+AVISOR INFO: rr_scheduler_vcpu latency: 18
+AVISOR INFO: rr_scheduler_vcpu latency: 48
+AVISOR INFO: TIME: 600946366 vm id 1 vcpu id 2 pcpu id 0
+AVISOR INFO: TIME: 600960182 vm id 0 vcpu id 2 pcpu id 1
+task2! 291
+task2! 292
+task2! 292
+task2! 293
+task2! 293
+task2! 294
+task2! 294
+task2! 295
+task2! 295
+AVISOR INFO: TIME IRQ 983
+AVISOR INFO: TIME IRQ 984
+AVISOR INFO: rr_scheduler_vm latency: 24
+AVISOR INFO: rr_scheduler_vm latency: 23
+AVISOR INFO: rr_scheduler_vcpu latency: 1227
+AVISOR INFO: rr_scheduler_vcpu latency: 154
+AVISOR INFO: TIME: 663541054 vm id 3 vcpu id 0 pcpu id 1
+AVISOR INFO: TIME: 663548739 vm id 2 vcpu id 0 pcpu id 0
+main 291
+main 291
+main 292
+main 292
+main 293
+main 293
+main 294
+main 294
+main 295
+main 295
+AVISOR INFO: TIME IRQ 985
+AVISOR INFO: TIME IRQ 986
+AVISOR INFO: rr_scheduler_vcpu latency: 21
+AVISOR INFO: rr_scheduler_vcpu latency: 36
+AVISOR INFO: TIME: 726115457 vm id 3 vcpu id 1 pcpu id 1
+AVISOR INFO: TIME: 726115649 vm id 2 vcpu id 1 pcpu id 0
+task1! 290
+task1! 291
+task1! 291
+task1! 292
+task1! 292
+task1! 293
+task1! 293
+task1! 294
+task1! 294
+task1! 295
+AVISOR INFO: TIME IRQ 987
+AVISOR INFO: TIME IRQ 988
+AVISOR INFO: rr_scheduler_vcpu latency: 28
+AVISOR INFO: rr_scheduler_vcpu latency: 20
+AVISOR INFO: TIME: 788669089 vm id 3 vcpu id 2 pcpu id 1
+AVISOR INFO: TIME: 788677730 vm id 2 vcpu id 2 pcpu id 0
+task2! 290
+task2! 291
+task2! 291
+task2! 292
+task2! 292
+task2! 293
+task2! 293
+task2! 294
+task2! 294
+AVISOR INFO: TIME IRQ 989
+AVISOR INFO: TIME IRQ 990
+AVISOR INFO: rr_scheduler_vcpu latency: 43
+AVISOR INFO: rr_scheduler_vcpu latency: 50
+AVISOR INFO: TIME: 851241190 vm id 2 vcpu id 3 pcpu id 0
+AVISOR INFO: TIME: 851250869 vm id 3 vcpu id 3 pcpu id 1
+task3! 291
+task3! 291
+task3! 292
+task3! 292
+task3! 293
+task3! 293
+task3! 294
+task3! 294
+task3! 295
+AVISOR INFO: TIME IRQ 991
+AVISOR INFO: TIME IRQ 992
+AVISOR INFO: rr_scheduler_vm latency: 21
+AVISOR INFO: rr_scheduler_vm latency: 15
+AVISOR INFO: rr_scheduler_vcpu latency: 244
+AVISOR INFO: TIME: 913821756 vm id 0 vcpu id 0 pcpu id 0
+AVISOR INFO: rr_scheduler_vcpu latency: 189
+AVISOR INFO: TIME: 913837017 vm id 1 vcpu id 3 pcpu id 1
+main 295
+task3! 291
+main 296
+task3! 292
+main 297
+task3! 293
+main 298
+task3! 294
+main 299
+task3! 295
+AVISOR INFO: TIME IRQ 993
+AVISOR INFO: TIME IRQ 994
+AVISOR INFO: rr_scheduler_vcpu latency: 58
+AVISOR INFO: rr_scheduler_vcpu latency: 44
+AVISOR INFO: TIME: 976388800 vm id 1 vcpu id 0 pcpu id 1
+AVISOR INFO: TIME: 976396418 vm id 0 vcpu id 1 pcpu id 0
+task1! 300
+task1! 301
+task1! 302
+task1! 303
+task1! 304
+AVISOR INFO: TIME IRQ 996
+AVISOR INFO: TIME IRQ 995
+AVISOR INFO: rr_scheduler_vcpu latency: 37
+AVISOR INFO: rr_scheduler_vcpu latency: 24
+AVISOR INFO: TIME: 1038953502 vm id 0 vcpu id 3 pcpu id 0
+AVISOR INFO: TIME: 1038958848 vm id 1 vcpu id 1 pcpu id 1
+task1! 295
+task1! 296
+task1! 297
+task1! 298
+task1! 299
+AVISOR INFO: TIME IRQ 997
+AVISOR INFO: TIME IRQ 998
+AVISOR INFO: rr_scheduler_vcpu latency: 21
+AVISOR INFO: rr_scheduler_vcpu latency: 50
+AVISOR INFO: TIME: 1101532109 vm id 1 vcpu id 2 pcpu id 1
+AVISOR INFO: TIME: 1101537534 vm id 0 vcpu id 2 pcpu id 0
+task2! 296
+task2! 296
+task2! 297
+task2! 297
+task2! 298
+task2! 298
+task2! 299
+task2! 299
+task2! 300
+task2! 300
+AVISOR INFO: TIME IRQ 999
+AVISOR INFO: TIME IRQ 1000
+AVISOR INFO: rr_scheduler_vm latency: 69
+AVISOR INFO: rr_scheduler_vm latency: 18
+AVISOR INFO: rr_scheduler_vcpu latency: 1234
+AVISOR INFO: rr_scheduler_vcpu latency: 801
+AVISOR INFO: TIME: 1164134549 vm id 2 vcpu id 0 pcpu id 0
+AVISOR INFO: TIME: 1164143086 vm id 3 vcpu id 0 pcpu id 1
+main 296
+main 296
+main 297
+main 297
+main 298
+main 298
+main 299
+main 299
+main 300
+main 300
+AVISOR INFO: TIME IRQ 1001
+AVISOR INFO: TIME IRQ 1002
+AVISOR INFO: rr_scheduler_vcpu latency: 193
+AVISOR INFO: rr_scheduler_vcpu latency: 412
+AVISOR INFO: TIME: 1226704088 vm id 3 vcpu id 1 pcpu id 1
+AVISOR INFO: TIME: 1226709326 vm id 2 vcpu id 1 pcpu id 0
+task1! 295
+task1! 296
+task1! 296
+task1! 297
+task1! 297
+task1! 298
+task1! 298
+task1! 299
+task1! 299
+AVISOR INFO: TIME IRQ 1003
+AVISOR INFO: TIME IRQ 1004
+AVISOR INFO: rr_scheduler_vcpu latency: 43
+AVISOR INFO: rr_scheduler_vcpu latency: 32
+AVISOR INFO: TIME: 1289277796 vm id 2 vcpu id 2 pcpu id 0
+AVISOR INFO: TIME: 1289277851 vm id 3 vcpu id 2 pcpu id 1
+task2! 295
+task2! 295
+task2! 296
+task2! 296
+task2! 297
+task2! 297
+task2! 298
+task2! 298
+task2! 299
+task2! 299
+AVISOR INFO: TIME IRQ 1005
+AVISOR INFO: TIME IRQ 1006
+AVISOR INFO: rr_scheduler_vcpu latency: 27
+AVISOR INFO: rr_scheduler_vcpu latency: 30
+AVISOR INFO: TIME: 1351842107 vm id 2 vcpu id 3 pcpu id 0
+AVISOR INFO: TIME: 1351845310 vm id 3 vcpu id 3 pcpu id 1
+task3! 295
+task3! 296
+task3! 296
+task3! 297
+task3! 297
+task3! 298
+task3! 298
+task3! 299
+task3! 299
+task3! 300
+AVISOR INFO: TIME IRQ 1007
+AVISOR INFO: TIME IRQ 1008
+AVISOR INFO: rr_scheduler_vm latency: 23
+AVISOR INFO: rr_scheduler_vm latency: 16
+AVISOR INFO: rr_scheduler_vcpu latency: 164
+AVISOR INFO: rr_scheduler_vcpu latency: 8139
+AVISOR INFO: TIME: 1414425628 vm id 0 vcpu id 0 pcpu id 0
+AVISOR INFO: TIME: 1414430441 vm id 1 vcpu id 3 pcpu id 1
+main 300
+task3! 296
+main 301
+task3! 297
+main 302
+task3! 298
+main 303
+task3! 299
+main 304
+AVISOR INFO: TIME IRQ 1009
+AVISOR INFO: TIME IRQ 1010
+AVISOR INFO: rr_scheduler_vcpu latency: 45
+AVISOR INFO: rr_scheduler_vcpu latency: 51
+AVISOR INFO: TIME: 1476981449 vm id 1 vcpu id 0 pcpu id 1
+AVISOR INFO: TIME: 1476989112 vm id 0 vcpu id 1 pcpu id 0
+task1! 305
+task1! 306
+task1! 307
+task1! 308
+task1! 309
+AVISOR INFO: TIME IRQ 1011
+AVISOR INFO: TIME IRQ 1012
+AVISOR INFO: rr_scheduler_vcpu latency: 38
+AVISOR INFO: rr_scheduler_vcpu latency: 22
+AVISOR INFO: TIME: 1539579772 vm id 0 vcpu id 3 pcpu id 0
+AVISOR INFO: TIME: 1539591142 vm id 1 vcpu id 1 pcpu id 1
+task1! 300
+task1! 301
+task1! 302
+task1! 303
+task1! 304
+AVISOR INFO: TIME IRQ 1013
+AVISOR INFO: TIME IRQ 1014
+AVISOR INFO: rr_scheduler_vcpu latency: 59
+AVISOR INFO: rr_scheduler_vcpu latency: 21
+AVISOR INFO: TIME: 1602131969 vm id 0 vcpu id 2 pcpu id 0
+AVISOR INFO: TIME: 1602133474 vm id 1 vcpu id 2 pcpu id 1
+task2! 301
+task2! 301
+task2! 302
+task2! 302
+task2! 303
+task2! 303
+task2! 304
+task2! 304
+task2! 305
+AVISOR INFO: TIME IRQ 1015
+AVISOR INFO: TIME IRQ 1016
+AVISOR INFO: rr_scheduler_vm latency: 27
+AVISOR INFO: rr_scheduler_vm latency: 15
+AVISOR INFO: rr_scheduler_vcpu latency: 247
+AVISOR INFO: rr_scheduler_vcpu latency: 293
+AVISOR INFO: TIME: 1664714908 vm id 2 vcpu id 0 pcpu id 0
+AVISOR INFO: TIME: 1664729147 vm id 3 vcpu id 0 pcpu id 1
+main 301
+main 301
+main 302
+main 302
+main 303
+main 303
+main 304
+main 304
+AVISOR INFO: TIME IRQ 1017
+AVISOR INFO: TIME IRQ 1018
+AVISOR INFO: rr_scheduler_vcpu latency: 29
+AVISOR INFO: rr_scheduler_vcpu latency: 63
+AVISOR INFO: TIME: 1727275635 vm id 3 vcpu id 1 pcpu id 1
+AVISOR INFO: TIME: 1727281117 vm id 2 vcpu id 1 pcpu id 0
+task1! 300
+task1! 300
+task1! 301
+task1! 301
+task1! 302
+task1! 302
+task1! 303
+task1! 303
+task1! 304
+task1! 304
+AVISOR INFO: TIME IRQ 1019
+AVISOR INFO: TIME IRQ 1020
+AVISOR INFO: rr_scheduler_vcpu latency: 23
+AVISOR INFO: rr_scheduler_vcpu latency: 27
+AVISOR INFO: TIME: 1789846682 vm id 2 vcpu id 2 pcpu id 0
+AVISOR INFO: TIME: 1789846725 vm id 3 vcpu id 2 pcpu id 1
+task2! 300
+task2! 300
+task2! 301
+task2! 301
+task2! 302
+task2! 302
+task2! 303
+task2! 303
+task2! 304
+task2! 304
+AVISOR INFO: TIME IRQ 1021
+AVISOR INFO: TIME IRQ 1022
+AVISOR INFO: rr_scheduler_vcpu latency: 89
+AVISOR INFO: rr_scheduler_vcpu latency: 77
+AVISOR INFO: TIME: 1852454440 vm id 3 vcpu id 3 pcpu id 1
+AVISOR INFO: TIME: 1852455222 vm id 2 vcpu id 3 pcpu id 0
+task3! 300
+task3! 301
+task3! 301
+task3! 302
+task3! 302
+task3! 303
+task3! 303
+AVISOR INFO: TIME IRQ 1024
+AVISOR INFO: TIME IRQ 1023
+AVISOR INFO: rr_scheduler_vm latency: 27
+AVISOR INFO: rr_scheduler_vcpu latency: 53
+AVISOR INFO: TIME: 1914999449 vm id 0 vcpu id 0 pcpu id 0
+AVISOR INFO: rr_scheduler_vm latency: 126
+AVISOR INFO: rr_scheduler_vcpu latency: 17
+AVISOR INFO: TIME: 1915020276 vm id 1 vcpu id 3 pcpu id 1
+task3! 300
+main 305
+task3! 301
+main 306
+task3! 302
+main 307
+task3! 303
+main 308
+task3! 304
+QEMU: Terminated
+

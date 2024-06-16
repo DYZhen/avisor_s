@@ -1,0 +1,2449 @@
+mkdir -p /home/fadedlove/avisor/build/arch/aarch64
+mkdir -p /home/fadedlove/avisor/build/core
+mkdir -p /home/fadedlove/avisor/build/lib
+mkdir -p /home/fadedlove/avisor/build/plat/qemu-aarch64-virt
+Creating dependency	 src/main.ld
+Creating dependency	 src/arch/aarch64/vgicv2.c
+Creating dependency	 src/arch/aarch64/gicv2.c
+Creating dependency	 src/config.c
+Creating dependency	 src/main.c
+Creating dependency	 src/plat/qemu-aarch64-virt/platform.c
+Creating dependency	 src/lib/string.c
+Creating dependency	 src/lib/bitmap.c
+Creating dependency	 src/lib/printk.c
+Creating dependency	 src/core/mmu.c
+Creating dependency	 src/core/objpool.c
+Creating dependency	 src/core/sched.c
+Creating dependency	 src/core/io.c
+Creating dependency	 src/core/cpu.c
+Creating dependency	 src/core/vmm.c
+Creating dependency	 src/core/interrupts.c
+Creating dependency	 src/core/rq.c
+Creating dependency	 src/core/mem.c
+Creating dependency	 src/core/lcm.c
+Creating dependency	 src/core/console.c
+Creating dependency	 src/core/vm.c
+Creating dependency	 src/arch/aarch64/arch_vm.c
+Creating dependency	 src/arch/aarch64/uart.c
+Creating dependency	 src/arch/aarch64/arch_vmm.c
+Creating dependency	 src/arch/aarch64/hypercall.c
+Creating dependency	 src/arch/aarch64/timer.c
+Creating dependency	 src/arch/aarch64/arch_platform.c
+Creating dependency	 src/arch/aarch64/aborts.c
+Creating dependency	 src/arch/aarch64/arch_interrupts.c
+Creating dependency	 src/arch/aarch64/arch_cpu.c
+Creating dependency	 src/arch/aarch64/iommu.c
+Creating dependency	 src/arch/aarch64/exception.S
+Creating dependency	 src/arch/aarch64/arch_page_table.c
+Creating dependency	 src/arch/aarch64/start.S
+Creating dependency	 src/arch/aarch64/gic.c
+Creating dependency	 src/arch/aarch64/arch_mem.c
+Creating dependency	 src/arch/aarch64/vgic.c
+Compiling source	 src/arch/aarch64/vgic.c
+Compiling source	 src/arch/aarch64/arch_mem.c
+Compiling source	 src/arch/aarch64/gic.c
+Compiling source	 src/arch/aarch64/start.S
+Compiling source	 src/arch/aarch64/arch_page_table.c
+Compiling source	 src/arch/aarch64/exception.S
+Compiling source	 src/arch/aarch64/iommu.c
+Compiling source	 src/arch/aarch64/arch_cpu.c
+Compiling source	 src/arch/aarch64/arch_interrupts.c
+Compiling source	 src/arch/aarch64/aborts.c
+Compiling source	 src/arch/aarch64/arch_platform.c
+Compiling source	 src/arch/aarch64/timer.c
+Compiling source	 src/arch/aarch64/hypercall.c
+Compiling source	 src/arch/aarch64/arch_vmm.c
+Compiling source	 src/arch/aarch64/uart.c
+Compiling source	 src/arch/aarch64/arch_vm.c
+Compiling source	 src/core/vm.c
+Compiling source	 src/core/console.c
+Compiling source	 src/core/lcm.c
+Compiling source	 src/core/rq.c
+Compiling source	 src/core/mem.c
+Compiling source	 src/core/interrupts.c
+Compiling source	 src/core/vmm.c
+Compiling source	 src/core/cpu.c
+Compiling source	 src/core/io.c
+Compiling source	 src/core/objpool.c
+Compiling source	 src/core/sched.c
+Compiling source	 src/core/mmu.c
+Compiling source	 src/lib/printk.c
+Compiling source	 src/lib/bitmap.c
+Compiling source	 src/lib/string.c
+Compiling source	 src/plat/qemu-aarch64-virt/platform.c
+Compiling source	 src/main.c
+Compiling source	 src/config.c
+Compiling source	 src/arch/aarch64/gicv2.c
+Compiling source	 src/arch/aarch64/vgicv2.c
+Compiling source	 src/main.ld
+Linking			avisor
+qemu-system-aarch64 -M virt,virtualization=on -machine gic-version=2,iommu=none \
+	-cpu cortex-a57 -smp 2 -m 4g -nographic \
+	-kernel /home/fadedlove/avisor/build/avisor.elf
+AVISOR INFO: CPU[0] INIT
+AVISOR INFO: CPU[1] INIT
+AVISOR INFO: ------------avisor started------------
+AVISOR INFO: Exception level: 2
+AVISOR INFO: MEM INIT
+AVISOR INFO: GIC Version: 2
+AVISOR INFO: GIC Version: 2
+AVISOR INFO: Timer Init
+AVISOR INFO: Timer Init
+AVISOR INFO: EL2 timer frq = 62500000
+AVISOR INFO: EL2 timer frq = 62500000
+AVISOR INFO: Reserved 26 intr
+AVISOR INFO: Reserved 26 intr
+AVISOR INFO: CPU[1] INTERRUPT INIT
+AVISOR INFO: CPU[0] INTERRUPT INIT
+AVISOR WARNING: NO IOMMU
+AVISOR WARNING: NO IOMMU
+AVISOR INFO: VMID:0 Load addr: 0x40100000
+AVISOR INFO: Copy vm0 to 0x50032000, size = 0x27840
+AVISOR INFO: Copy dtb to 0x58122000, size = 0x100000
+AVISOR INFO: VMID:1 Load addr: 0x40127840
+AVISOR INFO: Copy vm1 to 0x5842e000, size = 0x27840
+AVISOR INFO: Copy dtb to 0x6051a000, size = 0x100000
+AVISOR INFO: VMID:2 Load addr: 0x40127840
+AVISOR INFO: Copy vm2 to 0x60bf6000, size = 0x27840
+AVISOR INFO: Copy dtb to 0x68caa000, size = 0x100000
+AVISOR INFO: VMID:3 Load addr: 0x40127840
+AVISOR INFO: Copy vm3 to 0x69aee000, size = 0x27840
+AVISOR INFO: Copy dtb to 0x71b9a000, size = 0x100000
+AVISOR INFO: VM need reschedule, call bfs_scheduler and bmq_scheduler cpu:0
+AVISOR INFO: VM need reschedule, call bfs_scheduler and bmq_scheduler cpu:1
+AVISOR INFO: bfs scheduler latency: 3172
+AVISOR INFO: unikernel 0 will run on pcpu 1.
+AVISOR INFO: bfs scheduler latency: 42
+AVISOR INFO: unikernel 3 will run on pcpu 0.
+AVISOR INFO: bmq scheduler latency: 2512
+AVISOR INFO: bmq scheduler latency: 2465
+AVISOR INFO: vcpu:prio (0:5) run on unikernel 3 on pcpu 0.
+AVISOR INFO: vcpu:prio (0:5) run on unikernel 0 on pcpu 1.
+AVISOR INFO: TIME: 5438130 vm id 3 vcpu id 0 pcpu id 0
+AVISOR INFO: TIME: 5438223 vm id 0 vcpu id 0 pcpu id 1
+AVISOR INFO: TIME IRQ 1
+AVISOR INFO: TIME IRQ 2
+AVISOR INFO: VCPU need reschedule, call bmq_scheduler cpu:1
+AVISOR INFO: VCPU need reschedule, call bmq_scheduler cpu:0
+AVISOR INFO: bmq scheduler latency: 74
+AVISOR INFO: bmq scheduler latency: 27
+AVISOR INFO: vcpu:prio (0:6) run on unikernel 0 on pcpu 1.
+AVISOR INFO: vcpu:prio (0:6) run on unikernel 3 on pcpu 0.
+AVISOR INFO: TIME: 5540943 vm id 3 vcpu id 0 pcpu id 0
+AVISOR INFO: TIME: 5543386 vm id 0 vcpu id 0 pcpu id 1
+AVISOR INFO: TIME: 6085118 vm id 0 vcpu id 0 pcpu id 1
+Powered by
+o.   .o       _ _               __ _
+Oo   Oo  ___ (_) | __ __  __ _ ' _) :_
+oO   oO ' _ `| | |/ /  _)' _` | |_|  _)
+oOo oOO| | | | |   (| | | (_) |  _) :_
+ OoOoO ._, ._:_:_,\_._,  .__,_:_, \___)
+      Epimetheus 0.12.0~052b89e4-custom
+Boot Time Cycles = 9450822
+Hello World! 200000000
+cpuid = 1 fn = 40106ca0
+cpuid = 2 fn = 40106ce0
+cpuid = 3 fn = 40106c80
+Powered by
+o.   .o       _ _               __ _
+Oo   Oo  ___ (_) | __ __  __ _ ' _) :_
+oO   oO ' _ `| | |/ /  _)' _` | |_|  _)
+oOo oOO| | | | |   (| | | (_) |  _) :_
+ OoOoO ._, ._:_:_,\_._,  .__,_:_, \___)
+      Epimetheus 0.12.0~052b89e4-custom
+Boot Time Cycles = 9906440
+Hello World! 200000000
+cpuid = 1 fn = 40106c80
+cpuid = 2 fn = 40106cc0
+cpuid = 3 fn = 40106d00
+main 0
+main 0
+main 1
+main 1
+main 2
+main 2
+main 3
+main 3
+AVISOR INFO: TIME IRQ 3
+AVISOR INFO: TIME IRQ 4
+AVISOR INFO: VCPU need reschedule, call bmq_scheduler cpu:0
+AVISOR INFO: VCPU need reschedule, call bmq_scheduler cpu:1
+AVISOR INFO: bmq scheduler latency: 4612
+AVISOR INFO: bmq scheduler latency: 167
+AVISOR INFO: vcpu:prio (1:5) run on unikernel 3 on pcpu 0.
+AVISOR INFO: vcpu:prio (1:5) run on unikernel 0 on pcpu 1.
+AVISOR INFO: TIME: 68112280 vm id 3 vcpu id 1 pcpu id 0
+AVISOR INFO: TIME: 68118202 vm id 0 vcpu id 1 pcpu id 1
+task1! 0task1! 
+0
+task1! 1
+task1! 1
+task1! 2
+task1! 2
+task1! 3
+task1! 3
+AVISOR INFO: TIME IRQ 5
+AVISOR INFO: TIME IRQ 6
+AVISOR INFO: VCPU need reschedule, call bmq_scheduler cpu:0
+AVISOR INFO: VCPU need reschedule, call bmq_scheduler cpu:1
+AVISOR INFO: bmq scheduler latency: 418
+AVISOR INFO: bmq scheduler latency: 24
+AVISOR INFO: vcpu:prio (2:5) run on unikernel 3 on pcpu 0.
+AVISOR INFO: vcpu:prio (2:5) run on unikernel 0 on pcpu 1.
+AVISOR INFO: TIME: 130661335 vm id 3 vcpu id 2 pcpu id 0
+AVISOR INFO: TIME: 130676889 vm id 0 vcpu id 2 pcpu id 1
+task2! 0
+task2! 0
+task2! 1
+task2! 1
+task2! 2
+task2! 2
+task2! 3
+task2! 3
+AVISOR INFO: TIME IRQ 7
+AVISOR INFO: TIME IRQ 8
+AVISOR INFO: VM need reschedule, call bfs_scheduler and bmq_scheduler cpu:1
+AVISOR INFO: VM need reschedule, call bfs_scheduler and bmq_scheduler cpu:0
+AVISOR INFO: bfs scheduler latency: 7994
+AVISOR INFO: unikernel 2 will run on pcpu 1.
+AVISOR INFO: bfs scheduler latency: 21
+AVISOR INFO: bmq scheduler latency: 3267
+AVISOR INFO: unikernel 1 will run on pcpu 0.
+AVISOR INFO: vcpu:prio (0:5) run on unikernel 2 on pcpu 1.
+AVISOR INFO: bmq scheduler latency: 7768
+AVISOR INFO: TIME: 193258954 vm id 2 vcpu id 0 pcpu id 1
+AVISOR INFO: vcpu:prio (0:5) run on unikernel 1 on pcpu 0.
+AVISOR INFO: TIME: 193274596 vm id 1 vcpu id 0 pcpu id 0
+AVISOR INFO: TIME: 193707584 vm id 2 vcpu id 0 pcpu id 1
+Powered by
+o.   .o     Po we _ re_d   by  
+      o.        .o__      _ 
+ _ _Oo   Oo  ___ (_) | __ __  __    _    '   _ )  : _  
+  _oO   oO '_ _ _ 
+`Oo   Oo | |  |_/_ _/  ( __)) '|  __`_ |  |___|    _)__
+ oOo oO_O |'  |_ | |)  :_|  
+ oO   (| | o|O (_ ) |  _) :_
+' O _oO o`O| . |_ |/,  ./_: _ :__,\)_._' _`,   |.__,_:_ , \|____)| 
+ _)
+oOo oOO| | | | |   (| | |    (  _ )E pime|t heu s_ )0 .:1_2.0
+~ Oo0OoO 5.2_b, ._89e4-c:_u:sto_m,\
+_._,  .__,_:_, \___)
+Boot Time Cycles = 1     97 5E35p188im
+etheus 0Hell.12.o0 W~o0r5l2d!b 8290e040-0c00u0s0to
+m
+cpuid = 1 fn = 40106c80
+cpBoot uid =T 2 fn = 401i06cc0
+me Cyclcpesu i=d 197648032
+ = 3 fn = 401Hello World! 200000000
+06d00
+cpuid = 1 fn = 40106c80
+cpuid = 2 fn = 40106cc0
+cpuid = 3 fn = 40106d00
+main 0
+main 0
+main 1
+main 1
+main 2
+main 2
+AVISOR INFO: TIME IRQ 9
+AVISOR INFO: TIME IRQ 10
+AVISOR INFO: VCPU need reschedule, call bmq_scheduler cpu:0
+AVISOR INFO: VCPU need reschedule, call bmq_scheduler cpu:1
+AVISOR INFO: bmq scheduler latency: 183
+AVISOR INFO: bmq scheduler latency: 174
+AVISOR INFO: vcpu:prio (1:5) run on unikernel 1 on pcpu 0.
+AVISOR INFO: vcpu:prio (1:5) run on unikernel 2 on pcpu 1.
+AVISOR INFO: TIME: 255843264 vm id 1 vcpu id 1 pcpu id 0
+AVISOR INFO: TIME: 255847949 vm id 2 vcpu id 1 pcpu id 1
+tastak1! 0sk1! 0
+
+task1! 1
+task1! 1
+task1! 2
+task1! 2
+task1! 3
+task1! 3
+AVISOR INFO: TIME IRQ 11
+AVISOR INFO: TIME IRQ 12
+AVISOR INFO: VCPU need reschedule, call bmq_scheduler cpu:0
+AVISOR INFO: VCPU need reschedule, call bmq_scheduler cpu:1
+AVISOR INFO: bmq scheduler latency: 838
+AVISOR INFO: bmq scheduler latency: 5695
+AVISOR INFO: vcpu:prio (2:5) run on unikernel 1 on pcpu 0.
+AVISOR INFO: vcpu:prio (2:5) run on unikernel 2 on pcpu 1.
+AVISOR INFO: TIME: 318390562 vm id 1 vcpu id 2 pcpu id 0
+AVISOR INFO: TIME: 318398079 vm id 2 vcpu id 2 pcpu id 1
+task2task2! 0! 0
+
+task2! 1
+task2! 1
+task2! 2
+task2! 2
+task2! 3
+task2! 3
+AVISOR INFO: TIME IRQ 13
+AVISOR INFO: TIME IRQ 14
+AVISOR INFO: VCPU need reschedule, call bmq_scheduler cpu:1
+AVISOR INFO: VCPU need reschedule, call bmq_scheduler cpu:0
+AVISOR INFO: bmq scheduler latency: 6441
+AVISOR INFO: bmq scheduler latency: 153
+AVISOR INFO: vcpu:prio (3:5) run on unikernel 2 on pcpu 1.
+AVISOR INFO: vcpu:prio (3:5) run on unikernel 1 on pcpu 0.
+AVISOR INFO: TIME: 380954773 vm id 2 vcpu id 3 pcpu id 1
+AVISOR INFO: TIME: 380961872 vm id 1 vcpu id 3 pcpu id 0
+task3! 0
+task3! 0
+task3! 1
+task3! 1
+task3! 2
+task3! 2
+task3! 3
+task3! 3
+AVISOR INFO: TIME IRQ 15
+AVISOR INFO: TIME IRQ 16
+AVISOR INFO: VM need reschedule, call bfs_scheduler and bmq_scheduler cpu:1
+AVISOR INFO: VM need reschedule, call bfs_scheduler and bmq_scheduler cpu:0
+AVISOR INFO: bfs scheduler latency: 312
+AVISOR INFO: unikernel 0 will run on pcpu 1.
+AVISOR INFO: bfs scheduler latency: 24
+AVISOR INFO: bmq scheduler latency: 685
+AVISOR INFO: unikernel 3 will run on pcpu 0.
+AVISOR INFO: vcpu:prio (3:5) run on unikernel 0 on pcpu 1.
+AVISOR INFO: bmq scheduler latency: 403
+AVISOR INFO: TIME: 443544649 vm id 0 vcpu id 3 pcpu id 1
+AVISOR INFO: vcpu:prio (3:5) run on unikernel 3 on pcpu 0.
+AVISOR INFO: TIME: 443561245 vm id 3 vcpu id 3 pcpu id 0
+task3! 0
+task3! 1
+task3! 2
+task3! 3
+AVISOR INFO: TIME IRQ 17
+AVISOR INFO: TIME IRQ 18
+AVISOR INFO: VCPU need reschedule, call bmq_scheduler cpu:0
+AVISOR INFO: VCPU need reschedule, call bmq_scheduler cpu:1
+AVISOR INFO: bmq scheduler latency: 39
+AVISOR INFO: bmq scheduler latency: 125
+AVISOR INFO: vcpu:prio (1:6) run on unikernel 0 on pcpu 1.
+AVISOR INFO: vcpu:prio (1:6) run on unikernel 3 on pcpu 0.
+AVISOR INFO: TIME: 506098397 vm id 0 vcpu id 1 pcpu id 1
+AVISOR INFO: TIME: 506108599 vm id 3 vcpu id 1 pcpu id 0
+task1! 4
+task1! 4
+task1! 5
+task1! 5
+task1! 6
+task1! 6
+task1! 7
+task1! 7
+AVISOR INFO: TIME IRQ 19
+AVISOR INFO: TIME IRQ 20
+AVISOR INFO: VCPU need reschedule, call bmq_scheduler cpu:0
+AVISOR INFO: VCPU need reschedule, call bmq_scheduler cpu:1
+AVISOR INFO: bmq scheduler latency: 117
+AVISOR INFO: bmq scheduler latency: 176
+AVISOR INFO: vcpu:prio (2:6) run on unikernel 3 on pcpu 0.
+AVISOR INFO: vcpu:prio (2:6) run on unikernel 0 on pcpu 1.
+AVISOR INFO: TIME: 568707802 vm id 3 vcpu id 2 pcpu id 0
+AVISOR INFO: TIME: 568711444 vm id 0 vcpu id 2 pcpu id 1
+task2! 4
+task2! 4
+task2! 5
+task2! 5
+task2! 6
+task2! 6
+task2! 7
+task2! 7
+AVISOR INFO: TIME IRQ 21
+AVISOR INFO: TIME IRQ 22
+AVISOR INFO: VCPU need reschedule, call bmq_scheduler cpu:1
+AVISOR INFO: VCPU need reschedule, call bmq_scheduler cpu:0
+AVISOR INFO: bmq scheduler latency: 4029
+AVISOR INFO: bmq scheduler latency: 165
+AVISOR INFO: vcpu:prio (0:7) run on unikernel 0 on pcpu 1.
+AVISOR INFO: vcpu:prio (3:6) run on unikernel 3 on pcpu 0.
+AVISOR INFO: TIME: 631254516 vm id 0 vcpu id 0 pcpu id 1
+AVISOR INFO: TIME: 631260392 vm id 3 vcpu id 3 pcpu id 0
+task3! 4
+main 4
+task3! 5
+main 5
+task3! 6
+main 6
+task3! 7
+main 7
+AVISOR INFO: TIME IRQ 23
+AVISOR INFO: TIME IRQ 24
+AVISOR INFO: VM need reschedule, call bfs_scheduler and bmq_scheduler cpu:0
+AVISOR INFO: VM need reschedule, call bfs_scheduler and bmq_scheduler cpu:1
+AVISOR INFO: bfs scheduler latency: 3880
+AVISOR INFO: unikernel 1 will run on pcpu 0.
+AVISOR INFO: bfs scheduler latency: 21
+AVISOR INFO: bmq scheduler latency: 294
+AVISOR INFO: unikernel 2 will run on pcpu 1.
+AVISOR INFO: vcpu:prio (0:6) run on unikernel 1 on pcpu 0.
+AVISOR INFO: bmq scheduler latency: 166
+AVISOR INFO: TIME: 693841838 vm id 1 vcpu id 0 pcpu id 0
+AVISOR INFO: vcpu:prio (0:6) run on unikernel 2 on pcpu 1.
+AVISOR INFO: TIME: 693856746 vm id 2 vcpu id 0 pcpu id 1
+main 3
+main 3
+main 4
+main 4
+main 5
+main 5
+main 6
+main 6
+main 7
+main 7
+AVISOR INFO: TIME IRQ 26
+AVISOR INFO: TIME IRQ 25
+AVISOR INFO: VCPU need reschedule, call bmq_scheduler cpu:1
+AVISOR INFO: VCPU need reschedule, call bmq_scheduler cpu:0
+AVISOR INFO: bmq scheduler latency: 4365
+AVISOR INFO: vcpu:prio (1:6) run on unikernel 2 on pcpu 1.
+AVISOR INFO: bmq scheduler latency: 56
+AVISOR INFO: TIME: 756396441 vm id 2 vcpu id 1 pcpu id 1
+AVISOR INFO: vcpu:prio (1:6) run on unikernel 1 on pcpu 0.
+AVISOR INFO: TIME: 756409528 vm id 1 vcpu id 1 pcpu id 0
+task1! 4
+task1! 4
+task1! 5
+task1! 5
+task1! 6
+task1! 6
+task1! 7
+task1! 7
+AVISOR INFO: TIME IRQ 27
+AVISOR INFO: TIME IRQ 28
+AVISOR INFO: VCPU need reschedule, call bmq_scheduler cpu:1
+AVISOR INFO: VCPU need reschedule, call bmq_scheduler cpu:0
+AVISOR INFO: bmq scheduler latency: 1917
+AVISOR INFO: bmq scheduler latency: 159
+AVISOR INFO: vcpu:prio (2:6) run on unikernel 2 on pcpu 1.
+AVISOR INFO: vcpu:prio (2:6) run on unikernel 1 on pcpu 0.
+AVISOR INFO: TIME: 818972143 vm id 2 vcpu id 2 pcpu id 1
+AVISOR INFO: TIME: 818978455 vm id 1 vcpu id 2 pcpu id 0
+task2! 4
+task2! 4
+task2! 5
+task2! 5
+task2! 6
+task2! 6
+task2! 7
+task2! 7
+AVISOR INFO: TIME IRQ 30
+AVISOR INFO: TIME IRQ 29
+AVISOR INFO: VCPU need reschedule, call bmq_scheduler cpu:1
+AVISOR INFO: VCPU need reschedule, call bmq_scheduler cpu:0
+AVISOR INFO: bmq scheduler latency: 291
+AVISOR INFO: bmq scheduler latency: 2476
+AVISOR INFO: vcpu:prio (3:6) run on unikernel 2 on pcpu 1.
+AVISOR INFO: vcpu:prio (3:6) run on unikernel 1 on pcpu 0.
+AVISOR INFO: TIME: 881553060 vm id 2 vcpu id 3 pcpu id 1
+AVISOR INFO: TIME: 881560522 vm id 1 vcpu id 3 pcpu id 0
+task3! 4
+task3! 4
+task3! 5
+task3! 5
+task3! 6
+task3! 6
+task3! 7
+task3! 7
+AVISOR INFO: TIME IRQ 31
+AVISOR INFO: TIME IRQ 32
+AVISOR INFO: VM need reschedule, call bfs_scheduler and bmq_scheduler cpu:1
+AVISOR INFO: VM need reschedule, call bfs_scheduler and bmq_scheduler cpu:0
+AVISOR INFO: bfs scheduler latency: 2088
+AVISOR INFO: unikernel 0 will run on pcpu 1.
+AVISOR INFO: bfs scheduler latency: 27
+AVISOR INFO: bmq scheduler latency: 402
+AVISOR INFO: unikernel 3 will run on pcpu 0.
+AVISOR INFO: vcpu:prio (3:1) run on unikernel 0 on pcpu 1.
+AVISOR INFO: bmq scheduler latency: 597
+AVISOR INFO: TIME: 944143946 vm id 0 vcpu id 3 pcpu id 1
+AVISOR INFO: vcpu:prio (0:7) run on unikernel 3 on pcpu 0.
+AVISOR INFO: TIME: 944157031 vm id 3 vcpu id 0 pcpu id 0
+main 4
+main 5
+main 6
+main 7
+AVISOR INFO: TIME IRQ 33
+AVISOR INFO: TIME IRQ 34
+AVISOR INFO: VCPU need reschedule, call bmq_scheduler cpu:0
+AVISOR INFO: VCPU need reschedule, call bmq_scheduler cpu:1
+AVISOR INFO: bmq scheduler latency: 8340
+AVISOR INFO: bmq scheduler latency: 181
+AVISOR INFO: vcpu:prio (1:7) run on unikernel 3 on pcpu 0.
+AVISOR INFO: vcpu:prio (1:7) run on unikernel 0 on pcpu 1.
+AVISOR INFO: TIME: 1006728395 vm id 3 vcpu id 1 pcpu id 0
+AVISOR INFO: TIME: 1006739506 vm id 0 vcpu id 1 pcpu id 1
+task1! 8
+task1! 8
+task1! 9
+task1! 9
+task1! 10
+task1! 10
+task1! 11
+task1! 11
+AVISOR INFO: TIME IRQ 35
+AVISOR INFO: TIME IRQ 36
+AVISOR INFO: VCPU need reschedule, call bmq_scheduler cpu:0
+AVISOR INFO: VCPU need reschedule, call bmq_scheduler cpu:1
+AVISOR INFO: bmq scheduler latency: 63
+AVISOR INFO: vcpu:prio (2:7) run on unikernel 3 on pcpu 0.
+AVISOR INFO: bmq scheduler latency: 65
+AVISOR INFO: TIME: 1069306789 vm id 3 vcpu id 2 pcpu id 0
+AVISOR INFO: vcpu:prio (2:7) run on unikernel 0 on pcpu 1.
+AVISOR INFO: TIME: 1069320135 vm id 0 vcpu id 2 pcpu id 1
+task2! 8
+task2! 8
+task2! 9
+task2! 9
+task2! 10
+task2! 10
+task2! 11
+task2! 11
+task2! 12
+task2! 12
+AVISOR INFO: TIME IRQ 37
+AVISOR INFO: TIME IRQ 38
+AVISOR INFO: VCPU need reschedule, call bmq_scheduler cpu:0
+AVISOR INFO: VCPU need reschedule, call bmq_scheduler cpu:1
+AVISOR INFO: bmq scheduler latency: 1506
+AVISOR INFO: bmq scheduler latency: 169
+AVISOR INFO: vcpu:prio (3:7) run on unikernel 3 on pcpu 0.
+AVISOR INFO: vcpu:prio (0:8) run on unikernel 0 on pcpu 1.
+AVISOR INFO: TIME: 1131867735 vm id 3 vcpu id 3 pcpu id 0
+AVISOR INFO: TIME: 1131873570 vm id 0 vcpu id 0 pcpu id 1
+task3! 8
+main 8
+task3! 9
+main 9
+task3! 10
+main 10
+task3! 11
+main 11
+task3! 12
+main 12
+AVISOR INFO: TIME IRQ 39
+AVISOR INFO: TIME IRQ 40
+AVISOR INFO: VM need reschedule, call bfs_scheduler and bmq_scheduler cpu:0
+AVISOR INFO: VM need reschedule, call bfs_scheduler and bmq_scheduler cpu:1
+AVISOR INFO: bfs scheduler latency: 2799
+AVISOR INFO: unikernel 1 will run on pcpu 0.
+AVISOR INFO: bfs scheduler latency: 26
+AVISOR INFO: bmq scheduler latency: 1987
+AVISOR INFO: unikernel 2 will run on pcpu 1.
+AVISOR INFO: vcpu:prio (0:7) run on unikernel 1 on pcpu 0.
+AVISOR INFO: bmq scheduler latency: 4841
+AVISOR INFO: TIME: 1194452445 vm id 1 vcpu id 0 pcpu id 0
+AVISOR INFO: vcpu:prio (0:7) run on unikernel 2 on pcpu 1.
+AVISOR INFO: TIME: 1194465922 vm id 2 vcpu id 0 pcpu id 1
+main 8
+main 8
+main 9
+main 9
+main 10
+main 10
+main 11
+main 11
+AVISOR INFO: TIME IRQ 41
+AVISOR INFO: TIME IRQ 42
+AVISOR INFO: VCPU need reschedule, call bmq_scheduler cpu:1
+AVISOR INFO: VCPU need reschedule, call bmq_scheduler cpu:0
+AVISOR INFO: bmq scheduler latency: 10629
+AVISOR INFO: bmq scheduler latency: 183
+AVISOR INFO: vcpu:prio (1:7) run on unikernel 2 on pcpu 1.
+AVISOR INFO: vcpu:prio (1:7) run on unikernel 1 on pcpu 0.
+AVISOR INFO: TIME: 1257022991 vm id 2 vcpu id 1 pcpu id 1
+AVISOR INFO: TIME: 1257030648 vm id 1 vcpu id 1 pcpu id 0
+task1! 8
+task1! 8
+task1! 9
+task1! 9
+task1! 10task1
+! 10
+task1! 11
+task1! 11
+AVISOR INFO: TIME IRQ 43
+AVISOR INFO: TIME IRQ 44
+AVISOR INFO: VCPU need reschedule, call bmq_scheduler cpu:1
+AVISOR INFO: VCPU need reschedule, call bmq_scheduler cpu:0
+AVISOR INFO: bmq scheduler latency: 301
+AVISOR INFO: bmq scheduler latency: 1505
+AVISOR INFO: vcpu:prio (2:7) run on unikernel 2 on pcpu 1.
+AVISOR INFO: vcpu:prio (2:7) run on unikernel 1 on pcpu 0.
+AVISOR INFO: TIME: 1319584098 vm id 2 vcpu id 2 pcpu id 1
+AVISOR INFO: TIME: 1319591393 vm id 1 vcpu id 2 pcpu id 0
+task2! 8
+task2! 8
+task2! 9
+task2! 9
+task2! 10
+task2! 10
+task2! 11
+task2! 11
+AVISOR INFO: TIME IRQ 45
+AVISOR INFO: TIME IRQ 46
+AVISOR INFO: VCPU need reschedule, call bmq_scheduler cpu:1
+AVISOR INFO: VCPU need reschedule, call bmq_scheduler cpu:0
+AVISOR INFO: bmq scheduler latency: 174
+AVISOR INFO: bmq scheduler latency: 148
+AVISOR INFO: vcpu:prio (3:7) run on unikernel 2 on pcpu 1.
+AVISOR INFO: vcpu:prio (3:7) run on unikernel 1 on pcpu 0.
+AVISOR INFO: TIME: 1382155219 vm id 2 vcpu id 3 pcpu id 1
+AVISOR INFO: TIME: 1382161156 vm id 1 vcpu id 3 pcpu id 0
+task3! 8
+task3! 8
+task3! 9
+task3! 9
+task3! 10
+task3! 10
+task3! 11
+task3! 11
+task3! 12
+task3! 12
+AVISOR INFO: TIME IRQ 47
+AVISOR INFO: TIME IRQ 48
+AVISOR INFO: VM need reschedule, call bfs_scheduler and bmq_scheduler cpu:1
+AVISOR INFO: VM need reschedule, call bfs_scheduler and bmq_scheduler cpu:0
+AVISOR INFO: bfs scheduler latency: 2366
+AVISOR INFO: unikernel 0 will run on pcpu 1.
+AVISOR INFO: bfs scheduler latency: 22
+AVISOR INFO: bmq scheduler latency: 1642
+AVISOR INFO: unikernel 3 will run on pcpu 0.
+AVISOR INFO: vcpu:prio (3:0) run on unikernel 0 on pcpu 1.
+AVISOR INFO: bmq scheduler latency: 1720
+AVISOR INFO: TIME: 1444744525 vm id 0 vcpu id 3 pcpu id 1
+AVISOR INFO: vcpu:prio (0:8) run on unikernel 3 on pcpu 0.
+AVISOR INFO: TIME: 1444760147 vm id 3 vcpu id 0 pcpu id 0
+main 8
+main 9
+main 10
+main 11
+main 12
+AVISOR INFO: TIME IRQ 49
+AVISOR INFO: TIME IRQ 50
+AVISOR INFO: VCPU need reschedule, call bmq_scheduler cpu:0
+AVISOR INFO: VCPU need reschedule, call bmq_scheduler cpu:1
+AVISOR INFO: bmq scheduler latency: 3963
+AVISOR INFO: bmq scheduler latency: 119
+AVISOR INFO: vcpu:prio (1:8) run on unikernel 3 on pcpu 0.
+AVISOR INFO: vcpu:prio (1:8) run on unikernel 0 on pcpu 1.
+AVISOR INFO: TIME: 1507304646 vm id 3 vcpu id 1 pcpu id 0
+AVISOR INFO: TIME: 1507310906 vm id 0 vcpu id 1 pcpu id 1
+task1! 12
+task1! 12
+task1! 13
+task1! 13
+task1! 14
+task1! 14
+task1! 15
+task1! 15
+task1! 16
+task1! 16
+AVISOR INFO: TIME IRQ 51
+AVISOR INFO: TIME IRQ 52
+AVISOR INFO: VCPU need reschedule, call bmq_scheduler cpu:0
+AVISOR INFO: VCPU need reschedule, call bmq_scheduler cpu:1
+AVISOR INFO: bmq scheduler latency: 260
+AVISOR INFO: bmq scheduler latency: 171
+AVISOR INFO: vcpu:prio (2:8) run on unikernel 3 on pcpu 0.
+AVISOR INFO: vcpu:prio (2:8) run on unikernel 0 on pcpu 1.
+AVISOR INFO: TIME: 1569875923 vm id 3 vcpu id 2 pcpu id 0
+AVISOR INFO: TIME: 1569883307 vm id 0 vcpu id 2 pcpu id 1
+task2! 13
+task2! 13
+task2! 14
+task2! 14
+task2! 15
+task2! 15
+task2! 16
+task2! 16
+AVISOR INFO: TIME IRQ 53
+AVISOR INFO: TIME IRQ 54
+AVISOR INFO: VCPU need reschedule, call bmq_scheduler cpu:0
+AVISOR INFO: VCPU need reschedule, call bmq_scheduler cpu:1
+AVISOR INFO: bmq scheduler latency: 150
+AVISOR INFO: vcpu:prio (3:8) run on unikernel 3 on pcpu 0.
+AVISOR INFO: bmq scheduler latency: 7322
+AVISOR INFO: TIME: 1632461171 vm id 3 vcpu id 3 pcpu id 0
+AVISOR INFO: vcpu:prio (0:9) run on unikernel 0 on pcpu 1.
+AVISOR INFO: TIME: 1632474876 vm id 0 vcpu id 0 pcpu id 1
+task3! 13
+main 13
+task3! 14
+main 14
+task3! 15
+main 15
+task3! 16
+main 16
+task3! 17
+AVISOR INFO: TIME IRQ 55
+AVISOR INFO: TIME IRQ 56
+AVISOR INFO: VM need reschedule, call bfs_scheduler and bmq_scheduler cpu:0
+AVISOR INFO: VM need reschedule, call bfs_scheduler and bmq_scheduler cpu:1
+AVISOR INFO: bfs scheduler latency: 191
+AVISOR INFO: unikernel 1 will run on pcpu 0.
+AVISOR INFO: bfs scheduler latency: 22
+AVISOR INFO: bmq scheduler latency: 179
+AVISOR INFO: unikernel 2 will run on pcpu 1.
+AVISOR INFO: vcpu:prio (0:8) run on unikernel 1 on pcpu 0.
+AVISOR INFO: bmq scheduler latency: 799
+AVISOR INFO: TIME: 1695039286 vm id 1 vcpu id 0 pcpu id 0
+AVISOR INFO: vcpu:prio (0:8) run on unikernel 2 on pcpu 1.
+AVISOR INFO: TIME: 1695053351 vm id 2 vcpu id 0 pcpu id 1
+main 12
+main 12
+main 13
+main 13
+main 14
+main 14
+main 15
+main 15
+main 16
+main 16
+AVISOR INFO: TIME IRQ 57
+AVISOR INFO: TIME IRQ 58
+AVISOR INFO: VCPU need reschedule, call bmq_scheduler cpu:1
+AVISOR INFO: VCPU need reschedule, call bmq_scheduler cpu:0
+AVISOR INFO: bmq scheduler latency: 174
+AVISOR INFO: bmq scheduler latency: 1692
+AVISOR INFO: vcpu:prio (1:8) run on unikernel 2 on pcpu 1.
+AVISOR INFO: vcpu:prio (1:8) run on unikernel 1 on pcpu 0.
+AVISOR INFO: TIME: 1757603398 vm id 2 vcpu id 1 pcpu id 1
+AVISOR INFO: TIME: 1757608293 vm id 1 vcpu id 1 pcpu id 0
+task1! 12
+task1! 12
+task1! 13
+task1! 13
+task1! 14
+task1! 14
+task1! 15
+task1! 15
+task1! 16
+task1! 16
+AVISOR INFO: TIME IRQ 59
+AVISOR INFO: TIME IRQ 60
+AVISOR INFO: VCPU need reschedule, call bmq_scheduler cpu:1
+AVISOR INFO: VCPU need reschedule, call bmq_scheduler cpu:0
+AVISOR INFO: bmq scheduler latency: 174
+AVISOR INFO: bmq scheduler latency: 615
+AVISOR INFO: vcpu:prio (2:8) run on unikernel 2 on pcpu 1.
+AVISOR INFO: vcpu:prio (2:8) run on unikernel 1 on pcpu 0.
+AVISOR INFO: TIME: 1820178197 vm id 2 vcpu id 2 pcpu id 1
+AVISOR INFO: TIME: 1820186157 vm id 1 vcpu id 2 pcpu id 0
+task2! 12
+task2! 12
+task2! 13
+task2! 13
+task2! 14
+task2! 14
+task2! 15
+task2! 15
+task2! 16
+task2! 16
+AVISOR INFO: TIME IRQ 61
+AVISOR INFO: TIME IRQ 62
+AVISOR INFO: VCPU need reschedule, call bmq_scheduler cpu:1
+AVISOR INFO: VCPU need reschedule, call bmq_scheduler cpu:0
+AVISOR INFO: bmq scheduler latency: 401
+AVISOR INFO: bmq scheduler latency: 397
+AVISOR INFO: vcpu:prio (3:8) run on unikernel 2 on pcpu 1.
+AVISOR INFO: vcpu:prio (3:8) run on unikernel 1 on pcpu 0.
+AVISOR INFO: TIME: 1882742274 vm id 2 vcpu id 3 pcpu id 1
+AVISOR INFO: TIME: 1882747070 vm id 1 vcpu id 3 pcpu id 0
+task3! 13
+task3! 13
+task3! 14
+task3! 14
+task3! 15
+task3! 15
+task3! 16
+task3! 16
+AVISOR INFO: TIME IRQ 63
+AVISOR INFO: TIME IRQ 64
+AVISOR INFO: VM need reschedule, call bfs_scheduler and bmq_scheduler cpu:1
+AVISOR INFO: VM need reschedule, call bfs_scheduler and bmq_scheduler cpu:0
+AVISOR INFO: bfs scheduler latency: 176
+AVISOR INFO: unikernel 0 will run on pcpu 1.
+AVISOR INFO: bfs scheduler latency: 24
+AVISOR INFO: bmq scheduler latency: 132
+AVISOR INFO: unikernel 3 will run on pcpu 0.
+AVISOR INFO: vcpu:prio (3:0) run on unikernel 0 on pcpu 1.
+AVISOR INFO: bmq scheduler latency: 143
+AVISOR INFO: TIME: 1945335139 vm id 0 vcpu id 3 pcpu id 1
+AVISOR INFO: vcpu:prio (0:9) run on unikernel 3 on pcpu 0.
+AVISOR INFO: TIME: 1945348964 vm id 3 vcpu id 0 pcpu id 0
+main 13
+main 14
+main 15
+main 16
+AVISOR INFO: TIME IRQ 65
+AVISOR INFO: TIME IRQ 66
+AVISOR INFO: VCPU need reschedule, call bmq_scheduler cpu:0
+AVISOR INFO: VCPU need reschedule, call bmq_scheduler cpu:1
+AVISOR INFO: bmq scheduler latency: 186
+AVISOR INFO: bmq scheduler latency: 1525
+AVISOR INFO: vcpu:prio (1:9) run on unikernel 3 on pcpu 0.
+AVISOR INFO: vcpu:prio (1:9) run on unikernel 0 on pcpu 1.
+AVISOR INFO: TIME: 2007890461 vm id 3 vcpu id 1 pcpu id 0
+AVISOR INFO: TIME: 2007903166 vm id 0 vcpu id 1 pcpu id 1
+task1! 17
+task1! 17
+task1! 18
+task1! 18
+task1! 19
+task1! 19
+task1! 20
+task1! 20
+task1! 21
+task1! 21
+AVISOR INFO: TIME IRQ 68
+AVISOR INFO: TIME IRQ 67
+AVISOR INFO: VCPU need reschedule, call bmq_scheduler cpu:0
+AVISOR INFO: VCPU need reschedule, call bmq_scheduler cpu:1
+AVISOR INFO: bmq scheduler latency: 2433
+AVISOR INFO: bmq scheduler latency: 170
+AVISOR INFO: vcpu:prio (2:9) run on unikernel 3 on pcpu 0.
+AVISOR INFO: vcpu:prio (2:9) run on unikernel 0 on pcpu 1.
+AVISOR INFO: TIME: 2070461956 vm id 3 vcpu id 2 pcpu id 0
+AVISOR INFO: TIME: 2070469064 vm id 0 vcpu id 2 pcpu id 1
+task2! 17
+task2! 17
+task2! 18
+task2! 18
+task2! 19
+task2! 19
+task2! 20
+task2! 20
+task2! 21
+AVISOR INFO: TIME IRQ 69
+AVISOR INFO: TIME IRQ 70
+AVISOR INFO: VCPU need reschedule, call bmq_scheduler cpu:0
+AVISOR INFO: VCPU need reschedule, call bmq_scheduler cpu:1
+AVISOR INFO: bmq scheduler latency: 1751
+AVISOR INFO: bmq scheduler latency: 120
+AVISOR INFO: vcpu:prio (3:9) run on unikernel 3 on pcpu 0.
+AVISOR INFO: vcpu:prio (0:9) run on unikernel 0 on pcpu 1.
+AVISOR INFO: TIME: 2133032323 vm id 3 vcpu id 3 pcpu id 0
+AVISOR INFO: TIME: 2133037124 vm id 0 vcpu id 0 pcpu id 1
+main 17
+task3! 18
+main 18
+task3! 19
+main 19
+task3! 20
+main 20
+task3! 21
+main 21
+AVISOR INFO: TIME IRQ 71
+AVISOR INFO: TIME IRQ 72
+AVISOR INFO: VM need reschedule, call bfs_scheduler and bmq_scheduler cpu:0
+AVISOR INFO: VM need reschedule, call bfs_scheduler and bmq_scheduler cpu:1
+AVISOR INFO: bfs scheduler latency: 55
+AVISOR INFO: unikernel 1 will run on pcpu 0.
+AVISOR INFO: bfs scheduler latency: 28
+AVISOR INFO: bmq scheduler latency: 6348
+AVISOR INFO: unikernel 2 will run on pcpu 1.
+AVISOR INFO: vcpu:prio (0:9) run on unikernel 1 on pcpu 0.
+AVISOR INFO: bmq scheduler latency: 113
+AVISOR INFO: TIME: 2195677516 vm id 1 vcpu id 0 pcpu id 0
+AVISOR INFO: vcpu:prio (0:9) run on unikernel 2 on pcpu 1.
+AVISOR INFO: TIME: 2195689805 vm id 2 vcpu id 0 pcpu id 1
+main 17
+main 17
+main 18
+main 18
+main 19
+main 19
+main 20
+main 20
+AVISOR INFO: TIME IRQ 74
+AVISOR INFO: TIME IRQ 73
+AVISOR INFO: VCPU need reschedule, call bmq_scheduler cpu:1
+AVISOR INFO: VCPU need reschedule, call bmq_scheduler cpu:0
+AVISOR INFO: bmq scheduler latency: 8281
+AVISOR INFO: bmq scheduler latency: 77
+AVISOR INFO: vcpu:prio (1:9) run on unikernel 2 on pcpu 1.
+AVISOR INFO: vcpu:prio (1:9) run on unikernel 1 on pcpu 0.
+AVISOR INFO: TIME: 2258237653 vm id 2 vcpu id 1 pcpu id 1
+AVISOR INFO: TIME: 2258242816 vm id 1 vcpu id 1 pcpu id 0
+task1! 17
+task1! 17
+task1! 18
+task1! 18
+task1! 19
+task1! 19
+task1! 20
+task1! 20
+AVISOR INFO: TIME IRQ 75
+AVISOR INFO: TIME IRQ 76
+AVISOR INFO: VCPU need reschedule, call bmq_scheduler cpu:0
+AVISOR INFO: VCPU need reschedule, call bmq_scheduler cpu:1
+AVISOR INFO: bmq scheduler latency: 2392
+AVISOR INFO: bmq scheduler latency: 2450
+AVISOR INFO: vcpu:prio (2:9) run on unikernel 1 on pcpu 0.
+AVISOR INFO: vcpu:prio (2:9) run on unikernel 2 on pcpu 1.
+AVISOR INFO: TIME: 2320793680 vm id 1 vcpu id 2 pcpu id 0
+AVISOR INFO: TIME: 2320798846 vm id 2 vcpu id 2 pcpu id 1
+task2! 17
+task2! 17
+task2! 18
+task2! 18
+task2! 19
+task2! 19
+task2! 20
+task2! 20
+AVISOR INFO: TIME IRQ 77
+AVISOR INFO: TIME IRQ 78
+AVISOR INFO: VCPU need reschedule, call bmq_scheduler cpu:1
+AVISOR INFO: VCPU need reschedule, call bmq_scheduler cpu:0
+AVISOR INFO: bmq scheduler latency: 44
+AVISOR INFO: bmq scheduler latency: 328
+AVISOR INFO: vcpu:prio (3:9) run on unikernel 1 on pcpu 0.
+AVISOR INFO: vcpu:prio (3:9) run on unikernel 2 on pcpu 1.
+AVISOR INFO: TIME: 2383376713 vm id 1 vcpu id 3 pcpu id 0
+AVISOR INFO: TIME: 2383384032 vm id 2 vcpu id 3 pcpu id 1
+task3! 17
+task3! 17
+task3! 18
+task3! 18
+task3! 19
+task3! 19
+task3! 20
+task3! 20
+task3! 21
+AVISOR INFO: TIME IRQ 79
+AVISOR INFO: TIME IRQ 80
+AVISOR INFO: VM need reschedule, call bfs_scheduler and bmq_scheduler cpu:0
+AVISOR INFO: VM need reschedule, call bfs_scheduler and bmq_scheduler cpu:1
+AVISOR INFO: bfs scheduler latency: 202
+AVISOR INFO: unikernel 0 will run on pcpu 0.
+AVISOR INFO: bfs scheduler latency: 28
+AVISOR INFO: unikernel 3 will run on pcpu 1.
+AVISOR INFO: bmq scheduler latency: 73
+AVISOR INFO: bmq scheduler latency: 180
+AVISOR INFO: vcpu:prio (3:0) run on unikernel 0 on pcpu 0.
+AVISOR INFO: vcpu:prio (0:9) run on unikernel 3 on pcpu 1.
+AVISOR INFO: TIME: 2445970631 vm id 0 vcpu id 3 pcpu id 0
+AVISOR INFO: TIME: 2445982223 vm id 3 vcpu id 0 pcpu id 1
+main 17
+main 18
+main 19
+main 20
+main 21
+AVISOR INFO: TIME IRQ 81
+AVISOR INFO: TIME IRQ 82
+AVISOR INFO: VCPU need reschedule, call bmq_scheduler cpu:1
+AVISOR INFO: VCPU need reschedule, call bmq_scheduler cpu:0
+AVISOR INFO: bmq scheduler latency: 161
+AVISOR INFO: bmq scheduler latency: 80
+AVISOR INFO: vcpu:prio (1:9) run on unikernel 3 on pcpu 1.
+AVISOR INFO: vcpu:prio (1:9) run on unikernel 0 on pcpu 0.
+AVISOR INFO: TIME: 2508515765 vm id 3 vcpu id 1 pcpu id 1
+AVISOR INFO: TIME: 2508533016 vm id 0 vcpu id 1 pcpu id 0
+task1! 22
+task1! 22
+tastask1!k 23
+1! 23
+task1! 24
+task1! 24
+task1! 25
+task1! 25
+AVISOR INFO: TIME IRQ 83
+AVISOR INFO: TIME IRQ 84
+AVISOR INFO: VCPU need reschedule, call bmq_scheduler cpu:1
+AVISOR INFO: VCPU need reschedule, call bmq_scheduler cpu:0
+AVISOR INFO: bmq scheduler latency: 195
+AVISOR INFO: bmq scheduler latency: 3337
+AVISOR INFO: vcpu:prio (2:9) run on unikernel 3 on pcpu 1.
+AVISOR INFO: vcpu:prio (2:9) run on unikernel 0 on pcpu 0.
+AVISOR INFO: TIME: 2571094094 vm id 3 vcpu id 2 pcpu id 1
+AVISOR INFO: TIME: 2571099409 vm id 0 vcpu id 2 pcpu id 0
+task2! 21
+task2! 22
+task2! 22
+task2! 23
+task2! 23
+task2! 24
+task2! 24
+task2! 25
+task2! 25
+AVISOR INFO: TIME IRQ 85
+AVISOR INFO: TIME IRQ 86
+AVISOR INFO: VCPU need reschedule, call bmq_scheduler cpu:1
+AVISOR INFO: VCPU need reschedule, call bmq_scheduler cpu:0
+AVISOR INFO: bmq scheduler latency: 2046
+AVISOR INFO: bmq scheduler latency: 165
+AVISOR INFO: vcpu:prio (3:9) run on unikernel 3 on pcpu 1.
+AVISOR INFO: vcpu:prio (0:9) run on unikernel 0 on pcpu 0.
+AVISOR INFO: TIME: 2633656738 vm id 3 vcpu id 3 pcpu id 1
+AVISOR INFO: TIME: 2633662569 vm id 0 vcpu id 0 pcpu id 0
+task3! 22
+main 22
+task3! 23
+main 23
+task3! 24
+main 24
+task3! 25
+main 25
+task3! 26
+main 26
+AVISOR INFO: TIME IRQ 87
+AVISOR INFO: TIME IRQ 88
+AVISOR INFO: VM need reschedule, call bfs_scheduler and bmq_scheduler cpu:1
+AVISOR INFO: VM need reschedule, call bfs_scheduler and bmq_scheduler cpu:0
+AVISOR INFO: bfs scheduler latency: 145
+AVISOR INFO: unikernel 2 will run on pcpu 1.
+AVISOR INFO: bfs scheduler latency: 24
+AVISOR INFO: bmq scheduler latency: 307
+AVISOR INFO: unikernel 1 will run on pcpu 0.
+AVISOR INFO: vcpu:prio (0:9) run on unikernel 2 on pcpu 1.
+AVISOR INFO: bmq scheduler latency: 66
+AVISOR INFO: TIME: 2696245145 vm id 2 vcpu id 0 pcpu id 1
+AVISOR INFO: vcpu:prio (0:9) run on unikernel 1 on pcpu 0.
+AVISOR INFO: TIME: 2696261210 vm id 1 vcpu id 0 pcpu id 0
+main 21
+main 21
+main 22
+main 22
+main 23
+main 23
+main 24
+main 24
+main 25
+main 25
+AVISOR INFO: TIME IRQ 89
+AVISOR INFO: TIME IRQ 90
+AVISOR INFO: VCPU need reschedule, call bmq_scheduler cpu:0
+AVISOR INFO: VCPU need reschedule, call bmq_scheduler cpu:1
+AVISOR INFO: bmq scheduler latency: 203
+AVISOR INFO: bmq scheduler latency: 1367
+AVISOR INFO: vcpu:prio (1:9) run on unikernel 1 on pcpu 0.
+AVISOR INFO: vcpu:prio (1:9) run on unikernel 2 on pcpu 1.
+AVISOR INFO: TIME: 2758803167 vm id 1 vcpu id 1 pcpu id 0
+AVISOR INFO: TIME: 2758808418 vm id 2 vcpu id 1 pcpu id 1
+task1! 21
+task1! 21
+task1! 22
+task1! 22
+task1! 23
+task1! 23
+task1! 24
+task1! 24
+AVISOR INFO: TIME IRQ 91
+AVISOR INFO: TIME IRQ 92
+AVISOR INFO: VCPU need reschedule, call bmq_scheduler cpu:0
+AVISOR INFO: VCPU need reschedule, call bmq_scheduler cpu:1
+AVISOR INFO: bmq scheduler latency: 205
+AVISOR INFO: bmq scheduler latency: 166
+AVISOR INFO: vcpu:prio (2:9) run on unikernel 1 on pcpu 0.
+AVISOR INFO: vcpu:prio (2:9) run on unikernel 2 on pcpu 1.
+AVISOR INFO: TIME: 2821406972 vm id 1 vcpu id 2 pcpu id 0
+AVISOR INFO: TIME: 2821411887 vm id 2 vcpu id 2 pcpu id 1
+task2! 21
+task2! 21
+task2! 22
+task2! 22
+task2! 23
+task2! 23
+task2! 24
+task2! 24
+task2! 25
+task2! 25
+AVISOR INFO: TIME IRQ 93
+AVISOR INFO: TIME IRQ 94
+AVISOR INFO: VCPU need reschedule, call bmq_scheduler cpu:0
+AVISOR INFO: VCPU need reschedule, call bmq_scheduler cpu:1
+AVISOR INFO: bmq scheduler latency: 3020
+AVISOR INFO: bmq scheduler latency: 275
+AVISOR INFO: vcpu:prio (3:9) run on unikernel 1 on pcpu 0.
+AVISOR INFO: vcpu:prio (3:9) run on unikernel 2 on pcpu 1.
+AVISOR INFO: TIME: 2883947206 vm id 1 vcpu id 3 pcpu id 0
+AVISOR INFO: TIME: 2883957298 vm id 2 vcpu id 3 pcpu id 1
+task3! 21
+task3! 22
+task3! 22
+task3! 23
+task3! 23
+task3! 24
+task3! 24
+task3! 25
+task3! 25
+AVISOR INFO: TIME IRQ 96
+AVISOR INFO: TIME IRQ 95
+AVISOR INFO: VM need reschedule, call bfs_scheduler and bmq_scheduler cpu:1
+AVISOR INFO: VM need reschedule, call bfs_scheduler and bmq_scheduler cpu:0
+AVISOR INFO: bfs scheduler latency: 2870
+AVISOR INFO: unikernel 0 will run on pcpu 1.
+AVISOR INFO: bfs scheduler latency: 22
+AVISOR INFO: bmq scheduler latency: 295
+AVISOR INFO: unikernel 3 will run on pcpu 0.
+AVISOR INFO: vcpu:prio (3:1) run on unikernel 0 on pcpu 1.
+AVISOR INFO: bmq scheduler latency: 136
+AVISOR INFO: TIME: 2946543047 vm id 0 vcpu id 3 pcpu id 1
+AVISOR INFO: vcpu:prio (0:9) run on unikernel 3 on pcpu 0.
+AVISOR INFO: TIME: 2946557956 vm id 3 vcpu id 0 pcpu id 0
+main 22
+main 23
+main 24
+main 25
+AVISOR INFO: TIME IRQ 97
+AVISOR INFO: TIME IRQ 98
+AVISOR INFO: VCPU need reschedule, call bmq_scheduler cpu:0
+AVISOR INFO: VCPU need reschedule, call bmq_scheduler cpu:1
+AVISOR INFO: bmq scheduler latency: 413
+AVISOR INFO: bmq scheduler latency: 152
+AVISOR INFO: vcpu:prio (1:9) run on unikernel 3 on pcpu 0.
+AVISOR INFO: vcpu:prio (1:9) run on unikernel 0 on pcpu 1.
+AVISOR INFO: TIME: 3009089715 vm id 3 vcpu id 1 pcpu id 0
+AVISOR INFO: TIME: 3009094891 vm id 0 vcpu id 1 pcpu id 1
+task1! 26
+task1! 26
+task1! 27
+task1! 27
+task1! 28
+task1! 28
+task1! 29
+task1! 29
+task1! 30
+task1! 30
+AVISOR INFO: TIME IRQ 99
+AVISOR INFO: TIME IRQ 100
+AVISOR INFO: VCPU need reschedule, call bmq_scheduler cpu:0
+AVISOR INFO: VCPU need reschedule, call bmq_scheduler cpu:1
+AVISOR INFO: bmq scheduler latency: 606
+AVISOR INFO: bmq scheduler latency: 161
+AVISOR INFO: vcpu:prio (2:9) run on unikernel 3 on pcpu 0.
+AVISOR INFO: vcpu:prio (2:9) run on unikernel 0 on pcpu 1.
+AVISOR INFO: TIME: 3071664994 vm id 3 vcpu id 2 pcpu id 0
+AVISOR INFO: TIME: 3071673570 vm id 0 vcpu id 2 pcpu id 1
+task2! 26
+task2! 26
+task2! 27
+task2! 27
+task2! 28
+task2! 28
+task2! 29
+task2! 29
+AVISOR INFO: TIME IRQ 102
+AVISOR INFO: TIME IRQ 101
+AVISOR INFO: VCPU need reschedule, call bmq_scheduler cpu:0
+AVISOR INFO: VCPU need reschedule, call bmq_scheduler cpu:1
+AVISOR INFO: bmq scheduler latency: 4927
+AVISOR INFO: bmq scheduler latency: 402
+AVISOR INFO: vcpu:prio (3:9) run on unikernel 3 on pcpu 0.
+AVISOR INFO: vcpu:prio (0:9) run on unikernel 0 on pcpu 1.
+AVISOR INFO: TIME: 3134248169 vm id 3 vcpu id 3 pcpu id 0
+AVISOR INFO: TIME: 3134255137 vm id 0 vcpu id 0 pcpu id 1
+task3! 27
+main 27
+task3! 28
+main 28
+task3! 29
+main 29
+task3! 30
+main 30
+AVISOR INFO: TIME IRQ 103
+AVISOR INFO: TIME IRQ 104
+AVISOR INFO: VM need reschedule, call bfs_scheduler and bmq_scheduler cpu:0
+AVISOR INFO: VM need reschedule, call bfs_scheduler and bmq_scheduler cpu:1
+AVISOR INFO: bfs scheduler latency: 4900
+AVISOR INFO: unikernel 1 will run on pcpu 0.
+AVISOR INFO: bfs scheduler latency: 17
+AVISOR INFO: bmq scheduler latency: 593
+AVISOR INFO: unikernel 2 will run on pcpu 1.
+AVISOR INFO: vcpu:prio (0:9) run on unikernel 1 on pcpu 0.
+AVISOR INFO: bmq scheduler latency: 167
+AVISOR INFO: TIME: 3196841005 vm id 1 vcpu id 0 pcpu id 0
+AVISOR INFO: vcpu:prio (0:9) run on unikernel 2 on pcpu 1.
+AVISOR INFO: TIME: 3196856846 vm id 2 vcpu id 0 pcpu id 1
+main 26
+main 26
+main 27
+main 27
+main 28
+main 28
+main 29
+main 29
+AVISOR INFO: TIME IRQ 105
+AVISOR INFO: TIME IRQ 106
+AVISOR INFO: VCPU need reschedule, call bmq_scheduler cpu:1
+AVISOR INFO: VCPU need reschedule, call bmq_scheduler cpu:0
+AVISOR INFO: bmq scheduler latency: 97
+AVISOR INFO: bmq scheduler latency: 274
+AVISOR INFO: vcpu:prio (1:9) run on unikernel 2 on pcpu 1.
+AVISOR INFO: vcpu:prio (1:9) run on unikernel 1 on pcpu 0.
+AVISOR INFO: TIME: 3259397592 vm id 2 vcpu id 1 pcpu id 1
+AVISOR INFO: TIME: 3259406805 vm id 1 vcpu id 1 pcpu id 0
+task1! 25
+task1! 25
+task1! 26
+task1! 26
+task1! 27
+task1! 27
+task1! 28
+task1! 28
+AVISOR INFO: TIME IRQ 107
+AVISOR INFO: TIME IRQ 108
+AVISOR INFO: VCPU need reschedule, call bmq_scheduler cpu:1
+AVISOR INFO: VCPU need reschedule, call bmq_scheduler cpu:0
+AVISOR INFO: bmq scheduler latency: 2449
+AVISOR INFO: bmq scheduler latency: 160
+AVISOR INFO: vcpu:prio (2:9) run on unikernel 2 on pcpu 1.
+AVISOR INFO: vcpu:prio (2:9) run on unikernel 1 on pcpu 0.
+AVISOR INFO: TIME: 3321972532 vm id 2 vcpu id 2 pcpu id 1
+AVISOR INFO: TIME: 3321978184 vm id 1 vcpu id 2 pcpu id 0
+tatasks2!k 262! 26
+
+task2! 27
+task2! 27
+task2! 28
+task2! 28
+task2! 29
+task2! 29
+AVISOR INFO: TIME IRQ 110
+AVISOR INFO: TIME IRQ 109
+AVISOR INFO: VCPU need reschedule, call bmq_scheduler cpu:1
+AVISOR INFO: VCPU need reschedule, call bmq_scheduler cpu:0
+AVISOR INFO: bmq scheduler latency: 188
+AVISOR INFO: bmq scheduler latency: 601
+AVISOR INFO: vcpu:prio (3:9) run on unikernel 2 on pcpu 1.
+AVISOR INFO: vcpu:prio (3:9) run on unikernel 1 on pcpu 0.
+AVISOR INFO: TIME: 3384553245 vm id 2 vcpu id 3 pcpu id 1
+AVISOR INFO: TIME: 3384558442 vm id 1 vcpu id 3 pcpu id 0
+task3! 26
+task3! 26
+task3! 27
+task3! 27
+task3! 28
+task3! 28
+task3! 29
+task3! 29
+AVISOR INFO: TIME IRQ 112
+AVISOR INFO: TIME IRQ 111
+AVISOR INFO: VM need reschedule, call bfs_scheduler and bmq_scheduler cpu:0
+AVISOR INFO: VM need reschedule, call bfs_scheduler and bmq_scheduler cpu:1
+AVISOR INFO: bfs scheduler latency: 1001
+AVISOR INFO: unikernel 0 will run on pcpu 0.
+AVISOR INFO: bfs scheduler latency: 34
+AVISOR INFO: bmq scheduler latency: 2177
+AVISOR INFO: unikernel 3 will run on pcpu 1.
+AVISOR INFO: vcpu:prio (3:1) run on unikernel 0 on pcpu 0.
+AVISOR INFO: bmq scheduler latency: 1738
+AVISOR INFO: TIME: 3447159759 vm id 0 vcpu id 3 pcpu id 0
+AVISOR INFO: vcpu:prio (0:9) run on unikernel 3 on pcpu 1.
+AVISOR INFO: TIME: 3447182357 vm id 3 vcpu id 0 pcpu id 1
+main 26
+main 27
+main 28
+main 29
+AVISOR INFO: TIME IRQ 113
+AVISOR INFO: TIME IRQ 114
+AVISOR INFO: VCPU need reschedule, call bmq_scheduler cpu:0
+AVISOR INFO: VCPU need reschedule, call bmq_scheduler cpu:1
+AVISOR INFO: bmq scheduler latency: 2073
+AVISOR INFO: bmq scheduler latency: 254
+AVISOR INFO: vcpu:prio (1:9) run on unikernel 0 on pcpu 0.
+AVISOR INFO: vcpu:prio (1:9) run on unikernel 3 on pcpu 1.
+AVISOR INFO: TIME: 3509704789 vm id 0 vcpu id 1 pcpu id 0
+AVISOR INFO: TIME: 3509712064 vm id 3 vcpu id 1 pcpu id 1
+task1! 31
+task1! 31
+task1! 32
+task1! 32
+task1! 33
+task1! 33
+task1! 34
+task1! 34
+AVISOR INFO: TIME IRQ 115
+AVISOR INFO: TIME IRQ 116
+AVISOR INFO: VCPU need reschedule, call bmq_scheduler cpu:1
+AVISOR INFO: VCPU need reschedule, call bmq_scheduler cpu:0
+AVISOR INFO: bmq scheduler latency: 488
+AVISOR INFO: bmq scheduler latency: 182
+AVISOR INFO: vcpu:prio (2:9) run on unikernel 3 on pcpu 1.
+AVISOR INFO: vcpu:prio (2:9) run on unikernel 0 on pcpu 0.
+AVISOR INFO: TIME: 3572282128 vm id 3 vcpu id 2 pcpu id 1
+AVISOR INFO: TIME: 3572291904 vm id 0 vcpu id 2 pcpu id 0
+task2! 30
+task2! 30
+task2! 31
+task2! 31
+task2! 32
+task2! 32
+task2! 33
+task2! 33
+task2! 34
+AVISOR INFO: TIME IRQ 117
+AVISOR INFO: TIME IRQ 118
+AVISOR INFO: VCPU need reschedule, call bmq_scheduler cpu:1
+AVISOR INFO: VCPU need reschedule, call bmq_scheduler cpu:0
+AVISOR INFO: bmq scheduler latency: 3949
+AVISOR INFO: bmq scheduler latency: 176
+AVISOR INFO: vcpu:prio (3:9) run on unikernel 3 on pcpu 1.
+AVISOR INFO: vcpu:prio (0:9) run on unikernel 0 on pcpu 0.
+AVISOR INFO: TIME: 3634863496 vm id 3 vcpu id 3 pcpu id 1
+AVISOR INFO: TIME: 3634868910 vm id 0 vcpu id 0 pcpu id 0
+task3! 31
+main 31
+task3! 32
+main 32
+task3! 33
+main 33
+task3! 34
+main 34
+task3! 35
+main 35
+AVISOR INFO: TIME IRQ 119
+AVISOR INFO: TIME IRQ 120
+AVISOR INFO: VM need reschedule, call bfs_scheduler and bmq_scheduler cpu:1
+AVISOR INFO: VM need reschedule, call bfs_scheduler and bmq_scheduler cpu:0
+AVISOR INFO: bfs scheduler latency: 128
+AVISOR INFO: unikernel 2 will run on pcpu 1.
+AVISOR INFO: bfs scheduler latency: 21
+AVISOR INFO: bmq scheduler latency: 1329
+AVISOR INFO: unikernel 1 will run on pcpu 0.
+AVISOR INFO: vcpu:prio (0:9) run on unikernel 2 on pcpu 1.
+AVISOR INFO: bmq scheduler latency: 2515
+AVISOR INFO: TIME: 3697452457 vm id 2 vcpu id 0 pcpu id 1
+AVISOR INFO: vcpu:prio (0:9) run on unikernel 1 on pcpu 0.
+AVISOR INFO: TIME: 3697465803 vm id 1 vcpu id 0 pcpu id 0
+main 30
+main 30
+main 31
+main 31
+main 32
+main 32
+main 33
+main 33
+AVISOR INFO: TIME IRQ 121
+AVISOR INFO: TIME IRQ 122
+AVISOR INFO: VCPU need reschedule, call bmq_scheduler cpu:0
+AVISOR INFO: VCPU need reschedule, call bmq_scheduler cpu:1
+AVISOR INFO: bmq scheduler latency: 171
+AVISOR INFO: bmq scheduler latency: 163
+AVISOR INFO: vcpu:prio (1:9) run on unikernel 1 on pcpu 0.
+AVISOR INFO: vcpu:prio (1:9) run on unikernel 2 on pcpu 1.
+AVISOR INFO: TIME: 3760012805 vm id 1 vcpu id 1 pcpu id 0
+AVISOR INFO: TIME: 3760020978 vm id 2 vcpu id 1 pcpu id 1
+task1! 29
+task1! 29
+task1! 30
+task1! 30
+task1! 31
+task1! 31
+task1! 32
+task1! 32
+task1! 33
+task1! 33
+AVISOR INFO: TIME IRQ 123
+AVISOR INFO: TIME IRQ 124
+AVISOR INFO: VCPU need reschedule, call bmq_scheduler cpu:1
+AVISOR INFO: VCPU need reschedule, call bmq_scheduler cpu:0
+AVISOR INFO: bmq scheduler latency: 152
+AVISOR INFO: bmq scheduler latency: 489
+AVISOR INFO: vcpu:prio (2:9) run on unikernel 2 on pcpu 1.
+AVISOR INFO: vcpu:prio (2:9) run on unikernel 1 on pcpu 0.
+AVISOR INFO: TIME: 3822583818 vm id 2 vcpu id 2 pcpu id 1
+AVISOR INFO: TIME: 3822589340 vm id 1 vcpu id 2 pcpu id 0
+task2! 30
+task2! 30
+task2! 31
+task2! 31
+task2! 32
+task2! 32
+task2! 33
+task2! 33
+task2! 34
+task2! 34
+AVISOR INFO: TIME IRQ 125
+AVISOR INFO: TIME IRQ 126
+AVISOR INFO: VCPU need reschedule, call bmq_scheduler cpu:0
+AVISOR INFO: VCPU need reschedule, call bmq_scheduler cpu:1
+AVISOR INFO: bmq scheduler latency: 225
+AVISOR INFO: bmq scheduler latency: 194
+AVISOR INFO: vcpu:prio (3:9) run on unikernel 1 on pcpu 0.
+AVISOR INFO: vcpu:prio (3:9) run on unikernel 2 on pcpu 1.
+AVISOR INFO: TIME: 3885165438 vm id 1 vcpu id 3 pcpu id 0
+AVISOR INFO: TIME: 3885172482 vm id 2 vcpu id 3 pcpu id 1
+task3! 30
+task3! 30
+task3! 31
+task3! 31
+task3! 32
+task3! 32
+task3! 33
+task3! 33
+task3! 34
+task3! 34
+AVISOR INFO: TIME IRQ 127
+AVISOR INFO: TIME IRQ 128
+AVISOR INFO: VM need reschedule, call bfs_scheduler and bmq_scheduler cpu:1
+AVISOR INFO: VM need reschedule, call bfs_scheduler and bmq_scheduler cpu:0
+AVISOR INFO: bfs scheduler latency: 174
+AVISOR INFO: unikernel 0 will run on pcpu 1.
+AVISOR INFO: bfs scheduler latency: 24
+AVISOR INFO: bmq scheduler latency: 921
+AVISOR INFO: unikernel 3 will run on pcpu 0.
+AVISOR INFO: vcpu:prio (3:0) run on unikernel 0 on pcpu 1.
+AVISOR INFO: bmq scheduler latency: 1493
+AVISOR INFO: TIME: 3947749839 vm id 0 vcpu id 3 pcpu id 1
+AVISOR INFO: vcpu:prio (0:9) run on unikernel 3 on pcpu 0.
+AVISOR INFO: TIME: 3947764526 vm id 3 vcpu id 0 pcpu id 0
+main 30
+main 31
+main 32
+main 33
+main 34
+AVISOR INFO: TIME IRQ 129
+AVISOR INFO: TIME IRQ 130
+AVISOR INFO: VCPU need reschedule, call bmq_scheduler cpu:0
+AVISOR INFO: VCPU need reschedule, call bmq_scheduler cpu:1
+AVISOR INFO: bmq scheduler latency: 1942
+AVISOR INFO: bmq scheduler latency: 265
+AVISOR INFO: vcpu:prio (1:9) run on unikernel 3 on pcpu 0.
+AVISOR INFO: vcpu:prio (1:9) run on unikernel 0 on pcpu 1.
+AVISOR INFO: TIME: 4010309094 vm id 3 vcpu id 1 pcpu id 0
+AVISOR INFO: TIME: 4010314606 vm id 0 vcpu id 1 pcpu id 1
+task1! 35
+task1! 35
+task1! 36
+task1! 36
+task1! 37
+task1! 37
+task1! 38
+task1! 38
+AVISOR INFO: TIME IRQ 131
+AVISOR INFO: TIME IRQ 132
+AVISOR INFO: VCPU need reschedule, call bmq_scheduler cpu:1
+AVISOR INFO: VCPU need reschedule, call bmq_scheduler cpu:0
+AVISOR INFO: bmq scheduler latency: 80
+AVISOR INFO: bmq scheduler latency: 26
+AVISOR INFO: vcpu:prio (2:9) run on unikernel 0 on pcpu 1.
+AVISOR INFO: vcpu:prio (2:9) run on unikernel 3 on pcpu 0.
+AVISOR INFO: TIME: 4072911942 vm id 0 vcpu id 2 pcpu id 1
+AVISOR INFO: TIME: 4072922851 vm id 3 vcpu id 2 pcpu id 0
+task2! 34
+task2! 35
+task2! 35
+task2! 36
+task2! 36
+task2! 37
+task2! 37
+task2! 38
+task2! 38
+AVISOR INFO: TIME IRQ 133
+AVISOR INFO: TIME IRQ 134
+AVISOR INFO: VCPU need reschedule, call bmq_scheduler cpu:0
+AVISOR INFO: VCPU need reschedule, call bmq_scheduler cpu:1
+AVISOR INFO: bmq scheduler latency: 1180
+AVISOR INFO: bmq scheduler latency: 130
+AVISOR INFO: vcpu:prio (3:9) run on unikernel 3 on pcpu 0.
+AVISOR INFO: vcpu:prio (0:9) run on unikernel 0 on pcpu 1.
+AVISOR INFO: TIME: 4135456141 vm id 3 vcpu id 3 pcpu id 0
+AVISOR INFO: TIME: 4135462356 vm id 0 vcpu id 0 pcpu id 1
+task3! 36
+main 36
+task3! 37
+main 37
+task3! 38
+main 38
+task3! 39
+main 39
+AVISOR INFO: TIME IRQ 135
+AVISOR INFO: TIME IRQ 136
+AVISOR INFO: VM need reschedule, call bfs_scheduler and bmq_scheduler cpu:0
+AVISOR INFO: VM need reschedule, call bfs_scheduler and bmq_scheduler cpu:1
+AVISOR INFO: bfs scheduler latency: 146
+AVISOR INFO: unikernel 1 will run on pcpu 0.
+AVISOR INFO: bfs scheduler latency: 20
+AVISOR INFO: bmq scheduler latency: 221
+AVISOR INFO: unikernel 2 will run on pcpu 1.
+AVISOR INFO: vcpu:prio (0:9) run on unikernel 1 on pcpu 0.
+AVISOR INFO: bmq scheduler latency: 2047
+AVISOR INFO: TIME: 4198050101 vm id 1 vcpu id 0 pcpu id 0
+AVISOR INFO: vcpu:prio (0:9) run on unikernel 2 on pcpu 1.
+AVISOR INFO: TIME: 4198063987 vm id 2 vcpu id 0 pcpu id 1
+main 34
+main 34
+main 35
+main 35
+main 36
+main 36
+main 37
+main 37
+main 38
+main 38
+AVISOR INFO: TIME IRQ 137
+AVISOR INFO: TIME IRQ 138
+AVISOR INFO: VCPU need reschedule, call bmq_scheduler cpu:1
+AVISOR INFO: VCPU need reschedule, call bmq_scheduler cpu:0
+AVISOR INFO: bmq scheduler latency: 192
+AVISOR INFO: bmq scheduler latency: 72
+AVISOR INFO: vcpu:prio (1:9) run on unikernel 2 on pcpu 1.
+AVISOR INFO: vcpu:prio (1:9) run on unikernel 1 on pcpu 0.
+AVISOR INFO: TIME: 4260605595 vm id 2 vcpu id 1 pcpu id 1
+AVISOR INFO: TIME: 4260617666 vm id 1 vcpu id 1 pcpu id 0
+task1! 34
+task1! 34
+task1! 35
+task1! 35
+task1! 36
+task1! 36
+task1! 37
+task1! 37
+AVISOR INFO: TIME IRQ 139
+AVISOR INFO: TIME IRQ 140
+AVISOR INFO: VCPU need reschedule, call bmq_scheduler cpu:1
+AVISOR INFO: VCPU need reschedule, call bmq_scheduler cpu:0
+AVISOR INFO: bmq scheduler latency: 67
+AVISOR INFO: bmq scheduler latency: 104
+AVISOR INFO: vcpu:prio (2:9) run on unikernel 2 on pcpu 1.
+AVISOR INFO: vcpu:prio (2:9) run on unikernel 1 on pcpu 0.
+AVISOR INFO: TIME: 28214253 vm id 2 vcpu id 2 pcpu id 1
+AVISOR INFO: TIME: 28227089 vm id 1 vcpu id 2 pcpu id 0
+task2! 35
+task2! 35
+task2! 36
+task2! 36
+task2! 37
+task2! 37
+task2! 38
+task2! 38
+AVISOR INFO: TIME IRQ 141
+AVISOR INFO: TIME IRQ 142
+AVISOR INFO: VCPU need reschedule, call bmq_scheduler cpu:0
+AVISOR INFO: VCPU need reschedule, call bmq_scheduler cpu:1
+AVISOR INFO: bmq scheduler latency: 3633
+AVISOR INFO: bmq scheduler latency: 165
+AVISOR INFO: vcpu:prio (3:9) run on unikernel 1 on pcpu 0.
+AVISOR INFO: vcpu:prio (3:9) run on unikernel 2 on pcpu 1.
+AVISOR INFO: TIME: 90799609 vm id 1 vcpu id 3 pcpu id 0
+AVISOR INFO: TIME: 90811021 vm id 2 vcpu id 3 pcpu id 1
+task3! 35
+task3! 35
+task3! 36
+task3! 36
+task3! 37
+task3! 37
+task3! 38
+task3! 38
+AVISOR INFO: TIME IRQ 144
+AVISOR INFO: TIME IRQ 143
+AVISOR INFO: VM need reschedule, call bfs_scheduler and bmq_scheduler cpu:1
+AVISOR INFO: VM need reschedule, call bfs_scheduler and bmq_scheduler cpu:0
+AVISOR INFO: bfs scheduler latency: 109
+AVISOR INFO: unikernel 0 will run on pcpu 1.
+AVISOR INFO: bfs scheduler latency: 26
+AVISOR INFO: bmq scheduler latency: 3234
+AVISOR INFO: unikernel 3 will run on pcpu 0.
+AVISOR INFO: vcpu:prio (3:0) run on unikernel 0 on pcpu 1.
+AVISOR INFO: bmq scheduler latency: 597
+AVISOR INFO: TIME: 153394378 vm id 0 vcpu id 3 pcpu id 1
+AVISOR INFO: vcpu:prio (0:9) run on unikernel 3 on pcpu 0.
+AVISOR INFO: TIME: 153411087 vm id 3 vcpu id 0 pcpu id 0
+main 35
+main 36
+main 37
+main 38
+AVISOR INFO: TIME IRQ 146
+AVISOR INFO: TIME IRQ 145
+AVISOR INFO: VCPU need reschedule, call bmq_scheduler cpu:1
+AVISOR INFO: VCPU need reschedule, call bmq_scheduler cpu:0
+AVISOR INFO: bmq scheduler latency: 57
+AVISOR INFO: bmq scheduler latency: 159
+AVISOR INFO: vcpu:prio (1:9) run on unikernel 0 on pcpu 1.
+AVISOR INFO: vcpu:prio (1:9) run on unikernel 3 on pcpu 0.
+AVISOR INFO: TIME: 215949464 vm id 0 vcpu id 1 pcpu id 1
+AVISOR INFO: TIME: 215955423 vm id 3 vcpu id 1 pcpu id 0
+task1! 39
+task1! 39
+task1! 40
+task1! 40
+task1! 41
+task1! 41
+task1! 42
+task1! 42
+task1! 43
+task1! 43
+AVISOR INFO: TIME IRQ 147
+AVISOR INFO: TIME IRQ 148
+AVISOR INFO: VCPU need reschedule, call bmq_scheduler cpu:0
+AVISOR INFO: VCPU need reschedule, call bmq_scheduler cpu:1
+AVISOR INFO: bmq scheduler latency: 740
+AVISOR INFO: bmq scheduler latency: 136
+AVISOR INFO: vcpu:prio (2:9) run on unikernel 3 on pcpu 0.
+AVISOR INFO: vcpu:prio (2:9) run on unikernel 0 on pcpu 1.
+AVISOR INFO: TIME: 278511802 vm id 3 vcpu id 2 pcpu id 0
+AVISOR INFO: TIME: 278515592 vm id 0 vcpu id 2 pcpu id 1
+task2! 39
+task2! 39
+task2! 40
+task2! 40
+task2! 41
+task2! 41
+task2! 42
+task2! 42
+task2! 43
+task2! 43
+AVISOR INFO: TIME IRQ 149
+AVISOR INFO: TIME IRQ 150
+AVISOR INFO: VCPU need reschedule, call bmq_scheduler cpu:0
+AVISOR INFO: VCPU need reschedule, call bmq_scheduler cpu:1
+AVISOR INFO: bmq scheduler latency: 219
+AVISOR INFO: bmq scheduler latency: 1806
+AVISOR INFO: vcpu:prio (3:9) run on unikernel 3 on pcpu 0.
+AVISOR INFO: vcpu:prio (0:9) run on unikernel 0 on pcpu 1.
+AVISOR INFO: TIME: 341081060 vm id 3 vcpu id 3 pcpu id 0
+AVISOR INFO: TIME: 341090780 vm id 0 vcpu id 0 pcpu id 1
+task3! 40
+main 40
+task3! 41
+main 41
+task3! 42
+main 42
+task3! 43
+main 43
+task3! 44
+main 44
+AVISOR INFO: TIME IRQ 151
+AVISOR INFO: TIME IRQ 152
+AVISOR INFO: VM need reschedule, call bfs_scheduler and bmq_scheduler cpu:0
+AVISOR INFO: VM need reschedule, call bfs_scheduler and bmq_scheduler cpu:1
+AVISOR INFO: bfs scheduler latency: 215
+AVISOR INFO: unikernel 1 will run on pcpu 0.
+AVISOR INFO: bfs scheduler latency: 25
+AVISOR INFO: unikernel 2 will run on pcpu 1.
+AVISOR INFO: bmq scheduler latency: 58
+AVISOR INFO: bmq scheduler latency: 268
+AVISOR INFO: vcpu:prio (0:9) run on unikernel 1 on pcpu 0.
+AVISOR INFO: vcpu:prio (0:9) run on unikernel 2 on pcpu 1.
+AVISOR INFO: TIME: 403686496 vm id 1 vcpu id 0 pcpu id 0
+AVISOR INFO: TIME: 403695882 vm id 2 vcpu id 0 pcpu id 1
+main 39
+main 39
+main 40
+main 40
+main 41
+main 41
+AVISOR INFO: TIME IRQ 153
+AVISOR INFO: TIME IRQ 154
+AVISOR INFO: VCPU need reschedule, call bmq_scheduler cpu:1
+AVISOR INFO: VCPU need reschedule, call bmq_scheduler cpu:0
+AVISOR INFO: bmq scheduler latency: 5978
+AVISOR INFO: bmq scheduler latency: 259
+AVISOR INFO: vcpu:prio (1:9) run on unikernel 2 on pcpu 1.
+AVISOR INFO: vcpu:prio (1:9) run on unikernel 1 on pcpu 0.
+AVISOR INFO: TIME: 466233326 vm id 2 vcpu id 1 pcpu id 1
+AVISOR INFO: TIME: 466238562 vm id 1 vcpu id 1 pcpu id 0
+task1! 38
+task1! 38
+task1! 39
+task1! 39
+task1! 40
+task1! 40
+task1! 41
+task1! 41
+task1! 42
+task1! 42
+AVISOR INFO: TIME IRQ 155
+AVISOR INFO: TIME IRQ 156
+AVISOR INFO: VCPU need reschedule, call bmq_scheduler cpu:1
+AVISOR INFO: VCPU need reschedule, call bmq_scheduler cpu:0
+AVISOR INFO: bmq scheduler latency: 58
+AVISOR INFO: bmq scheduler latency: 66
+AVISOR INFO: vcpu:prio (2:9) run on unikernel 1 on pcpu 0.
+AVISOR INFO: vcpu:prio (2:9) run on unikernel 2 on pcpu 1.
+AVISOR INFO: TIME: 528802250 vm id 1 vcpu id 2 pcpu id 0
+AVISOR INFO: TIME: 528809164 vm id 2 vcpu id 2 pcpu id 1
+task2! 39
+task2! 39
+task2! 40
+task2! 40
+task2! 41
+task2! 41
+task2! 42
+task2! 42
+task2! 43
+task2! 43
+AVISOR INFO: TIME IRQ 157
+AVISOR INFO: TIME IRQ 158
+AVISOR INFO: VCPU need reschedule, call bmq_scheduler cpu:1
+AVISOR INFO: VCPU need reschedule, call bmq_scheduler cpu:0
+AVISOR INFO: bmq scheduler latency: 108
+AVISOR INFO: bmq scheduler latency: 182
+AVISOR INFO: vcpu:prio (3:9) run on unikernel 2 on pcpu 1.
+AVISOR INFO: vcpu:prio (3:9) run on unikernel 1 on pcpu 0.
+AVISOR INFO: TIME: 591371787 vm id 2 vcpu id 3 pcpu id 1
+AVISOR INFO: TIME: 591376796 vm id 1 vcpu id 3 pcpu id 0
+task3! 39
+task3! 39
+task3! 40
+task3! 40
+task3! 41
+task3! 41
+task3! 42
+task3! 42
+AVISOR INFO: TIME IRQ 159
+AVISOR INFO: TIME IRQ 160
+AVISOR INFO: VM need reschedule, call bfs_scheduler and bmq_scheduler cpu:0
+AVISOR INFO: VM need reschedule, call bfs_scheduler and bmq_scheduler cpu:1
+AVISOR INFO: bfs scheduler latency: 3249
+AVISOR INFO: unikernel 0 will run on pcpu 0.
+AVISOR INFO: bfs scheduler latency: 47
+AVISOR INFO: bmq scheduler latency: 151
+AVISOR INFO: unikernel 3 will run on pcpu 1.
+AVISOR INFO: vcpu:prio (3:1) run on unikernel 0 on pcpu 0.
+AVISOR INFO: bmq scheduler latency: 173
+AVISOR INFO: TIME: 653962951 vm id 0 vcpu id 3 pcpu id 0
+AVISOR INFO: vcpu:prio (0:9) run on unikernel 3 on pcpu 1.
+AVISOR INFO: TIME: 653975005 vm id 3 vcpu id 0 pcpu id 1
+main 39
+main 40
+main 41
+main 42
+AVISOR INFO: TIME IRQ 161
+AVISOR INFO: TIME IRQ 162
+AVISOR INFO: VCPU need reschedule, call bmq_scheduler cpu:1
+AVISOR INFO: VCPU need reschedule, call bmq_scheduler cpu:0
+AVISOR INFO: bmq scheduler latency: 591
+AVISOR INFO: bmq scheduler latency: 140
+AVISOR INFO: vcpu:prio (1:9) run on unikernel 3 on pcpu 1.
+AVISOR INFO: vcpu:prio (1:9) run on unikernel 0 on pcpu 0.
+AVISOR INFO: TIME: 716518102 vm id 3 vcpu id 1 pcpu id 1
+AVISOR INFO: TIME: 716525382 vm id 0 vcpu id 1 pcpu id 0
+task1! 44
+task1! 44
+task1! 45
+task1! 45
+task1! 46
+task1! 46
+task1! 47
+task1! 47
+AVISOR INFO: TIME IRQ 163
+AVISOR INFO: TIME IRQ 164
+AVISOR INFO: VCPU need reschedule, call bmq_scheduler cpu:1
+AVISOR INFO: VCPU need reschedule, call bmq_scheduler cpu:0
+AVISOR INFO: bmq scheduler latency: 2153
+AVISOR INFO: bmq scheduler latency: 160
+AVISOR INFO: vcpu:prio (2:9) run on unikernel 3 on pcpu 1.
+AVISOR INFO: vcpu:prio (2:9) run on unikernel 0 on pcpu 0.
+AVISOR INFO: TIME: 779085795 vm id 3 vcpu id 2 pcpu id 1
+AVISOR INFO: TIME: 779092976 vm id 0 vcpu id 2 pcpu id 0
+task2! 44
+task2! 44
+task2! 45
+task2! 45
+task2! 46
+task2! 46
+task2! 47
+task2! 47
+AVISOR INFO: TIME IRQ 165
+AVISOR INFO: TIME IRQ 166
+AVISOR INFO: VCPU need reschedule, call bmq_scheduler cpu:1
+AVISOR INFO: VCPU need reschedule, call bmq_scheduler cpu:0
+AVISOR INFO: bmq scheduler latency: 1934
+AVISOR INFO: bmq scheduler latency: 167
+AVISOR INFO: vcpu:prio (3:9) run on unikernel 3 on pcpu 1.
+AVISOR INFO: vcpu:prio (0:9) run on unikernel 0 on pcpu 0.
+AVISOR INFO: TIME: 841654155 vm id 3 vcpu id 3 pcpu id 1
+AVISOR INFO: TIME: 841659872 vm id 0 vcpu id 0 pcpu id 0
+task3! 45
+main 45
+task3! 46
+main 46
+task3! 47
+main 47
+task3! 48
+main 48
+AVISOR INFO: TIME IRQ 168
+AVISOR INFO: TIME IRQ 167
+AVISOR INFO: VM need reschedule, call bfs_scheduler and bmq_scheduler cpu:1
+AVISOR INFO: VM need reschedule, call bfs_scheduler and bmq_scheduler cpu:0
+AVISOR INFO: bfs scheduler latency: 186
+AVISOR INFO: unikernel 2 will run on pcpu 1.
+AVISOR INFO: bfs scheduler latency: 21
+AVISOR INFO: bmq scheduler latency: 162
+AVISOR INFO: unikernel 1 will run on pcpu 0.
+AVISOR INFO: vcpu:prio (0:9) run on unikernel 2 on pcpu 1.
+AVISOR INFO: bmq scheduler latency: 403
+AVISOR INFO: TIME: 904241797 vm id 2 vcpu id 0 pcpu id 1
+AVISOR INFO: vcpu:prio (0:9) run on unikernel 1 on pcpu 0.
+AVISOR INFO: TIME: 904254646 vm id 1 vcpu id 0 pcpu id 0
+main 42
+main 42
+main 43
+main 43
+main 44
+main 44
+main 45
+main 45
+main 46
+main 46
+AVISOR INFO: TIME IRQ 169
+AVISOR INFO: TIME IRQ 170
+AVISOR INFO: VCPU need reschedule, call bmq_scheduler cpu:0
+AVISOR INFO: VCPU need reschedule, call bmq_scheduler cpu:1
+AVISOR INFO: bmq scheduler latency: 299
+AVISOR INFO: bmq scheduler latency: 260
+AVISOR INFO: vcpu:prio (1:9) run on unikernel 1 on pcpu 0.
+AVISOR INFO: vcpu:prio (1:9) run on unikernel 2 on pcpu 1.
+AVISOR INFO: TIME: 966798518 vm id 1 vcpu id 1 pcpu id 0
+AVISOR INFO: TIME: 966811320 vm id 2 vcpu id 1 pcpu id 1
+task1! 43
+task1! 43
+task1! 44
+task1! 44
+task1! 45
+task1! 45
+task1! 46
+task1! 46
+AVISOR INFO: TIME IRQ 171
+AVISOR INFO: TIME IRQ 172
+AVISOR INFO: VCPU need reschedule, call bmq_scheduler cpu:1
+AVISOR INFO: VCPU need reschedule, call bmq_scheduler cpu:0
+AVISOR INFO: bmq scheduler latency: 702
+AVISOR INFO: vcpu:prio (2:9) run on unikernel 2 on pcpu 1.
+AVISOR INFO: bmq scheduler latency: 52
+AVISOR INFO: TIME: 1029382587 vm id 2 vcpu id 2 pcpu id 1
+AVISOR INFO: vcpu:prio (2:9) run on unikernel 1 on pcpu 0.
+AVISOR INFO: TIME: 1029398316 vm id 1 vcpu id 2 pcpu id 0
+task2! 44
+task2! 44
+task2! 45
+task2! 45
+task2! 46
+task2! 46
+task2! 47
+task2! 47
+AVISOR INFO: TIME IRQ 173
+AVISOR INFO: TIME IRQ 174
+AVISOR INFO: VCPU need reschedule, call bmq_scheduler cpu:1
+AVISOR INFO: VCPU need reschedule, call bmq_scheduler cpu:0
+AVISOR INFO: bmq scheduler latency: 184
+AVISOR INFO: bmq scheduler latency: 167
+AVISOR INFO: vcpu:prio (3:9) run on unikernel 2 on pcpu 1.
+AVISOR INFO: vcpu:prio (3:9) run on unikernel 1 on pcpu 0.
+AVISOR INFO: TIME: 1091942222 vm id 2 vcpu id 3 pcpu id 1
+AVISOR INFO: TIME: 1091948919 vm id 1 vcpu id 3 pcpu id 0
+task3! 43
+task3! 43
+task3! 44
+task3! 44
+task3! 45
+task3! 45
+task3! 46
+task3! 46
+task3! 47
+task3! 47
+AVISOR INFO: TIME IRQ 175
+AVISOR INFO: TIME IRQ 176
+AVISOR INFO: VM need reschedule, call bfs_scheduler and bmq_scheduler cpu:1
+AVISOR INFO: VM need reschedule, call bfs_scheduler and bmq_scheduler cpu:0
+AVISOR INFO: bfs scheduler latency: 822
+AVISOR INFO: unikernel 0 will run on pcpu 1.
+AVISOR INFO: bfs scheduler latency: 21
+AVISOR INFO: bmq scheduler latency: 970
+AVISOR INFO: unikernel 3 will run on pcpu 0.
+AVISOR INFO: vcpu:prio (3:1) run on unikernel 0 on pcpu 1.
+AVISOR INFO: bmq scheduler latency: 1764
+AVISOR INFO: TIME: 1154532127 vm id 0 vcpu id 3 pcpu id 1
+AVISOR INFO: vcpu:prio (0:9) run on unikernel 3 on pcpu 0.
+AVISOR INFO: TIME: 1154545832 vm id 3 vcpu id 0 pcpu id 0
+main 43
+main 44
+main 45
+main 46
+main 47
+AVISOR INFO: TIME IRQ 178
+AVISOR INFO: TIME IRQ 177
+AVISOR INFO: VCPU need reschedule, call bmq_scheduler cpu:0
+AVISOR INFO: VCPU need reschedule, call bmq_scheduler cpu:1
+AVISOR INFO: bmq scheduler latency: 257
+AVISOR INFO: bmq scheduler latency: 162
+AVISOR INFO: vcpu:prio (1:9) run on unikernel 3 on pcpu 0.
+AVISOR INFO: vcpu:prio (1:9) run on unikernel 0 on pcpu 1.
+AVISOR INFO: TIME: 1217098796 vm id 3 vcpu id 1 pcpu id 0
+AVISOR INFO: TIME: 1217105400 vm id 0 vcpu id 1 pcpu id 1
+task1! 48
+task1! 48
+task1! 49
+task1! 49
+task1! 50
+task1! 50
+task1! 51
+task1! 51
+AVISOR INFO: TIME IRQ 180
+AVISOR INFO: TIME IRQ 179
+AVISOR INFO: VCPU need reschedule, call bmq_scheduler cpu:0
+AVISOR INFO: VCPU need reschedule, call bmq_scheduler cpu:1
+AVISOR INFO: bmq scheduler latency: 196
+AVISOR INFO: bmq scheduler latency: 163
+AVISOR INFO: vcpu:prio (2:9) run on unikernel 3 on pcpu 0.
+AVISOR INFO: vcpu:prio (2:9) run on unikernel 0 on pcpu 1.
+AVISOR INFO: TIME: 1279670035 vm id 3 vcpu id 2 pcpu id 0
+AVISOR INFO: TIME: 1279677145 vm id 0 vcpu id 2 pcpu id 1
+task2! 48
+task2! 48
+task2! 49
+task2! 49
+task2! 50
+task2! 50
+task2! 51
+task2! 51
+AVISOR INFO: TIME IRQ 182
+AVISOR INFO: TIME IRQ 181
+AVISOR INFO: VCPU need reschedule, call bmq_scheduler cpu:0
+AVISOR INFO: VCPU need reschedule, call bmq_scheduler cpu:1
+AVISOR INFO: bmq scheduler latency: 201
+AVISOR INFO: bmq scheduler latency: 167
+AVISOR INFO: vcpu:prio (3:9) run on unikernel 3 on pcpu 0.
+AVISOR INFO: vcpu:prio (0:9) run on unikernel 0 on pcpu 1.
+AVISOR INFO: TIME: 1342256670 vm id 3 vcpu id 3 pcpu id 0
+AVISOR INFO: TIME: 1342262576 vm id 0 vcpu id 0 pcpu id 1
+task3! 49
+main 49
+task3! 50
+main 50
+task3! 51
+main 51
+task3! 52
+main 52
+task3! 53
+AVISOR INFO: TIME IRQ 183
+AVISOR INFO: TIME IRQ 184
+AVISOR INFO: VM need reschedule, call bfs_scheduler and bmq_scheduler cpu:0
+AVISOR INFO: VM need reschedule, call bfs_scheduler and bmq_scheduler cpu:1
+AVISOR INFO: bfs scheduler latency: 2206
+AVISOR INFO: unikernel 1 will run on pcpu 0.
+AVISOR INFO: bfs scheduler latency: 24
+AVISOR INFO: bmq scheduler latency: 3950
+AVISOR INFO: unikernel 2 will run on pcpu 1.
+AVISOR INFO: vcpu:prio (0:9) run on unikernel 1 on pcpu 0.
+AVISOR INFO: bmq scheduler latency: 3859
+AVISOR INFO: TIME: 1404834430 vm id 1 vcpu id 0 pcpu id 0
+AVISOR INFO: vcpu:prio (0:9) run on unikernel 2 on pcpu 1.
+AVISOR INFO: TIME: 1404849935 vm id 2 vcpu id 0 pcpu id 1
+main 47
+main 47
+main 48
+main 48
+main 49
+main 49
+main 50
+main 50
+AVISOR INFO: TIME IRQ 185
+AVISOR INFO: TIME IRQ 186
+AVISOR INFO: VCPU need reschedule, call bmq_scheduler cpu:1
+AVISOR INFO: VCPU need reschedule, call bmq_scheduler cpu:0
+AVISOR INFO: bmq scheduler latency: 415
+AVISOR INFO: bmq scheduler latency: 169
+AVISOR INFO: vcpu:prio (1:9) run on unikernel 2 on pcpu 1.
+AVISOR INFO: vcpu:prio (1:9) run on unikernel 1 on pcpu 0.
+AVISOR INFO: TIME: 1467389464 vm id 2 vcpu id 1 pcpu id 1
+AVISOR INFO: TIME: 1467396051 vm id 1 vcpu id 1 pcpu id 0
+task1! 47
+task1! 47
+task1! 48
+task1! 48
+task1! 49
+task1! 49
+task1! 50
+task1! 50
+AVISOR INFO: TIME IRQ 187
+AVISOR INFO: TIME IRQ 188
+AVISOR INFO: VCPU need reschedule, call bmq_scheduler cpu:1
+AVISOR INFO: VCPU need reschedule, call bmq_scheduler cpu:0
+AVISOR INFO: bmq scheduler latency: 2887
+AVISOR INFO: bmq scheduler latency: 177
+AVISOR INFO: vcpu:prio (2:9) run on unikernel 2 on pcpu 1.
+AVISOR INFO: vcpu:prio (2:9) run on unikernel 1 on pcpu 0.
+AVISOR INFO: TIME: 1529960332 vm id 2 vcpu id 2 pcpu id 1
+AVISOR INFO: TIME: 1529965938 vm id 1 vcpu id 2 pcpu id 0
+task2! 48
+task2! 48
+task2! 49
+task2! 49
+task2! 50
+task2! 50
+task2! 51
+task2! 51
+task2! 52
+task2! 52
+AVISOR INFO: TIME IRQ 189
+AVISOR INFO: TIME IRQ 190
+AVISOR INFO: VCPU need reschedule, call bmq_scheduler cpu:1
+AVISOR INFO: VCPU need reschedule, call bmq_scheduler cpu:0
+AVISOR INFO: bmq scheduler latency: 2422
+AVISOR INFO: bmq scheduler latency: 4914
+AVISOR INFO: vcpu:prio (3:9) run on unikernel 2 on pcpu 1.
+AVISOR INFO: vcpu:prio (3:9) run on unikernel 1 on pcpu 0.
+AVISOR INFO: TIME: 1592525656 vm id 2 vcpu id 3 pcpu id 1
+AVISOR INFO: TIME: 1592531580 vm id 1 vcpu id 3 pcpu id 0
+task3! 48
+task3! 48
+task3! 49
+task3! 49
+task3! 50
+task3! 50
+task3! 51
+task3! 51
+AVISOR INFO: TIME IRQ 192
+AVISOR INFO: TIME IRQ 191
+AVISOR INFO: VM need reschedule, call bfs_scheduler and bmq_scheduler cpu:1
+AVISOR INFO: VM need reschedule, call bfs_scheduler and bmq_scheduler cpu:0
+AVISOR INFO: bfs scheduler latency: 195
+AVISOR INFO: unikernel 0 will run on pcpu 1.
+AVISOR INFO: bfs scheduler latency: 25
+AVISOR INFO: bmq scheduler latency: 154
+AVISOR INFO: unikernel 3 will run on pcpu 0.
+AVISOR INFO: vcpu:prio (3:1) run on unikernel 0 on pcpu 1.
+AVISOR INFO: bmq scheduler latency: 987
+AVISOR INFO: TIME: 1655116982 vm id 0 vcpu id 3 pcpu id 1
+AVISOR INFO: vcpu:prio (0:9) run on unikernel 3 on pcpu 0.
+AVISOR INFO: TIME: 1655132609 vm id 3 vcpu id 0 pcpu id 0
+main 48
+main 49
+main 50
+main 51
+AVISOR INFO: TIME IRQ 193
+AVISOR INFO: TIME IRQ 194
+AVISOR INFO: VCPU need reschedule, call bmq_scheduler cpu:0
+AVISOR INFO: VCPU need reschedule, call bmq_scheduler cpu:1
+AVISOR INFO: bmq scheduler latency: 181
+AVISOR INFO: vcpu:prio (1:9) run on unikernel 3 on pcpu 0.
+AVISOR INFO: bmq scheduler latency: 169
+AVISOR INFO: TIME: 1717683474 vm id 3 vcpu id 1 pcpu id 0
+AVISOR INFO: vcpu:prio (1:9) run on unikernel 0 on pcpu 1.
+AVISOR INFO: TIME: 1717697132 vm id 0 vcpu id 1 pcpu id 1
+task1! 52
+task1! 52
+task1! 53
+task1! 53
+task1! 54
+task1! 54
+task1! 55
+task1! 55
+task1! 56
+task1! 56
+AVISOR INFO: TIME IRQ 195
+AVISOR INFO: TIME IRQ 196
+AVISOR INFO: VCPU need reschedule, call bmq_scheduler cpu:0
+AVISOR INFO: VCPU need reschedule, call bmq_scheduler cpu:1
+AVISOR INFO: bmq scheduler latency: 261
+AVISOR INFO: bmq scheduler latency: 75
+AVISOR INFO: vcpu:prio (2:9) run on unikernel 3 on pcpu 0.
+AVISOR INFO: vcpu:prio (2:9) run on unikernel 0 on pcpu 1.
+AVISOR INFO: TIME: 1780257255 vm id 3 vcpu id 2 pcpu id 0
+AVISOR INFO: TIME: 1780268778 vm id 0 vcpu id 2 pcpu id 1
+task2! 52
+task2! 52
+task2! 53
+task2! 53
+task2! 54
+task2! 54
+task2! 55
+task2! 55
+task2! 56
+AVISOR INFO: TIME IRQ 197
+AVISOR INFO: TIME IRQ 198
+AVISOR INFO: VCPU need reschedule, call bmq_scheduler cpu:0
+AVISOR INFO: VCPU need reschedule, call bmq_scheduler cpu:1
+AVISOR INFO: bmq scheduler latency: 3430
+AVISOR INFO: vcpu:prio (3:9) run on unikernel 3 on pcpu 0.
+AVISOR INFO: bmq scheduler latency: 3209
+AVISOR INFO: TIME: 1842821664 vm id 3 vcpu id 3 pcpu id 0
+AVISOR INFO: vcpu:prio (0:9) run on unikernel 0 on pcpu 1.
+AVISOR INFO: TIME: 1842837234 vm id 0 vcpu id 0 pcpu id 1
+main 53
+task3! 54
+main 54
+task3! 55
+main 55
+task3! 56
+main 56
+task3! 57
+main 57
+AVISOR INFO: TIME IRQ 199
+AVISOR INFO: TIME IRQ 200
+AVISOR INFO: VM need reschedule, call bfs_scheduler and bmq_scheduler cpu:0
+AVISOR INFO: VM need reschedule, call bfs_scheduler and bmq_scheduler cpu:1
+AVISOR INFO: bfs scheduler latency: 565
+AVISOR INFO: unikernel 1 will run on pcpu 0.
+AVISOR INFO: bfs scheduler latency: 27
+AVISOR INFO: unikernel 2 will run on pcpu 1.
+AVISOR INFO: bmq scheduler latency: 59
+AVISOR INFO: bmq scheduler latency: 1977
+AVISOR INFO: vcpu:prio (0:9) run on unikernel 1 on pcpu 0.
+AVISOR INFO: vcpu:prio (0:9) run on unikernel 2 on pcpu 1.
+AVISOR INFO: TIME: 1905420625 vm id 1 vcpu id 0 pcpu id 0
+AVISOR INFO: TIME: 1905428243 vm id 2 vcpu id 0 pcpu id 1
+main 51
+main 51
+main 52
+main 52
+main 53
+main 53
+main 54
+main 54
+main 55
+main 55
+AVISOR INFO: TIME IRQ 201
+AVISOR INFO: TIME IRQ 202
+AVISOR INFO: VCPU need reschedule, call bmq_scheduler cpu:0
+AVISOR INFO: VCPU need reschedule, call bmq_scheduler cpu:1
+AVISOR INFO: bmq scheduler latency: 984
+AVISOR INFO: bmq scheduler latency: 3148
+AVISOR INFO: vcpu:prio (1:9) run on unikernel 1 on pcpu 0.
+AVISOR INFO: vcpu:prio (1:9) run on unikernel 2 on pcpu 1.
+AVISOR INFO: TIME: 1967968448 vm id 1 vcpu id 1 pcpu id 0
+AVISOR INFO: TIME: 1967978581 vm id 2 vcpu id 1 pcpu id 1
+task1! 51
+task1! 51
+task1! 52
+task1! 52
+task1! 53
+task1! 53
+task1! 54
+task1! 54
+task1! 55
+task1! 55
+AVISOR INFO: TIME IRQ 203
+AVISOR INFO: TIME IRQ 204
+AVISOR INFO: VCPU need reschedule, call bmq_scheduler cpu:0
+AVISOR INFO: VCPU need reschedule, call bmq_scheduler cpu:1
+AVISOR INFO: bmq scheduler latency: 280
+AVISOR INFO: bmq scheduler latency: 152
+AVISOR INFO: vcpu:prio (2:9) run on unikernel 1 on pcpu 0.
+AVISOR INFO: vcpu:prio (2:9) run on unikernel 2 on pcpu 1.
+AVISOR INFO: TIME: 2030548501 vm id 1 vcpu id 2 pcpu id 0
+AVISOR INFO: TIME: 2030554678 vm id 2 vcpu id 2 pcpu id 1
+task2! 53
+task2! 53
+task2! 54
+task2! 54
+task2! 55
+task2! 55
+task2! 56
+task2! 56
+AVISOR INFO: TIME IRQ 205
+AVISOR INFO: TIME IRQ 206
+AVISOR INFO: VCPU need reschedule, call bmq_scheduler cpu:0
+AVISOR INFO: VCPU need reschedule, call bmq_scheduler cpu:1
+AVISOR INFO: bmq scheduler latency: 185
+AVISOR INFO: bmq scheduler latency: 600
+AVISOR INFO: vcpu:prio (3:9) run on unikernel 1 on pcpu 0.
+AVISOR INFO: vcpu:prio (3:9) run on unikernel 2 on pcpu 1.
+AVISOR INFO: TIME: 2093126877 vm id 1 vcpu id 3 pcpu id 0
+AVISOR INFO: TIME: 2093129738 vm id 2 vcpu id 3 pcpu id 1
+task3! 52
+task3! 52
+task3! 53
+task3! 53
+task3! 54
+task3! 54
+task3! 55
+task3! 55
+task3! 56
+task3! 56
+AVISOR INFO: TIME IRQ 207
+AVISOR INFO: TIME IRQ 208
+AVISOR INFO: VM need reschedule, call bfs_scheduler and bmq_scheduler cpu:1
+AVISOR INFO: VM need reschedule, call bfs_scheduler and bmq_scheduler cpu:0
+AVISOR INFO: bfs scheduler latency: 169
+AVISOR INFO: unikernel 0 will run on pcpu 1.
+AVISOR INFO: bfs scheduler latency: 23
+AVISOR INFO: bmq scheduler latency: 391
+AVISOR INFO: unikernel 3 will run on pcpu 0.
+AVISOR INFO: vcpu:prio (3:1) run on unikernel 0 on pcpu 1.
+AVISOR INFO: bmq scheduler latency: 106
+AVISOR INFO: TIME: 2155705651 vm id 0 vcpu id 3 pcpu id 1
+AVISOR INFO: vcpu:prio (0:9) run on unikernel 3 on pcpu 0.
+AVISOR INFO: TIME: 2155721118 vm id 3 vcpu id 0 pcpu id 0
+main 52
+main 53
+main 54
+main 55
+main 56
+AVISOR INFO: TIME IRQ 210
+AVISOR INFO: TIME IRQ 209
+AVISOR INFO: VCPU need reschedule, call bmq_scheduler cpu:0
+AVISOR INFO: VCPU need reschedule, call bmq_scheduler cpu:1
+AVISOR INFO: bmq scheduler latency: 2907
+AVISOR INFO: bmq scheduler latency: 171
+AVISOR INFO: vcpu:prio (1:9) run on unikernel 3 on pcpu 0.
+AVISOR INFO: vcpu:prio (1:9) run on unikernel 0 on pcpu 1.
+AVISOR INFO: TIME: 2218263477 vm id 3 vcpu id 1 pcpu id 0
+AVISOR INFO: TIME: 2218270308 vm id 0 vcpu id 1 pcpu id 1
+task1! 57
+task1! 57
+task1! 58
+task1! 58
+task1! 59
+task1! 59
+task1! 60
+task1! 60
+AVISOR INFO: TIME IRQ 211
+AVISOR INFO: TIME IRQ 212
+AVISOR INFO: VCPU need reschedule, call bmq_scheduler cpu:0
+AVISOR INFO: VCPU need reschedule, call bmq_scheduler cpu:1
+AVISOR INFO: bmq scheduler latency: 7271
+AVISOR INFO: bmq scheduler latency: 176
+AVISOR INFO: vcpu:prio (2:9) run on unikernel 3 on pcpu 0.
+AVISOR INFO: vcpu:prio (2:9) run on unikernel 0 on pcpu 1.
+AVISOR INFO: TIME: 2280855644 vm id 3 vcpu id 2 pcpu id 0
+AVISOR INFO: TIME: 2280862679 vm id 0 vcpu id 2 pcpu id 1
+task2! 56
+task2! 57
+task2! 57
+task2! 58
+task2! 58
+task2! 59
+task2! 59
+task2! 60
+task2! 60
+AVISOR INFO: TIME IRQ 213
+AVISOR INFO: TIME IRQ 214
+AVISOR INFO: VCPU need reschedule, call bmq_scheduler cpu:0
+AVISOR INFO: bmq scheduler latency: 46
+AVISOR INFO: VCPU need reschedule, call bmq_scheduler cpu:1
+AVISOR INFO: vcpu:prio (3:9) run on unikernel 3 on pcpu 0.
+AVISOR INFO: bmq scheduler latency: 29
+AVISOR INFO: TIME: 2343432954 vm id 3 vcpu id 3 pcpu id 0
+AVISOR INFO: vcpu:prio (0:9) run on unikernel 0 on pcpu 1.
+AVISOR INFO: TIME: 2343447591 vm id 0 vcpu id 0 pcpu id 1
+task3! 58
+main 58
+task3! 59
+main 59
+task3! 60
+main 60
+task3! 61
+main 61
+task3! 62
+AVISOR INFO: TIME IRQ 215
+AVISOR INFO: TIME IRQ 216
+AVISOR INFO: VM need reschedule, call bfs_scheduler and bmq_scheduler cpu:0
+AVISOR INFO: VM need reschedule, call bfs_scheduler and bmq_scheduler cpu:1
+AVISOR INFO: bfs scheduler latency: 2358
+AVISOR INFO: unikernel 1 will run on pcpu 0.
+AVISOR INFO: bfs scheduler latency: 22
+AVISOR INFO: bmq scheduler latency: 180
+AVISOR INFO: unikernel 2 will run on pcpu 1.
+AVISOR INFO: vcpu:prio (0:9) run on unikernel 1 on pcpu 0.
+AVISOR INFO: bmq scheduler latency: 63
+AVISOR INFO: TIME: 2406006696 vm id 1 vcpu id 0 pcpu id 0
+AVISOR INFO: vcpu:prio (0:9) run on unikernel 2 on pcpu 1.
+AVISOR INFO: TIME: 2406020792 vm id 2 vcpu id 0 pcpu id 1
+main 56
+main 56
+main 57
+main 57
+main 58
+main 58
+main 59
+main 59
+AVISOR INFO: TIME IRQ 217
+AVISOR INFO: TIME IRQ 218
+AVISOR INFO: VCPU need reschedule, call bmq_scheduler cpu:0
+AVISOR INFO: VCPU need reschedule, call bmq_scheduler cpu:1
+AVISOR INFO: bmq scheduler latency: 134
+AVISOR INFO: bmq scheduler latency: 182
+AVISOR INFO: vcpu:prio (1:9) run on unikernel 1 on pcpu 0.
+AVISOR INFO: vcpu:prio (1:9) run on unikernel 2 on pcpu 1.
+AVISOR INFO: TIME: 2468574511 vm id 1 vcpu id 1 pcpu id 0
+AVISOR INFO: TIME: 2468581336 vm id 2 vcpu id 1 pcpu id 1
+task1! 56
+task1! 56
+task1! 57
+task1! 57
+task1! 58
+task1! 58
+task1! 59
+task1! 59
+AVISOR INFO: TIME IRQ 219
+AVISOR INFO: TIME IRQ 220
+AVISOR INFO: VCPU need reschedule, call bmq_scheduler cpu:1
+AVISOR INFO: VCPU need reschedule, call bmq_scheduler cpu:0
+AVISOR INFO: bmq scheduler latency: 513
+AVISOR INFO: bmq scheduler latency: 1892
+AVISOR INFO: vcpu:prio (2:9) run on unikernel 2 on pcpu 1.
+AVISOR INFO: vcpu:prio (2:9) run on unikernel 1 on pcpu 0.
+AVISOR INFO: TIME: 2531143808 vm id 2 vcpu id 2 pcpu id 1
+AVISOR INFO: TIME: 2531152031 vm id 1 vcpu id 2 pcpu id 0
+task2! 57
+task2! 57
+task2! 58
+task2! 58
+task2! 59
+task2! 59
+task2! 60
+task2! 60
+task2! 61
+task2! 61
+AVISOR INFO: TIME IRQ 221
+AVISOR INFO: TIME IRQ 222
+AVISOR INFO: VCPU need reschedule, call bmq_scheduler cpu:1
+AVISOR INFO: VCPU need reschedule, call bmq_scheduler cpu:0
+AVISOR INFO: bmq scheduler latency: 196
+AVISOR INFO: bmq scheduler latency: 6793
+AVISOR INFO: vcpu:prio (3:9) run on unikernel 2 on pcpu 1.
+AVISOR INFO: vcpu:prio (3:9) run on unikernel 1 on pcpu 0.
+AVISOR INFO: TIME: 2593706620 vm id 2 vcpu id 3 pcpu id 1
+AVISOR INFO: TIME: 2593711971 vm id 1 vcpu id 3 pcpu id 0
+task3! 57
+task3! 57
+task3! 58
+task3! 58
+task3! 59
+task3! 59
+task3! 60
+task3! 60
+task3! 61
+task3! 61
+AVISOR INFO: TIME IRQ 223
+AVISOR INFO: TIME IRQ 224
+AVISOR INFO: VM need reschedule, call bfs_scheduler and bmq_scheduler cpu:0
+AVISOR INFO: VM need reschedule, call bfs_scheduler and bmq_scheduler cpu:1
+AVISOR INFO: bfs scheduler latency: 5406
+AVISOR INFO: unikernel 0 will run on pcpu 0.
+AVISOR INFO: bfs scheduler latency: 20
+AVISOR INFO: bmq scheduler latency: 1696
+AVISOR INFO: unikernel 3 will run on pcpu 1.
+AVISOR INFO: vcpu:prio (3:0) run on unikernel 0 on pcpu 0.
+AVISOR INFO: bmq scheduler latency: 4161
+AVISOR INFO: TIME: 2656304473 vm id 0 vcpu id 3 pcpu id 0
+AVISOR INFO: vcpu:prio (0:9) run on unikernel 3 on pcpu 1.
+AVISOR INFO: TIME: 2656317616 vm id 3 vcpu id 0 pcpu id 1
+main 57
+main 58
+main 59
+main 60
+AVISOR INFO: TIME IRQ 225
+AVISOR INFO: TIME IRQ 226
+AVISOR INFO: VCPU need reschedule, call bmq_scheduler cpu:1
+AVISOR INFO: VCPU need reschedule, call bmq_scheduler cpu:0
+AVISOR INFO: bmq scheduler latency: 171
+AVISOR INFO: bmq scheduler latency: 182
+AVISOR INFO: vcpu:prio (1:9) run on unikernel 3 on pcpu 1.
+AVISOR INFO: vcpu:prio (1:9) run on unikernel 0 on pcpu 0.
+AVISOR INFO: TIME: 2718880851 vm id 0 vcpu id 1 pcpu id 0
+AVISOR INFO: TIME: 2718880826 vm id 3 vcpu id 1 pcpu id 1
+task1! 61
+task1! 61
+task1! 62
+task1! 62
+task1! 63
+task1! 63
+task1! 64
+task1! 64
+task1! 65
+AVISOR INFO: TIME IRQ 227
+AVISOR INFO: TIME IRQ 228
+AVISOR INFO: VCPU need reschedule, call bmq_scheduler cpu:1
+AVISOR INFO: VCPU need reschedule, call bmq_scheduler cpu:0
+AVISOR INFO: bmq scheduler latency: 597
+AVISOR INFO: bmq scheduler latency: 157
+AVISOR INFO: vcpu:prio (2:9) run on unikernel 3 on pcpu 1.
+AVISOR INFO: vcpu:prio (2:9) run on unikernel 0 on pcpu 0.
+AVISOR INFO: TIME: 2781427203 vm id 3 vcpu id 2 pcpu id 1
+AVISOR INFO: TIME: 2781436577 vm id 0 vcpu id 2 pcpu id 0
+task2! 61
+task2! 61
+task2! 62
+task2! 62
+task2! 63
+task2! 63
+task2! 64
+task2! 64
+AVISOR INFO: TIME IRQ 229
+AVISOR INFO: TIME IRQ 230
+AVISOR INFO: VCPU need reschedule, call bmq_scheduler cpu:1
+AVISOR INFO: VCPU need reschedule, call bmq_scheduler cpu:0
+AVISOR INFO: bmq scheduler latency: 169
+AVISOR INFO: bmq scheduler latency: 157
+AVISOR INFO: vcpu:prio (3:9) run on unikernel 3 on pcpu 1.
+AVISOR INFO: vcpu:prio (0:9) run on unikernel 0 on pcpu 0.
+AVISOR INFO: TIME: 2844004912 vm id 3 vcpu id 3 pcpu id 1
+AVISOR INFO: TIME: 2844009767 vm id 0 vcpu id 0 pcpu id 0
+main 62
+task3! 63
+main 63
+task3! 64
+main 64
+task3! 65
+main 65
+task3! 66
+main 66
+AVISOR INFO: TIME IRQ 231
+AVISOR INFO: TIME IRQ 232
+AVISOR INFO: VM need reschedule, call bfs_scheduler and bmq_scheduler cpu:1
+AVISOR INFO: VM need reschedule, call bfs_scheduler and bmq_scheduler cpu:0
+AVISOR INFO: bfs scheduler latency: 138
+AVISOR INFO: unikernel 2 will run on pcpu 1.
+AVISOR INFO: bfs scheduler latency: 20
+AVISOR INFO: unikernel 1 will run on pcpu 0.
+AVISOR INFO: bmq scheduler latency: 176
+AVISOR INFO: bmq scheduler latency: 165
+AVISOR INFO: vcpu:prio (0:9) run on unikernel 2 on pcpu 1.
+AVISOR INFO: vcpu:prio (0:9) run on unikernel 1 on pcpu 0.
+AVISOR INFO: TIME: 2906637216 vm id 2 vcpu id 0 pcpu id 1
+AVISOR INFO: TIME: 2906642503 vm id 1 vcpu id 0 pcpu id 0
+main 60
+main 60
+main 61
+main 61
+main 62
+main 62
+main 63
+main 63
+AVISOR INFO: TIME IRQ 233
+AVISOR INFO: TIME IRQ 234
+AVISOR INFO: VCPU need reschedule, call bmq_scheduler cpu:0
+AVISOR INFO: VCPU need reschedule, call bmq_scheduler cpu:1
+AVISOR INFO: bmq scheduler latency: 302
+AVISOR INFO: bmq scheduler latency: 207
+AVISOR INFO: vcpu:prio (1:9) run on unikernel 1 on pcpu 0.
+AVISOR INFO: vcpu:prio (1:9) run on unikernel 2 on pcpu 1.
+AVISOR INFO: TIME: 2969154880 vm id 1 vcpu id 1 pcpu id 0
+AVISOR INFO: TIME: 2969160204 vm id 2 vcpu id 1 pcpu id 1
+task1! 60
+task1! 60
+task1! 61
+task1! 61
+task1! 62
+task1! 62
+task1! 63
+task1! 63
+AVISOR INFO: TIME IRQ 236
+AVISOR INFO: TIME IRQ 235
+AVISOR INFO: VCPU need reschedule, call bmq_scheduler cpu:1
+AVISOR INFO: VCPU need reschedule, call bmq_scheduler cpu:0
+AVISOR INFO: bmq scheduler latency: 178
+AVISOR INFO: bmq scheduler latency: 218
+AVISOR INFO: vcpu:prio (2:9) run on unikernel 2 on pcpu 1.
+AVISOR INFO: vcpu:prio (2:9) run on unikernel 1 on pcpu 0.
+AVISOR INFO: TIME: 3031723779 vm id 2 vcpu id 2 pcpu id 1
+AVISOR INFO: TIME: 3031728524 vm id 1 vcpu id 2 pcpu id 0
+task2! 62
+task2! 62
+task2! 63
+task2! 63
+task2! 64
+task2! 64
+task2! 65
+task2! 65
+AVISOR INFO: TIME IRQ 237
+AVISOR INFO: TIME IRQ 238
+AVISOR INFO: VCPU need reschedule, call bmq_scheduler cpu:1
+AVISOR INFO: VCPU need reschedule, call bmq_scheduler cpu:0
+AVISOR INFO: bmq scheduler latency: 120
+AVISOR INFO: vcpu:prio (3:9) run on unikernel 2 on pcpu 1.
+AVISOR INFO: bmq scheduler latency: 54
+AVISOR INFO: TIME: 3094251613 vm id 2 vcpu id 3 pcpu id 1
+AVISOR INFO: vcpu:prio (3:9) run on unikernel 1 on pcpu 0.
+AVISOR INFO: TIME: 3094267028 vm id 1 vcpu id 3 pcpu id 0
+QEMU: Terminated
+

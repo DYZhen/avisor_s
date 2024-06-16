@@ -1,0 +1,3803 @@
+mkdir -p /home/fadedlove/avisor/build/arch/aarch64
+mkdir -p /home/fadedlove/avisor/build/core
+mkdir -p /home/fadedlove/avisor/build/lib
+mkdir -p /home/fadedlove/avisor/build/plat/qemu-aarch64-virt
+Creating dependency	 src/main.ld
+Creating dependency	 src/arch/aarch64/vgicv2.c
+Creating dependency	 src/arch/aarch64/gicv2.c
+Creating dependency	 src/config.c
+Creating dependency	 src/main.c
+Creating dependency	 src/plat/qemu-aarch64-virt/platform.c
+Creating dependency	 src/lib/string.c
+Creating dependency	 src/lib/bitmap.c
+Creating dependency	 src/lib/printk.c
+Creating dependency	 src/core/mmu.c
+Creating dependency	 src/core/objpool.c
+Creating dependency	 src/core/sched.c
+Creating dependency	 src/core/io.c
+Creating dependency	 src/core/cpu.c
+Creating dependency	 src/core/vmm.c
+Creating dependency	 src/core/interrupts.c
+Creating dependency	 src/core/rq.c
+Creating dependency	 src/core/mem.c
+Creating dependency	 src/core/lcm.c
+Creating dependency	 src/core/console.c
+Creating dependency	 src/core/vm.c
+Creating dependency	 src/arch/aarch64/arch_vm.c
+Creating dependency	 src/arch/aarch64/uart.c
+Creating dependency	 src/arch/aarch64/arch_vmm.c
+Creating dependency	 src/arch/aarch64/hypercall.c
+Creating dependency	 src/arch/aarch64/timer.c
+Creating dependency	 src/arch/aarch64/arch_platform.c
+Creating dependency	 src/arch/aarch64/aborts.c
+Creating dependency	 src/arch/aarch64/arch_interrupts.c
+Creating dependency	 src/arch/aarch64/arch_cpu.c
+Creating dependency	 src/arch/aarch64/iommu.c
+Creating dependency	 src/arch/aarch64/exception.S
+Creating dependency	 src/arch/aarch64/arch_page_table.c
+Creating dependency	 src/arch/aarch64/start.S
+Creating dependency	 src/arch/aarch64/gic.c
+Creating dependency	 src/arch/aarch64/arch_mem.c
+Creating dependency	 src/arch/aarch64/vgic.c
+Compiling source	 src/arch/aarch64/vgic.c
+Compiling source	 src/arch/aarch64/arch_mem.c
+Compiling source	 src/arch/aarch64/gic.c
+Compiling source	 src/arch/aarch64/start.S
+Compiling source	 src/arch/aarch64/arch_page_table.c
+Compiling source	 src/arch/aarch64/exception.S
+Compiling source	 src/arch/aarch64/iommu.c
+Compiling source	 src/arch/aarch64/arch_cpu.c
+Compiling source	 src/arch/aarch64/arch_interrupts.c
+Compiling source	 src/arch/aarch64/aborts.c
+Compiling source	 src/arch/aarch64/arch_platform.c
+Compiling source	 src/arch/aarch64/timer.c
+Compiling source	 src/arch/aarch64/hypercall.c
+Compiling source	 src/arch/aarch64/arch_vmm.c
+Compiling source	 src/arch/aarch64/uart.c
+Compiling source	 src/arch/aarch64/arch_vm.c
+Compiling source	 src/core/vm.c
+Compiling source	 src/core/console.c
+Compiling source	 src/core/lcm.c
+Compiling source	 src/core/mem.c
+Compiling source	 src/core/interrupts.c
+Compiling source	 src/core/rq.c
+Compiling source	 src/core/vmm.c
+Compiling source	 src/core/cpu.c
+Compiling source	 src/core/io.c
+Compiling source	 src/core/sched.c
+Compiling source	 src/core/objpool.c
+Compiling source	 src/core/mmu.c
+Compiling source	 src/lib/printk.c
+Compiling source	 src/lib/bitmap.c
+Compiling source	 src/lib/string.c
+Compiling source	 src/plat/qemu-aarch64-virt/platform.c
+Compiling source	 src/main.c
+Compiling source	 src/config.c
+Compiling source	 src/arch/aarch64/gicv2.c
+Compiling source	 src/arch/aarch64/vgicv2.c
+Compiling source	 src/main.ld
+Linking			avisor
+qemu-system-aarch64 -M virt,virtualization=on -machine gic-version=2,iommu=none \
+	-cpu cortex-a57 -smp 2 -m 4g -nographic \
+	-kernel /home/fadedlove/avisor/build/avisor.elf
+AVISOR INFO: CPU[0] INIT
+AVISOR INFO: CPU[1] INIT
+AVISOR INFO: ------------avisor started------------
+AVISOR INFO: Exception level: 2
+AVISOR INFO: MEM INIT
+AVISOR INFO: GIC Version: 2
+AVISOR INFO: GIC Version: 2
+AVISOR INFO: Timer Init
+AVISOR INFO: Timer Init
+AVISOR INFO: EL2 timer frq = 62500000
+AVISOR INFO: EL2 timer frq = 62500000
+AVISOR INFO: Reserved 26 intr
+AVISOR INFO: Reserved 26 intr
+AVISOR INFO: CPU[1] INTERRUPT INIT
+AVISOR INFO: CPU[0] INTERRUPT INIT
+AVISOR WARNING: NO IOMMU
+AVISOR WARNING: NO IOMMU
+AVISOR INFO: VMID:0 Load addr: 0x40100000
+AVISOR INFO: Copy vm0 to 0x50032000, size = 0x27840
+AVISOR INFO: Copy dtb to 0x58122000, size = 0x100000
+AVISOR INFO: VMID:1 Load addr: 0x40127840
+AVISOR INFO: Copy vm1 to 0x5842e000, size = 0x27840
+AVISOR INFO: Copy dtb to 0x6051a000, size = 0x100000
+AVISOR INFO: VMID:2 Load addr: 0x40127840
+AVISOR INFO: Copy vm2 to 0x60bf6000, size = 0x27840
+AVISOR INFO: Copy dtb to 0x68caa000, size = 0x100000
+AVISOR INFO: VMID:3 Load addr: 0x40127840
+AVISOR INFO: Copy vm3 to 0x69aee000, size = 0x27840
+AVISOR INFO: Copy dtb to 0x71b9a000, size = 0x100000
+AVISOR INFO: cpu id 1 vm id 3 rqnode need_resched = 1
+AVISOR INFO: cpu id 1 vm id 2 rqnode need_resched = 1
+AVISOR INFO: cpu id 1 vm id 1 rqnode need_resched = 1
+AVISOR INFO: cpu id 1 vm id 0 rqnode need_resched = 1
+AVISOR INFO: unikernel 0 will run on pcpu 1.
+AVISOR INFO: cpu id 0 vm id 3 rqnode need_resched = 1
+AVISOR INFO: cpu id 0 vm id 2 rqnode need_resched = 1
+AVISOR INFO: cpu id 0 vm id 1 rqnode need_resched = 1
+AVISOR INFO: unikernel 1 will run on pcpu 0.
+AVISOR INFO: vcpu:prio (0:5) run on unikernel 1 on pcpu 0.
+AVISOR INFO: vcpu:prio (0:5) run on unikernel 0 on pcpu 1.
+AVISOR INFO: TIME: 4844516 vm id 0 vcpu id 0 pcpu id 1
+AVISOR INFO: TIME: 4844560 vm id 1 vcpu id 0 pcpu id 0
+AVISOR INFO: TIME IRQ 1
+AVISOR INFO: TIME IRQ 2
+AVISOR INFO: vcpu repeat
+AVISOR INFO: vcpu repeat
+AVISOR INFO: vcpu:prio (0:5) run on unikernel 0 on pcpu 1.
+AVISOR INFO: vcpu:prio (0:5) run on unikernel 1 on pcpu 0.
+AVISOR INFO: TIME: 4916933 vm id 0 vcpu id 0 pcpu id 1
+AVISOR INFO: TIME: 4924442 vm id 1 vcpu id 0 pcpu id 0
+Powered by
+o.   .o       _ _               __ _
+Oo   Oo  ___ (_) | __ __  __ _ ' _) :_
+oO   oO ' _ `| | |/ /  _)' _` | |_|  _)
+oOo oOO| | | | |   (| | | (_) |  _) :_
+ OoOoO ._, ._:_:_,\_._,  .__,_:_, \___)
+      Epimetheus 0.12.0~052b89e4-custom
+Boot Time Cycles = 8932294
+Hello World! 200000000
+cpuid = 1 fn = 40106ca0P
+owered by
+o.   .o c pui d =    _ _   2              __ _
+fOo   Oo  ___n  (_) | __ __  __ _ ' _) :_
+= oO   oO ' _ `| | |/ /  _)' _` | |_|  _)
+oOo40106 oOO| | | | |   (| | | (_) |  _) :_
+ce Oo0
+OoO cpu._, ._:_:_,\_._,  .__,_:_, \___)
+id = 3 fn = 40106c80
+      Epimetheus 0.12.0~052b89e4-custom
+Boot Time Cycles = 9328700
+Hello World! 200000000
+cpuid = 1 fn = 40106c80
+cpuid = 2 fn = 40106cc0
+cpuid = 3 fn = 40106d00
+main 0
+main 0
+main 1
+main 1
+main 2
+main 2
+main 3
+main 3
+AVISOR INFO: TIME IRQ 3
+AVISOR INFO: TIME IRQ 4
+AVISOR INFO: vcpu:prio (1:5) run on unikernel 0 on pcpu 1.
+AVISOR INFO: vcpu:prio (1:5) run on unikernel 1 on pcpu 0.
+AVISOR INFO: TIME: 67490720 vm id 0 vcpu id 1 pcpu id 1
+AVISOR INFO: TIME: 67496114 vm id 1 vcpu id 1 pcpu id 0
+task1! 0
+task1! 0
+task1! 1
+task1! 1
+task1! 2
+task1! 2
+task1! 3
+task1! 3
+AVISOR INFO: TIME IRQ 5
+AVISOR INFO: TIME IRQ 6
+AVISOR INFO: vcpu:prio (2:5) run on unikernel 0 on pcpu 1.
+AVISOR INFO: vcpu:prio (2:5) run on unikernel 1 on pcpu 0.
+AVISOR INFO: TIME: 130078998 vm id 0 vcpu id 2 pcpu id 1
+AVISOR INFO: TIME: 130094113 vm id 1 vcpu id 2 pcpu id 0
+task2! 0
+task2! 0
+task2! 1
+task2! 1
+task2! 2
+task2! 2
+task2! 3
+task2! 3
+AVISOR INFO: TIME IRQ 8
+AVISOR INFO: TIME IRQ 7
+AVISOR INFO: cpu id 0 vm id 1 rqnode need_resched = 0
+AVISOR INFO: cpu id 0 vm id 3 rqnode need_resched = 1
+AVISOR INFO: cpu id 0 vm id 2 rqnode need_resched = 1
+AVISOR INFO: unikernel 2 will run on pcpu 0.
+AVISOR INFO: cpu id 1 vm id 0 rqnode need_resched = 0
+AVISOR INFO: vcpu:prio (0:5) run on unikernel 2 on pcpu 0.
+AVISOR INFO: cpu id 1 vm id 1 rqnode need_resched = 0
+AVISOR INFO: TIME: 192660019 vm id 2 vcpu id 0 pcpu id 0
+AVISOR INFO: cpu id 1 vm id 3 rqnode need_resched = 1
+AVISOR INFO: unikernel 3 will run on pcpu 1.
+AVISOR INFO: vcpu:prio (0:5) run on unikernel 3 on pcpu 1.
+AVISOR INFO: TIME: 192685206 vm id 3 vcpu id 0 pcpu id 1
+Powered by
+o.   .o       _ _               __ _
+Oo   Oo  ___ (_) | __ __  __ _ ' _) :_
+oO   oO ' _ `| | |/ /  _)' _` | |_|  _)
+oOo oOO| | | | |   (| | | (_) |  _) :_
+ OoOoO ._, ._:_:_,\_._,  .__,_:_, \___)
+      Epimetheus 0.12.0~052b89e4-custom
+Boot Time Cycles = 196434711
+Hello World! 200000000
+cpuid = 1 fn = 40106c80
+cpuid = 2 fn = 40106cc0
+cpuid = 3 fn = 40106d00
+Powered by
+o.   .o       _ _               __ _
+Oo   Oo  ___ (_) | __ __  __ _ ' _) :_
+oO   oO ' _ `| | |/ /  _)' _` | |_|  _)
+oOo oOO| | | | |   (| | | (_) |  _) :_
+ OoOoO ._, ._:_:_,\_._,  .__,_:_, \___)
+      Epimetheus 0.12.0~052b89e4-custom
+Boot Time Cycles = 196724237
+Hello World! 200000000
+cpuid = 1 fn = 40106c80
+cpuid = 2 fn = 40106cc0
+cpuid = 3 fn = 40106d00
+main 0
+main 0
+main 1
+main 1
+main 2
+main 2
+main 3
+main 3
+AVISOR INFO: TIME IRQ 9
+AVISOR INFO: TIME IRQ 10
+AVISOR INFO: vcpu:prio (1:5) run on unikernel 2 on pcpu 0.
+AVISOR INFO: vcpu:prio (1:5) run on unikernel 3 on pcpu 1.
+AVISOR INFO: TIME: 255215385 vm id 2 vcpu id 1 pcpu id 0
+AVISOR INFO: TIME: 255220219 vm id 3 vcpu id 1 pcpu id 1
+task1! 0
+task1! 0
+task1! 1
+task1! 1
+task1! 2
+task1! 2
+task1! 3
+task1! 3
+AVISOR INFO: TIME IRQ 11
+AVISOR INFO: TIME IRQ 12
+AVISOR INFO: vcpu:prio (2:5) run on unikernel 2 on pcpu 0.
+AVISOR INFO: vcpu:prio (2:5) run on unikernel 3 on pcpu 1.
+AVISOR INFO: TIME: 317796893 vm id 2 vcpu id 2 pcpu id 0
+AVISOR INFO: TIME: 317804256 vm id 3 vcpu id 2 pcpu id 1
+task2! 0
+task2! 0
+task2! 1
+task2! 1
+task2! 2
+task2! 2
+task2! 3
+task2! 3
+AVISOR INFO: TIME IRQ 13
+AVISOR INFO: TIME IRQ 14
+AVISOR INFO: vcpu:prio (3:5) run on unikernel 3 on pcpu 1.
+AVISOR INFO: vcpu:prio (3:5) run on unikernel 2 on pcpu 0.
+AVISOR INFO: TIME: 380366818 vm id 3 vcpu id 3 pcpu id 1
+AVISOR INFO: TIME: 380386495 vm id 2 vcpu id 3 pcpu id 0
+task3! 0
+task3! 0
+task3! 1
+task3! 1
+task3! 2
+task3! 2
+task3! 3
+task3! 3
+AVISOR INFO: TIME IRQ 15
+AVISOR INFO: TIME IRQ 16
+AVISOR INFO: cpu id 1 vm id 3 rqnode need_resched = 0
+AVISOR INFO: cpu id 1 vm id 0 rqnode need_resched = 0
+AVISOR INFO: cpu id 1 vm id 1 rqnode need_resched = 0
+AVISOR INFO: vm repeat
+AVISOR INFO: cpu id 1 vm id 3 rqnode need_resched = 1
+AVISOR INFO: cpu id 1 vm id 0 rqnode need_resched = 1
+AVISOR INFO: cpu id 1 vm id 1 rqnode need_resched = 1
+AVISOR INFO: unikernel 1 will run on pcpu 1.
+AVISOR INFO: cpu id 0 vm id 2 rqnode need_resched = 0
+AVISOR INFO: vcpu:prio (3:5) run on unikernel 1 on pcpu 1.
+AVISOR INFO: cpu id 0 vm id 3 rqnode need_resched = 1
+AVISOR INFO: TIME: 442993243 vm id 1 vcpu id 3 pcpu id 1
+AVISOR INFO: cpu id 0 vm id 0 rqnode need_resched = 1
+AVISOR INFO: unikernel 0 will run on pcpu 0.
+AVISOR INFO: vcpu:prio (3:5) run on unikernel 0 on pcpu 0.
+AVISOR INFO: TIME: 443016212 vm id 0 vcpu id 3 pcpu id 0
+task3! 0
+task3! 1
+task3! 2
+task3! 3
+AVISOR INFO: TIME IRQ 17
+AVISOR INFO: TIME IRQ 18
+AVISOR INFO: vcpu repeat
+AVISOR INFO: vcpu repeat
+AVISOR INFO: vcpu:prio (0:5) run on unikernel 0 on pcpu 0.
+AVISOR INFO: vcpu:prio (0:5) run on unikernel 1 on pcpu 1.
+AVISOR INFO: TIME: 505511331 vm id 0 vcpu id 0 pcpu id 0
+AVISOR INFO: TIME: 505517354 vm id 1 vcpu id 0 pcpu id 1
+main 4
+main 4
+main 5
+main 5
+main 6
+main 6
+main 7
+main 7
+main 8
+main 8
+AVISOR INFO: TIME IRQ 19
+AVISOR INFO: TIME IRQ 20
+AVISOR INFO: vcpu:prio (1:5) run on unikernel 0 on pcpu 0.
+AVISOR INFO: vcpu:prio (1:5) run on unikernel 1 on pcpu 1.
+AVISOR INFO: TIME: 568079784 vm id 0 vcpu id 1 pcpu id 0
+AVISOR INFO: TIME: 568087213 vm id 1 vcpu id 1 pcpu id 1
+task1! 4
+task1! 4
+task1! 5
+task1! 5
+task1! 6
+task1! 6
+task1! 7
+task1! 7
+task1! 8
+task1! 8
+AVISOR INFO: TIME IRQ 22
+AVISOR INFO: TIME IRQ 21
+AVISOR INFO: vcpu:prio (2:5) run on unikernel 1 on pcpu 1.
+AVISOR INFO: vcpu:prio (2:5) run on unikernel 0 on pcpu 0.
+AVISOR INFO: TIME: 630668847 vm id 1 vcpu id 2 pcpu id 1
+AVISOR INFO: TIME: 630668893 vm id 0 vcpu id 2 pcpu id 0
+task2! 4
+task2! 4
+task2! 5
+task2! 5
+task2! 6
+task2! 6
+task2! 7
+task2! 7
+AVISOR INFO: TIME IRQ 23
+AVISOR INFO: TIME IRQ 24
+AVISOR INFO: cpu id 1 vm id 0 rqnode need_resched = 0
+AVISOR INFO: cpu id 1 vm id 1 rqnode need_resched = 0
+AVISOR INFO: cpu id 1 vm id 2 rqnode need_resched = 0
+AVISOR INFO: cpu id 1 vm id 3 rqnode need_resched = 1
+AVISOR INFO: unikernel 3 will run on pcpu 1.
+AVISOR INFO: cpu id 0 vm id 0 rqnode need_resched = 0
+AVISOR INFO: vcpu repeat
+AVISOR INFO: cpu id 0 vm id 1 rqnode need_resched = 0
+AVISOR INFO: vcpu:prio (0:5) run on unikernel 3 on pcpu 1.
+AVISOR INFO: cpu id 0 vm id 2 rqnode need_resched = 0
+AVISOR INFO: TIME: 693280616 vm id 3 vcpu id 0 pcpu id 1
+AVISOR INFO: vm repeat
+AVISOR INFO: cpu id 0 vm id 0 rqnode need_resched = 1
+AVISOR INFO: cpu id 0 vm id 1 rqnode need_resched = 1
+AVISOR INFO: cpu id 0 vm id 2 rqnode need_resched = 1
+AVISOR INFO: unikernel 2 will run on pcpu 0.
+AVISOR INFO: vcpu repeat
+AVISOR INFO: vcpu:prio (0:5) run on unikernel 2 on pcpu 0.
+AVISOR INFO: TIME: 693326313 vm id 2 vcpu id 0 pcpu id 0
+main 4
+main 4
+main 5
+main 5
+main 6
+main 6
+main 7
+main 7
+main 8
+main 8
+AVISOR INFO: TIME IRQ 25
+AVISOR INFO: TIME IRQ 26
+AVISOR INFO: vcpu:prio (1:5) run on unikernel 3 on pcpu 1.
+AVISOR INFO: vcpu:prio (1:5) run on unikernel 2 on pcpu 0.
+AVISOR INFO: TIME: 755807065 vm id 3 vcpu id 1 pcpu id 1
+AVISOR INFO: TIME: 755813144 vm id 2 vcpu id 1 pcpu id 0
+task1! 4
+task1! 4
+task1! 5
+task1! 5
+task1! 6
+task1! 6
+task1! 7
+task1! 7
+task1! 8
+task1! 8
+AVISOR INFO: TIME IRQ 28
+AVISOR INFO: TIME IRQ 27
+AVISOR INFO: vcpu:prio (2:5) run on unikernel 3 on pcpu 1.
+AVISOR INFO: vcpu:prio (2:5) run on unikernel 2 on pcpu 0.
+AVISOR INFO: TIME: 818384585 vm id 3 vcpu id 2 pcpu id 1
+AVISOR INFO: TIME: 818393409 vm id 2 vcpu id 2 pcpu id 0
+task2! 4
+task2! 4
+task2! 5
+task2! 5
+task2! 6
+task2! 6
+task2! 7
+task2! 7
+task2! 8
+task2! 8
+AVISOR INFO: TIME IRQ 29
+AVISOR INFO: TIME IRQ 30
+AVISOR INFO: vcpu:prio (3:5) run on unikernel 2 on pcpu 0.
+AVISOR INFO: vcpu:prio (3:5) run on unikernel 3 on pcpu 1.
+AVISOR INFO: TIME: 880952921 vm id 2 vcpu id 3 pcpu id 0
+AVISOR INFO: TIME: 880959755 vm id 3 vcpu id 3 pcpu id 1
+task3! 4
+task3! 4
+task3! 5
+task3! 5
+task3! 6
+task3! 6
+task3! 7
+task3! 7
+task3! 8
+task3! 8
+AVISOR INFO: TIME IRQ 31
+AVISOR INFO: TIME IRQ 32
+AVISOR INFO: cpu id 1 vm id 2 rqnode need_resched = 0
+AVISOR INFO: cpu id 1 vm id 3 rqnode need_resched = 0
+AVISOR INFO: cpu id 1 vm id 0 rqnode need_resched = 1
+AVISOR INFO: cpu id 1 vm id 1 rqnode need_resched = 1
+AVISOR INFO: unikernel 1 will run on pcpu 1.
+AVISOR INFO: cpu id 0 vm id 2 rqnode need_resched = 0
+AVISOR INFO: vcpu:prio (3:5) run on unikernel 1 on pcpu 1.
+AVISOR INFO: cpu id 0 vm id 3 rqnode need_resched = 0
+AVISOR INFO: TIME: 943501785 vm id 1 vcpu id 3 pcpu id 1
+AVISOR INFO: cpu id 0 vm id 0 rqnode need_resched = 1
+AVISOR INFO: unikernel 0 will run on pcpu 0.
+AVISOR INFO: vcpu:prio (3:5) run on unikernel 0 on pcpu 0.
+AVISOR INFO: TIME: 943526589 vm id 0 vcpu id 3 pcpu id 0
+task3! 4
+task3! 5
+task3! 6
+task3! 7
+task3! 8
+AVISOR INFO: TIME IRQ 33
+AVISOR INFO: TIME IRQ 34
+AVISOR INFO: vcpu repeat
+AVISOR INFO: vcpu repeat
+AVISOR INFO: vcpu:prio (0:5) run on unikernel 1 on pcpu 1.
+AVISOR INFO: vcpu:prio (0:5) run on unikernel 0 on pcpu 0.
+AVISOR INFO: TIME: 1006059124 vm id 1 vcpu id 0 pcpu id 1
+AVISOR INFO: TIME: 1006063172 vm id 0 vcpu id 0 pcpu id 0
+main 9
+main 9
+main 10
+main 10
+main 11
+main 11
+main 12
+main 12
+AVISOR INFO: TIME IRQ 35
+AVISOR INFO: TIME IRQ 36
+AVISOR INFO: vcpu:prio (1:5) run on unikernel 1 on pcpu 1.
+AVISOR INFO: vcpu:prio (1:5) run on unikernel 0 on pcpu 0.
+AVISOR INFO: TIME: 1068622472 vm id 1 vcpu id 1 pcpu id 1
+AVISOR INFO: TIME: 1068629768 vm id 0 vcpu id 1 pcpu id 0
+task1! 9
+task1! 9
+task1! 10
+task1! 10
+task1! 11
+task1! 11
+task1! 12
+task1! 12
+task1! 13
+task1! 13
+AVISOR INFO: TIME IRQ 37
+AVISOR INFO: TIME IRQ 38
+AVISOR INFO: vcpu:prio (2:5) run on unikernel 0 on pcpu 0.
+AVISOR INFO: vcpu:prio (2:5) run on unikernel 1 on pcpu 1.
+AVISOR INFO: TIME: 1131200940 vm id 0 vcpu id 2 pcpu id 0
+AVISOR INFO: TIME: 1131207435 vm id 1 vcpu id 2 pcpu id 1
+task2! 8
+task2! 8
+task2! 9
+task2! 9
+task2! 10
+task2! 10
+task2! 11
+task2! 11
+task2! 12
+task2! 12
+AVISOR INFO: TIME IRQ 39
+AVISOR INFO: TIME IRQ 40
+AVISOR INFO: cpu id 1 vm id 1 rqnode need_resched = 0
+AVISOR INFO: cpu id 1 vm id 0 rqnode need_resched = 0
+AVISOR INFO: cpu id 1 vm id 2 rqnode need_resched = 0
+AVISOR INFO: cpu id 1 vm id 3 rqnode need_resched = 0
+AVISOR INFO: vm repeat
+AVISOR INFO: cpu id 1 vm id 1 rqnode need_resched = 1
+AVISOR INFO: cpu id 1 vm id 0 rqnode need_resched = 1
+AVISOR INFO: cpu id 1 vm id 2 rqnode need_resched = 1
+AVISOR INFO: cpu id 1 vm id 3 rqnode need_resched = 1
+AVISOR INFO: unikernel 3 will run on pcpu 1.
+AVISOR INFO: cpu id 0 vm id 1 rqnode need_resched = 1
+AVISOR INFO: vcpu repeat
+AVISOR INFO: cpu id 0 vm id 0 rqnode need_resched = 1
+AVISOR INFO: vcpu:prio (0:5) run on unikernel 3 on pcpu 1.
+AVISOR INFO: cpu id 0 vm id 2 rqnode need_resched = 1
+AVISOR INFO: TIME: 1193822552 vm id 3 vcpu id 0 pcpu id 1
+AVISOR INFO: unikernel 2 will run on pcpu 0.
+AVISOR INFO: vcpu repeat
+AVISOR INFO: vcpu:prio (0:5) run on unikernel 2 on pcpu 0.
+AVISOR INFO: TIME: 1193844793 vm id 2 vcpu id 0 pcpu id 0
+main 9
+main 9
+main 10
+main 10
+main 11
+main 11
+main 12
+main 12
+AVISOR INFO: TIME IRQ 41
+AVISOR INFO: TIME IRQ 42
+AVISOR INFO: vcpu:prio (1:5) run on unikernel 3 on pcpu 1.
+AVISOR INFO: vcpu:prio (1:5) run on unikernel 2 on pcpu 0.
+AVISOR INFO: TIME: 1256334757 vm id 3 vcpu id 1 pcpu id 1
+AVISOR INFO: TIME: 1256342509 vm id 2 vcpu id 1 pcpu id 0
+task1! 9
+task1! 9
+task1! 10
+task1! 10
+task1! 11
+task1! 11
+task1! 12
+task1! 12
+AVISOR INFO: TIME IRQ 43
+AVISOR INFO: TIME IRQ 44
+AVISOR INFO: vcpu:prio (2:5) run on unikernel 3 on pcpu 1.
+AVISOR INFO: vcpu:prio (2:5) run on unikernel 2 on pcpu 0.
+AVISOR INFO: TIME: 1318922004 vm id 3 vcpu id 2 pcpu id 1
+AVISOR INFO: TIME: 1318933639 vm id 2 vcpu id 2 pcpu id 0
+task2! 9
+task2! 9
+task2! 10
+task2! 10
+task2! 11
+task2! 11
+task2! 12
+task2! 12
+AVISOR INFO: TIME IRQ 45
+AVISOR INFO: TIME IRQ 46
+AVISOR INFO: vcpu:prio (3:5) run on unikernel 3 on pcpu 1.
+AVISOR INFO: vcpu:prio (3:5) run on unikernel 2 on pcpu 0.
+AVISOR INFO: TIME: 1381493870 vm id 3 vcpu id 3 pcpu id 1
+AVISOR INFO: TIME: 1381503688 vm id 2 vcpu id 3 pcpu id 0
+task3! 9
+task3! 9
+task3! 10
+task3! 10
+task3! 11
+task3! 11
+task3! 12
+task3! 12
+task3! 13
+task3! 13
+AVISOR INFO: TIME IRQ 47
+AVISOR INFO: TIME IRQ 48
+AVISOR INFO: cpu id 1 vm id 3 rqnode need_resched = 0
+AVISOR INFO: cpu id 1 vm id 2 rqnode need_resched = 0
+AVISOR INFO: cpu id 1 vm id 1 rqnode need_resched = 1
+AVISOR INFO: cpu id 1 vm id 0 rqnode need_resched = 1
+AVISOR INFO: unikernel 0 will run on pcpu 1.
+AVISOR INFO: cpu id 0 vm id 3 rqnode need_resched = 0
+AVISOR INFO: vcpu:prio (3:5) run on unikernel 0 on pcpu 1.
+AVISOR INFO: cpu id 0 vm id 2 rqnode need_resched = 0
+AVISOR INFO: TIME: 1444139734 vm id 0 vcpu id 3 pcpu id 1
+AVISOR INFO: cpu id 0 vm id 1 rqnode need_resched = 1
+AVISOR INFO: unikernel 1 will run on pcpu 0.
+AVISOR INFO: vcpu:prio (3:5) run on unikernel 1 on pcpu 0.
+AVISOR INFO: TIME: 1444192908 vm id 1 vcpu id 3 pcpu id 0
+task3! 9
+task3! 10
+task3! 11
+task3! 12
+AVISOR INFO: TIME IRQ 49
+AVISOR INFO: TIME IRQ 50
+AVISOR INFO: vcpu repeat
+AVISOR INFO: vcpu repeat
+AVISOR INFO: vcpu:prio (0:5) run on unikernel 0 on pcpu 1.
+AVISOR INFO: vcpu:prio (0:5) run on unikernel 1 on pcpu 0.
+AVISOR INFO: TIME: 1506642417 vm id 0 vcpu id 0 pcpu id 1
+AVISOR INFO: TIME: 1506653312 vm id 1 vcpu id 0 pcpu id 0
+main 13
+main 13
+main 14
+main 14
+main 15
+main 15
+main 16
+main 16
+main 17
+main 17
+AVISOR INFO: TIME IRQ 51
+AVISOR INFO: TIME IRQ 52
+AVISOR INFO: vcpu:prio (1:5) run on unikernel 0 on pcpu 1.
+AVISOR INFO: vcpu:prio (1:5) run on unikernel 1 on pcpu 0.
+AVISOR INFO: TIME: 1569210406 vm id 0 vcpu id 1 pcpu id 1
+AVISOR INFO: TIME: 1569220890 vm id 1 vcpu id 1 pcpu id 0
+task1! 14
+task1! 14
+task1! 15
+task1! 15
+task1! 16
+task1! 16
+task1! 17
+task1! 17
+AVISOR INFO: TIME IRQ 54
+AVISOR INFO: TIME IRQ 53
+AVISOR INFO: vcpu:prio (2:5) run on unikernel 1 on pcpu 0.
+AVISOR INFO: vcpu:prio (2:5) run on unikernel 0 on pcpu 1.
+AVISOR INFO: TIME: 1631809220 vm id 0 vcpu id 2 pcpu id 1
+AVISOR INFO: TIME: 1631809342 vm id 1 vcpu id 2 pcpu id 0
+task2! 13
+task2! 13
+task2! 14
+task2! 14
+task2! 15
+task2! 15
+task2! 16
+task2! 16
+AVISOR INFO: TIME IRQ 55
+AVISOR INFO: TIME IRQ 56
+AVISOR INFO: cpu id 0 vm id 1 rqnode need_resched = 0
+AVISOR INFO: cpu id 0 vm id 0 rqnode need_resched = 0
+AVISOR INFO: cpu id 0 vm id 3 rqnode need_resched = 0
+AVISOR INFO: cpu id 0 vm id 2 rqnode need_resched = 0
+AVISOR INFO: vm repeat
+AVISOR INFO: cpu id 0 vm id 1 rqnode need_resched = 1
+AVISOR INFO: cpu id 0 vm id 0 rqnode need_resched = 1
+AVISOR INFO: cpu id 0 vm id 3 rqnode need_resched = 1
+AVISOR INFO: cpu id 0 vm id 2 rqnode need_resched = 1
+AVISOR INFO: unikernel 2 will run on pcpu 0.
+AVISOR INFO: cpu id 1 vm id 1 rqnode need_resched = 1
+AVISOR INFO: vcpu repeat
+AVISOR INFO: cpu id 1 vm id 0 rqnode need_resched = 1
+AVISOR INFO: vcpu:prio (0:5) run on unikernel 2 on pcpu 0.
+AVISOR INFO: cpu id 1 vm id 3 rqnode need_resched = 1
+AVISOR INFO: TIME: 1694416342 vm id 2 vcpu id 0 pcpu id 0
+AVISOR INFO: unikernel 3 will run on pcpu 1.
+AVISOR INFO: vcpu repeat
+AVISOR INFO: vcpu:prio (0:5) run on unikernel 3 on pcpu 1.
+AVISOR INFO: TIME: 1694440569 vm id 3 vcpu id 0 pcpu id 1
+main 13
+main 13
+main 14
+main 14
+main 15
+main 15
+main 16
+main 16
+main 17
+main 17
+AVISOR INFO: TIME IRQ 57
+AVISOR INFO: TIME IRQ 58
+AVISOR INFO: vcpu:prio (1:5) run on unikernel 2 on pcpu 0.
+AVISOR INFO: vcpu:prio (1:5) run on unikernel 3 on pcpu 1.
+AVISOR INFO: TIME: 1756953693 vm id 2 vcpu id 1 pcpu id 0
+AVISOR INFO: TIME: 1756960616 vm id 3 vcpu id 1 pcpu id 1
+task1! 13
+task1! 13
+task1! 14
+task1! 14
+task1! 15
+task1! 15
+task1! 16
+task1! 16
+task1! 17
+task1! 17
+AVISOR INFO: TIME IRQ 59
+AVISOR INFO: TIME IRQ 60
+AVISOR INFO: vcpu:prio (2:5) run on unikernel 3 on pcpu 1.
+AVISOR INFO: vcpu:prio (2:5) run on unikernel 2 on pcpu 0.
+AVISOR INFO: TIME: 1819502743 vm id 3 vcpu id 2 pcpu id 1
+AVISOR INFO: TIME: 1819508725 vm id 2 vcpu id 2 pcpu id 0
+task2! 13
+task2! 13
+task2! 14
+task2! 14
+task2! 15
+task2! 15
+task2! 16
+task2! 16
+AVISOR INFO: TIME IRQ 62
+AVISOR INFO: TIME IRQ 61
+AVISOR INFO: vcpu:prio (3:5) run on unikernel 2 on pcpu 0.
+AVISOR INFO: vcpu:prio (3:5) run on unikernel 3 on pcpu 1.
+AVISOR INFO: TIME: 1882097382 vm id 2 vcpu id 3 pcpu id 0
+AVISOR INFO: TIME: 1882102033 vm id 3 vcpu id 3 pcpu id 1
+task3! 14
+task3! 14
+task3! 15
+task3! 15
+task3! 16
+task3! 16
+task3! 17
+task3! 17
+AVISOR INFO: TIME IRQ 64
+AVISOR INFO: TIME IRQ 63
+AVISOR INFO: cpu id 1 vm id 3 rqnode need_resched = 0
+AVISOR INFO: cpu id 1 vm id 2 rqnode need_resched = 0
+AVISOR INFO: cpu id 1 vm id 1 rqnode need_resched = 1
+AVISOR INFO: cpu id 1 vm id 0 rqnode need_resched = 1
+AVISOR INFO: unikernel 0 will run on pcpu 1.
+AVISOR INFO: cpu id 0 vm id 3 rqnode need_resched = 0
+AVISOR INFO: vcpu:prio (3:5) run on unikernel 0 on pcpu 1.
+AVISOR INFO: cpu id 0 vm id 2 rqnode need_resched = 0
+AVISOR INFO: TIME: 1944677312 vm id 0 vcpu id 3 pcpu id 1
+AVISOR INFO: cpu id 0 vm id 1 rqnode need_resched = 1
+AVISOR INFO: unikernel 1 will run on pcpu 0.
+AVISOR INFO: vcpu:prio (3:5) run on unikernel 1 on pcpu 0.
+AVISOR INFO: TIME: 1944704598 vm id 1 vcpu id 3 pcpu id 0
+task3! 13
+task3! 14
+task3! 15
+task3! 16
+task3! 17
+AVISOR INFO: TIME IRQ 65
+AVISOR INFO: TIME IRQ 66
+AVISOR INFO: vcpu repeat
+AVISOR INFO: vcpu repeat
+AVISOR INFO: vcpu:prio (0:5) run on unikernel 0 on pcpu 1.
+AVISOR INFO: vcpu:prio (0:5) run on unikernel 1 on pcpu 0.
+AVISOR INFO: TIME: 2007230525 vm id 0 vcpu id 0 pcpu id 1
+AVISOR INFO: TIME: 2007236697 vm id 1 vcpu id 0 pcpu id 0
+main 18
+main 18
+main 19
+main 19
+main 20
+main 20
+main 21
+main 21
+main 22
+main 22
+AVISOR INFO: TIME IRQ 67
+AVISOR INFO: TIME IRQ 68
+AVISOR INFO: vcpu:prio (1:5) run on unikernel 1 on pcpu 0.
+AVISOR INFO: vcpu:prio (1:5) run on unikernel 0 on pcpu 1.
+AVISOR INFO: TIME: 2069797709 vm id 1 vcpu id 1 pcpu id 0
+AVISOR INFO: TIME: 2069804117 vm id 0 vcpu id 1 pcpu id 1
+task1! 18
+task1! 18
+task1! 19
+task1! 19
+task1! 20
+task1! 20
+task1! 21
+task1! 21
+task1! 22
+task1! 22
+AVISOR INFO: TIME IRQ 69
+AVISOR INFO: TIME IRQ 70
+AVISOR INFO: vcpu:prio (2:5) run on unikernel 0 on pcpu 1.
+AVISOR INFO: vcpu:prio (2:5) run on unikernel 1 on pcpu 0.
+AVISOR INFO: TIME: 2132368662 vm id 0 vcpu id 2 pcpu id 1
+AVISOR INFO: TIME: 2132394185 vm id 1 vcpu id 2 pcpu id 0
+task2! 17
+task2! 17
+task2! 18
+task2! 18
+task2! 19
+task2! 19
+task2! 20
+task2! 20
+task2! 21
+task2! 21
+AVISOR INFO: TIME IRQ 71
+AVISOR INFO: TIME IRQ 72
+AVISOR INFO: cpu id 1 vm id 0 rqnode need_resched = 0
+AVISOR INFO: cpu id 1 vm id 1 rqnode need_resched = 0
+AVISOR INFO: cpu id 1 vm id 3 rqnode need_resched = 0
+AVISOR INFO: cpu id 1 vm id 2 rqnode need_resched = 0
+AVISOR INFO: vm repeat
+AVISOR INFO: cpu id 1 vm id 0 rqnode need_resched = 1
+AVISOR INFO: cpu id 1 vm id 1 rqnode need_resched = 1
+AVISOR INFO: cpu id 1 vm id 3 rqnode need_resched = 1
+AVISOR INFO: cpu id 1 vm id 2 rqnode need_resched = 1
+AVISOR INFO: unikernel 2 will run on pcpu 1.
+AVISOR INFO: cpu id 0 vm id 0 rqnode need_resched = 1
+AVISOR INFO: vcpu repeat
+AVISOR INFO: cpu id 0 vm id 1 rqnode need_resched = 1
+AVISOR INFO: vcpu:prio (0:5) run on unikernel 2 on pcpu 1.
+AVISOR INFO: cpu id 0 vm id 3 rqnode need_resched = 1
+AVISOR INFO: TIME: 2195019394 vm id 2 vcpu id 0 pcpu id 1
+AVISOR INFO: unikernel 3 will run on pcpu 0.
+AVISOR INFO: vcpu repeat
+AVISOR INFO: vcpu:prio (0:5) run on unikernel 3 on pcpu 0.
+AVISOR INFO: TIME: 2195039876 vm id 3 vcpu id 0 pcpu id 0
+main 18
+main 18
+main 19
+main 19
+main 20
+main 20
+main 21
+main 21
+main 22
+main 22
+AVISOR INFO: TIME IRQ 73
+AVISOR INFO: TIME IRQ 74
+AVISOR INFO: vcpu:prio (1:5) run on unikernel 3 on pcpu 0.
+AVISOR INFO: vcpu:prio (1:5) run on unikernel 2 on pcpu 1.
+AVISOR INFO: TIME: 2257507848 vm id 3 vcpu id 1 pcpu id 0
+AVISOR INFO: TIME: 2257513983 vm id 2 vcpu id 1 pcpu id 1
+task1! 18
+task1! 18
+task1! 19
+task1! 19
+task1! 20
+task1! 20
+task1! 21
+task1! 21
+task1! 22
+task1! 22
+AVISOR INFO: TIME IRQ 75
+AVISOR INFO: TIME IRQ 76
+AVISOR INFO: vcpu:prio (2:5) run on unikernel 2 on pcpu 1.
+AVISOR INFO: vcpu:prio (2:5) run on unikernel 3 on pcpu 0.
+AVISOR INFO: TIME: 2320086041 vm id 2 vcpu id 2 pcpu id 1
+AVISOR INFO: TIME: 2320092721 vm id 3 vcpu id 2 pcpu id 0
+task2! 17
+task2! 17
+task2! 18
+task2! 18
+task2! 19
+task2! 19
+task2! 20
+task2! 20
+task2! 21
+task2! 21
+AVISOR INFO: TIME IRQ 77
+AVISOR INFO: TIME IRQ 78
+AVISOR INFO: vcpu:prio (3:5) run on unikernel 2 on pcpu 1.
+AVISOR INFO: vcpu:prio (3:5) run on unikernel 3 on pcpu 0.
+AVISOR INFO: TIME: 2382668437 vm id 2 vcpu id 3 pcpu id 1
+AVISOR INFO: TIME: 2382677789 vm id 3 vcpu id 3 pcpu id 0
+task3! 18
+task3! 18
+task3! 19
+task3! 19
+task3! 20
+task3! 20
+task3! 21
+task3! 21
+AVISOR INFO: TIME IRQ 80
+AVISOR INFO: TIME IRQ 79
+AVISOR INFO: cpu id 1 vm id 2 rqnode need_resched = 0
+AVISOR INFO: cpu id 1 vm id 3 rqnode need_resched = 0
+AVISOR INFO: cpu id 1 vm id 0 rqnode need_resched = 1
+AVISOR INFO: cpu id 1 vm id 1 rqnode need_resched = 1
+AVISOR INFO: unikernel 1 will run on pcpu 1.
+AVISOR INFO: cpu id 0 vm id 2 rqnode need_resched = 0
+AVISOR INFO: vcpu:prio (3:5) run on unikernel 1 on pcpu 1.
+AVISOR INFO: cpu id 0 vm id 3 rqnode need_resched = 0
+AVISOR INFO: TIME: 2445288955 vm id 1 vcpu id 3 pcpu id 1
+AVISOR INFO: cpu id 0 vm id 0 rqnode need_resched = 1
+AVISOR INFO: unikernel 0 will run on pcpu 0.
+AVISOR INFO: vcpu:prio (3:5) run on unikernel 0 on pcpu 0.
+AVISOR INFO: TIME: 2445315190 vm id 0 vcpu id 3 pcpu id 0
+task3! 18
+task3! 19
+task3! 20
+task3! 21
+task3! 22
+AVISOR INFO: TIME IRQ 81
+AVISOR INFO: TIME IRQ 82
+AVISOR INFO: vcpu repeat
+AVISOR INFO: vcpu repeat
+AVISOR INFO: vcpu:prio (0:5) run on unikernel 1 on pcpu 1.
+AVISOR INFO: vcpu:prio (0:5) run on unikernel 0 on pcpu 0.
+AVISOR INFO: TIME: 2507817112 vm id 1 vcpu id 0 pcpu id 1
+AVISOR INFO: TIME: 2507826458 vm id 0 vcpu id 0 pcpu id 0
+main 23
+main 23
+main 24
+main 24
+main 25
+main 25
+main 26
+main 26
+main 27
+main 27
+AVISOR INFO: TIME IRQ 83
+AVISOR INFO: TIME IRQ 84
+AVISOR INFO: vcpu:prio (1:5) run on unikernel 1 on pcpu 1.
+AVISOR INFO: vcpu:prio (1:5) run on unikernel 0 on pcpu 0.
+AVISOR INFO: TIME: 2570389521 vm id 1 vcpu id 1 pcpu id 1
+AVISOR INFO: TIME: 2570397299 vm id 0 vcpu id 1 pcpu id 0
+task1! 23
+task1! 23
+task1! 24
+task1! 24
+task1! 25
+task1! 25
+task1! 26
+task1! 26
+AVISOR INFO: TIME IRQ 85
+AVISOR INFO: TIME IRQ 86
+AVISOR INFO: vcpu:prio (2:5) run on unikernel 0 on pcpu 0.
+AVISOR INFO: vcpu:prio (2:5) run on unikernel 1 on pcpu 1.
+AVISOR INFO: TIME: 2632964788 vm id 0 vcpu id 2 pcpu id 0
+AVISOR INFO: TIME: 2632972446 vm id 1 vcpu id 2 pcpu id 1
+task2! 22
+task2! 22
+task2! 23
+task2! 23
+task2! 24
+task2! 24
+task2! 25
+task2! 25
+AVISOR INFO: TIME IRQ 87
+AVISOR INFO: TIME IRQ 88
+AVISOR INFO: cpu id 0 vm id 0 rqnode need_resched = 0
+AVISOR INFO: cpu id 0 vm id 1 rqnode need_resched = 0
+AVISOR INFO: cpu id 0 vm id 2 rqnode need_resched = 0
+AVISOR INFO: cpu id 0 vm id 3 rqnode need_resched = 0
+AVISOR INFO: vm repeat
+AVISOR INFO: cpu id 0 vm id 0 rqnode need_resched = 1
+AVISOR INFO: cpu id 0 vm id 1 rqnode need_resched = 1
+AVISOR INFO: cpu id 0 vm id 2 rqnode need_resched = 1
+AVISOR INFO: cpu id 0 vm id 3 rqnode need_resched = 1
+AVISOR INFO: unikernel 3 will run on pcpu 0.
+AVISOR INFO: cpu id 1 vm id 0 rqnode need_resched = 1
+AVISOR INFO: vcpu repeat
+AVISOR INFO: cpu id 1 vm id 1 rqnode need_resched = 1
+AVISOR INFO: vcpu:prio (0:5) run on unikernel 3 on pcpu 0.
+AVISOR INFO: cpu id 1 vm id 2 rqnode need_resched = 1
+AVISOR INFO: TIME: 2695589481 vm id 3 vcpu id 0 pcpu id 0
+AVISOR INFO: unikernel 2 will run on pcpu 1.
+AVISOR INFO: vcpu repeat
+AVISOR INFO: vcpu:prio (0:5) run on unikernel 2 on pcpu 1.
+AVISOR INFO: TIME: 2695612152 vm id 2 vcpu id 0 pcpu id 1
+main 23
+main 23
+main 24
+main 24
+main 25
+main 25
+main 26
+main 26
+AVISOR INFO: TIME IRQ 89
+AVISOR INFO: TIME IRQ 90
+AVISOR INFO: vcpu:prio (1:5) run on unikernel 3 on pcpu 0.
+AVISOR INFO: vcpu:prio (1:5) run on unikernel 2 on pcpu 1.
+AVISOR INFO: TIME: 2758114326 vm id 3 vcpu id 1 pcpu id 0
+AVISOR INFO: TIME: 2758118585 vm id 2 vcpu id 1 pcpu id 1
+task1! 23
+task1! 23
+task1! 24
+task1! 24
+task1! 25
+task1! 25
+task1! 26
+task1! 26
+AVISOR INFO: TIME IRQ 91
+AVISOR INFO: TIME IRQ 92
+AVISOR INFO: vcpu:prio (2:5) run on unikernel 2 on pcpu 1.
+AVISOR INFO: vcpu:prio (2:5) run on unikernel 3 on pcpu 0.
+AVISOR INFO: TIME: 2820699421 vm id 2 vcpu id 2 pcpu id 1
+AVISOR INFO: TIME: 2820706909 vm id 3 vcpu id 2 pcpu id 0
+task2! 22
+task2! 22
+task2! 23
+task2! 23
+task2! 24
+task2! 24
+task2! 25
+task2! 25
+task2! 26
+AVISOR INFO: TIME IRQ 93
+AVISOR INFO: TIME IRQ 94
+AVISOR INFO: vcpu:prio (3:5) run on unikernel 2 on pcpu 1.
+AVISOR INFO: vcpu:prio (3:5) run on unikernel 3 on pcpu 0.
+AVISOR INFO: TIME: 2883243997 vm id 2 vcpu id 3 pcpu id 1
+AVISOR INFO: TIME: 2883251162 vm id 3 vcpu id 3 pcpu id 0
+task3! 22
+task3! 22
+task3! 23
+task3! 23
+task3! 24
+task3! 24
+task3! 25
+task3! 25
+task3! 26
+task3! 26
+AVISOR INFO: TIME IRQ 95
+AVISOR INFO: TIME IRQ 96
+AVISOR INFO: cpu id 1 vm id 3 rqnode need_resched = 0
+AVISOR INFO: cpu id 1 vm id 2 rqnode need_resched = 0
+AVISOR INFO: cpu id 1 vm id 0 rqnode need_resched = 1
+AVISOR INFO: cpu id 1 vm id 1 rqnode need_resched = 1
+AVISOR INFO: unikernel 1 will run on pcpu 1.
+AVISOR INFO: cpu id 0 vm id 3 rqnode need_resched = 0
+AVISOR INFO: vcpu:prio (3:5) run on unikernel 1 on pcpu 1.
+AVISOR INFO: cpu id 0 vm id 2 rqnode need_resched = 0
+AVISOR INFO: TIME: 2945842960 vm id 1 vcpu id 3 pcpu id 1
+AVISOR INFO: cpu id 0 vm id 0 rqnode need_resched = 1
+AVISOR INFO: unikernel 0 will run on pcpu 0.
+AVISOR INFO: vcpu:prio (3:5) run on unikernel 0 on pcpu 0.
+AVISOR INFO: TIME: 2945868461 vm id 0 vcpu id 3 pcpu id 0
+task3! 23
+task3! 24
+task3! 25
+task3! 26
+AVISOR INFO: TIME IRQ 97
+AVISOR INFO: TIME IRQ 98
+AVISOR INFO: vcpu repeat
+AVISOR INFO: vcpu repeat
+AVISOR INFO: vcpu:prio (0:5) run on unikernel 1 on pcpu 1.
+AVISOR INFO: vcpu:prio (0:5) run on unikernel 0 on pcpu 0.
+AVISOR INFO: TIME: 3008426811 vm id 1 vcpu id 0 pcpu id 1
+AVISOR INFO: TIME: 3008433234 vm id 0 vcpu id 0 pcpu id 0
+main 28
+main 28
+main 29
+main 29
+main 30
+main 30
+main 31
+main 31
+AVISOR INFO: TIME IRQ 99
+AVISOR INFO: TIME IRQ 100
+AVISOR INFO: vcpu:prio (1:5) run on unikernel 1 on pcpu 1.
+AVISOR INFO: vcpu:prio (1:5) run on unikernel 0 on pcpu 0.
+AVISOR INFO: TIME: 3071001945 vm id 1 vcpu id 1 pcpu id 1
+AVISOR INFO: TIME: 3071007296 vm id 0 vcpu id 1 pcpu id 0
+task1! 27
+task1! 27
+task1! 28
+task1! 28
+task1! 29
+task1! 29
+task1! 30
+task1! 30
+task1! 31
+task1! 31
+AVISOR INFO: TIME IRQ 101
+AVISOR INFO: TIME IRQ 102
+AVISOR INFO: vcpu:prio (2:5) run on unikernel 0 on pcpu 0.
+AVISOR INFO: vcpu:prio (2:5) run on unikernel 1 on pcpu 1.
+AVISOR INFO: TIME: 3133564019 vm id 0 vcpu id 2 pcpu id 0
+AVISOR INFO: TIME: 3133569228 vm id 1 vcpu id 2 pcpu id 1
+task2! 26
+task2! 26
+task2! 27
+task2! 27
+task2! 28
+task2! 28
+task2! 29
+task2! 29
+task2! 30
+task2! 30
+AVISOR INFO: TIME IRQ 104
+AVISOR INFO: TIME IRQ 103
+AVISOR INFO: cpu id 0 vm id 1 rqnode need_resched = 0
+AVISOR INFO: cpu id 0 vm id 0 rqnode need_resched = 0
+AVISOR INFO: cpu id 0 vm id 3 rqnode need_resched = 0
+AVISOR INFO: cpu id 0 vm id 2 rqnode need_resched = 0
+AVISOR INFO: vm repeat
+AVISOR INFO: cpu id 0 vm id 1 rqnode need_resched = 1
+AVISOR INFO: cpu id 0 vm id 0 rqnode need_resched = 1
+AVISOR INFO: cpu id 0 vm id 3 rqnode need_resched = 1
+AVISOR INFO: cpu id 0 vm id 2 rqnode need_resched = 1
+AVISOR INFO: unikernel 2 will run on pcpu 0.
+AVISOR INFO: cpu id 1 vm id 1 rqnode need_resched = 1
+AVISOR INFO: vcpu repeat
+AVISOR INFO: cpu id 1 vm id 0 rqnode need_resched = 1
+AVISOR INFO: vcpu:prio (0:5) run on unikernel 2 on pcpu 0.
+AVISOR INFO: cpu id 1 vm id 3 rqnode need_resched = 1
+AVISOR INFO: TIME: 3196222373 vm id 2 vcpu id 0 pcpu id 0
+AVISOR INFO: unikernel 3 will run on pcpu 1.
+AVISOR INFO: vcpu repeat
+AVISOR INFO: vcpu:prio (0:5) run on unikernel 3 on pcpu 1.
+AVISOR INFO: TIME: 3196244921 vm id 3 vcpu id 0 pcpu id 1
+main 27
+main 27
+main 28
+main 28
+main 29
+main 29
+main 30
+main 30
+AVISOR INFO: TIME IRQ 105
+AVISOR INFO: TIME IRQ 106
+AVISOR INFO: vcpu:prio (1:5) run on unikernel 3 on pcpu 1.
+AVISOR INFO: vcpu:prio (1:5) run on unikernel 2 on pcpu 0.
+AVISOR INFO: TIME: 3258743232 vm id 3 vcpu id 1 pcpu id 1
+AVISOR INFO: TIME: 3258743273 vm id 2 vcpu id 1 pcpu id 0
+task1! 27
+task1! 27
+task1! 28
+task1! 28
+task1! 29
+task1! 29
+task1! 30
+task1! 30
+task1! 31
+task1! 31
+AVISOR INFO: TIME IRQ 107
+AVISOR INFO: TIME IRQ 108
+AVISOR INFO: vcpu:prio (2:5) run on unikernel 2 on pcpu 0.
+AVISOR INFO: vcpu:prio (2:5) run on unikernel 3 on pcpu 1.
+AVISOR INFO: TIME: 3321298516 vm id 2 vcpu id 2 pcpu id 0
+AVISOR INFO: TIME: 3321306199 vm id 3 vcpu id 2 pcpu id 1
+task2! 26
+task2! 27
+task2! 27
+task2! 28
+task2! 28
+task2! 29
+task2! 29
+task2! 30
+task2! 30
+AVISOR INFO: TIME IRQ 109
+AVISOR INFO: TIME IRQ 110
+AVISOR INFO: vcpu:prio (3:5) run on unikernel 3 on pcpu 1.
+AVISOR INFO: vcpu:prio (3:5) run on unikernel 2 on pcpu 0.
+AVISOR INFO: TIME: 3383874007 vm id 3 vcpu id 3 pcpu id 1
+AVISOR INFO: TIME: 3383883696 vm id 2 vcpu id 3 pcpu id 0
+task3! 27
+task3! 27
+task3! 28
+task3! 28
+task3! 29
+task3! 29
+task3! 30
+task3! 30
+task3! 31
+task3! 31
+AVISOR INFO: TIME IRQ 111
+AVISOR INFO: TIME IRQ 112
+AVISOR INFO: cpu id 1 vm id 3 rqnode need_resched = 0
+AVISOR INFO: cpu id 1 vm id 2 rqnode need_resched = 0
+AVISOR INFO: cpu id 1 vm id 1 rqnode need_resched = 1
+AVISOR INFO: cpu id 1 vm id 0 rqnode need_resched = 1
+AVISOR INFO: unikernel 0 will run on pcpu 1.
+AVISOR INFO: cpu id 0 vm id 3 rqnode need_resched = 0
+AVISOR INFO: vcpu:prio (3:5) run on unikernel 0 on pcpu 1.
+AVISOR INFO: cpu id 0 vm id 2 rqnode need_resched = 0
+AVISOR INFO: TIME: 3446482016 vm id 0 vcpu id 3 pcpu id 1
+AVISOR INFO: cpu id 0 vm id 1 rqnode need_resched = 1
+AVISOR INFO: unikernel 1 will run on pcpu 0.
+AVISOR INFO: vcpu:prio (3:5) run on unikernel 1 on pcpu 0.
+AVISOR INFO: TIME: 3446505486 vm id 1 vcpu id 3 pcpu id 0
+task3! 27
+task3! 28
+task3! 29
+task3! 30
+task3! 31
+AVISOR INFO: TIME IRQ 113
+AVISOR INFO: TIME IRQ 114
+AVISOR INFO: vcpu repeat
+AVISOR INFO: vcpu repeat
+AVISOR INFO: vcpu:prio (0:5) run on unikernel 0 on pcpu 1.
+AVISOR INFO: vcpu:prio (0:5) run on unikernel 1 on pcpu 0.
+AVISOR INFO: TIME: 3509027080 vm id 0 vcpu id 0 pcpu id 1
+AVISOR INFO: TIME: 3509034808 vm id 1 vcpu id 0 pcpu id 0
+main 32
+main 32
+main 33
+main 33
+main 34
+main 34
+main 35
+main 35
+main 36
+main 36
+AVISOR INFO: TIME IRQ 115
+AVISOR INFO: TIME IRQ 116
+AVISOR INFO: vcpu:prio (1:5) run on unikernel 1 on pcpu 0.
+AVISOR INFO: vcpu:prio (1:5) run on unikernel 0 on pcpu 1.
+AVISOR INFO: TIME: 3571593914 vm id 1 vcpu id 1 pcpu id 0
+AVISOR INFO: TIME: 3571600052 vm id 0 vcpu id 1 pcpu id 1
+task1! 32
+task1! 32
+task1! 33
+task1! 33
+task1! 34
+task1! 34
+task1! 35
+task1! 35
+task1! 36
+task1! 36
+AVISOR INFO: TIME IRQ 117
+AVISOR INFO: TIME IRQ 118
+AVISOR INFO: vcpu:prio (2:5) run on unikernel 0 on pcpu 1.
+AVISOR INFO: vcpu:prio (2:5) run on unikernel 1 on pcpu 0.
+AVISOR INFO: TIME: 3634109930 vm id 0 vcpu id 2 pcpu id 1
+AVISOR INFO: TIME: 3634116716 vm id 1 vcpu id 2 pcpu id 0
+task2! 31
+task2! 31
+task2! 32
+task2! 32
+task2! 33
+task2! 33
+task2! 34
+task2! 34
+task2! 35
+task2! 35
+AVISOR INFO: TIME IRQ 119
+AVISOR INFO: TIME IRQ 120
+AVISOR INFO: cpu id 1 vm id 0 rqnode need_resched = 0
+AVISOR INFO: cpu id 1 vm id 1 rqnode need_resched = 0
+AVISOR INFO: cpu id 1 vm id 3 rqnode need_resched = 0
+AVISOR INFO: cpu id 1 vm id 2 rqnode need_resched = 0
+AVISOR INFO: vm repeat
+AVISOR INFO: cpu id 1 vm id 0 rqnode need_resched = 1
+AVISOR INFO: cpu id 1 vm id 1 rqnode need_resched = 1
+AVISOR INFO: cpu id 1 vm id 3 rqnode need_resched = 1
+AVISOR INFO: cpu id 1 vm id 2 rqnode need_resched = 1
+AVISOR INFO: unikernel 2 will run on pcpu 1.
+AVISOR INFO: cpu id 0 vm id 0 rqnode need_resched = 1
+AVISOR INFO: vcpu repeat
+AVISOR INFO: cpu id 0 vm id 1 rqnode need_resched = 1
+AVISOR INFO: vcpu:prio (0:5) run on unikernel 2 on pcpu 1.
+AVISOR INFO: cpu id 0 vm id 3 rqnode need_resched = 1
+AVISOR INFO: TIME: 3696748886 vm id 2 vcpu id 0 pcpu id 1
+AVISOR INFO: unikernel 3 will run on pcpu 0.
+AVISOR INFO: vcpu repeat
+AVISOR INFO: vcpu:prio (0:5) run on unikernel 3 on pcpu 0.
+AVISOR INFO: TIME: 3696769949 vm id 3 vcpu id 0 pcpu id 0
+main 31
+main 31
+main 32
+main 32
+main 33
+main 33
+main 34
+main 34
+main 35
+main 35
+AVISOR INFO: TIME IRQ 121
+AVISOR INFO: TIME IRQ 122
+AVISOR INFO: vcpu:prio (1:5) run on unikernel 2 on pcpu 1.
+AVISOR INFO: vcpu:prio (1:5) run on unikernel 3 on pcpu 0.
+AVISOR INFO: TIME: 3759266333 vm id 2 vcpu id 1 pcpu id 1
+AVISOR INFO: TIME: 3759271547 vm id 3 vcpu id 1 pcpu id 0
+task1! 32
+task1! 32
+task1! 33
+task1! 33
+task1! 34
+task1! 34
+task1! 35
+task1! 35
+task1! 36
+task1! 36
+AVISOR INFO: TIME IRQ 123
+AVISOR INFO: TIME IRQ 124
+AVISOR INFO: vcpu:prio (2:5) run on unikernel 2 on pcpu 1.
+AVISOR INFO: vcpu:prio (2:5) run on unikernel 3 on pcpu 0.
+AVISOR INFO: TIME: 3821821161 vm id 2 vcpu id 2 pcpu id 1
+AVISOR INFO: TIME: 3821828345 vm id 3 vcpu id 2 pcpu id 0
+task2! 31
+task2! 31
+task2! 32
+task2! 32
+task2! 33
+task2! 33
+task2! 34
+task2! 34
+task2! 35
+task2! 35
+AVISOR INFO: TIME IRQ 125
+AVISOR INFO: TIME IRQ 126
+AVISOR INFO: vcpu:prio (3:5) run on unikernel 2 on pcpu 1.
+AVISOR INFO: vcpu:prio (3:5) run on unikernel 3 on pcpu 0.
+AVISOR INFO: TIME: 3884398398 vm id 2 vcpu id 3 pcpu id 1
+AVISOR INFO: TIME: 3884405094 vm id 3 vcpu id 3 pcpu id 0
+task3! 32
+task3! 32
+task3! 33
+task3! 33
+task3! 34
+task3! 34
+task3! 35
+task3! 35
+task3! 36
+AVISOR INFO: TIME IRQ 127
+AVISOR INFO: TIME IRQ 128
+AVISOR INFO: cpu id 1 vm id 3 rqnode need_resched = 0
+AVISOR INFO: cpu id 1 vm id 2 rqnode need_resched = 0
+AVISOR INFO: cpu id 1 vm id 0 rqnode need_resched = 1
+AVISOR INFO: cpu id 1 vm id 1 rqnode need_resched = 1
+AVISOR INFO: unikernel 1 will run on pcpu 1.
+AVISOR INFO: cpu id 0 vm id 3 rqnode need_resched = 0
+AVISOR INFO: vcpu:prio (3:5) run on unikernel 1 on pcpu 1.
+AVISOR INFO: cpu id 0 vm id 2 rqnode need_resched = 0
+AVISOR INFO: TIME: 3947013873 vm id 1 vcpu id 3 pcpu id 1
+AVISOR INFO: cpu id 0 vm id 0 rqnode need_resched = 1
+AVISOR INFO: unikernel 0 will run on pcpu 0.
+AVISOR INFO: vcpu:prio (3:5) run on unikernel 0 on pcpu 0.
+AVISOR INFO: TIME: 3947040095 vm id 0 vcpu id 3 pcpu id 0
+task3! 32
+task3! 33
+task3! 34
+task3! 35
+task3! 36
+AVISOR INFO: TIME IRQ 129
+AVISOR INFO: TIME IRQ 130
+AVISOR INFO: vcpu repeat
+AVISOR INFO: vcpu repeat
+AVISOR INFO: vcpu:prio (0:5) run on unikernel 1 on pcpu 1.
+AVISOR INFO: vcpu:prio (0:5) run on unikernel 0 on pcpu 0.
+AVISOR INFO: TIME: 4009562521 vm id 1 vcpu id 0 pcpu id 1
+AVISOR INFO: TIME: 4009562574 vm id 0 vcpu id 0 pcpu id 0
+main 37
+main 37
+main 38
+main 38
+main 39
+main 39
+main 40
+main 40
+AVISOR INFO: TIME IRQ 131
+AVISOR INFO: TIME IRQ 132
+AVISOR INFO: vcpu:prio (1:5) run on unikernel 1 on pcpu 1.
+AVISOR INFO: vcpu:prio (1:5) run on unikernel 0 on pcpu 0.
+AVISOR INFO: TIME: 4072152335 vm id 1 vcpu id 1 pcpu id 1
+AVISOR INFO: TIME: 4072158738 vm id 0 vcpu id 1 pcpu id 0
+task1! 37
+task1! 37
+task1! 38
+task1! 38
+task1! 39
+task1! 39
+task1! 40
+task1! 40
+task1! 41
+task1! 41
+AVISOR INFO: TIME IRQ 133
+AVISOR INFO: TIME IRQ 134
+AVISOR INFO: vcpu:prio (2:5) run on unikernel 1 on pcpu 1.
+AVISOR INFO: vcpu:prio (2:5) run on unikernel 0 on pcpu 0.
+AVISOR INFO: TIME: 4134709937 vm id 1 vcpu id 2 pcpu id 1
+AVISOR INFO: TIME: 4134714490 vm id 0 vcpu id 2 pcpu id 0
+task2! 36
+task2! 36
+task2! 37
+task2! 37
+task2! 38
+task2! 38
+task2! 39
+task2! 39
+task2! 40
+task2! 40
+AVISOR INFO: TIME IRQ 135
+AVISOR INFO: TIME IRQ 136
+AVISOR INFO: cpu id 0 vm id 0 rqnode need_resched = 0
+AVISOR INFO: cpu id 0 vm id 1 rqnode need_resched = 0
+AVISOR INFO: cpu id 0 vm id 3 rqnode need_resched = 0
+AVISOR INFO: cpu id 0 vm id 2 rqnode need_resched = 0
+AVISOR INFO: vm repeat
+AVISOR INFO: cpu id 0 vm id 0 rqnode need_resched = 1
+AVISOR INFO: cpu id 0 vm id 1 rqnode need_resched = 1
+AVISOR INFO: cpu id 0 vm id 3 rqnode need_resched = 1
+AVISOR INFO: cpu id 0 vm id 2 rqnode need_resched = 1
+AVISOR INFO: unikernel 2 will run on pcpu 0.
+AVISOR INFO: cpu id 1 vm id 0 rqnode need_resched = 1
+AVISOR INFO: vcpu repeat
+AVISOR INFO: cpu id 1 vm id 1 rqnode need_resched = 1
+AVISOR INFO: vcpu:prio (0:5) run on unikernel 2 on pcpu 0.
+AVISOR INFO: cpu id 1 vm id 3 rqnode need_resched = 1
+AVISOR INFO: TIME: 4197330228 vm id 2 vcpu id 0 pcpu id 0
+AVISOR INFO: unikernel 3 will run on pcpu 1.
+AVISOR INFO: vcpu repeat
+AVISOR INFO: vcpu:prio (0:5) run on unikernel 3 on pcpu 1.
+AVISOR INFO: TIME: 4197351856 vm id 3 vcpu id 0 pcpu id 1
+main 36
+main 36
+main 37
+main 37
+main 38
+main 38
+main 39
+main 39
+main 40
+main 40
+AVISOR INFO: TIME IRQ 137
+AVISOR INFO: TIME IRQ 138
+AVISOR INFO: vcpu:prio (1:5) run on unikernel 2 on pcpu 0.
+AVISOR INFO: vcpu:prio (1:5) run on unikernel 3 on pcpu 1.
+AVISOR INFO: TIME: 4259842159 vm id 2 vcpu id 1 pcpu id 0
+AVISOR INFO: TIME: 4259847570 vm id 3 vcpu id 1 pcpu id 1
+task1! 37
+task1! 37
+task1! 38
+task1! 38
+task1! 39
+task1! 39
+task1! 40
+task1! 40
+task1! 41
+task1! 41
+AVISOR INFO: TIME IRQ 139
+AVISOR INFO: TIME IRQ 140
+AVISOR INFO: vcpu:prio (2:5) run on unikernel 3 on pcpu 1.
+AVISOR INFO: vcpu:prio (2:5) run on unikernel 2 on pcpu 0.
+AVISOR INFO: TIME: 27452988 vm id 3 vcpu id 2 pcpu id 1
+AVISOR INFO: TIME: 27461606 vm id 2 vcpu id 2 pcpu id 0
+task2! 36
+task2! 36
+task2! 37
+task2! 37
+task2! 38
+task2! 38
+task2! 39
+task2! 39
+AVISOR INFO: TIME IRQ 141
+AVISOR INFO: TIME IRQ 142
+AVISOR INFO: vcpu:prio (3:5) run on unikernel 3 on pcpu 1.
+AVISOR INFO: vcpu:prio (3:5) run on unikernel 2 on pcpu 0.
+AVISOR INFO: TIME: 90066413 vm id 3 vcpu id 3 pcpu id 1
+AVISOR INFO: TIME: 90082434 vm id 2 vcpu id 3 pcpu id 0
+task3! 36
+task3! 37
+task3! 37
+task3! 38
+task3! 38
+task3! 39
+task3! 39
+task3! 40
+task3! 40
+AVISOR INFO: TIME IRQ 143
+AVISOR INFO: TIME IRQ 144
+AVISOR INFO: cpu id 1 vm id 3 rqnode need_resched = 0
+AVISOR INFO: cpu id 1 vm id 2 rqnode need_resched = 0
+AVISOR INFO: cpu id 1 vm id 0 rqnode need_resched = 1
+AVISOR INFO: cpu id 1 vm id 1 rqnode need_resched = 1
+AVISOR INFO: unikernel 1 will run on pcpu 1.
+AVISOR INFO: cpu id 0 vm id 3 rqnode need_resched = 0
+AVISOR INFO: vcpu:prio (3:5) run on unikernel 1 on pcpu 1.
+AVISOR INFO: cpu id 0 vm id 2 rqnode need_resched = 0
+AVISOR INFO: TIME: 152636734 vm id 1 vcpu id 3 pcpu id 1
+AVISOR INFO: cpu id 0 vm id 0 rqnode need_resched = 1
+AVISOR INFO: unikernel 0 will run on pcpu 0.
+AVISOR INFO: vcpu:prio (3:5) run on unikernel 0 on pcpu 0.
+AVISOR INFO: TIME: 152662597 vm id 0 vcpu id 3 pcpu id 0
+task3! 37
+task3! 38
+task3! 39
+task3! 40
+AVISOR INFO: TIME IRQ 145
+AVISOR INFO: TIME IRQ 146
+AVISOR INFO: vcpu repeat
+AVISOR INFO: vcpu repeat
+AVISOR INFO: vcpu:prio (0:5) run on unikernel 0 on pcpu 0.
+AVISOR INFO: vcpu:prio (0:5) run on unikernel 1 on pcpu 1.
+AVISOR INFO: TIME: 215198345 vm id 0 vcpu id 0 pcpu id 0
+AVISOR INFO: TIME: 215211947 vm id 1 vcpu id 0 pcpu id 1
+main 41
+main 41
+main 42
+main 42
+main 43
+main 43
+main 44
+main 44
+main 45
+main 45
+AVISOR INFO: TIME IRQ 147
+AVISOR INFO: TIME IRQ 148
+AVISOR INFO: vcpu:prio (1:5) run on unikernel 1 on pcpu 1.
+AVISOR INFO: vcpu:prio (1:5) run on unikernel 0 on pcpu 0.
+AVISOR INFO: TIME: 277765556 vm id 1 vcpu id 1 pcpu id 1
+AVISOR INFO: TIME: 277773102 vm id 0 vcpu id 1 pcpu id 0
+task1! 42
+task1! 42
+task1! 43
+task1! 43
+task1! 44
+task1! 44
+task1! 45
+task1! 45
+AVISOR INFO: TIME IRQ 149
+AVISOR INFO: TIME IRQ 150
+AVISOR INFO: vcpu:prio (2:5) run on unikernel 1 on pcpu 1.
+AVISOR INFO: vcpu:prio (2:5) run on unikernel 0 on pcpu 0.
+AVISOR INFO: TIME: 340347058 vm id 1 vcpu id 2 pcpu id 1
+AVISOR INFO: TIME: 340347174 vm id 0 vcpu id 2 pcpu id 0
+task2! 41
+task2! 41
+task2! 42
+task2! 42
+task2! 43
+task2! 43
+task2! 44
+task2! 44
+AVISOR INFO: TIME IRQ 151
+AVISOR INFO: TIME IRQ 152
+AVISOR INFO: cpu id 0 vm id 0 rqnode need_resched = 0
+AVISOR INFO: cpu id 0 vm id 1 rqnode need_resched = 0
+AVISOR INFO: cpu id 0 vm id 3 rqnode need_resched = 0
+AVISOR INFO: cpu id 0 vm id 2 rqnode need_resched = 0
+AVISOR INFO: vm repeat
+AVISOR INFO: cpu id 0 vm id 0 rqnode need_resched = 1
+AVISOR INFO: cpu id 0 vm id 1 rqnode need_resched = 1
+AVISOR INFO: cpu id 0 vm id 3 rqnode need_resched = 1
+AVISOR INFO: cpu id 0 vm id 2 rqnode need_resched = 1
+AVISOR INFO: unikernel 2 will run on pcpu 0.
+AVISOR INFO: cpu id 1 vm id 0 rqnode need_resched = 1
+AVISOR INFO: vcpu repeat
+AVISOR INFO: cpu id 1 vm id 1 rqnode need_resched = 1
+AVISOR INFO: vcpu:prio (0:5) run on unikernel 2 on pcpu 0.
+AVISOR INFO: cpu id 1 vm id 3 rqnode need_resched = 1
+AVISOR INFO: TIME: 402990324 vm id 2 vcpu id 0 pcpu id 0
+AVISOR INFO: unikernel 3 will run on pcpu 1.
+AVISOR INFO: vcpu repeat
+AVISOR INFO: vcpu:prio (0:5) run on unikernel 3 on pcpu 1.
+AVISOR INFO: TIME: 403012581 vm id 3 vcpu id 0 pcpu id 1
+main 41
+main 41
+main 42
+main 42
+main 43
+main 43
+main 44
+main 44
+main 45
+main 45
+AVISOR INFO: TIME IRQ 153
+AVISOR INFO: TIME IRQ 154
+AVISOR INFO: vcpu:prio (1:5) run on unikernel 2 on pcpu 0.
+AVISOR INFO: vcpu:prio (1:5) run on unikernel 3 on pcpu 1.
+AVISOR INFO: TIME: 465473094 vm id 2 vcpu id 1 pcpu id 0
+AVISOR INFO: TIME: 465480524 vm id 3 vcpu id 1 pcpu id 1
+task1! 42
+task1! 42
+task1! 43
+task1! 43
+task1! 44
+task1! 44
+task1! 45
+task1! 45
+AVISOR INFO: TIME IRQ 156
+AVISOR INFO: TIME IRQ 155
+AVISOR INFO: vcpu:prio (2:5) run on unikernel 2 on pcpu 0.
+AVISOR INFO: vcpu:prio (2:5) run on unikernel 3 on pcpu 1.
+AVISOR INFO: TIME: 528050261 vm id 2 vcpu id 2 pcpu id 0
+AVISOR INFO: TIME: 528055621 vm id 3 vcpu id 2 pcpu id 1
+task2! 40
+task2! 40
+task2! 41
+task2! 41
+task2! 42
+task2! 42
+task2! 43
+task2! 43
+task2! 44
+task2! 44
+AVISOR INFO: TIME IRQ 157
+AVISOR INFO: TIME IRQ 158
+AVISOR INFO: vcpu:prio (3:5) run on unikernel 3 on pcpu 1.
+AVISOR INFO: vcpu:prio (3:5) run on unikernel 2 on pcpu 0.
+AVISOR INFO: TIME: 590628179 vm id 3 vcpu id 3 pcpu id 1
+AVISOR INFO: TIME: 590637141 vm id 2 vcpu id 3 pcpu id 0
+task3! 41
+task3! 41
+task3! 42
+task3! 42
+task3! 43
+task3! 43
+task3! 44
+task3! 44
+task3! 45
+task3! 45
+AVISOR INFO: TIME IRQ 159
+AVISOR INFO: TIME IRQ 160
+AVISOR INFO: cpu id 0 vm id 2 rqnode need_resched = 0
+AVISOR INFO: cpu id 0 vm id 3 rqnode need_resched = 0
+AVISOR INFO: cpu id 0 vm id 0 rqnode need_resched = 1
+AVISOR INFO: cpu id 0 vm id 1 rqnode need_resched = 1
+AVISOR INFO: unikernel 1 will run on pcpu 0.
+AVISOR INFO: cpu id 1 vm id 2 rqnode need_resched = 0
+AVISOR INFO: vcpu:prio (3:5) run on unikernel 1 on pcpu 0.
+AVISOR INFO: cpu id 1 vm id 3 rqnode need_resched = 0
+AVISOR INFO: TIME: 653231289 vm id 1 vcpu id 3 pcpu id 0
+AVISOR INFO: cpu id 1 vm id 0 rqnode need_resched = 1
+AVISOR INFO: unikernel 0 will run on pcpu 1.
+AVISOR INFO: vcpu:prio (3:5) run on unikernel 0 on pcpu 1.
+AVISOR INFO: TIME: 653258605 vm id 0 vcpu id 3 pcpu id 1
+task3! 41
+task3! 42
+task3! 43
+task3! 44
+task3! 45
+AVISOR INFO: TIME IRQ 161
+AVISOR INFO: TIME IRQ 162
+AVISOR INFO: vcpu repeat
+AVISOR INFO: vcpu repeat
+AVISOR INFO: vcpu:prio (0:5) run on unikernel 0 on pcpu 1.
+AVISOR INFO: vcpu:prio (0:5) run on unikernel 1 on pcpu 0.
+AVISOR INFO: TIME: 715796994 vm id 0 vcpu id 0 pcpu id 1
+AVISOR INFO: TIME: 715809710 vm id 1 vcpu id 0 pcpu id 0
+main 46
+main 46
+main 47
+main 47
+main 48
+main 48
+main 49
+main 49
+main 50
+main 50
+AVISOR INFO: TIME IRQ 163
+AVISOR INFO: TIME IRQ 164
+AVISOR INFO: vcpu:prio (1:5) run on unikernel 1 on pcpu 0.
+AVISOR INFO: vcpu:prio (1:5) run on unikernel 0 on pcpu 1.
+AVISOR INFO: TIME: 778347391 vm id 1 vcpu id 1 pcpu id 0
+AVISOR INFO: TIME: 778355545 vm id 0 vcpu id 1 pcpu id 1
+task1! 46
+task1! 46
+task1! 47
+task1! 47
+task1! 48
+task1! 48
+task1! 49
+task1! 49
+task1! 50
+task1! 50
+AVISOR INFO: TIME IRQ 165
+AVISOR INFO: TIME IRQ 166
+AVISOR INFO: vcpu:prio (2:5) run on unikernel 1 on pcpu 0.
+AVISOR INFO: vcpu:prio (2:5) run on unikernel 0 on pcpu 1.
+AVISOR INFO: TIME: 840924569 vm id 1 vcpu id 2 pcpu id 0
+AVISOR INFO: TIME: 840938567 vm id 0 vcpu id 2 pcpu id 1
+task2! 45
+task2! 45
+task2! 46
+task2! 46
+task2! 47
+task2! 47
+task2! 48
+task2! 48
+task2! 49
+task2! 49
+AVISOR INFO: TIME IRQ 167
+AVISOR INFO: TIME IRQ 168
+AVISOR INFO: cpu id 1 vm id 0 rqnode need_resched = 0
+AVISOR INFO: cpu id 1 vm id 1 rqnode need_resched = 0
+AVISOR INFO: cpu id 1 vm id 2 rqnode need_resched = 0
+AVISOR INFO: cpu id 1 vm id 3 rqnode need_resched = 0
+AVISOR INFO: vm repeat
+AVISOR INFO: cpu id 1 vm id 0 rqnode need_resched = 1
+AVISOR INFO: cpu id 1 vm id 1 rqnode need_resched = 1
+AVISOR INFO: cpu id 1 vm id 2 rqnode need_resched = 1
+AVISOR INFO: cpu id 1 vm id 3 rqnode need_resched = 1
+AVISOR INFO: unikernel 3 will run on pcpu 1.
+AVISOR INFO: cpu id 0 vm id 0 rqnode need_resched = 1
+AVISOR INFO: vcpu repeat
+AVISOR INFO: cpu id 0 vm id 1 rqnode need_resched = 1
+AVISOR INFO: vcpu:prio (0:5) run on unikernel 3 on pcpu 1.
+AVISOR INFO: cpu id 0 vm id 2 rqnode need_resched = 1
+AVISOR INFO: TIME: 903564337 vm id 3 vcpu id 0 pcpu id 1
+AVISOR INFO: unikernel 2 will run on pcpu 0.
+AVISOR INFO: vcpu repeat
+AVISOR INFO: vcpu:prio (0:5) run on unikernel 2 on pcpu 0.
+AVISOR INFO: TIME: 903584723 vm id 2 vcpu id 0 pcpu id 0
+main 46
+main 46
+main 47
+main 47
+main 48
+main 48
+main 49
+main 49
+AVISOR INFO: TIME IRQ 169
+AVISOR INFO: TIME IRQ 170
+AVISOR INFO: vcpu:prio (1:5) run on unikernel 3 on pcpu 1.
+AVISOR INFO: vcpu:prio (1:5) run on unikernel 2 on pcpu 0.
+AVISOR INFO: TIME: 966057208 vm id 3 vcpu id 1 pcpu id 1
+AVISOR INFO: TIME: 966064225 vm id 2 vcpu id 1 pcpu id 0
+task1! 46
+task1! 46
+task1! 47
+task1! 47
+task1! 48
+task1! 48
+task1! 49
+task1! 49
+task1! 50
+task1! 50
+AVISOR INFO: TIME IRQ 171
+AVISOR INFO: TIME IRQ 172
+AVISOR INFO: vcpu:prio (2:5) run on unikernel 3 on pcpu 1.
+AVISOR INFO: vcpu:prio (2:5) run on unikernel 2 on pcpu 0.
+AVISOR INFO: TIME: 1028656017 vm id 3 vcpu id 2 pcpu id 1
+AVISOR INFO: TIME: 1028664975 vm id 2 vcpu id 2 pcpu id 0
+task2! 45
+task2! 45
+task2! 46
+task2! 46
+task2! 47
+task2! 47
+task2! 48
+task2! 48
+task2! 49
+task2! 49
+AVISOR INFO: TIME IRQ 173
+AVISOR INFO: TIME IRQ 174
+AVISOR INFO: vcpu:prio (3:5) run on unikernel 3 on pcpu 1.
+AVISOR INFO: vcpu:prio (3:5) run on unikernel 2 on pcpu 0.
+AVISOR INFO: TIME: 1091199275 vm id 3 vcpu id 3 pcpu id 1
+AVISOR INFO: TIME: 1091204364 vm id 2 vcpu id 3 pcpu id 0
+task3! 46
+task3! 46
+task3! 47
+task3! 47
+task3! 48
+task3! 48
+task3! 49
+task3! 49
+task3! 50
+task3! 50
+AVISOR INFO: TIME IRQ 176
+AVISOR INFO: TIME IRQ 175
+AVISOR INFO: cpu id 1 vm id 3 rqnode need_resched = 0
+AVISOR INFO: cpu id 1 vm id 2 rqnode need_resched = 0
+AVISOR INFO: cpu id 1 vm id 0 rqnode need_resched = 1
+AVISOR INFO: cpu id 1 vm id 1 rqnode need_resched = 1
+AVISOR INFO: unikernel 1 will run on pcpu 1.
+AVISOR INFO: cpu id 0 vm id 3 rqnode need_resched = 0
+AVISOR INFO: vcpu:prio (3:5) run on unikernel 1 on pcpu 1.
+AVISOR INFO: cpu id 0 vm id 2 rqnode need_resched = 0
+AVISOR INFO: TIME: 1153822702 vm id 1 vcpu id 3 pcpu id 1
+AVISOR INFO: cpu id 0 vm id 0 rqnode need_resched = 1
+AVISOR INFO: unikernel 0 will run on pcpu 0.
+AVISOR INFO: vcpu:prio (3:5) run on unikernel 0 on pcpu 0.
+AVISOR INFO: TIME: 1153851499 vm id 0 vcpu id 3 pcpu id 0
+task3! 46
+task3! 47
+task3! 48
+task3! 49
+AVISOR INFO: TIME IRQ 177
+AVISOR INFO: TIME IRQ 178
+AVISOR INFO: vcpu repeat
+AVISOR INFO: vcpu repeat
+AVISOR INFO: vcpu:prio (0:5) run on unikernel 0 on pcpu 0.
+AVISOR INFO: vcpu:prio (0:5) run on unikernel 1 on pcpu 1.
+AVISOR INFO: TIME: 1216365688 vm id 0 vcpu id 0 pcpu id 0
+AVISOR INFO: TIME: 1216373236 vm id 1 vcpu id 0 pcpu id 1
+main 51
+main 51
+main 52
+main 52
+main 53
+main 53
+main 54
+main 54
+main 55
+AVISOR INFO: TIME IRQ 179
+AVISOR INFO: TIME IRQ 180
+AVISOR INFO: vcpu:prio (1:5) run on unikernel 1 on pcpu 1.
+AVISOR INFO: vcpu:prio (1:5) run on unikernel 0 on pcpu 0.
+AVISOR INFO: TIME: 1278935912 vm id 1 vcpu id 1 pcpu id 1
+AVISOR INFO: TIME: 1278945723 vm id 0 vcpu id 1 pcpu id 0
+task1! 51
+task1! 51
+task1! 52
+task1! 52
+task1! 53
+task1! 53
+task1! 54
+task1! 54
+task1! 55
+task1! 55
+AVISOR INFO: TIME IRQ 182
+AVISOR INFO: TIME IRQ 181
+AVISOR INFO: vcpu:prio (2:5) run on unikernel 1 on pcpu 1.
+AVISOR INFO: vcpu:prio (2:5) run on unikernel 0 on pcpu 0.
+AVISOR INFO: TIME: 1341532715 vm id 1 vcpu id 2 pcpu id 1
+AVISOR INFO: TIME: 1341539022 vm id 0 vcpu id 2 pcpu id 0
+task2! 50
+task2! 50
+task2! 51
+task2! 51
+task2! 52
+task2! 52
+task2! 53
+task2! 53
+task2! 54
+task2! 54
+AVISOR INFO: TIME IRQ 183
+AVISOR INFO: TIME IRQ 184
+AVISOR INFO: cpu id 1 vm id 1 rqnode need_resched = 0
+AVISOR INFO: cpu id 1 vm id 0 rqnode need_resched = 0
+AVISOR INFO: cpu id 1 vm id 3 rqnode need_resched = 0
+AVISOR INFO: cpu id 1 vm id 2 rqnode need_resched = 0
+AVISOR INFO: vm repeat
+AVISOR INFO: cpu id 1 vm id 1 rqnode need_resched = 1
+AVISOR INFO: cpu id 1 vm id 0 rqnode need_resched = 1
+AVISOR INFO: cpu id 1 vm id 3 rqnode need_resched = 1
+AVISOR INFO: cpu id 1 vm id 2 rqnode need_resched = 1
+AVISOR INFO: unikernel 2 will run on pcpu 1.
+AVISOR INFO: cpu id 0 vm id 1 rqnode need_resched = 1
+AVISOR INFO: vcpu repeat
+AVISOR INFO: cpu id 0 vm id 0 rqnode need_resched = 1
+AVISOR INFO: vcpu:prio (0:5) run on unikernel 2 on pcpu 1.
+AVISOR INFO: cpu id 0 vm id 3 rqnode need_resched = 1
+AVISOR INFO: unikernel 3 will run on pcpu 0.
+AVISOR INFO: TIME: 1404143947 vm id 2 vcpu id 0 pcpu id 1
+AVISOR INFO: vcpu repeat
+AVISOR INFO: vcpu:prio (0:5) run on unikernel 3 on pcpu 0.
+AVISOR INFO: TIME: 1404163034 vm id 3 vcpu id 0 pcpu id 0
+main 50
+main 50
+main 51
+main 51
+main 52
+main 52
+main 53
+main 53
+main 54
+main 54
+AVISOR INFO: TIME IRQ 185
+AVISOR INFO: TIME IRQ 186
+AVISOR INFO: vcpu:prio (1:5) run on unikernel 2 on pcpu 1.
+AVISOR INFO: vcpu:prio (1:5) run on unikernel 3 on pcpu 0.
+AVISOR INFO: TIME: 1466646707 vm id 2 vcpu id 1 pcpu id 1
+AVISOR INFO: TIME: 1466652871 vm id 3 vcpu id 1 pcpu id 0
+task1! 51
+task1! 51
+task1! 52
+task1! 52
+task1! 53
+task1! 53
+task1! 54
+task1! 54
+task1! 55
+task1! 55
+AVISOR INFO: TIME IRQ 188
+AVISOR INFO: TIME IRQ 187
+AVISOR INFO: vcpu:prio (2:5) run on unikernel 2 on pcpu 1.
+AVISOR INFO: vcpu:prio (2:5) run on unikernel 3 on pcpu 0.
+AVISOR INFO: TIME: 1529219276 vm id 2 vcpu id 2 pcpu id 1
+AVISOR INFO: TIME: 1529225804 vm id 3 vcpu id 2 pcpu id 0
+task2! 50
+task2! 50
+task2! 51
+task2! 51
+task2! 52
+task2! 52
+task2! 53
+task2! 53
+task2! 54
+AVISOR INFO: TIME IRQ 189
+AVISOR INFO: TIME IRQ 190
+AVISOR INFO: vcpu:prio (3:5) run on unikernel 3 on pcpu 0.
+AVISOR INFO: vcpu:prio (3:5) run on unikernel 2 on pcpu 1.
+AVISOR INFO: TIME: 1591788357 vm id 3 vcpu id 3 pcpu id 0
+AVISOR INFO: TIME: 1591793970 vm id 2 vcpu id 3 pcpu id 1
+task3! 51
+task3! 51
+task3! 52
+task3! 52
+task3! 53
+task3! 53
+task3! 54
+task3! 54
+task3! 55
+AVISOR INFO: TIME IRQ 191
+AVISOR INFO: TIME IRQ 192
+AVISOR INFO: cpu id 0 vm id 3 rqnode need_resched = 0
+AVISOR INFO: cpu id 0 vm id 2 rqnode need_resched = 0
+AVISOR INFO: cpu id 0 vm id 1 rqnode need_resched = 1
+AVISOR INFO: cpu id 0 vm id 0 rqnode need_resched = 1
+AVISOR INFO: unikernel 0 will run on pcpu 0.
+AVISOR INFO: cpu id 1 vm id 3 rqnode need_resched = 0
+AVISOR INFO: vcpu:prio (3:5) run on unikernel 0 on pcpu 0.
+AVISOR INFO: cpu id 1 vm id 2 rqnode need_resched = 0
+AVISOR INFO: TIME: 1654396040 vm id 0 vcpu id 3 pcpu id 0
+AVISOR INFO: cpu id 1 vm id 1 rqnode need_resched = 1
+AVISOR INFO: unikernel 1 will run on pcpu 1.
+AVISOR INFO: vcpu:prio (3:5) run on unikernel 1 on pcpu 1.
+AVISOR INFO: TIME: 1654426068 vm id 1 vcpu id 3 pcpu id 1
+task3! 50
+task3! 51
+task3! 52
+task3! 53
+task3! 54
+AVISOR INFO: TIME IRQ 193
+AVISOR INFO: TIME IRQ 194
+AVISOR INFO: vcpu repeat
+AVISOR INFO: vcpu repeat
+AVISOR INFO: vcpu:prio (0:5) run on unikernel 0 on pcpu 0.
+AVISOR INFO: vcpu:prio (0:5) run on unikernel 1 on pcpu 1.
+AVISOR INFO: TIME: 1716947057 vm id 0 vcpu id 0 pcpu id 0
+AVISOR INFO: TIME: 1716953708 vm id 1 vcpu id 0 pcpu id 1
+main 55
+main 56
+main 56
+main 57
+main 57
+main 58
+main 58
+main 59
+main 59
+main 60
+AVISOR INFO: TIME IRQ 195
+AVISOR INFO: TIME IRQ 196
+AVISOR INFO: vcpu:prio (1:5) run on unikernel 1 on pcpu 1.
+AVISOR INFO: vcpu:prio (1:5) run on unikernel 0 on pcpu 0.
+AVISOR INFO: TIME: 1779506089 vm id 1 vcpu id 1 pcpu id 1
+AVISOR INFO: TIME: 1779512648 vm id 0 vcpu id 1 pcpu id 0
+task1! 56
+task1! 56
+task1! 57
+task1! 57
+task1! 58
+task1! 58
+task1! 59
+task1! 59
+AVISOR INFO: TIME IRQ 197
+AVISOR INFO: TIME IRQ 198
+AVISOR INFO: vcpu:prio (2:5) run on unikernel 0 on pcpu 0.
+AVISOR INFO: vcpu:prio (2:5) run on unikernel 1 on pcpu 1.
+AVISOR INFO: TIME: 1842079796 vm id 0 vcpu id 2 pcpu id 0
+AVISOR INFO: TIME: 1842087088 vm id 1 vcpu id 2 pcpu id 1
+task2! 55
+task2! 55
+task2! 56
+task2! 56
+task2! 57
+task2! 57
+task2! 58
+task2! 58
+AVISOR INFO: TIME IRQ 199
+AVISOR INFO: TIME IRQ 200
+AVISOR INFO: cpu id 1 vm id 1 rqnode need_resched = 0
+AVISOR INFO: cpu id 1 vm id 0 rqnode need_resched = 0
+AVISOR INFO: cpu id 1 vm id 3 rqnode need_resched = 0
+AVISOR INFO: cpu id 1 vm id 2 rqnode need_resched = 0
+AVISOR INFO: vm repeat
+AVISOR INFO: cpu id 1 vm id 1 rqnode need_resched = 1
+AVISOR INFO: cpu id 1 vm id 0 rqnode need_resched = 1
+AVISOR INFO: cpu id 1 vm id 3 rqnode need_resched = 1
+AVISOR INFO: cpu id 1 vm id 2 rqnode need_resched = 1
+AVISOR INFO: unikernel 2 will run on pcpu 1.
+AVISOR INFO: cpu id 0 vm id 1 rqnode need_resched = 1
+AVISOR INFO: vcpu repeat
+AVISOR INFO: cpu id 0 vm id 0 rqnode need_resched = 1
+AVISOR INFO: vcpu:prio (0:5) run on unikernel 2 on pcpu 1.
+AVISOR INFO: cpu id 0 vm id 3 rqnode need_resched = 1
+AVISOR INFO: TIME: 1904721082 vm id 2 vcpu id 0 pcpu id 1
+AVISOR INFO: unikernel 3 will run on pcpu 0.
+AVISOR INFO: vcpu repeat
+AVISOR INFO: vcpu:prio (0:5) run on unikernel 3 on pcpu 0.
+AVISOR INFO: TIME: 1904748820 vm id 3 vcpu id 0 pcpu id 0
+main 55
+main 55
+main 56
+main 56
+main 57
+main 57
+main 58
+main 58
+main 59
+main 59
+AVISOR INFO: TIME IRQ 201
+AVISOR INFO: TIME IRQ 202
+AVISOR INFO: vcpu:prio (1:5) run on unikernel 2 on pcpu 1.
+AVISOR INFO: vcpu:prio (1:5) run on unikernel 3 on pcpu 0.
+AVISOR INFO: TIME: 1967236845 vm id 2 vcpu id 1 pcpu id 1
+AVISOR INFO: TIME: 1967245854 vm id 3 vcpu id 1 pcpu id 0
+task1! 56
+task1! 56
+task1! 57
+task1! 57
+task1! 58
+task1! 58
+task1! 59
+task1! 59
+task1! 60
+task1! 60
+AVISOR INFO: TIME IRQ 203
+AVISOR INFO: TIME IRQ 204
+AVISOR INFO: vcpu:prio (2:5) run on unikernel 3 on pcpu 0.
+AVISOR INFO: vcpu:prio (2:5) run on unikernel 2 on pcpu 1.
+AVISOR INFO: TIME: 2029801839 vm id 3 vcpu id 2 pcpu id 0
+AVISOR INFO: TIME: 2029809300 vm id 2 vcpu id 2 pcpu id 1
+task2! 54
+task2! 55
+task2! 55
+task2! 56
+task2! 56
+task2! 57
+task2! 57
+task2! 58
+task2! 58
+AVISOR INFO: TIME IRQ 205
+AVISOR INFO: TIME IRQ 206
+AVISOR INFO: vcpu:prio (3:5) run on unikernel 3 on pcpu 0.
+AVISOR INFO: vcpu:prio (3:5) run on unikernel 2 on pcpu 1.
+AVISOR INFO: TIME: 2092366748 vm id 3 vcpu id 3 pcpu id 0
+AVISOR INFO: TIME: 2092373074 vm id 2 vcpu id 3 pcpu id 1
+task3! 55
+task3! 56
+task3! 56
+task3! 57
+task3! 57
+task3! 58
+task3! 58
+task3! 59
+task3! 59
+task3! 60
+AVISOR INFO: TIME IRQ 207
+AVISOR INFO: TIME IRQ 208
+AVISOR INFO: cpu id 0 vm id 2 rqnode need_resched = 0
+AVISOR INFO: cpu id 0 vm id 3 rqnode need_resched = 0
+AVISOR INFO: cpu id 0 vm id 1 rqnode need_resched = 1
+AVISOR INFO: cpu id 0 vm id 0 rqnode need_resched = 1
+AVISOR INFO: unikernel 0 will run on pcpu 0.
+AVISOR INFO: cpu id 1 vm id 2 rqnode need_resched = 0
+AVISOR INFO: vcpu:prio (3:5) run on unikernel 0 on pcpu 0.
+AVISOR INFO: cpu id 1 vm id 3 rqnode need_resched = 0
+AVISOR INFO: TIME: 2154963857 vm id 0 vcpu id 3 pcpu id 0
+AVISOR INFO: cpu id 1 vm id 1 rqnode need_resched = 1
+AVISOR INFO: unikernel 1 will run on pcpu 1.
+AVISOR INFO: vcpu:prio (3:5) run on unikernel 1 on pcpu 1.
+AVISOR INFO: TIME: 2154989720 vm id 1 vcpu id 3 pcpu id 1
+task3! 55
+task3! 56
+task3! 57
+task3! 58
+task3! 59
+AVISOR INFO: TIME IRQ 210
+AVISOR INFO: TIME IRQ 209
+AVISOR INFO: vcpu repeat
+AVISOR INFO: vcpu repeat
+AVISOR INFO: vcpu:prio (0:5) run on unikernel 1 on pcpu 1.
+AVISOR INFO: vcpu:prio (0:5) run on unikernel 0 on pcpu 0.
+AVISOR INFO: TIME: 2217517815 vm id 1 vcpu id 0 pcpu id 1
+AVISOR INFO: TIME: 2217529237 vm id 0 vcpu id 0 pcpu id 0
+main 60
+main 61
+main 61
+main 62
+main 62
+main 63
+main 63
+main 64
+main 64
+AVISOR INFO: TIME IRQ 211
+AVISOR INFO: TIME IRQ 212
+AVISOR INFO: vcpu:prio (1:5) run on unikernel 1 on pcpu 1.
+AVISOR INFO: vcpu:prio (1:5) run on unikernel 0 on pcpu 0.
+AVISOR INFO: TIME: 2280118972 vm id 0 vcpu id 1 pcpu id 0
+AVISOR INFO: TIME: 2280119235 vm id 1 vcpu id 1 pcpu id 1
+task1! 60
+task1! 60
+task1! 61
+task1! 61
+task1! 62
+task1! 62
+task1! 63
+task1! 63
+task1! 64
+task1! 64
+AVISOR INFO: TIME IRQ 213
+AVISOR INFO: TIME IRQ 214
+AVISOR INFO: vcpu:prio (2:5) run on unikernel 1 on pcpu 1.
+AVISOR INFO: vcpu:prio (2:5) run on unikernel 0 on pcpu 0.
+AVISOR INFO: TIME: 2342668216 vm id 1 vcpu id 2 pcpu id 1
+AVISOR INFO: TIME: 2342668190 vm id 0 vcpu id 2 pcpu id 0
+task2! 59
+task2! 59
+task2! 60
+task2! 60
+task2! 61
+task2! 61
+task2! 62
+task2! 62
+task2! 63
+task2! 63
+AVISOR INFO: TIME IRQ 215
+AVISOR INFO: TIME IRQ 216
+AVISOR INFO: cpu id 1 vm id 1 rqnode need_resched = 0
+AVISOR INFO: cpu id 1 vm id 0 rqnode need_resched = 0
+AVISOR INFO: cpu id 1 vm id 2 rqnode need_resched = 0
+AVISOR INFO: cpu id 1 vm id 3 rqnode need_resched = 0
+AVISOR INFO: vm repeat
+AVISOR INFO: cpu id 1 vm id 1 rqnode need_resched = 1
+AVISOR INFO: cpu id 1 vm id 0 rqnode need_resched = 1
+AVISOR INFO: cpu id 1 vm id 2 rqnode need_resched = 1
+AVISOR INFO: cpu id 1 vm id 3 rqnode need_resched = 1
+AVISOR INFO: unikernel 3 will run on pcpu 1.
+AVISOR INFO: cpu id 0 vm id 1 rqnode need_resched = 1
+AVISOR INFO: vcpu repeat
+AVISOR INFO: cpu id 0 vm id 0 rqnode need_resched = 1
+AVISOR INFO: vcpu:prio (0:5) run on unikernel 3 on pcpu 1.
+AVISOR INFO: cpu id 0 vm id 2 rqnode need_resched = 1
+AVISOR INFO: TIME: 2405278588 vm id 3 vcpu id 0 pcpu id 1
+AVISOR INFO: unikernel 2 will run on pcpu 0.
+AVISOR INFO: vcpu repeat
+AVISOR INFO: vcpu:prio (0:5) run on unikernel 2 on pcpu 0.
+AVISOR INFO: TIME: 2405304192 vm id 2 vcpu id 0 pcpu id 0
+main 60
+main 60
+main 61
+main 61
+main 62
+main 62
+main 63
+main 63
+main 64
+main 64
+AVISOR INFO: TIME IRQ 217
+AVISOR INFO: TIME IRQ 218
+AVISOR INFO: vcpu:prio (1:5) run on unikernel 2 on pcpu 0.
+AVISOR INFO: vcpu:prio (1:5) run on unikernel 3 on pcpu 1.
+AVISOR INFO: TIME: 2467806254 vm id 2 vcpu id 1 pcpu id 0
+AVISOR INFO: TIME: 2467823691 vm id 3 vcpu id 1 pcpu id 1
+task1! 61
+task1! 61
+task1! 62
+task1! 62
+task1! 63
+task1! 63
+task1! 64
+task1! 64
+task1! 65
+AVISOR INFO: TIME IRQ 219
+AVISOR INFO: TIME IRQ 220
+AVISOR INFO: vcpu:prio (2:5) run on unikernel 3 on pcpu 1.
+AVISOR INFO: vcpu:prio (2:5) run on unikernel 2 on pcpu 0.
+AVISOR INFO: TIME: 2530375128 vm id 3 vcpu id 2 pcpu id 1
+AVISOR INFO: TIME: 2530387441 vm id 2 vcpu id 2 pcpu id 0
+task2! 59
+task2! 59
+task2! 60
+task2! 60
+task2! 61
+task2! 61
+task2! 62
+task2! 62
+task2! 63
+task2! 63
+AVISOR INFO: TIME IRQ 221
+AVISOR INFO: TIME IRQ 222
+AVISOR INFO: vcpu:prio (3:5) run on unikernel 3 on pcpu 1.
+AVISOR INFO: vcpu:prio (3:5) run on unikernel 2 on pcpu 0.
+AVISOR INFO: TIME: 2592946076 vm id 3 vcpu id 3 pcpu id 1
+AVISOR INFO: TIME: 2592955787 vm id 2 vcpu id 3 pcpu id 0
+task3! 60
+task3! 61
+task3! 61
+task3! 62
+task3! 62
+task3! 63
+task3! 63
+task3! 64
+task3! 64
+AVISOR INFO: TIME IRQ 223
+AVISOR INFO: TIME IRQ 224
+AVISOR INFO: cpu id 1 vm id 2 rqnode need_resched = 0
+AVISOR INFO: cpu id 1 vm id 3 rqnode need_resched = 0
+AVISOR INFO: cpu id 1 vm id 1 rqnode need_resched = 1
+AVISOR INFO: cpu id 1 vm id 0 rqnode need_resched = 1
+AVISOR INFO: unikernel 0 will run on pcpu 1.
+AVISOR INFO: cpu id 0 vm id 2 rqnode need_resched = 0
+AVISOR INFO: vcpu:prio (3:5) run on unikernel 0 on pcpu 1.
+AVISOR INFO: cpu id 0 vm id 3 rqnode need_resched = 0
+AVISOR INFO: TIME: 2655539918 vm id 0 vcpu id 3 pcpu id 1
+AVISOR INFO: cpu id 0 vm id 1 rqnode need_resched = 1
+AVISOR INFO: unikernel 1 will run on pcpu 0.
+AVISOR INFO: vcpu:prio (3:5) run on unikernel 1 on pcpu 0.
+AVISOR INFO: TIME: 2655568726 vm id 1 vcpu id 3 pcpu id 0
+task3! 60
+task3! 61
+task3! 62
+task3! 63
+AVISOR INFO: TIME IRQ 225
+AVISOR INFO: TIME IRQ 226
+AVISOR INFO: vcpu repeat
+AVISOR INFO: vcpu repeat
+AVISOR INFO: vcpu:prio (0:5) run on unikernel 0 on pcpu 1.
+AVISOR INFO: vcpu:prio (0:5) run on unikernel 1 on pcpu 0.
+AVISOR INFO: TIME: 2718100808 vm id 0 vcpu id 0 pcpu id 1
+AVISOR INFO: TIME: 2718107943 vm id 1 vcpu id 0 pcpu id 0
+main 65
+main 65
+main 66
+main 66
+main 67
+main 67
+main 68
+main 68
+main 69
+main 69
+AVISOR INFO: TIME IRQ 227
+AVISOR INFO: TIME IRQ 228
+AVISOR INFO: vcpu:prio (1:5) run on unikernel 1 on pcpu 0.
+AVISOR INFO: vcpu:prio (1:5) run on unikernel 0 on pcpu 1.
+AVISOR INFO: TIME: 2780668087 vm id 1 vcpu id 1 pcpu id 0
+AVISOR INFO: TIME: 2780671405 vm id 0 vcpu id 1 pcpu id 1
+task1! 65
+task1! 65
+task1! 66
+task1! 66
+task1! 67
+task1! 67
+task1! 68
+task1! 68
+task1! 69
+task1! 69
+AVISOR INFO: TIME IRQ 229
+AVISOR INFO: TIME IRQ 230
+AVISOR INFO: vcpu:prio (2:5) run on unikernel 0 on pcpu 1.
+AVISOR INFO: vcpu:prio (2:5) run on unikernel 1 on pcpu 0.
+AVISOR INFO: TIME: 2843232398 vm id 0 vcpu id 2 pcpu id 1
+AVISOR INFO: TIME: 2843240581 vm id 1 vcpu id 2 pcpu id 0
+task2! 64
+task2! 64
+task2! 65
+task2! 65
+task2! 66
+task2! 66
+task2! 67
+task2! 67
+task2! 68
+AVISOR INFO: TIME IRQ 231
+AVISOR INFO: TIME IRQ 232
+AVISOR INFO: cpu id 1 vm id 0 rqnode need_resched = 0
+AVISOR INFO: cpu id 1 vm id 1 rqnode need_resched = 0
+AVISOR INFO: cpu id 1 vm id 2 rqnode need_resched = 0
+AVISOR INFO: cpu id 1 vm id 3 rqnode need_resched = 0
+AVISOR INFO: vm repeat
+AVISOR INFO: cpu id 1 vm id 0 rqnode need_resched = 1
+AVISOR INFO: cpu id 1 vm id 1 rqnode need_resched = 1
+AVISOR INFO: cpu id 1 vm id 2 rqnode need_resched = 1
+AVISOR INFO: cpu id 1 vm id 3 rqnode need_resched = 1
+AVISOR INFO: unikernel 3 will run on pcpu 1.
+AVISOR INFO: cpu id 0 vm id 0 rqnode need_resched = 1
+AVISOR INFO: vcpu repeat
+AVISOR INFO: cpu id 0 vm id 1 rqnode need_resched = 1
+AVISOR INFO: vcpu:prio (0:5) run on unikernel 3 on pcpu 1.
+AVISOR INFO: cpu id 0 vm id 2 rqnode need_resched = 1
+AVISOR INFO: TIME: 2905920070 vm id 3 vcpu id 0 pcpu id 1
+AVISOR INFO: unikernel 2 will run on pcpu 0.
+AVISOR INFO: vcpu repeat
+AVISOR INFO: vcpu:prio (0:5) run on unikernel 2 on pcpu 0.
+AVISOR INFO: TIME: 2905953172 vm id 2 vcpu id 0 pcpu id 0
+main 65
+main 65
+main 66
+main 66
+main 67
+main 67
+main 68
+main 68
+AVISOR INFO: TIME IRQ 233
+AVISOR INFO: TIME IRQ 234
+AVISOR INFO: vcpu:prio (1:5) run on unikernel 2 on pcpu 0.
+AVISOR INFO: vcpu:prio (1:5) run on unikernel 3 on pcpu 1.
+AVISOR INFO: TIME: 2968389896 vm id 2 vcpu id 1 pcpu id 0
+AVISOR INFO: TIME: 2968397506 vm id 3 vcpu id 1 pcpu id 1
+task1! 65
+task1! 66
+task1! 66
+task1! 67
+task1! 67
+task1! 68
+task1! 68
+task1! 69
+task1! 69
+AVISOR INFO: TIME IRQ 235
+AVISOR INFO: TIME IRQ 236
+AVISOR INFO: vcpu:prio (2:5) run on unikernel 3 on pcpu 1.
+AVISOR INFO: vcpu:prio (2:5) run on unikernel 2 on pcpu 0.
+AVISOR INFO: TIME: 3030962266 vm id 3 vcpu id 2 pcpu id 1
+AVISOR INFO: TIME: 3030974477 vm id 2 vcpu id 2 pcpu id 0
+task2! 64
+task2! 64
+task2! 65
+task2! 65
+task2! 66
+task2! 66
+task2! 67
+task2! 67
+task2! 68
+task2! 68
+AVISOR INFO: TIME IRQ 237
+AVISOR INFO: TIME IRQ 238
+AVISOR INFO: vcpu:prio (3:5) run on unikernel 3 on pcpu 1.
+AVISOR INFO: vcpu:prio (3:5) run on unikernel 2 on pcpu 0.
+AVISOR INFO: TIME: 3093538601 vm id 3 vcpu id 3 pcpu id 1
+AVISOR INFO: TIME: 3093553945 vm id 2 vcpu id 3 pcpu id 0
+task3! 65
+task3! 65
+task3! 66
+task3! 66
+task3! 67
+task3! 67
+task3! 68
+task3! 68
+task3! 69
+task3! 69
+AVISOR INFO: TIME IRQ 239
+AVISOR INFO: TIME IRQ 240
+AVISOR INFO: cpu id 1 vm id 3 rqnode need_resched = 0
+AVISOR INFO: cpu id 1 vm id 2 rqnode need_resched = 0
+AVISOR INFO: cpu id 1 vm id 0 rqnode need_resched = 1
+AVISOR INFO: cpu id 1 vm id 1 rqnode need_resched = 1
+AVISOR INFO: unikernel 1 will run on pcpu 1.
+AVISOR INFO: cpu id 0 vm id 3 rqnode need_resched = 0
+AVISOR INFO: vcpu:prio (3:5) run on unikernel 1 on pcpu 1.
+AVISOR INFO: cpu id 0 vm id 2 rqnode need_resched = 0
+AVISOR INFO: TIME: 3156136073 vm id 1 vcpu id 3 pcpu id 1
+AVISOR INFO: cpu id 0 vm id 0 rqnode need_resched = 1
+AVISOR INFO: unikernel 0 will run on pcpu 0.
+AVISOR INFO: vcpu:prio (3:5) run on unikernel 0 on pcpu 0.
+AVISOR INFO: TIME: 3156164254 vm id 0 vcpu id 3 pcpu id 0
+task3! 64
+task3! 65
+task3! 66
+task3! 67
+task3! 68
+AVISOR INFO: TIME IRQ 242
+AVISOR INFO: TIME IRQ 241
+AVISOR INFO: vcpu repeat
+AVISOR INFO: vcpu repeat
+AVISOR INFO: vcpu:prio (0:5) run on unikernel 1 on pcpu 1.
+AVISOR INFO: vcpu:prio (0:5) run on unikernel 0 on pcpu 0.
+AVISOR INFO: TIME: 3218688755 vm id 1 vcpu id 0 pcpu id 1
+AVISOR INFO: TIME: 3218695699 vm id 0 vcpu id 0 pcpu id 0
+main 70
+main 70
+main 71
+main 71
+main 72
+main 72
+main 73
+main 73
+main 74
+main 74
+AVISOR INFO: TIME IRQ 243
+AVISOR INFO: TIME IRQ 244
+AVISOR INFO: vcpu:prio (1:5) run on unikernel 1 on pcpu 1.
+AVISOR INFO: vcpu:prio (1:5) run on unikernel 0 on pcpu 0.
+AVISOR INFO: TIME: 3281263193 vm id 1 vcpu id 1 pcpu id 1
+AVISOR INFO: TIME: 3281267611 vm id 0 vcpu id 1 pcpu id 0
+task1! 70
+task1! 70
+task1! 71
+task1! 71
+task1! 72
+task1! 72
+task1! 73
+task1! 73
+task1! 74
+AVISOR INFO: TIME IRQ 245
+AVISOR INFO: TIME IRQ 246
+AVISOR INFO: vcpu:prio (2:5) run on unikernel 1 on pcpu 1.
+AVISOR INFO: vcpu:prio (2:5) run on unikernel 0 on pcpu 0.
+AVISOR INFO: TIME: 3343838110 vm id 1 vcpu id 2 pcpu id 1
+AVISOR INFO: TIME: 3343843336 vm id 0 vcpu id 2 pcpu id 0
+task2! 68
+task2! 69
+task2! 69
+task2! 70
+task2! 70
+task2! 71
+task2! 71
+task2! 72
+task2! 72
+AVISOR INFO: TIME IRQ 247
+AVISOR INFO: TIME IRQ 248
+AVISOR INFO: cpu id 1 vm id 0 rqnode need_resched = 0
+AVISOR INFO: cpu id 1 vm id 1 rqnode need_resched = 0
+AVISOR INFO: cpu id 1 vm id 3 rqnode need_resched = 0
+AVISOR INFO: cpu id 1 vm id 2 rqnode need_resched = 0
+AVISOR INFO: vm repeat
+AVISOR INFO: cpu id 1 vm id 0 rqnode need_resched = 1
+AVISOR INFO: cpu id 1 vm id 1 rqnode need_resched = 1
+AVISOR INFO: cpu id 1 vm id 3 rqnode need_resched = 1
+AVISOR INFO: cpu id 1 vm id 2 rqnode need_resched = 1
+AVISOR INFO: unikernel 2 will run on pcpu 1.
+AVISOR INFO: cpu id 0 vm id 0 rqnode need_resched = 1
+AVISOR INFO: vcpu repeat
+AVISOR INFO: cpu id 0 vm id 1 rqnode need_resched = 1
+AVISOR INFO: vcpu:prio (0:5) run on unikernel 2 on pcpu 1.
+AVISOR INFO: cpu id 0 vm id 3 rqnode need_resched = 1
+AVISOR INFO: TIME: 3406463564 vm id 2 vcpu id 0 pcpu id 1
+AVISOR INFO: unikernel 3 will run on pcpu 0.
+AVISOR INFO: vcpu repeat
+AVISOR INFO: vcpu:prio (0:5) run on unikernel 3 on pcpu 0.
+AVISOR INFO: TIME: 3406485065 vm id 3 vcpu id 0 pcpu id 0
+main 69
+main 69
+main 70
+main 70
+main 71
+main 71
+main 72
+main 72
+main 73
+main 73
+AVISOR INFO: TIME IRQ 249
+AVISOR INFO: TIME IRQ 250
+AVISOR INFO: vcpu:prio (1:5) run on unikernel 2 on pcpu 1.
+AVISOR INFO: vcpu:prio (1:5) run on unikernel 3 on pcpu 0.
+AVISOR INFO: TIME: 3468977752 vm id 2 vcpu id 1 pcpu id 1
+AVISOR INFO: TIME: 3468984865 vm id 3 vcpu id 1 pcpu id 0
+task1! 70
+task1! 70
+task1! 71
+task1! 71
+task1! 72
+task1! 72
+task1! 73
+task1! 73
+task1! 74
+task1! 74
+AVISOR INFO: TIME IRQ 251
+AVISOR INFO: TIME IRQ 252
+AVISOR INFO: vcpu:prio (2:5) run on unikernel 2 on pcpu 1.
+AVISOR INFO: vcpu:prio (2:5) run on unikernel 3 on pcpu 0.
+AVISOR INFO: TIME: 3531556095 vm id 2 vcpu id 2 pcpu id 1
+AVISOR INFO: TIME: 3531562425 vm id 3 vcpu id 2 pcpu id 0
+task2! 69
+task2! 69
+task2! 70
+task2! 70
+task2! 71
+task2! 71
+task2! 72
+task2! 72
+task2! 73
+AVISOR INFO: TIME IRQ 253
+AVISOR INFO: TIME IRQ 254
+AVISOR INFO: vcpu:prio (3:5) run on unikernel 2 on pcpu 1.
+AVISOR INFO: vcpu:prio (3:5) run on unikernel 3 on pcpu 0.
+AVISOR INFO: TIME: 3594125478 vm id 2 vcpu id 3 pcpu id 1
+AVISOR INFO: TIME: 3594138537 vm id 3 vcpu id 3 pcpu id 0
+task3! 70
+task3! 70
+task3! 71
+task3! 71
+task3! 72
+task3! 72
+task3! 73
+task3! 73
+task3! 74
+task3! 74
+AVISOR INFO: TIME IRQ 255
+AVISOR INFO: TIME IRQ 256
+AVISOR INFO: cpu id 0 vm id 2 rqnode need_resched = 0
+AVISOR INFO: cpu id 0 vm id 3 rqnode need_resched = 0
+AVISOR INFO: cpu id 0 vm id 0 rqnode need_resched = 1
+AVISOR INFO: cpu id 0 vm id 1 rqnode need_resched = 1
+AVISOR INFO: unikernel 1 will run on pcpu 0.
+AVISOR INFO: cpu id 1 vm id 2 rqnode need_resched = 0
+AVISOR INFO: vcpu:prio (3:5) run on unikernel 1 on pcpu 0.
+AVISOR INFO: cpu id 1 vm id 3 rqnode need_resched = 0
+AVISOR INFO: TIME: 3656730488 vm id 1 vcpu id 3 pcpu id 0
+AVISOR INFO: cpu id 1 vm id 0 rqnode need_resched = 1
+AVISOR INFO: unikernel 0 will run on pcpu 1.
+AVISOR INFO: vcpu:prio (3:5) run on unikernel 0 on pcpu 1.
+AVISOR INFO: TIME: 3656760506 vm id 0 vcpu id 3 pcpu id 1
+task3! 69
+task3! 70
+task3! 71
+task3! 72
+task3! 73
+AVISOR INFO: TIME IRQ 257
+AVISOR INFO: TIME IRQ 258
+AVISOR INFO: vcpu repeat
+AVISOR INFO: vcpu repeat
+AVISOR INFO: vcpu:prio (0:5) run on unikernel 0 on pcpu 1.
+AVISOR INFO: vcpu:prio (0:5) run on unikernel 1 on pcpu 0.
+AVISOR INFO: TIME: 3719283926 vm id 0 vcpu id 0 pcpu id 1
+AVISOR INFO: TIME: 3719289243 vm id 1 vcpu id 0 pcpu id 0
+main 75
+main 75
+main 76
+main 76
+main 77
+main 77
+main 78
+main 78
+main 79
+main 79
+AVISOR INFO: TIME IRQ 259
+AVISOR INFO: TIME IRQ 260
+AVISOR INFO: vcpu:prio (1:5) run on unikernel 1 on pcpu 0.
+AVISOR INFO: vcpu:prio (1:5) run on unikernel 0 on pcpu 1.
+AVISOR INFO: TIME: 3781846382 vm id 1 vcpu id 1 pcpu id 0
+AVISOR INFO: TIME: 3781854059 vm id 0 vcpu id 1 pcpu id 1
+task1! 74
+task1! 75
+task1! 75
+task1! 76
+task1! 76
+task1! 77
+task1! 77
+task1! 78
+task1! 78
+AVISOR INFO: TIME IRQ 261
+AVISOR INFO: TIME IRQ 262
+AVISOR INFO: vcpu:prio (2:5) run on unikernel 0 on pcpu 1.
+AVISOR INFO: vcpu:prio (2:5) run on unikernel 1 on pcpu 0.
+AVISOR INFO: TIME: 3844458855 vm id 0 vcpu id 2 pcpu id 1
+AVISOR INFO: TIME: 3844464221 vm id 1 vcpu id 2 pcpu id 0
+task2! 73
+task2! 73
+task2! 74
+task2! 74
+task2! 75
+task2! 75
+task2! 76
+task2! 76
+task2! 77
+task2! 77
+AVISOR INFO: TIME IRQ 264
+AVISOR INFO: TIME IRQ 263
+AVISOR INFO: cpu id 1 vm id 0 rqnode need_resched = 0
+AVISOR INFO: cpu id 1 vm id 1 rqnode need_resched = 0
+AVISOR INFO: cpu id 1 vm id 2 rqnode need_resched = 0
+AVISOR INFO: cpu id 1 vm id 3 rqnode need_resched = 0
+AVISOR INFO: vm repeat
+AVISOR INFO: cpu id 1 vm id 0 rqnode need_resched = 1
+AVISOR INFO: cpu id 1 vm id 1 rqnode need_resched = 1
+AVISOR INFO: cpu id 1 vm id 2 rqnode need_resched = 1
+AVISOR INFO: cpu id 1 vm id 3 rqnode need_resched = 1
+AVISOR INFO: unikernel 3 will run on pcpu 1.
+AVISOR INFO: cpu id 0 vm id 0 rqnode need_resched = 1
+AVISOR INFO: vcpu repeat
+AVISOR INFO: cpu id 0 vm id 1 rqnode need_resched = 1
+AVISOR INFO: vcpu:prio (0:5) run on unikernel 3 on pcpu 1.
+AVISOR INFO: cpu id 0 vm id 2 rqnode need_resched = 1
+AVISOR INFO: TIME: 3907051523 vm id 3 vcpu id 0 pcpu id 1
+AVISOR INFO: unikernel 2 will run on pcpu 0.
+AVISOR INFO: vcpu repeat
+AVISOR INFO: vcpu:prio (0:5) run on unikernel 2 on pcpu 0.
+AVISOR INFO: TIME: 3907073769 vm id 2 vcpu id 0 pcpu id 0
+main 74
+main 74
+main 75
+main 75
+main 76
+main 76
+main 77
+main 77
+main 78
+AVISOR INFO: TIME IRQ 265
+AVISOR INFO: TIME IRQ 266
+AVISOR INFO: vcpu:prio (1:5) run on unikernel 3 on pcpu 1.
+AVISOR INFO: vcpu:prio (1:5) run on unikernel 2 on pcpu 0.
+AVISOR INFO: TIME: 3969566072 vm id 3 vcpu id 1 pcpu id 1
+AVISOR INFO: TIME: 3969570726 vm id 2 vcpu id 1 pcpu id 0
+task1! 75
+task1! 75
+task1! 76
+task1! 76
+task1! 77
+task1! 77
+task1! 78
+task1! 78
+task1! 79
+AVISOR INFO: TIME IRQ 267
+AVISOR INFO: TIME IRQ 268
+AVISOR INFO: vcpu:prio (2:5) run on unikernel 3 on pcpu 1.
+AVISOR INFO: vcpu:prio (2:5) run on unikernel 2 on pcpu 0.
+AVISOR INFO: TIME: 4032144164 vm id 3 vcpu id 2 pcpu id 1
+AVISOR INFO: TIME: 4032154314 vm id 2 vcpu id 2 pcpu id 0
+task2! 73
+task2! 74
+task2! 74
+task2! 75
+task2! 75
+task2! 76
+task2! 76
+task2! 77
+task2! 77
+AVISOR INFO: TIME IRQ 269
+AVISOR INFO: TIME IRQ 270
+AVISOR INFO: vcpu:prio (3:5) run on unikernel 3 on pcpu 1.
+AVISOR INFO: vcpu:prio (3:5) run on unikernel 2 on pcpu 0.
+AVISOR INFO: TIME: 4094722992 vm id 3 vcpu id 3 pcpu id 1
+AVISOR INFO: TIME: 4094732047 vm id 2 vcpu id 3 pcpu id 0
+task3! 75
+task3! 75
+task3! 76
+task3! 76
+task3! 77
+task3! 77
+task3! 78
+task3! 78
+task3! 79
+AVISOR INFO: TIME IRQ 271
+AVISOR INFO: TIME IRQ 272
+AVISOR INFO: cpu id 0 vm id 3 rqnode need_resched = 0
+AVISOR INFO: cpu id 0 vm id 2 rqnode need_resched = 0
+AVISOR INFO: cpu id 0 vm id 0 rqnode need_resched = 1
+AVISOR INFO: cpu id 0 vm id 1 rqnode need_resched = 1
+AVISOR INFO: unikernel 1 will run on pcpu 0.
+AVISOR INFO: cpu id 1 vm id 3 rqnode need_resched = 0
+AVISOR INFO: vcpu:prio (3:5) run on unikernel 1 on pcpu 0.
+AVISOR INFO: cpu id 1 vm id 2 rqnode need_resched = 0
+AVISOR INFO: TIME: 4157315511 vm id 1 vcpu id 3 pcpu id 0
+AVISOR INFO: cpu id 1 vm id 0 rqnode need_resched = 1
+AVISOR INFO: unikernel 0 will run on pcpu 1.
+AVISOR INFO: vcpu:prio (3:5) run on unikernel 0 on pcpu 1.
+AVISOR INFO: TIME: 4157339723 vm id 0 vcpu id 3 pcpu id 1
+task3! 74
+task3! 75
+task3! 76
+task3! 77
+task3! 78
+AVISOR INFO: TIME IRQ 273
+AVISOR INFO: TIME IRQ 274
+AVISOR INFO: vcpu repeat
+AVISOR INFO: vcpu repeat
+AVISOR INFO: vcpu:prio (0:5) run on unikernel 0 on pcpu 1.
+AVISOR INFO: vcpu:prio (0:5) run on unikernel 1 on pcpu 0.
+AVISOR INFO: TIME: 4219868170 vm id 0 vcpu id 0 pcpu id 1
+AVISOR INFO: TIME: 4219873453 vm id 1 vcpu id 0 pcpu id 0
+main 80
+main 80
+main 81
+main 81
+main 82
+main 82
+main 83
+main 83
+AVISOR INFO: TIME IRQ 275
+AVISOR INFO: TIME IRQ 276
+AVISOR INFO: vcpu:prio (1:5) run on unikernel 0 on pcpu 1.
+AVISOR INFO: vcpu:prio (1:5) run on unikernel 1 on pcpu 0.
+AVISOR INFO: TIME: 4282452825 vm id 0 vcpu id 1 pcpu id 1
+AVISOR INFO: TIME: 4282459413 vm id 1 vcpu id 1 pcpu id 0
+task1! 79
+task1! 79
+task1! 80
+task1! 80
+task1! 81
+task1! 81
+task1! 82
+task1! 82
+task1! 83
+task1! 83
+AVISOR INFO: TIME IRQ 277
+AVISOR INFO: TIME IRQ 278
+AVISOR INFO: vcpu:prio (2:5) run on unikernel 0 on pcpu 1.
+AVISOR INFO: vcpu:prio (2:5) run on unikernel 1 on pcpu 0.
+AVISOR INFO: TIME: 50046876 vm id 0 vcpu id 2 pcpu id 1
+AVISOR INFO: TIME: 50056550 vm id 1 vcpu id 2 pcpu id 0
+task2! 78
+task2! 78
+task2! 79
+task2! 79
+task2! 80
+task2! 80
+task2! 81
+task2! 81
+task2! 82
+task2! 82
+AVISOR INFO: TIME IRQ 280
+AVISOR INFO: TIME IRQ 279
+AVISOR INFO: cpu id 1 vm id 1 rqnode need_resched = 0
+AVISOR INFO: cpu id 1 vm id 0 rqnode need_resched = 0
+AVISOR INFO: cpu id 1 vm id 3 rqnode need_resched = 0
+AVISOR INFO: cpu id 1 vm id 2 rqnode need_resched = 0
+AVISOR INFO: vm repeat
+AVISOR INFO: cpu id 1 vm id 1 rqnode need_resched = 1
+AVISOR INFO: cpu id 1 vm id 0 rqnode need_resched = 1
+AVISOR INFO: cpu id 1 vm id 3 rqnode need_resched = 1
+AVISOR INFO: cpu id 1 vm id 2 rqnode need_resched = 1
+AVISOR INFO: unikernel 2 will run on pcpu 1.
+AVISOR INFO: cpu id 0 vm id 1 rqnode need_resched = 1
+AVISOR INFO: vcpu repeat
+AVISOR INFO: cpu id 0 vm id 0 rqnode need_resched = 1
+AVISOR INFO: vcpu:prio (0:5) run on unikernel 2 on pcpu 1.
+AVISOR INFO: cpu id 0 vm id 3 rqnode need_resched = 1
+AVISOR INFO: TIME: 112676698 vm id 2 vcpu id 0 pcpu id 1
+AVISOR INFO: unikernel 3 will run on pcpu 0.
+AVISOR INFO: vcpu repeat
+AVISOR INFO: vcpu:prio (0:5) run on unikernel 3 on pcpu 0.
+AVISOR INFO: TIME: 112699103 vm id 3 vcpu id 0 pcpu id 0
+main 78
+main 79
+main 79
+main 80
+main 80
+main 81
+main 81
+main 82
+main 82
+AVISOR INFO: TIME IRQ 281
+AVISOR INFO: TIME IRQ 282
+AVISOR INFO: vcpu:prio (1:5) run on unikernel 2 on pcpu 1.
+AVISOR INFO: vcpu:prio (1:5) run on unikernel 3 on pcpu 0.
+AVISOR INFO: TIME: 175210838 vm id 2 vcpu id 1 pcpu id 1
+AVISOR INFO: TIME: 175221092 vm id 3 vcpu id 1 pcpu id 0
+task1! 79
+task1! 80
+task1! 80
+task1! 81
+task1! 81
+task1! 82
+task1! 82
+task1! 83
+task1! 83
+AVISOR INFO: TIME IRQ 283
+AVISOR INFO: TIME IRQ 284
+AVISOR INFO: vcpu:prio (2:5) run on unikernel 2 on pcpu 1.
+AVISOR INFO: vcpu:prio (2:5) run on unikernel 3 on pcpu 0.
+AVISOR INFO: TIME: 237764545 vm id 2 vcpu id 2 pcpu id 1
+AVISOR INFO: TIME: 237772590 vm id 3 vcpu id 2 pcpu id 0
+task2! 78
+task2! 78
+task2! 79
+task2! 79
+task2! 80
+task2! 80
+task2! 81
+task2! 81
+task2! 82
+task2! 82
+AVISOR INFO: TIME IRQ 285
+AVISOR INFO: TIME IRQ 286
+AVISOR INFO: vcpu:prio (3:5) run on unikernel 2 on pcpu 1.
+AVISOR INFO: vcpu:prio (3:5) run on unikernel 3 on pcpu 0.
+AVISOR INFO: TIME: 300338262 vm id 2 vcpu id 3 pcpu id 1
+AVISOR INFO: TIME: 300354644 vm id 3 vcpu id 3 pcpu id 0
+task3! 79
+task3! 80
+task3! 80
+task3! 81
+task3! 81
+task3! 82
+task3! 82
+task3! 83
+task3! 83
+AVISOR INFO: TIME IRQ 287
+AVISOR INFO: TIME IRQ 288
+AVISOR INFO: cpu id 0 vm id 3 rqnode need_resched = 0
+AVISOR INFO: cpu id 0 vm id 2 rqnode need_resched = 0
+AVISOR INFO: cpu id 0 vm id 1 rqnode need_resched = 1
+AVISOR INFO: cpu id 0 vm id 0 rqnode need_resched = 1
+AVISOR INFO: unikernel 0 will run on pcpu 0.
+AVISOR INFO: cpu id 1 vm id 3 rqnode need_resched = 0
+AVISOR INFO: vcpu:prio (3:5) run on unikernel 0 on pcpu 0.
+AVISOR INFO: cpu id 1 vm id 2 rqnode need_resched = 0
+AVISOR INFO: TIME: 362939416 vm id 0 vcpu id 3 pcpu id 0
+AVISOR INFO: cpu id 1 vm id 1 rqnode need_resched = 1
+AVISOR INFO: unikernel 1 will run on pcpu 1.
+AVISOR INFO: vcpu:prio (3:5) run on unikernel 1 on pcpu 1.
+AVISOR INFO: TIME: 362965252 vm id 1 vcpu id 3 pcpu id 1
+task3! 79
+task3! 80
+task3! 81
+task3! 82
+AVISOR INFO: TIME IRQ 289
+AVISOR INFO: TIME IRQ 290
+AVISOR INFO: vcpu repeat
+AVISOR INFO: vcpu repeat
+AVISOR INFO: vcpu:prio (0:5) run on unikernel 1 on pcpu 1.
+AVISOR INFO: vcpu:prio (0:5) run on unikernel 0 on pcpu 0.
+AVISOR INFO: TIME: 425487792 vm id 1 vcpu id 0 pcpu id 1
+AVISOR INFO: TIME: 425500249 vm id 0 vcpu id 0 pcpu id 0
+main 84
+main 84
+main 85
+main 85
+main 86
+main 86
+main 87
+main 87
+main 88
+main 88
+AVISOR INFO: TIME IRQ 292
+AVISOR INFO: TIME IRQ 291
+AVISOR INFO: vcpu:prio (1:5) run on unikernel 1 on pcpu 1.
+AVISOR INFO: vcpu:prio (1:5) run on unikernel 0 on pcpu 0.
+AVISOR INFO: TIME: 488077144 vm id 1 vcpu id 1 pcpu id 1
+AVISOR INFO: TIME: 488084145 vm id 0 vcpu id 1 pcpu id 0
+task1! 84
+task1! 84
+task1! 85
+task1! 85
+task1! 86
+task1! 86
+task1! 87
+task1! 87
+task1! 88
+task1! 88
+AVISOR INFO: TIME IRQ 293
+AVISOR INFO: TIME IRQ 294
+AVISOR INFO: vcpu:prio (2:5) run on unikernel 0 on pcpu 0.
+AVISOR INFO: vcpu:prio (2:5) run on unikernel 1 on pcpu 1.
+AVISOR INFO: TIME: 550614520 vm id 0 vcpu id 2 pcpu id 0
+AVISOR INFO: TIME: 550623234 vm id 1 vcpu id 2 pcpu id 1
+task2! 83
+task2! 83
+task2! 84
+task2! 84
+task2! 85
+task2! 85
+task2! 86
+task2! 86
+AVISOR INFO: TIME IRQ 295
+AVISOR INFO: TIME IRQ 296
+AVISOR INFO: cpu id 0 vm id 0 rqnode need_resched = 0
+AVISOR INFO: cpu id 0 vm id 1 rqnode need_resched = 0
+AVISOR INFO: cpu id 0 vm id 3 rqnode need_resched = 0
+AVISOR INFO: cpu id 0 vm id 2 rqnode need_resched = 0
+AVISOR INFO: vm repeat
+AVISOR INFO: cpu id 0 vm id 0 rqnode need_resched = 1
+AVISOR INFO: cpu id 0 vm id 1 rqnode need_resched = 1
+AVISOR INFO: cpu id 0 vm id 3 rqnode need_resched = 1
+AVISOR INFO: cpu id 0 vm id 2 rqnode need_resched = 1
+AVISOR INFO: unikernel 2 will run on pcpu 0.
+AVISOR INFO: cpu id 1 vm id 0 rqnode need_resched = 1
+AVISOR INFO: vcpu repeat
+AVISOR INFO: cpu id 1 vm id 1 rqnode need_resched = 1
+AVISOR INFO: vcpu:prio (0:5) run on unikernel 2 on pcpu 0.
+AVISOR INFO: cpu id 1 vm id 3 rqnode need_resched = 1
+AVISOR INFO: TIME: 613306667 vm id 2 vcpu id 0 pcpu id 0
+AVISOR INFO: unikernel 3 will run on pcpu 1.
+AVISOR INFO: vcpu repeat
+AVISOR INFO: vcpu:prio (0:5) run on unikernel 3 on pcpu 1.
+AVISOR INFO: TIME: 613330090 vm id 3 vcpu id 0 pcpu id 1
+main 83
+main 83
+main 84
+main 84
+main 85
+main 85
+main 86
+main 86
+mAVISOR INFO: TIME IRQ 297
+AVISOR INFO: TIME IRQ 298
+AVISOR INFO: vcpu:prio (1:5) run on unikernel 3 on pcpu 1.
+AVISOR INFO: vcpu:prio (1:5) run on unikernel 2 on pcpu 0.
+AVISOR INFO: TIME: 675818160 vm id 3 vcpu id 1 pcpu id 1
+AVISOR INFO: TIME: 675827246 vm id 2 vcpu id 1 pcpu id 0
+task1! 84
+task1! 84
+task1! 85
+task1! 85
+task1! 86
+task1! 86
+task1! 87
+task1! 87
+task1! 88
+task1! 88
+AVISOR INFO: TIME IRQ 299
+AVISOR INFO: TIME IRQ 300
+AVISOR INFO: vcpu:prio (2:5) run on unikernel 2 on pcpu 0.
+AVISOR INFO: vcpu:prio (2:5) run on unikernel 3 on pcpu 1.
+AVISOR INFO: TIME: 738393908 vm id 2 vcpu id 2 pcpu id 0
+AVISOR INFO: TIME: 738399079 vm id 3 vcpu id 2 pcpu id 1
+task2! 83
+task2! 83
+task2! 84
+task2! 84
+task2! 85
+task2! 85
+task2! 86
+task2! 86
+task2! 87
+AVISOR INFO: TIME IRQ 301
+AVISOR INFO: TIME IRQ 302
+AVISOR INFO: vcpu:prio (3:5) run on unikernel 3 on pcpu 1.
+AVISOR INFO: vcpu:prio (3:5) run on unikernel 2 on pcpu 0.
+AVISOR INFO: TIME: 800977443 vm id 3 vcpu id 3 pcpu id 1
+AVISOR INFO: TIME: 800983643 vm id 2 vcpu id 3 pcpu id 0
+task3! 84
+task3! 84
+task3! 85
+task3! 85
+task3! 86
+task3! 86
+task3! 87
+task3! 87
+task3! 88
+task3! 88
+AVISOR INFO: TIME IRQ 303
+AVISOR INFO: TIME IRQ 304
+AVISOR INFO: cpu id 0 vm id 3 rqnode need_resched = 0
+AVISOR INFO: cpu id 0 vm id 2 rqnode need_resched = 0
+AVISOR INFO: cpu id 0 vm id 0 rqnode need_resched = 1
+AVISOR INFO: cpu id 0 vm id 1 rqnode need_resched = 1
+AVISOR INFO: unikernel 1 will run on pcpu 0.
+AVISOR INFO: cpu id 1 vm id 3 rqnode need_resched = 0
+AVISOR INFO: vcpu:prio (3:5) run on unikernel 1 on pcpu 0.
+AVISOR INFO: cpu id 1 vm id 2 rqnode need_resched = 0
+AVISOR INFO: TIME: 863583096 vm id 1 vcpu id 3 pcpu id 0
+AVISOR INFO: cpu id 1 vm id 0 rqnode need_resched = 1
+AVISOR INFO: unikernel 0 will run on pcpu 1.
+AVISOR INFO: vcpu:prio (3:5) run on unikernel 0 on pcpu 1.
+AVISOR INFO: TIME: 863609610 vm id 0 vcpu id 3 pcpu id 1
+task3! 83
+task3! 84
+task3! 85
+task3! 86
+task3! 87
+AVISOR INFO: TIME IRQ 305
+AVISOR INFO: TIME IRQ 306
+AVISOR INFO: vcpu repeat
+AVISOR INFO: vcpu repeat
+AVISOR INFO: vcpu:prio (0:5) run on unikernel 0 on pcpu 1.
+AVISOR INFO: vcpu:prio (0:5) run on unikernel 1 on pcpu 0.
+AVISOR INFO: TIME: 926117037 vm id 0 vcpu id 0 pcpu id 1
+AVISOR INFO: TIME: 926122006 vm id 1 vcpu id 0 pcpu id 0
+main 89
+main 89
+main 90
+main 90
+main 91
+main 91
+main 92
+main 92
+AVISOR INFO: TIME IRQ 307
+AVISOR INFO: TIME IRQ 308
+AVISOR INFO: vcpu:prio (1:5) run on unikernel 0 on pcpu 1.
+AVISOR INFO: vcpu:prio (1:5) run on unikernel 1 on pcpu 0.
+AVISOR INFO: TIME: 988686427 vm id 0 vcpu id 1 pcpu id 1
+AVISOR INFO: TIME: 988696473 vm id 1 vcpu id 1 pcpu id 0
+task1! 89
+task1! 89
+task1! 90
+task1! 90
+task1! 91
+task1! 91
+task1! 92
+task1! 92
+AVISOR INFO: TIME IRQ 309
+AVISOR INFO: TIME IRQ 310
+AVISOR INFO: vcpu:prio (2:5) run on unikernel 0 on pcpu 1.
+AVISOR INFO: vcpu:prio (2:5) run on unikernel 1 on pcpu 0.
+AVISOR INFO: TIME: 1051263053 vm id 0 vcpu id 2 pcpu id 1
+AVISOR INFO: TIME: 1051271831 vm id 1 vcpu id 2 pcpu id 0
+task2! 87
+task2! 87
+task2! 88
+task2! 88
+task2! 89
+task2! 89
+task2! 90
+task2! 90
+task2! 91
+task2! 91
+AVISOR INFO: TIME IRQ 311
+AVISOR INFO: TIME IRQ 312
+AVISOR INFO: cpu id 0 vm id 1 rqnode need_resched = 0
+AVISOR INFO: cpu id 0 vm id 0 rqnode need_resched = 0
+AVISOR INFO: cpu id 0 vm id 3 rqnode need_resched = 0
+AVISOR INFO: cpu id 0 vm id 2 rqnode need_resched = 0
+AVISOR INFO: vm repeat
+AVISOR INFO: cpu id 0 vm id 1 rqnode need_resched = 1
+AVISOR INFO: cpu id 0 vm id 0 rqnode need_resched = 1
+AVISOR INFO: cpu id 0 vm id 3 rqnode need_resched = 1
+AVISOR INFO: cpu id 0 vm id 2 rqnode need_resched = 1
+AVISOR INFO: unikernel 2 will run on pcpu 0.
+AVISOR INFO: cpu id 1 vm id 1 rqnode need_resched = 1
+AVISOR INFO: vcpu repeat
+AVISOR INFO: cpu id 1 vm id 0 rqnode need_resched = 1
+AVISOR INFO: vcpu:prio (0:5) run on unikernel 2 on pcpu 0.
+AVISOR INFO: cpu id 1 vm id 3 rqnode need_resched = 1
+AVISOR INFO: TIME: 1113906862 vm id 2 vcpu id 0 pcpu id 0
+AVISOR INFO: unikernel 3 will run on pcpu 1.
+AVISOR INFO: vcpu repeat
+AVISOR INFO: vcpu:prio (0:5) run on unikernel 3 on pcpu 1.
+AVISOR INFO: TIME: 1113932030 vm id 3 vcpu id 0 pcpu id 1
+ain 87
+main 87
+main 88
+main 89
+main 90
+main 91
+AVISOR INFO: TIME IRQ 313
+AVISOR INFO: TIME IRQ 314
+AVISOR INFO: vcpu:prio (1:5) run on unikernel 3 on pcpu 1.
+AVISOR INFO: vcpu:prio (1:5) run on unikernel 2 on pcpu 0.
+AVISOR INFO: TIME: 1176457624 vm id 3 vcpu id 1 pcpu id 1
+AVISOR INFO: TIME: 1176463574 vm id 2 vcpu id 1 pcpu id 0
+task1! 89
+task1! 89
+task1! 90
+task1! 90
+task1! 91
+task1! 91
+task1! 92
+task1! 92
+task1! 93
+task1! 93
+AVISOR INFO: TIME IRQ 315
+AVISOR INFO: TIME IRQ 316
+AVISOR INFO: vcpu:prio (2:5) run on unikernel 2 on pcpu 0.
+AVISOR INFO: vcpu:prio (2:5) run on unikernel 3 on pcpu 1.
+AVISOR INFO: TIME: 1239023067 vm id 2 vcpu id 2 pcpu id 0
+AVISOR INFO: TIME: 1239028953 vm id 3 vcpu id 2 pcpu id 1
+task2! 87
+task2! 88
+task2! 88
+task2! 89
+task2! 89
+task2! 90
+task2! 90
+task2! 91
+task2! 91
+AVISOR INFO: TIME IRQ 317
+AVISOR INFO: TIME IRQ 318
+AVISOR INFO: vcpu:prio (3:5) run on unikernel 2 on pcpu 0.
+AVISOR INFO: vcpu:prio (3:5) run on unikernel 3 on pcpu 1.
+AVISOR INFO: TIME: 1301608320 vm id 3 vcpu id 3 pcpu id 1
+AVISOR INFO: TIME: 1301610521 vm id 2 vcpu id 3 pcpu id 0
+task3! 89
+task3! 89
+task3! 90
+task3! 90
+task3! 91
+task3! 91
+task3! 92
+task3! 92
+task3! 93
+AVISOR INFO: TIME IRQ 319
+AVISOR INFO: TIME IRQ 320
+AVISOR INFO: cpu id 0 vm id 3 rqnode need_resched = 0
+AVISOR INFO: cpu id 0 vm id 2 rqnode need_resched = 0
+AVISOR INFO: cpu id 0 vm id 1 rqnode need_resched = 1
+AVISOR INFO: cpu id 0 vm id 0 rqnode need_resched = 1
+AVISOR INFO: unikernel 0 will run on pcpu 0.
+AVISOR INFO: cpu id 1 vm id 3 rqnode need_resched = 0
+AVISOR INFO: vcpu:prio (3:5) run on unikernel 0 on pcpu 0.
+AVISOR INFO: cpu id 1 vm id 2 rqnode need_resched = 0
+AVISOR INFO: TIME: 1364196760 vm id 0 vcpu id 3 pcpu id 0
+AVISOR INFO: cpu id 1 vm id 1 rqnode need_resched = 1
+AVISOR INFO: unikernel 1 will run on pcpu 1.
+AVISOR INFO: vcpu:prio (3:5) run on unikernel 1 on pcpu 1.
+AVISOR INFO: TIME: 1364220744 vm id 1 vcpu id 3 pcpu id 1
+task3! 88
+task3! 89
+task3! 90
+task3! 91
+task3! 92
+AVISOR INFO: TIME IRQ 321
+AVISOR INFO: TIME IRQ 322
+AVISOR INFO: vcpu repeat
+AVISOR INFO: vcpu repeat
+AVISOR INFO: vcpu:prio (0:5) run on unikernel 1 on pcpu 1.
+AVISOR INFO: vcpu:prio (0:5) run on unikernel 0 on pcpu 0.
+AVISOR INFO: TIME: 1426754619 vm id 1 vcpu id 0 pcpu id 1
+AVISOR INFO: TIME: 1426764656 vm id 0 vcpu id 0 pcpu id 0
+maimn ai9n 933
+
+main 94
+main 94
+main 95
+main 95
+main 96
+main 96
+main 97
+main 97
+AVISOR INFO: TIME IRQ 323
+AVISOR INFO: TIME IRQ 324
+AVISOR INFO: vcpu:prio (1:5) run on unikernel 1 on pcpu 1.
+AVISOR INFO: vcpu:prio (1:5) run on unikernel 0 on pcpu 0.
+AVISOR INFO: TIME: 1489315967 vm id 1 vcpu id 1 pcpu id 1
+AVISOR INFO: TIME: 1489321279 vm id 0 vcpu id 1 pcpu id 0
+task1! 93
+task1! 93
+task1! 94
+task1! 94
+task1! 95
+task1! 95
+task1! 96
+task1! 96
+task1! 97
+task1! 97
+AVISOR INFO: TIME IRQ 325
+AVISOR INFO: TIME IRQ 326
+AVISOR INFO: vcpu:prio (2:5) run on unikernel 1 on pcpu 1.
+AVISOR INFO: vcpu:prio (2:5) run on unikernel 0 on pcpu 0.
+AVISOR INFO: TIME: 1551895477 vm id 1 vcpu id 2 pcpu id 1
+AVISOR INFO: TIME: 1551903899 vm id 0 vcpu id 2 pcpu id 0
+task2! 92
+task2! 92
+task2! 93
+task2! 93
+task2! 94
+task2! 94
+task2! 95
+task2! 95
+task2! 96
+task2! 96
+AVISOR INFO: TIME IRQ 327
+AVISOR INFO: TIME IRQ 328
+AVISOR INFO: cpu id 1 vm id 1 rqnode need_resched = 0
+AVISOR INFO: cpu id 1 vm id 0 rqnode need_resched = 0
+AVISOR INFO: cpu id 1 vm id 3 rqnode need_resched = 0
+AVISOR INFO: cpu id 1 vm id 2 rqnode need_resched = 0
+AVISOR INFO: vm repeat
+AVISOR INFO: cpu id 1 vm id 1 rqnode need_resched = 1
+AVISOR INFO: cpu id 1 vm id 0 rqnode need_resched = 1
+AVISOR INFO: cpu id 1 vm id 3 rqnode need_resched = 1
+AVISOR INFO: cpu id 1 vm id 2 rqnode need_resched = 1
+AVISOR INFO: unikernel 2 will run on pcpu 1.
+AVISOR INFO: cpu id 0 vm id 1 rqnode need_resched = 1
+AVISOR INFO: vcpu repeat
+AVISOR INFO: cpu id 0 vm id 0 rqnode need_resched = 1
+AVISOR INFO: vcpu:prio (0:5) run on unikernel 2 on pcpu 1.
+AVISOR INFO: cpu id 0 vm id 3 rqnode need_resched = 1
+AVISOR INFO: TIME: 1614528759 vm id 2 vcpu id 0 pcpu id 1
+AVISOR INFO: unikernel 3 will run on pcpu 0.
+AVISOR INFO: vcpu repeat
+AVISOR INFO: vcpu:prio (0:5) run on unikernel 3 on pcpu 0.
+AVISOR INFO: TIME: 1614552805 vm id 3 vcpu id 0 pcpu id 0
+main 92
+main 93
+main 94
+main 95
+main 96
+AVISOR INFO: TIME IRQ 329
+AVISOR INFO: TIME IRQ 330
+AVISOR INFO: vcpu:prio (1:5) run on unikernel 2 on pcpu 1.
+AVISOR INFO: vcpu:prio (1:5) run on unikernel 3 on pcpu 0.
+AVISOR INFO: TIME: 1677039222 vm id 2 vcpu id 1 pcpu id 1
+AVISOR INFO: TIME: 1677049031 vm id 3 vcpu id 1 pcpu id 0
+task1! 94
+task1! 94
+task1! 95
+task1! 95
+task1! 96
+task1! 96
+task1! 97
+task1! 97
+AVISOR INFO: TIME IRQ 331
+AVISOR INFO: TIME IRQ 332
+AVISOR INFO: vcpu:prio (2:5) run on unikernel 3 on pcpu 0.
+AVISOR INFO: vcpu:prio (2:5) run on unikernel 2 on pcpu 1.
+AVISOR INFO: TIME: 1739622911 vm id 3 vcpu id 2 pcpu id 0
+AVISOR INFO: TIME: 1739628354 vm id 2 vcpu id 2 pcpu id 1
+task2! 92
+task2! 92
+task2! 93
+task2! 93
+task2! 94
+task2! 94
+task2! 95
+task2! 95
+task2! 96
+task2! 96
+AVISOR INFO: TIME IRQ 333
+AVISOR INFO: TIME IRQ 334
+AVISOR INFO: vcpu:prio (3:5) run on unikernel 3 on pcpu 0.
+AVISOR INFO: vcpu:prio (3:5) run on unikernel 2 on pcpu 1.
+AVISOR INFO: TIME: 1802204344 vm id 3 vcpu id 3 pcpu id 0
+AVISOR INFO: TIME: 1802212307 vm id 2 vcpu id 3 pcpu id 1
+task3! 93
+task3! 94
+task3! 94
+task3! 95
+task3! 95
+task3! 96
+task3! 96
+task3! 97
+task3! 97
+AVISOR INFO: TIME IRQ 335
+AVISOR INFO: TIME IRQ 336
+AVISOR INFO: cpu id 0 vm id 3 rqnode need_resched = 0
+AVISOR INFO: cpu id 0 vm id 2 rqnode need_resched = 0
+AVISOR INFO: cpu id 0 vm id 1 rqnode need_resched = 1
+AVISOR INFO: cpu id 0 vm id 0 rqnode need_resched = 1
+AVISOR INFO: unikernel 0 will run on pcpu 0.
+AVISOR INFO: cpu id 1 vm id 3 rqnode need_resched = 0
+AVISOR INFO: vcpu:prio (3:5) run on unikernel 0 on pcpu 0.
+AVISOR INFO: cpu id 1 vm id 2 rqnode need_resched = 0
+AVISOR INFO: TIME: 1864814805 vm id 0 vcpu id 3 pcpu id 0
+AVISOR INFO: cpu id 1 vm id 1 rqnode need_resched = 1
+AVISOR INFO: unikernel 1 will run on pcpu 1.
+AVISOR INFO: vcpu:prio (3:5) run on unikernel 1 on pcpu 1.
+AVISOR INFO: TIME: 1864839809 vm id 1 vcpu id 3 pcpu id 1
+task3! 93
+task3! 94
+task3! 95
+task3! 96
+AVISOR INFO: TIME IRQ 337
+AVISOR INFO: TIME IRQ 338
+AVISOR INFO: vcpu repeat
+AVISOR INFO: vcpu repeat
+AVISOR INFO: vcpu:prio (0:5) run on unikernel 1 on pcpu 1.
+AVISOR INFO: vcpu:prio (0:5) run on unikernel 0 on pcpu 0.
+AVISOR INFO: TIME: 1927370578 vm id 1 vcpu id 0 pcpu id 1
+AVISOR INFO: TIME: 1927379045 vm id 0 vcpu id 0 pcpu id 0
+main 98
+main 98
+main 99
+main 99
+main 100
+main 100
+main 101
+main 101
+main 102
+main 102
+AVISOR INFO: TIME IRQ 340
+AVISOR INFO: TIME IRQ 339
+AVISOR INFO: vcpu:prio (1:5) run on unikernel 0 on pcpu 0.
+AVISOR INFO: vcpu:prio (1:5) run on unikernel 1 on pcpu 1.
+AVISOR INFO: TIME: 1989930851 vm id 0 vcpu id 1 pcpu id 0
+AVISOR INFO: TIME: 1989936230 vm id 1 vcpu id 1 pcpu id 1
+task1! 98
+task1! 98
+task1! 99
+task1! 99
+task1! 100
+task1! 100
+task1! 101
+task1! 101
+task1! 102
+AVISOR INFO: TIME IRQ 341
+AVISOR INFO: TIME IRQ 342
+AVISOR INFO: vcpu:prio (2:5) run on unikernel 0 on pcpu 0.
+AVISOR INFO: vcpu:prio (2:5) run on unikernel 1 on pcpu 1.
+AVISOR INFO: TIME: 2052500428 vm id 0 vcpu id 2 pcpu id 0
+AVISOR INFO: TIME: 2052507499 vm id 1 vcpu id 2 pcpu id 1
+task2! 97
+task2! 97
+task2! 98
+task2! 98
+task2! 99
+task2! 99
+task2! 100
+task2! 100
+AVISOR INFO: TIME IRQ 343
+AVISOR INFO: TIME IRQ 344
+AVISOR INFO: cpu id 1 vm id 0 rqnode need_resched = 0
+AVISOR INFO: cpu id 1 vm id 1 rqnode need_resched = 0
+AVISOR INFO: cpu id 1 vm id 3 rqnode need_resched = 0
+AVISOR INFO: cpu id 1 vm id 2 rqnode need_resched = 0
+AVISOR INFO: vm repeat
+AVISOR INFO: cpu id 1 vm id 0 rqnode need_resched = 1
+AVISOR INFO: cpu id 1 vm id 1 rqnode need_resched = 1
+AVISOR INFO: cpu id 1 vm id 3 rqnode need_resched = 1
+AVISOR INFO: cpu id 1 vm id 2 rqnode need_resched = 1
+AVISOR INFO: unikernel 2 will run on pcpu 1.
+AVISOR INFO: cpu id 0 vm id 0 rqnode need_resched = 1
+AVISOR INFO: vcpu repeat
+AVISOR INFO: cpu id 0 vm id 1 rqnode need_resched = 1
+AVISOR INFO: vcpu:prio (0:5) run on unikernel 2 on pcpu 1.
+AVISOR INFO: cpu id 0 vm id 3 rqnode need_resched = 1
+AVISOR INFO: TIME: 2115141463 vm id 2 vcpu id 0 pcpu id 1
+AVISOR INFO: unikernel 3 will run on pcpu 0.
+AVISOR INFO: vcpu repeat
+AVISOR INFO: vcpu:prio (0:5) run on unikernel 3 on pcpu 0.
+AVISOR INFO: TIME: 2115159659 vm id 3 vcpu id 0 pcpu id 0
+main 97
+main 98
+main 99
+main 100
+main 101
+main 102
+AVISOR INFO: TIME IRQ 345
+AVISOR INFO: TIME IRQ 346
+AVISOR INFO: vcpu:prio (1:5) run on unikernel 2 on pcpu 1.
+AVISOR INFO: vcpu:prio (1:5) run on unikernel 3 on pcpu 0.
+AVISOR INFO: TIME: 2177657169 vm id 2 vcpu id 1 pcpu id 1
+AVISOR INFO: TIME: 2177673265 vm id 3 vcpu id 1 pcpu id 0
+task1! 98
+task1! 98
+task1! 99
+task1! 99
+task1! 100
+task1! 100
+task1! 101
+task1! 101
+task1! 102
+task1! 102
+AVISOR INFO: TIME IRQ 347
+AVISOR INFO: TIME IRQ 348
+AVISOR INFO: vcpu:prio (2:5) run on unikernel 2 on pcpu 1.
+AVISOR INFO: vcpu:prio (2:5) run on unikernel 3 on pcpu 0.
+AVISOR INFO: TIME: 2240221214 vm id 2 vcpu id 2 pcpu id 1
+AVISOR INFO: TIME: 2240233344 vm id 3 vcpu id 2 pcpu id 0
+task2! 97
+task2! 97
+task2! 98
+task2! 98
+task2! 99
+task2! 99
+task2! 100
+task2! 100
+AVISOR INFO: TIME IRQ 349
+AVISOR INFO: TIME IRQ 350
+AVISOR INFO: vcpu:prio (3:5) run on unikernel 3 on pcpu 0.
+AVISOR INFO: vcpu:prio (3:5) run on unikernel 2 on pcpu 1.
+AVISOR INFO: TIME: 2302790961 vm id 3 vcpu id 3 pcpu id 0
+AVISOR INFO: TIME: 2302796693 vm id 2 vcpu id 3 pcpu id 1
+task3! 98
+task3! 98
+task3! 99
+task3! 99
+task3! 100
+task3! 100
+task3! 101
+task3! 101
+task3! 102
+task3! 102
+AVISOR INFO: TIME IRQ 351
+AVISOR INFO: TIME IRQ 352
+AVISOR INFO: cpu id 0 vm id 3 rqnode need_resched = 0
+AVISOR INFO: cpu id 0 vm id 2 rqnode need_resched = 0
+AVISOR INFO: cpu id 0 vm id 0 rqnode need_resched = 1
+AVISOR INFO: cpu id 0 vm id 1 rqnode need_resched = 1
+AVISOR INFO: unikernel 1 will run on pcpu 0.
+AVISOR INFO: cpu id 1 vm id 3 rqnode need_resched = 0
+AVISOR INFO: vcpu:prio (3:5) run on unikernel 1 on pcpu 0.
+AVISOR INFO: cpu id 1 vm id 2 rqnode need_resched = 0
+AVISOR INFO: TIME: 2365467234 vm id 1 vcpu id 3 pcpu id 0
+AVISOR INFO: cpu id 1 vm id 0 rqnode need_resched = 1
+AVISOR INFO: unikernel 0 will run on pcpu 1.
+AVISOR INFO: vcpu:prio (3:5) run on unikernel 0 on pcpu 1.
+AVISOR INFO: TIME: 2365497669 vm id 0 vcpu id 3 pcpu id 1
+task3! 97
+task3! 98
+task3! 99
+task3! 100
+task3! 101
+AVISOR INFO: TIME IRQ 353
+AVISOR INFO: TIME IRQ 354
+AVISOR INFO: vcpu repeat
+AVISOR INFO: vcpu repeat
+AVISOR INFO: vcpu:prio (0:5) run on unikernel 0 on pcpu 1.
+AVISOR INFO: vcpu:prio (0:5) run on unikernel 1 on pcpu 0.
+AVISOR INFO: TIME: 2428009898 vm id 1 vcpu id 0 pcpu id 0
+AVISOR INFO: TIME: 2428010207 vm id 0 vcpu id 0 pcpu id 1
+main 103
+main 103
+main 104
+main 104
+main 105
+main 105
+main 106
+main 106
+AVISOR INFO: TIME IRQ 355
+AVISOR INFO: TIME IRQ 356
+AVISOR INFO: vcpu:prio (1:5) run on unikernel 0 on pcpu 1.
+AVISOR INFO: vcpu:prio (1:5) run on unikernel 1 on pcpu 0.
+AVISOR INFO: TIME: 2490585724 vm id 0 vcpu id 1 pcpu id 1
+AVISOR INFO: TIME: 2490585781 vm id 1 vcpu id 1 pcpu id 0
+task1! 102
+task1! 103
+task1! 103
+task1! 104
+task1! 104
+task1! 105
+task1! 105
+task1! 106
+task1! 106
+AVISOR INFO: TIME IRQ 357
+AVISOR INFO: TIME IRQ 358
+AVISOR INFO: vcpu:prio (2:5) run on unikernel 0 on pcpu 1.
+AVISOR INFO: vcpu:prio (2:5) run on unikernel 1 on pcpu 0.
+AVISOR INFO: TIME: 2553143696 vm id 0 vcpu id 2 pcpu id 1
+AVISOR INFO: TIME: 2553149015 vm id 1 vcpu id 2 pcpu id 0
+task2! 101
+task2! 101
+task2! 102
+task2! 102
+task2! 103
+task2! 103
+task2! 104
+task2! 104
+task2! 105
+task2! 105
+AVISOR INFO: TIME IRQ 359
+AVISOR INFO: TIME IRQ 360
+AVISOR INFO: cpu id 0 vm id 0 rqnode need_resched = 0
+AVISOR INFO: cpu id 0 vm id 1 rqnode need_resched = 0
+AVISOR INFO: cpu id 0 vm id 3 rqnode need_resched = 0
+AVISOR INFO: cpu id 0 vm id 2 rqnode need_resched = 0
+AVISOR INFO: vm repeat
+AVISOR INFO: cpu id 0 vm id 0 rqnode need_resched = 1
+AVISOR INFO: cpu id 0 vm id 1 rqnode need_resched = 1
+AVISOR INFO: cpu id 0 vm id 3 rqnode need_resched = 1
+AVISOR INFO: cpu id 0 vm id 2 rqnode need_resched = 1
+AVISOR INFO: unikernel 2 will run on pcpu 0.
+AVISOR INFO: cpu id 1 vm id 0 rqnode need_resched = 1
+AVISOR INFO: vcpu repeat
+AVISOR INFO: cpu id 1 vm id 1 rqnode need_resched = 1
+AVISOR INFO: vcpu:prio (0:5) run on unikernel 2 on pcpu 0.
+AVISOR INFO: cpu id 1 vm id 3 rqnode need_resched = 1
+AVISOR INFO: TIME: 2615774152 vm id 2 vcpu id 0 pcpu id 0
+AVISOR INFO: unikernel 3 will run on pcpu 1.
+AVISOR INFO: vcpu repeat
+AVISOR INFO: vcpu:prio (0:5) run on unikernel 3 on pcpu 1.
+AVISOR INFO: TIME: 2615796124 vm id 3 vcpu id 0 pcpu id 1
+main 103
+main 104
+main 105
+main 106
+main 107
+AVISOR INFO: TIME IRQ 361
+AVISOR INFO: TIME IRQ 362
+AVISOR INFO: vcpu:prio (1:5) run on unikernel 2 on pcpu 0.
+AVISOR INFO: vcpu:prio (1:5) run on unikernel 3 on pcpu 1.
+AVISOR INFO: TIME: 2678286930 vm id 2 vcpu id 1 pcpu id 0
+AVISOR INFO: TIME: 2678297906 vm id 3 vcpu id 1 pcpu id 1
+task1! 103
+task1! 103
+task1! 104
+task1! 104
+task1! 105
+task1! 105
+task1! 106
+task1! 106
+task1! 107
+task1! 107
+AVISOR INFO: TIME IRQ 363
+AVISOR INFO: TIME IRQ 364
+AVISOR INFO: vcpu:prio (2:5) run on unikernel 2 on pcpu 0.
+AVISOR INFO: vcpu:prio (2:5) run on unikernel 3 on pcpu 1.
+AVISOR INFO: TIME: 2740862079 vm id 2 vcpu id 2 pcpu id 0
+AVISOR INFO: TIME: 2740869558 vm id 3 vcpu id 2 pcpu id 1
+task2! 101
+task2! 101
+task2! 102
+task2! 102
+task2! 103
+task2! 103
+task2! 104
+task2! 104
+task2! 105
+task2! 105
+AVISOR INFO: TIME IRQ 365
+AVISOR INFO: TIME IRQ 366
+AVISOR INFO: vcpu:prio (3:5) run on unikernel 2 on pcpu 0.
+AVISOR INFO: vcpu:prio (3:5) run on unikernel 3 on pcpu 1.
+AVISOR INFO: TIME: 2803437087 vm id 2 vcpu id 3 pcpu id 0
+AVISOR INFO: TIME: 2803443795 vm id 3 vcpu id 3 pcpu id 1
+task3! 103
+task3! 103
+task3! 104
+task3! 104
+task3! 105
+task3! 105
+task3! 106
+task3! 106
+task3! 107
+AVISOR INFO: TIME IRQ 367
+AVISOR INFO: TIME IRQ 368
+AVISOR INFO: cpu id 0 vm id 3 rqnode need_resched = 0
+AVISOR INFO: cpu id 0 vm id 2 rqnode need_resched = 0
+AVISOR INFO: cpu id 0 vm id 0 rqnode need_resched = 1
+AVISOR INFO: cpu id 0 vm id 1 rqnode need_resched = 1
+AVISOR INFO: unikernel 1 will run on pcpu 0.
+AVISOR INFO: cpu id 1 vm id 3 rqnode need_resched = 0
+AVISOR INFO: vcpu:prio (3:5) run on unikernel 1 on pcpu 0.
+AVISOR INFO: cpu id 1 vm id 2 rqnode need_resched = 0
+AVISOR INFO: TIME: 2866029578 vm id 1 vcpu id 3 pcpu id 0
+AVISOR INFO: cpu id 1 vm id 0 rqnode need_resched = 1
+AVISOR INFO: unikernel 0 will run on pcpu 1.
+AVISOR INFO: vcpu:prio (3:5) run on unikernel 0 on pcpu 1.
+AVISOR INFO: TIME: 2866054963 vm id 0 vcpu id 3 pcpu id 1
+task3! 102
+task3! 103
+task3! 104
+task3! 105
+task3! 106
+AVISOR INFO: TIME IRQ 369
+AVISOR INFO: TIME IRQ 370
+AVISOR INFO: vcpu repeat
+AVISOR INFO: vcpu repeat
+AVISOR INFO: vcpu:prio (0:5) run on unikernel 0 on pcpu 1.
+AVISOR INFO: vcpu:prio (0:5) run on unikernel 1 on pcpu 0.
+AVISOR INFO: TIME: 2928589685 vm id 1 vcpu id 0 pcpu id 0
+AVISOR INFO: TIME: 2928589769 vm id 0 vcpu id 0 pcpu id 1
+main 107
+main 107
+main 108
+main 108
+main 109
+main 109
+main 110
+main 110
+main 111
+main 111
+AVISOR INFO: TIME IRQ 371
+AVISOR INFO: TIME IRQ 372
+AVISOR INFO: vcpu:prio (1:5) run on unikernel 1 on pcpu 0.
+AVISOR INFO: vcpu:prio (1:5) run on unikernel 0 on pcpu 1.
+AVISOR INFO: TIME: 2991196756 vm id 0 vcpu id 1 pcpu id 1
+AVISOR INFO: TIME: 2991196653 vm id 1 vcpu id 1 pcpu id 0
+task1! 107
+task1! 107
+task1! 108
+task1! 108
+task1! 109
+task1! 109
+task1! 110
+task1! 110
+task1! 111
+task1! 111
+AVISOR INFO: TIME IRQ 373
+AVISOR INFO: TIME IRQ 374
+AVISOR INFO: vcpu:prio (2:5) run on unikernel 0 on pcpu 1.
+AVISOR INFO: vcpu:prio (2:5) run on unikernel 1 on pcpu 0.
+AVISOR INFO: TIME: 3053726590 vm id 0 vcpu id 2 pcpu id 1
+AVISOR INFO: TIME: 3053735174 vm id 1 vcpu id 2 pcpu id 0
+task2! 106
+task2! 106
+task2! 107
+task2! 107
+task2! 108
+task2! 108
+task2! 109
+task2! 109
+task2! 110
+task2! 110
+AVISOR INFO: TIME IRQ 375
+AVISOR INFO: TIME IRQ 376
+AVISOR INFO: cpu id 0 vm id 0 rqnode need_resched = 0
+AVISOR INFO: cpu id 0 vm id 1 rqnode need_resched = 0
+AVISOR INFO: cpu id 0 vm id 3 rqnode need_resched = 0
+AVISOR INFO: cpu id 0 vm id 2 rqnode need_resched = 0
+AVISOR INFO: vm repeat
+AVISOR INFO: cpu id 0 vm id 0 rqnode need_resched = 1
+AVISOR INFO: cpu id 0 vm id 1 rqnode need_resched = 1
+AVISOR INFO: cpu id 0 vm id 3 rqnode need_resched = 1
+AVISOR INFO: cpu id 0 vm id 2 rqnode need_resched = 1
+AVISOR INFO: unikernel 2 will run on pcpu 0.
+AVISOR INFO: cpu id 1 vm id 0 rqnode need_resched = 1
+AVISOR INFO: vcpu repeat
+AVISOR INFO: cpu id 1 vm id 1 rqnode need_resched = 1
+AVISOR INFO: vcpu:prio (0:5) run on unikernel 2 on pcpu 0.
+AVISOR INFO: cpu id 1 vm id 3 rqnode need_resched = 1
+AVISOR INFO: TIME: 3116368529 vm id 2 vcpu id 0 pcpu id 0
+AVISOR INFO: unikernel 3 will run on pcpu 1.
+AVISOR INFO: vcpu repeat
+AVISOR INFO: vcpu:prio (0:5) run on unikernel 3 on pcpu 1.
+AVISOR INFO: TIME: 3116389903 vm id 3 vcpu id 0 pcpu id 1
+main 108
+main 109
+main 110
+main 111
+main 112
+AVISOR INFO: TIME IRQ 377
+AVISOR INFO: TIME IRQ 378
+AVISOR INFO: vcpu:prio (1:5) run on unikernel 2 on pcpu 0.
+AVISOR INFO: vcpu:prio (1:5) run on unikernel 3 on pcpu 1.
+AVISOR INFO: TIME: 3178905280 vm id 2 vcpu id 1 pcpu id 0
+AVISOR INFO: TIME: 3178921036 vm id 3 vcpu id 1 pcpu id 1
+task1! 108
+task1! 108
+task1! 109
+task1! 109
+task1! 110
+task1! 110
+task1! 111
+task1! 111
+AVISOR INFO: TIME IRQ 379
+AVISOR INFO: TIME IRQ 380
+AVISOR INFO: vcpu:prio (2:5) run on unikernel 3 on pcpu 1.
+AVISOR INFO: vcpu:prio (2:5) run on unikernel 2 on pcpu 0.
+AVISOR INFO: TIME: 3241494947 vm id 3 vcpu id 2 pcpu id 1
+AVISOR INFO: TIME: 3241501628 vm id 2 vcpu id 2 pcpu id 0
+task2! 106
+task2! 106
+task2! 107
+task2! 107
+task2! 108
+task2! 108
+task2! 109
+task2! 109
+task2! 110
+AVISOR INFO: TIME IRQ 381
+AVISOR INFO: TIME IRQ 382
+AVISOR INFO: vcpu:prio (3:5) run on unikernel 3 on pcpu 1.
+AVISOR INFO: vcpu:prio (3:5) run on unikernel 2 on pcpu 0.
+AVISOR INFO: TIME: 3304063348 vm id 3 vcpu id 3 pcpu id 1
+AVISOR INFO: TIME: 3304072297 vm id 2 vcpu id 3 pcpu id 0
+task3! 107
+task3! 108
+task3! 108
+task3! 109
+task3! 109
+task3! 110
+task3! 110
+task3! 111
+task3! 111
+task3! 112
+AVISOR INFO: TIME IRQ 383
+AVISOR INFO: TIME IRQ 384
+AVISOR INFO: cpu id 1 vm id 3 rqnode need_resched = 0
+AVISOR INFO: cpu id 1 vm id 2 rqnode need_resched = 0
+AVISOR INFO: cpu id 1 vm id 0 rqnode need_resched = 1
+AVISOR INFO: cpu id 1 vm id 1 rqnode need_resched = 1
+AVISOR INFO: unikernel 1 will run on pcpu 1.
+AVISOR INFO: cpu id 0 vm id 3 rqnode need_resched = 0
+AVISOR INFO: vcpu:prio (3:5) run on unikernel 1 on pcpu 1.
+AVISOR INFO: cpu id 0 vm id 2 rqnode need_resched = 0
+AVISOR INFO: TIME: 3366675806 vm id 1 vcpu id 3 pcpu id 1
+AVISOR INFO: cpu id 0 vm id 0 rqnode need_resched = 1
+AVISOR INFO: unikernel 0 will run on pcpu 0.
+AVISOR INFO: vcpu:prio (3:5) run on unikernel 0 on pcpu 0.
+AVISOR INFO: TIME: 3366705731 vm id 0 vcpu id 3 pcpu id 0
+task3! 107
+task3! 108
+task3! 109
+task3! 110
+AVISOR INFO: TIME IRQ 385
+AVISOR INFO: TIME IRQ 386
+AVISOR INFO: vcpu repeat
+AVISOR INFO: vcpu repeat
+AVISOR INFO: vcpu:prio (0:5) run on unikernel 1 on pcpu 1.
+AVISOR INFO: vcpu:prio (0:5) run on unikernel 0 on pcpu 0.
+AVISOR INFO: TIME: 3429220684 vm id 1 vcpu id 0 pcpu id 1
+AVISOR INFO: TIME: 3429242373 vm id 0 vcpu id 0 pcpu id 0
+main 112
+main 112
+main 113
+main 113
+main 114
+main 114
+main 115
+main 115
+AVISOR INFO: TIME IRQ 388
+AVISOR INFO: TIME IRQ 387
+AVISOR INFO: vcpu:prio (1:5) run on unikernel 1 on pcpu 1.
+AVISOR INFO: vcpu:prio (1:5) run on unikernel 0 on pcpu 0.
+AVISOR INFO: TIME: 3491779677 vm id 1 vcpu id 1 pcpu id 1
+AVISOR INFO: TIME: 3491784827 vm id 0 vcpu id 1 pcpu id 0
+task1! 112
+task1! 112
+task1! 113
+task1! 113
+task1! 114
+task1! 114
+task1! 115
+task1! 115
+task1! 116
+AVISOR INFO: TIME IRQ 389
+AVISOR INFO: TIME IRQ 390
+AVISOR INFO: vcpu:prio (2:5) run on unikernel 1 on pcpu 1.
+AVISOR INFO: vcpu:prio (2:5) run on unikernel 0 on pcpu 0.
+AVISOR INFO: TIME: 3554359681 vm id 1 vcpu id 2 pcpu id 1
+AVISOR INFO: TIME: 3554367867 vm id 0 vcpu id 2 pcpu id 0
+task2! 111
+task2! 111
+task2! 112
+task2! 112
+task2! 113
+task2! 113
+task2! 114
+task2! 114
+AVISOR INFO: TIME IRQ 391
+AVISOR INFO: TIME IRQ 392
+AVISOR INFO: cpu id 0 vm id 0 rqnode need_resched = 0
+AVISOR INFO: cpu id 0 vm id 3 rqnode need_resched = 0
+AVISOR INFO: cpu id 0 vm id 2 rqnode need_resched = 0
+AVISOR INFO: vm repeat
+AVISOR INFO: cpu id 0 vm id 0 rqnode need_resched = 1
+AVISOR INFO: cpu id 0 vm id 3 rqnode need_resched = 1
+AVISOR INFO: cpu id 0 vm id 2 rqnode need_resched = 1
+AVISOR INFO: unikernel 2 will run on pcpu 0.
+AVISOR INFO: cpu id 1 vm id 1 rqnode need_resched = 0
+AVISOR INFO: vcpu repeat
+AVISOR INFO: cpu id 1 vm id 0 rqnode need_resched = 1
+AVISOR INFO: vcpu:prio (0:5) run on unikernel 2 on pcpu 0.
+AVISOR INFO: cpu id 1 vm id 3 rqnode need_resched = 1
+AVISOR INFO: TIME: 3616972433 vm id 2 vcpu id 0 pcpu id 0
+AVISOR INFO: unikernel 3 will run on pcpu 1.
+AVISOR INFO: vcpu repeat
+AVISOR INFO: vcpu:prio (0:5) run on unikernel 3 on pcpu 1.
+AVISOR INFO: TIME: 3617001568 vm id 3 vcpu id 0 pcpu id 1
+main 113
+main 114
+main 115
+main 116
+main 117
+AVISOR INFO: TIME IRQ 394
+AVISOR INFO: TIME IRQ 393
+AVISOR INFO: vcpu:prio (1:5) run on unikernel 2 on pcpu 0.
+AVISOR INFO: vcpu:prio (1:5) run on unikernel 3 on pcpu 1.
+AVISOR INFO: TIME: 3679506846 vm id 2 vcpu id 1 pcpu id 0
+AVISOR INFO: TIME: 3679515877 vm id 3 vcpu id 1 pcpu id 1
+task1! 112
+task1! 112
+task1! 113
+task1! 113
+task1! 114
+task1! 114
+task1! 115
+task1! 115
+task1! 116
+task1! 116
+AVISOR INFO: TIME IRQ 395
+AVISOR INFO: TIME IRQ 396
+AVISOR INFO: vcpu:prio (2:5) run on unikernel 3 on pcpu 1.
+AVISOR INFO: vcpu:prio (2:5) run on unikernel 2 on pcpu 0.
+AVISOR INFO: TIME: 3742074756 vm id 3 vcpu id 2 pcpu id 1
+AVISOR INFO: TIME: 3742080047 vm id 2 vcpu id 2 pcpu id 0
+task2! 110
+task2! 111
+task2! 111
+task2! 112
+task2! 112
+task2! 113
+task2! 113
+task2! 114
+task2! 114
+AVISOR INFO: TIME IRQ 397
+AVISOR INFO: TIME IRQ 398
+AVISOR INFO: vcpu:prio (3:5) run on unikernel 2 on pcpu 0.
+AVISOR INFO: vcpu:prio (3:5) run on unikernel 3 on pcpu 1.
+AVISOR INFO: TIME: 3804658477 vm id 2 vcpu id 3 pcpu id 0
+AVISOR INFO: TIME: 3804667427 vm id 3 vcpu id 3 pcpu id 1
+task3! 112
+task3! 113
+task3! 113
+task3! 114
+task3! 114
+task3! 115
+task3! 115
+task3! 116
+task3! 116
+AVISOR INFO: TIME IRQ 399
+AVISOR INFO: TIME IRQ 400
+AVISOR INFO: cpu id 0 vm id 2 rqnode need_resched = 0
+AVISOR INFO: cpu id 0 vm id 3 rqnode need_resched = 0
+AVISOR INFO: cpu id 0 vm id 1 rqnode need_resched = 0
+AVISOR INFO: cpu id 0 vm id 0 rqnode need_resched = 1
+AVISOR INFO: unikernel 0 will run on pcpu 0.
+AVISOR INFO: cpu id 1 vm id 2 rqnode need_resched = 0
+AVISOR INFO: vcpu:prio (3:5) run on unikernel 0 on pcpu 0.
+AVISOR INFO: cpu id 1 vm id 3 rqnode need_resched = 0
+AVISOR INFO: TIME: 3867261947 vm id 0 vcpu id 3 pcpu id 0
+AVISOR INFO: cpu id 1 vm id 1 rqnode need_resched = 0
+AVISOR INFO: vm repeat
+AVISOR INFO: cpu id 1 vm id 2 rqnode need_resched = 1
+AVISOR INFO: cpu id 1 vm id 3 rqnode need_resched = 1
+AVISOR INFO: cpu id 1 vm id 1 rqnode need_resched = 1
+AVISOR INFO: unikernel 1 will run on pcpu 1.
+AVISOR INFO: vcpu:prio (3:5) run on unikernel 1 on pcpu 1.
+AVISOR INFO: TIME: 3867304466 vm id 1 vcpu id 3 pcpu id 1
+task3! 111
+task3! 112
+task3! 113
+task3! 114
+task3! 115
+AVISOR INFO: TIME IRQ 401
+AVISOR INFO: TIME IRQ 402
+AVISOR INFO: vcpu repeat
+AVISOR INFO: vcpu repeat
+AVISOR INFO: vcpu:prio (0:5) run on unikernel 0 on pcpu 0.
+AVISOR INFO: vcpu:prio (0:5) run on unikernel 1 on pcpu 1.
+AVISOR INFO: TIME: 3929809291 vm id 0 vcpu id 0 pcpu id 0
+AVISOR INFO: TIME: 3929823062 vm id 1 vcpu id 0 pcpu id 1
+main 116
+main 116
+main 117
+main 117
+main 118
+main 118
+main 119
+main 119
+main 120
+main 120
+AVISOR INFO: TIME IRQ 403
+AVISOR INFO: TIME IRQ 404
+AVISOR INFO: vcpu:prio (1:5) run on unikernel 1 on pcpu 1.
+AVISOR INFO: vcpu:prio (1:5) run on unikernel 0 on pcpu 0.
+AVISOR INFO: TIME: 3992377246 vm id 1 vcpu id 1 pcpu id 1
+AVISOR INFO: TIME: 3992386664 vm id 0 vcpu id 1 pcpu id 0
+task1! 116
+task1! 117
+task1! 117
+task1! 118
+task1! 118
+task1! 119
+task1! 119
+task1! 120
+task1! 120
+AVISOR INFO: TIME IRQ 405
+AVISOR INFO: TIME IRQ 406
+AVISOR INFO: vcpu:prio (2:5) run on unikernel 0 on pcpu 0.
+AVISOR INFO: vcpu:prio (2:5) run on unikernel 1 on pcpu 1.
+AVISOR INFO: TIME: 4054946766 vm id 0 vcpu id 2 pcpu id 0
+AVISOR INFO: TIME: 4054952267 vm id 1 vcpu id 2 pcpu id 1
+task2! 115
+task2! 115
+task2! 116
+task2! 116
+QEMU: Terminated
+
